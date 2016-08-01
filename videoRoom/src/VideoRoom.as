@@ -188,6 +188,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         }
     }
 
+
     public function netAppInit():void {
         NetManager.getInstance().appInit = true;
         NetManager.getInstance().connectRoom();
@@ -245,7 +246,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         this.parking_Module.x = this.stage.stageWidth;
         this.parking_Module.y = this.speaker_Module.y + this.speaker_Module.getInPutHeight() - this.parking_Module.height;
         this.parking_Module.visible =false;
-
         //飞屏
     }
 
