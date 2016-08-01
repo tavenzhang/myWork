@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/appShare/ModuleInterFace.iml" filepath="$PROJECT_DIR$/appShare/ModuleInterFace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TVideo.iml" filepath="$PROJECT_DIR$/TVideo.iml" />
       <module fileurl="file://$PROJECT_DIR$/appShare/appShare.iml" filepath="$PROJECT_DIR$/appShare/appShare.iml" />
       <module fileurl="file://$PROJECT_DIR$/taven/taven.iml" filepath="$PROJECT_DIR$/taven/taven.iml" />
-      <module fileurl="file://$PROJECT_DIR$/videoRoom.iml" filepath="$PROJECT_DIR$/videoRoom.iml" />
     </modules>
   </component>
 </project>
