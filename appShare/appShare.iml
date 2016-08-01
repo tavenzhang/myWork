@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="videoRoom">
+  <component name="FlexBuildConfigurationManager" active="appShare">
     <configurations>
-      <configuration name="videoRoom" pure-as="true" main-class="VideoRoom" output-file="videoRoom.swf" output-folder="$MODULE_DIR$/bin-debug">
+      <configuration name="appShare" pure-as="true" output-type="Library" output-file="appShare.swc" output-folder="$MODULE_DIR$">
         <dependencies target-player="18.0">
           <entries>
-            <entry library-id="fc9476c4-f1a2-4c39-b5c6-9f4dd7800913">
+            <entry library-id="2edd365b-7a2e-4060-bc78-3cc9bce77d01">
               <dependency linkage="Merged" />
-            </entry>
-            <entry module-name="appShare" build-configuration-name="appShare">
-              <dependency linkage="Include" />
             </entry>
           </entries>
           <sdk name="AIRSDK18" />
         </dependencies>
-        <compiler-options>
-          <map>
-            <entry key="compiler.debug.swf" value="true" />
-          </map>
-          <option name="resourceFilesMode" value="None" />
-        </compiler-options>
+        <compiler-options />
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />
@@ -36,15 +28,14 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="fc9476c4-f1a2-4c39-b5c6-9f4dd7800913" />
+        <properties id="2edd365b-7a2e-4060-bc78-3cc9bce77d01" />
         <CLASSES>
-          <root url="file://$MODULE_DIR$/libs" />
+          <root url="file://$MODULE_DIR$/../libs" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="appShare" exported="" />
   </component>
 </module>
