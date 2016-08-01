@@ -46,7 +46,7 @@ package videoView{
 			this.videoLightBase = new ScaleBitmap(new baseVideoLight(607, 154));
 			this.videoLightBase.scale9Grid = new Rectangle(50, 10, 50, 130);
 			this.videoLightBase.alpha = .1;
-			this.videoLightBase.x = this.centerBase.x
+			this.videoLightBase.x = this.centerBase.x;
 			this.videoLightBase.y = this.centerBase.y;
 			this.videoLightBase.width = this.centerBase.width;			
 			this.body_mc.addChild(this.videoLightBase);	
@@ -94,7 +94,7 @@ package videoView{
 			}
 			this.chatBase.y = _h - 50;
 			
-			this.x=(this.stage.stageWidth-1200)/2
+			this.x=(this.stage.stageWidth-1200)/2;
 			this.renderLayout();//提交布局
 		}
 		

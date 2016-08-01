@@ -164,7 +164,7 @@ package  {
 			this.DownButton.addEventListener(MouseEvent.ROLL_OUT, _upDownEvent);
 					
 			this.incre = int(this._stepNum);
-			this.increBool = true
+			this.increBool = true;
 			this.time.delay = 600;
 			
 			this.time.start();
