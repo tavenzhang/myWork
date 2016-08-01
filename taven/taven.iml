@@ -96,6 +96,23 @@
         <packaging-android />
         <packaging-ios />
       </configuration>
+      <configuration name="giftModule" pure-as="true" main-class="GiftModule" output-file="GiftModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules">
+        <dependencies target-player="18.0">
+          <entries>
+            <entry library-id="ba6358b4-b65c-49fb-bc28-c52f218b8c4b">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="5836a2c9-9d47-4567-862b-11a40c8d3aa0">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK18" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
     </configurations>
     <compiler-options />
   </component>
@@ -187,6 +204,28 @@
     <orderEntry type="module-library" exported="">
       <library type="flex">
         <properties id="8d2aa529-b2c8-4bce-b0f9-1860cd188cab" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="ba6358b4-b65c-49fb-bc28-c52f218b8c4b" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="5836a2c9-9d47-4567-862b-11a40c8d3aa0" />
         <CLASSES>
           <root url="file://$MODULE_DIR$/libs" />
         </CLASSES>
