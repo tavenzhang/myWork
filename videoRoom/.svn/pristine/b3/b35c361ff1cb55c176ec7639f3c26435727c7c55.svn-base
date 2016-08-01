@@ -1,0 +1,259 @@
+/**
+ * Created by Taven on 2015/9/29.
+ */
+package taven {
+import com.junkbyte.console.Cc;
+import com.rover022.event.CBModuleEvent;
+import com.rover022.CBProtocol;
+import com.rover022.vo.UserVo;
+import com.rover022.vo.VideoConfig;
+
+import control.ControlsManger;
+
+import display.BaseModue;
+
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.events.StatusEvent;
+import flash.external.ExternalInterface;
+import flash.net.URLRequest;
+import flash.net.navigateToURL;
+
+import manger.UserVoDataManger;
+
+import net.NetManager;
+
+import taven.RankVipModule;
+import taven.common.TavenScrollList;
+import taven.enum.EventUtils;
+import taven.rankView.RankItemRender;
+import taven.rankView.RankVipRender;
+import taven.utils.ObjectPool;
+
+import tool.VideoTool;
+
+public class RankVipModule extends BaseModue {
+    /** 当前点击的item数据*/
+    public var selectItem:Object;
+    private var _vipList:TavenScrollList;
+    /**list 数据源  {rank:2,name:"走路闷骚会闪耀",money:169536},{rank:3,name:"累无爱",money:120588} */
+    private var _data:Array=[];
+    private var _maxWidth:Number  = 0;
+    private var _maxHeight:Number = 0;
+    private var _objectPool:ObjectPool;
+    private var _view:tave_vipSeatView;
+
+    public function RankVipModule() {
+        _vipList = new TavenScrollList(RankVipRender);
+        _view    = new tave_vipSeatView();
+        this.addChild(_view);
+        _view.mcList.addChild(_vipList);
+        _vipList.updateMaxCountByHeight(288);
+        this.addChild(_view);
+        _view.btnVipOpen.addEventListener(MouseEvent.CLICK, onClickVip);
+        _vipList.addEventListener(TavenScrollList.SCROLL_END, scrollEndHandle);
+    }
+
+    /**向服务器请求更多 用户信息*/
+    private function scrollEndHandle(evt:Event):void {
+        if (_vipList.dataList.length > 0) {
+            c2sGetUsrList(_vipList.dataList.length);
+        }
+    }
+
+    private function c2sGetUsrList(startIndex:int = 0):void {
+        var data:Object = new Object();
+        data.start      = startIndex;
+        data.end        = startIndex + 20;
+        NetManager.getInstance().sendDataObject({
+            "cmd": CBProtocol.VIP_LIST_18002,
+            "start": data.start,
+            "end": data.end
+        });//获取更多vip贵族信息
+    }
+
+    //跳转到贵族链接
+    private function onClickVip(evt:MouseEvent):void {
+        VideoTool.jumpToGuiZhuURL();
+    }
+
+    private function test():void {
+        var resut:Object = new Object();
+        resut.items      = [];
+        for (var i:int = 1; i <= 10; i++) {
+            var data:Object = new Object();
+            data.uid        = i;
+            data.vip        = int(Math.random() * 6) + 1;
+            data.name       = "taven" + int(Math.random() * 100);
+            resut.items.push(data)
+        }
+        resut.isSingle = 0;
+        flushList(resut.items);
+    }
+
+    //ui 消息处理
+    override public function handMessage(data:*):void {
+        switch (data.cmd) {
+            case CBProtocol.VIP_LIST_18002://收到 贵族列表。
+                addSeat(data.items);
+                break;
+            case CBProtocol.onEnterRoom://玩家进入
+                if (data.vip > 0 && !data.isAuchor) {
+                    addSeat([data]);
+                }
+                break;
+            case CBProtocol.onOutRoom://玩家离开玩家
+                deleteSeat([data]);
+                break;
+        }
+    }
+
+    public function selectItemChange(evt:StatusEvent):void {
+        for each (var item:RankVipRender in _vipList.itemList) {
+            if (item.data && item.data.name == evt.code) {
+                selectItem              = item.data;
+                var _userVo:UserVo      = new UserVo(item.data);
+                var event:CBModuleEvent = new CBModuleEvent(CBModuleEvent.PLAYNAMELINK, true);
+                event.dataObject        = _userVo;
+                dispatchEvent(event);
+                break;
+            }
+        }
+    }
+
+    /**--------------------------------------------------------------------------公共接口-----------------------------------------------------------------------------------------------------------*/
+    override public function get width():Number {
+        return _maxWidth;
+    }
+
+    override public function set width(value:Number):void {
+        if (_maxWidth != value) {
+            if (_vipList.itemList.length > 0) {
+                for each (var item:RankVipRender in _vipList.itemList) {
+                    if (item) {
+                        item.adujustSize(value);
+                    }
+                }
+            }
+        }
+        _maxWidth = value;
+    }
+
+    override public function get height():Number {
+        return _maxHeight;
+    }
+
+    override public function set height(value:Number):void {
+        if (_maxHeight != value) {
+            var h:Number = value - _view.height - 10;
+            _vipList.updateMaxCountByHeight(h);
+        }
+        _maxHeight = value;
+        _view.y    = _maxHeight - _view.height - 5;
+        // _view.mcLine.width = _maxWidth;
+    }
+
+    /**整体刷新 ui*/
+    private function updateView(maxWidth:Number, maxHeight:Number):void {
+        if (_data) {
+            //{time:123342,name:"走路闷骚会闪耀",count:169536,ico:"1.jpg"} 数据demo;
+            if (_data.length > 0) {
+                _data.sortOn("vip", Array.NUMERIC | Array.DESCENDING); //排序一下  根据贡献值
+                for (var t:int = 0; t < _data.length; t++) {
+                    _data[t].rank = t + 1;
+                }
+            }
+            var tempRender:RankVipRender;
+            if (maxWidth > 0 && maxWidth != RankVipRender.FORCRE_WIDTH) {
+                RankItemRender.FORCRE_WIDTH = maxWidth;
+            }
+            _vipList.dataList = _data;
+            for (var i:int = 0; i < _vipList.itemList.length; i++) {
+                tempRender = _vipList.itemList[i] as RankVipRender;
+                if (!tempRender.hasEventListener(StatusEvent.STATUS)) {
+                    tempRender.addEventListener(StatusEvent.STATUS, selectItemChange);
+                }
+            }
+            if (maxWidth > 0 && _vipList.itemList.length > 0) {
+                _vipList.flushListView(_vipList.itemList[0].width);
+            }
+        }
+    }
+
+    //删除某些贵族座位判断
+    private function deleteSeat(dataArr:Array):void {
+        updateData(dataArr, true, false)
+    }
+
+    //添加某些贵族座位判断
+    private function addSeat(dataArr:Array):void {
+        updateData(dataArr, false, false)
+    }
+
+    //刷新整个列表
+    private function flushList(dataArr:Array):void {
+        updateData(dataArr, false, true)
+    }
+
+    /**设置数据接口*/
+    public function updateData(dataArr:Array, isDelete:Boolean = false, flushAll:Boolean = false):void {
+        dataArr              = ( dataArr == null) ? new Array() : dataArr;
+        var isChange:Boolean = false;
+        if (flushAll) {
+                _data.length = 0;
+            isChange = true;
+            isDelete = false;
+        }
+        if (isDelete) //删除元素
+        {
+            for (var i:int = 0; i < dataArr.length; i++) {
+                if(_data!=null&&_data.length>0)
+                {
+                    for each (var item:Object in _data) {
+                        if (item.uid == dataArr[i].uid) {
+                            _data.splice(_data.indexOf(item), 1);
+                            isChange = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        } else {
+            if (_data.length==0) {
+                _data    = dataArr;
+                isChange = true;
+            } else {
+                var isNew:Boolean;
+                for (i = 0; i < dataArr.length; i++) {
+                    isNew = true;
+                    for each (var item2:Object in _data) {
+                        if (item2.uid == dataArr[i].uid) {
+                            isNew             = false;
+                            var index:int     = _data.indexOf(item2);
+                            _data[index].vip  = dataArr[i].vip;
+                            _data[index].name = dataArr[i].name;
+                            isChange          = true;
+                            isNew             = false;
+                            break;
+                        }
+                    }
+                    if (isNew)
+                        _data.push(dataArr[i]);
+                    isChange = true;
+                }
+            }
+        }
+        //过滤掉神秘人;
+        for (i = 0; i < _data.length; i++) {
+            if (_data[i].hidden == 1) {
+                _data.splice(i, 1);
+                i--;
+                continue;
+            }
+        }
+        if (isChange) {
+            updateView(_maxWidth, _maxHeight);
+        }
+    }
+}
+}

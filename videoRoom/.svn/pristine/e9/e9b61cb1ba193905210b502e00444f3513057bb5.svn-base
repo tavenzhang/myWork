@@ -1,0 +1,114 @@
+﻿package taven {
+import com.rover022.vo.UserVo;
+
+import display.BaseModue;
+import display.ui.CBScrollPanel;
+
+import taven.rankView.RankItemRender;
+import taven.utils.ObjectPool;
+
+public class RankViewModule extends BaseModue {
+    /** 当前点击的item数据*/
+    public var selectItem:Object;
+    /**list 数据源  {rank:2,name:"走路闷骚会闪耀",money:169536},{rank:3,name:"累无爱",money:120588} */
+    private var _data:Array;
+    private var _maxWidth:Number              = 0;
+    private var _maxHeight:Number             = 0;
+    private var _objectPool:ObjectPool;
+    private var _totalView:taven_item_total;
+    private var _sbScrollPanel:CBScrollPanel;
+    private var _list:Vector.<RankItemRender> = new <RankItemRender>[];
+
+    public function RankViewModule() {
+        _totalView = new taven_item_total();
+        this.addChild(_totalView);
+        _totalView.visible = false;
+        //
+        _sbScrollPanel = new CBScrollPanel();
+        _sbScrollPanel.setSize(270, 90);
+        addChild(_sbScrollPanel);
+        //
+    }
+
+    /**--------------------------------------------------------------------------公共接口-----------------------------------------------------------------------------------------------------------*/
+    override public function get width():Number {
+        return _maxWidth;
+    }
+
+    override public function set width(value:Number):void {
+        _maxWidth = value;
+    }
+
+    override public function get height():Number {
+        return _maxHeight;
+    }
+
+    override public function set height(value:Number):void {
+        _maxHeight              = value;
+        _totalView.y            = _maxHeight - _totalView.height - 5;
+        _totalView.mcLine.width = _maxWidth;
+        //
+        _sbScrollPanel.setSize(270, value - 30);
+    }
+
+    /**整体刷新 ui*/
+
+
+    public function updateTotal(num:int, isWeek:Boolean):void {
+        //_totalView.txtName.text=isWeek ? "周贡献统计":"共计礼物";
+        _totalView.txtName.text = "共计礼物: ";
+        _totalView.txtNum.text  = num.toString() + " 钻";
+        _totalView.visible      = num > 0;
+    }
+
+    /**设置数据接口*/
+    public function updateData(dataArr:Array, isDelete:Boolean = false, flushAll:Boolean = false):void {
+        if (dataArr == null) {
+            return;
+        }
+        if (_data) {
+            for (var i:uint = 0; i < dataArr.length; i++) {
+                var _object:Object   = dataArr[i];
+                var _canPush:Boolean = true;
+                for (var j:int = 0; j < _data.length; j++) {
+                    var _obja:Object = _data[j];
+                    if (_obja.uid == _object.uid) {
+                        _data[j] = _object;
+                        _canPush = false;
+                        break;
+                    }
+                }
+                if (_canPush) {
+                    _data.push(_object);
+                }
+            }
+        } else {
+            _data = dataArr;
+        }
+        if (_data) {
+            _data.sortOn("money", Array.NUMERIC | Array.DESCENDING); //排序一下  根据贡献值
+            for (i = 0; i < _data.length; i++) {
+                if (_data[i] != null) {
+                    var _userVo:UserVo = new UserVo({
+                        richLv: _data[i].richLv,
+                        name: _data[i].name,
+                        money: _data[i].money,
+                        uid: _data[i].uid,
+                        hidden: _data[i].hidden
+                    });
+                    if (_list.length <= i) {
+                        var _item:RankItemRender = new RankItemRender();
+                        _item.y                  = i * 30;
+                        _item.setIndex(i);
+                        _sbScrollPanel.view.addChild(_item);
+                        _list.push(_item);
+                    }
+                    _userVo.rank = i;
+                    _list[i].setUserVo(_userVo);
+                }
+            }
+            _sbScrollPanel.updateT();
+        }
+    }
+}
+}

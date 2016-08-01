@@ -1,0 +1,106 @@
+﻿<project name="build" default="build" basedir=".">
+    <property file="build_run.properties"/>
+    <!--定义任务的库引用路径，比如下面我们用到了mxmlc，必须让Ant知道去哪里寻找这个任务的定义，包括类名
+称和classpath。这里我们配置了4个，实际上用到了3个，即调用mxmlc完成编译，调用html-wrapper对SWF进行HTML包裹，
+调用asdoc生成代码文档。compc是用来编译库(SWC)文件，这里我们没有用到 -->
+    <taskdef name="mxmlc" classname="com.adobe.flash.compiler.ant.MXMLCTask"
+             classpath="${ant-contrib}"/>
+    <taskdef name="compc" classname="com.adobe.flash.compiler.ant.COMPCTask"
+             classpath="${ant-contrib}"/>
+    <!--<taskdef name="html-wrapper" classname="flex.ant.HtmlWrapperTask" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar"/>-->
+    <!--<taskdef name="asdoc" classname="flex.ant.AsDocTask" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar"/>-->
+    <!-- 定义ant存放位置  -->
+    <!--<property name="ant.lib.dir" value="${FLEX_HOME}/ant/lib"/>-->
+    <!-- 初始化时间格式,以便使用 -->
+    <tstamp>
+        <format property="TODAY" pattern="yy.mm.dd"/>
+    </tstamp>
+    <!-- 导入ant支持包 -->
+    <!--<path id="ant.classpath">-->
+    <!--<fileset dir="${ant.lib.dir}">-->
+    <!--<include name="*.jar"/>-->
+    <!--</fileset>-->
+    <!--</path>-->
+    <!--完成当前构建任务所需的4个调用，首先是清理，如果bin下面有文件，删除掉；然后是编译，HTML包裹-->
+    <target name="build">
+        <!--<antcall target="clean"/>-->
+        <!--<antcall target="init"/>-->
+        <antcall target="ModuleInterFace"/>
+        <antcall target="videoRoom"/>
+        <antcall target="ModuleGift"/>
+        <antcall target="ModuleTaven"/>
+    </target>
+    <target name="init">
+        <echo message="Ant Version: ${ant.version}">
+        </echo>
+        <echo message="Flex SDK Home: ${FLEX_HOME}"/>
+    </target>
+    <!--执行清理-->
+    <target name="clean">
+        <delete includeemptydirs="true">
+
+        </delete>
+    </target>
+
+    <!-- 编译Flex Library Project项 -->
+    <target name="ModuleInterFace">
+        <property name="project.name" value="ModuleInterFace"/>
+        <echo message="start-------------ModuleInterFace.swc"/>
+        <compc output="${project.ModuleInterFace}/${project.name}.swc"
+               debug="false">
+            <include-sources dir="${project.ModuleInterFace}/src">
+                <include name="**/*.as"/>
+            </include-sources>
+            <!--&lt;!&ndash; 指定xwjnProjectFlex项目的源码目录 &ndash;&gt;-->
+            <!--<source-path path-element="${project.ModuleInterFace}/src"/>-->
+            <!--&lt;!&ndash; 指定编译的文件列表 &ndash;&gt;-->
+            <!--<include-sources dir="${project.ModuleInterFace}/src" includes="*.as"/>-->
+            <library-path dir="${project.video}/libs" includes="*" append="true"/>
+        </compc>
+
+        <echo message="===============ModuleInterFace.swc finished!====================================="/>
+    </target>
+
+    <!--执行编译，注意debug参数，默认是false，如果您需要开启Debug功能，可以将它设置为true(会增大文件体
+积)-->
+    <target name="ModuleGift" depends="ModuleInterFace">
+        <echo message="start-------------GiftModule.swf"/>
+        <mxmlc file="${project.gift}/src/giftModule/GiftModule.as"
+               output="${project.gift.bin}/GiftModule.swf"
+               debug="false">
+            <source-path path-element="${project.gift}/src"/>
+            <library-path dir="${project.gift}/libs" includes="*" append="true"/>
+        </mxmlc>
+        <echo message="====================================GiftModule.swf============================="/>
+    </target>
+
+    <target name="ModuleTaven">
+        <echo message="start-------------taven.swf"/>
+        <mxmlc
+                file="${project.taven}/src/TavenModule.as"
+                output="${project.gift.bin}/TavenModule.swf"
+                debug="false">
+            <source-path path-element="${project.taven}/src"/>
+            <library-path dir="${project.taven}/libs" includes="*" append="true"/>
+            <library-path dir="${project.video}/libs" includes="*" append="true"/>
+            <external-library-path dir="${project.ModuleInterFace}" includes="*" append="true"/>
+        </mxmlc>
+        <echo message="=======external-library-path=======================videoRoom.swf============================="/>
+    </target>
+
+
+    <target name="videoRoom">
+        <echo message="start-------------videoRoom.swf"/>
+        <mxmlc
+                file="${project.video}/src/VideoRoom.as"
+                output="${project.video.bin}/videoRoom.swf"
+                debug="false">
+            <source-path path-element="${project.video}/src"/>
+            <library-path dir="${project.video}/libs" includes="*" append="true"/>
+            <include-libraries dir="${project.ModuleInterFace}" includes="*" append="true"/>
+        </mxmlc>
+        <echo message="====================================videoRoom.swf============================="/>
+    </target>
+
+
+</project>
