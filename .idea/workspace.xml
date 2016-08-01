@@ -5,103 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ModuleGift/src/giftModule/GiftModule.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/SWC类参考/ScaleBitmap.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/SWC类参考/baseScroll.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/SWC类参考/ktvEvent.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/SWC类参考/ktvStageEvent.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/V项目2.1版本PRD.doc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/V项目需求列表.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/greensock.swc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/modulesSWC.swc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/shareElement.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/shareElement.swc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/shareElement/autoTextField.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/shareElement/loadHeadElement.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/shareElement/loadMaterial.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/shareElement/logo.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/shareElement/progress.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/shareElement/scrollShare.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/videoView.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/通用资源/videoView/view.as" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/ModuleInterFace.iml" afterPath="$PROJECT_DIR$/appShare/appShare.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/ModuleInterFace.swc" afterPath="$PROJECT_DIR$/appShare/ModuleInterFace.swc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/CBProtocol.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/IChat.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IChat.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/IPlayer.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IPlayer.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/IVideoModule.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoModule.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/IVideoRoom.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoRoom.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/ModuleNameType.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/ModuleNameType.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/display/IAssetMovieClip.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/IAssetMovieClip.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/display/IBaseRslModule.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/IBaseRslModule.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/display/UserIconMovieClip.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/UserIconMovieClip.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/event/CBModuleEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/CBModuleEvent.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/event/ModuleEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/ModuleEvent.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/event/PingEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/PingEvent.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/p2pPlay/BaseLiveP2P.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/BaseLiveP2P.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/p2pPlay/MonaP2P.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/MonaP2P.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/p2pPlay/livep2p.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/livep2p.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/tool/NetPing.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/NetPing.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/tool/PingManager.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/PingManager.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/tool/SensitiveWordFilter.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SensitiveWordFilter.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/tool/SocketPing.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/tool/SocketPingManager.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPingManager.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/tool/TreeNode.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/TreeNode.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/vo/ChatState.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/ChatState.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/vo/GiftVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/GiftVo.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/vo/PlayerType.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/PlayerType.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/vo/RespondVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/RespondVo.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/vo/UserVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/UserVo.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/vo/VideoConfig.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/com/rover022/vo/VipInfo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VipInfo.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/BaseControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/BaseControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/ChatAndErrorControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/ChatAndErrorControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/ControlsManger.as" afterPath="$PROJECT_DIR$/appShare/src/control/ControlsManger.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/GiftAndVideoUIControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/GiftAndVideoUIControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/GlobalControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/GlobalControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/IControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/IControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/ParkAndSeatControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/ParkAndSeatControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/RankAndInfoControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/RankAndInfoControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/RoomManageControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/RoomManageControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/control/VideoControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/VideoControl.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/BaseModule.as" afterPath="$PROJECT_DIR$/appShare/src/display/BaseModule.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/BaseRslModule.as" afterPath="$PROJECT_DIR$/appShare/src/display/BaseRslModule.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/LoaderHelp.as" afterPath="$PROJECT_DIR$/appShare/src/display/LoaderHelp.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/RslModuleManager.as" afterPath="$PROJECT_DIR$/appShare/src/display/RslModuleManager.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/TweenHelp.as" afterPath="$PROJECT_DIR$/appShare/src/display/TweenHelp.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/Alert.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/Alert.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/CBScrollPanel.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/CBScrollPanel.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/CGLoader.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/CGLoader.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/MaskLoaderMc.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/MaskLoaderMc.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/ScaleBitmap.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/ScaleBitmap.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/SignActivityPanel.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/SignActivityPanel.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/TTab.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/TTab.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/TTabBar.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/TTabBar.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/thumbImage_taven.png" afterPath="$PROJECT_DIR$/appShare/src/display/ui/thumbImage_taven.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/display/ui/trackImage_taven.png" afterPath="$PROJECT_DIR$/appShare/src/display/ui/trackImage_taven.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/ktvEvent.as" afterPath="$PROJECT_DIR$/appShare/src/ktvEvent.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/ktvStageEvent.as" afterPath="$PROJECT_DIR$/appShare/src/ktvStageEvent.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/manger/ClientManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/manger/ISocketApp.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ISocketApp.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/manger/ModuleLoaderManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ModuleLoaderManger.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/manger/UserVoDataManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/UserVoDataManger.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/net/CBHttpServiceProxy.as" afterPath="$PROJECT_DIR$/appShare/src/net/CBHttpServiceProxy.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/net/GameSocket.as" afterPath="$PROJECT_DIR$/appShare/src/net/GameSocket.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/net/NetManager.as" afterPath="$PROJECT_DIR$/appShare/src/net/NetManager.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/net/NetSocket.as" afterPath="$PROJECT_DIR$/appShare/src/net/NetSocket.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/net/TavenHttpService.as" afterPath="$PROJECT_DIR$/appShare/src/net/TavenHttpService.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/tool/CTimeoutOper.as" afterPath="$PROJECT_DIR$/appShare/src/tool/CTimeoutOper.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/tool/FormatDataTool.as" afterPath="$PROJECT_DIR$/appShare/src/tool/FormatDataTool.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/tool/GoogleAdSence.as" afterPath="$PROJECT_DIR$/appShare/src/tool/GoogleAdSence.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/tool/JsHelp.as" afterPath="$PROJECT_DIR$/appShare/src/tool/JsHelp.as" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ModuleInterFace/src/tool/VideoTool.as" afterPath="$PROJECT_DIR$/appShare/src/tool/VideoTool.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/GiftModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/GiftModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/videoRoom.swf" afterPath="$PROJECT_DIR$/bin-debug/videoRoom.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/taven.iml" afterPath="$PROJECT_DIR$/taven/taven.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/videoRoom.iml" afterPath="$PROJECT_DIR$/videoRoom.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/IChat.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IChat.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/IPlayer.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IPlayer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoModule.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoModule.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoRoom.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoRoom.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/ModuleNameType.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/ModuleNameType.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/display/IAssetMovieClip.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/IAssetMovieClip.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/display/IBaseRslModule.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/IBaseRslModule.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/display/UserIconMovieClip.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/UserIconMovieClip.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/event/CBModuleEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/CBModuleEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/event/ModuleEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/ModuleEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/event/PingEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/PingEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/BaseLiveP2P.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/BaseLiveP2P.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/livep2p.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/livep2p.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/NetPing.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/NetPing.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/PingManager.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/PingManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SensitiveWordFilter.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SensitiveWordFilter.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPingManager.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPingManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/TreeNode.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/TreeNode.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/ChatState.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/ChatState.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/GiftVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/GiftVo.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/PlayerType.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/PlayerType.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/RespondVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/RespondVo.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/UserVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/UserVo.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/BaseControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/BaseControl.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/ControlsManger.as" afterPath="$PROJECT_DIR$/appShare/src/control/ControlsManger.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/GiftAndVideoUIControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/GiftAndVideoUIControl.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/GlobalControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/GlobalControl.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/IControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/IControl.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/ParkAndSeatControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/ParkAndSeatControl.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/RankAndInfoControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/RankAndInfoControl.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/RoomManageControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/RoomManageControl.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/VideoControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/VideoControl.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/BaseModule.as" afterPath="$PROJECT_DIR$/appShare/src/display/BaseModule.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/BaseRslModule.as" afterPath="$PROJECT_DIR$/appShare/src/display/BaseRslModule.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/RslModuleManager.as" afterPath="$PROJECT_DIR$/appShare/src/display/RslModuleManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/TweenHelp.as" afterPath="$PROJECT_DIR$/appShare/src/display/TweenHelp.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/Alert.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/Alert.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/CBScrollPanel.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/CBScrollPanel.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/CGLoader.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/CGLoader.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/MaskLoaderMc.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/MaskLoaderMc.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/ScaleBitmap.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/ScaleBitmap.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/SignActivityPanel.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/SignActivityPanel.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/ktvEvent.as" afterPath="$PROJECT_DIR$/appShare/src/ktvEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/ktvStageEvent.as" afterPath="$PROJECT_DIR$/appShare/src/ktvStageEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/ISocketApp.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ISocketApp.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/ModuleLoaderManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ModuleLoaderManger.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/UserVoDataManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/UserVoDataManger.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/CBHttpServiceProxy.as" afterPath="$PROJECT_DIR$/appShare/src/net/CBHttpServiceProxy.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/GameSocket.as" afterPath="$PROJECT_DIR$/appShare/src/net/GameSocket.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/NetManager.as" afterPath="$PROJECT_DIR$/appShare/src/net/NetManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/NetSocket.as" afterPath="$PROJECT_DIR$/appShare/src/net/NetSocket.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/TavenHttpService.as" afterPath="$PROJECT_DIR$/appShare/src/net/TavenHttpService.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/CTimeoutOper.as" afterPath="$PROJECT_DIR$/appShare/src/tool/CTimeoutOper.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/FormatDataTool.as" afterPath="$PROJECT_DIR$/appShare/src/tool/FormatDataTool.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/GoogleAdSence.as" afterPath="$PROJECT_DIR$/appShare/src/tool/GoogleAdSence.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/JsHelp.as" afterPath="$PROJECT_DIR$/appShare/src/tool/JsHelp.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/VideoTool.as" afterPath="$PROJECT_DIR$/appShare/src/tool/VideoTool.as" />
     </list>
     <list id="0b8432f8-703d-4449-8515-06a7a62d6e77" name="ignore-on-commit" comment="" />
     <ignored path="videoRoom.iws" />
@@ -210,6 +175,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -1217,7 +1185,7 @@
       <workItem from="1470038313448" duration="743000" />
       <workItem from="1470039115938" duration="426000" />
       <workItem from="1470039848672" duration="1136000" />
-      <workItem from="1470041016416" duration="251000" />
+      <workItem from="1470041016416" duration="354000" />
     </task>
     <task id="LOCAL-00001" summary="change module">
       <created>1470040579516</created>
@@ -1226,11 +1194,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470040579516</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="优化">
+      <created>1470041299678</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1470041299678</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="792478000" />
+    <option name="totallyTimeSpent" value="792581000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1247,14 +1222,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24592833" sideWeight="0.4450727" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20032573" sideWeight="0.51615506" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20032573" sideWeight="0.4789984" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24592833" sideWeight="0.5549273" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20032573" sideWeight="0.52100164" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24267101" sideWeight="0.5218094" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.123700626" sideWeight="0.47777778" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24267101" sideWeight="0.5218094" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.123700626" sideWeight="0.47777778" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20436187" sideWeight="0.755" order="0" side_tool="false" content_ui="combo" />
@@ -1267,12 +1242,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18390192" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="463" y="337" width="1062" height="607" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.48933902" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.48933902" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18399169" sideWeight="0.3962963" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1320,7 +1295,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change module" />
-    <option name="LAST_COMMIT_MESSAGE" value="change module" />
+    <MESSAGE value="优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1613,6 +1589,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
