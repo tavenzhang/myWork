@@ -58,7 +58,7 @@ public class sidesGroup extends BaseModule {
     }
 
     public function onRichMessage(data:*):void {
-        var obj:Object = new Object();
+        var obj:Object = {};
         obj.created = data.created;
         obj.roomid = data.roomid;
         obj.sendName = data.sendName;
@@ -91,7 +91,7 @@ public class sidesGroup extends BaseModule {
         _view.btnClearGit.mouseChildren=false;
         _view.btnClearGit.y-=5;
         _view.btnClearGit.stop();
-        _view.visible=false;
+        //_view.visible=false;
     }
 
     override protected function initListeners():void {
@@ -163,7 +163,7 @@ public class sidesGroup extends BaseModule {
                 case _view.viewTransUser.btnOk:/**操作用户转移*/
                     if (_view.viewTransUser.txtHouse.text != "") {
                         data = _view.viewTransUser.txtHouse.text;
-                        dispatchModuleEvent("tranUser")
+                        dispatchModuleEvent("tranUser");
                         _view.viewTransUser.visible = false;
                     }
                     break;
@@ -267,7 +267,7 @@ public class sidesGroup extends BaseModule {
     }
 
     private function onClickLimit(evt:MouseEvent):void {
-        var data:Object = new Object();
+        var data:Object = {};
         data.open = _view.btnLimit.currentFrame == 1 ? 1 : 0;
         data.roomid = videoRoom.getDataByName(ModuleNameType.USERROOMDATA).roomid;
         EventUtils.secndNetData(videoRoom, CBProtocol.enterRoomLimit_10012, data, s2cRoomLimita);

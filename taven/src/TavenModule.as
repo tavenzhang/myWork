@@ -12,6 +12,7 @@ import taven.RankViewModule;
 import taven.RankVipModule;
 import taven.SpeakerModule;
 import taven.UserInfo;
+import taven.common.RightMenuBar;
 import taven.leftMap;
 import taven.rightView.MenuList;
 import taven.sidesGroup;
@@ -32,6 +33,7 @@ public class TavenModule extends Sprite
 		private var menuList:MenuList;
 		private var rankVipModule:RankVipModule;
 		private var limitEnterModule:LimitEnterModule;
+		private  var rightBar:RightMenuBar;
 
 		public function TavenModule()
 		{

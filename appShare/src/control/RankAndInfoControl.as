@@ -43,7 +43,7 @@ public class RankAndInfoControl extends BaseControl {
                 ClientManger.getInstance().roomPublic = sObject.content;
                 ClientManger.getInstance().addChatSpanMessage({
                     message: "[房间消息]:" + sObject.content,
-                    color: "0xFFCC00"
+                    color: "0x00b4dc"
                 });
                 break;
             case CBProtocol.moneyChange://主播费用增加通知
@@ -55,6 +55,7 @@ public class RankAndInfoControl extends BaseControl {
                 var roomPlayInfor:MovieClip = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEO_PLAY_INFO) as MovieClip;
                 roomPlayInfor.updataExp(sObject);
                 break;
+
             case CBProtocol.moneyChange2://扣费心跳通知
                 UserVoDataManger.userData.points = sObject.points;
                 UserVoDataManger.userData.richLv = sObject.richLv;
@@ -69,7 +70,7 @@ public class RankAndInfoControl extends BaseControl {
                 break;
             case CBProtocol.pushKtvOrder://本场贡献有字段更改
                 rankView_Module.updateData([FormatDataTool.rankView(sObject)]);
-                break
+                break;
             case CBProtocol.VIP_LIST_18002://获取vip列表
                 //Cc.log("CBProtocol.VIP_LIST_18002===");
                 //vipModule.handMessage(sObject);

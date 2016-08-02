@@ -156,7 +156,7 @@ public class RoomManageControl extends BaseControl {
             case CBProtocol.pushFobTime://禁言解封时间
                 ClientManger.getInstance().addChatSpanMessage({
                     message: "[系统消息]:" + "您已经被禁言了," + Math.floor(sObject.seconds / 60) + "分" + (sObject.seconds % 60) + "秒后才能发言.",
-                    color: "0xFFCC00"
+                    color: "0x00b4dc"
                 });
                 break;
             case CBProtocol.userInviteVideo://收到玩户申请开房

@@ -21,6 +21,8 @@ public class BackGroundLay extends MovieClip {
     private var chatBase:ScaleBitmap;
     private var chatNewsBase:ScaleBitmap;
 
+    private var _bgImageLoad:CGLoader;
+
     public function BackGroundLay():void {
         this.mouseChildren = false;
         this.mouseEnabled = false;
@@ -30,30 +32,30 @@ public class BackGroundLay extends MovieClip {
         this.addChild(this.body_mc);
         this.leftBase = new ScaleBitmap(new baseBorder(84, 84));
         this.leftBase.scale9Grid = new Rectangle(20, 20, 10, 10);
-        this.leftBase.y = 85;
+        this.leftBase.y = 50;
         this.leftBase.width = 300;
        //∫ this.body_mc.addChild(this.leftBase);
         //**************中间
         this.centerBase = new ScaleBitmap(new baseBorder2(607, 41));
         this.centerBase.scale9Grid = new Rectangle(50, 10, 500, 20);
-        this.centerBase.x = this.leftBase.width + 35;
+        this.centerBase.x = this.leftBase.width + 50;
         this.centerBase.y = 5;
-        this.centerBase.width = 752;
+        this.centerBase.width = 630;
         this.centerBase.height = 420;
         //this.body_mc.addChild(this.centerBase);
         //高光
         this.videoLightBase = new ScaleBitmap(new baseVideoLight(607, 154));
         this.videoLightBase.scale9Grid = new Rectangle(50, 10, 50, 130);
         this.videoLightBase.alpha = .1;
-        this.videoLightBase.x = this.centerBase.x
+        this.videoLightBase.x = this.centerBase.x;
         this.videoLightBase.y = this.centerBase.y;
         this.videoLightBase.width = this.centerBase.width;
         //this.body_mc.addChild(this.videoLightBase);
         //****************右边
         this.rightBase = new ScaleBitmap(new baseBorder(84, 84));
         this.rightBase.scale9Grid = new Rectangle(20, 20, 10, 10);
-        this.rightBase.x = this.centerBase.x + this.centerBase.width + 10;
-        this.rightBase.y = 85;
+        this.rightBase.x = this.centerBase.x + this.centerBase.width +10;
+        this.rightBase.y = 50;
         this.rightBase.width = 300;
         this.body_mc.addChild(this.rightBase);
         //消息
@@ -70,11 +72,11 @@ public class BackGroundLay extends MovieClip {
         this.chatBase.width = 276;
         this.body_mc.addChild(this.chatBase);
         this.addEventListener(Event.ADDED_TO_STAGE, _addedToStageEvent);
-        var loader:CGLoader = new CGLoader();
-        loader.load(new URLRequest(VideoConfig.HTTP + "image/other/background.jpg"));
-        loader.x = -360;
-        loader.y = -40;
-        addChildAt(loader, 0);
+        _bgImageLoad = new CGLoader();
+        _bgImageLoad.load(new URLRequest(VideoConfig.HTTP + "image/other/background.jpg"));
+        //_bgImageLoad.x = -360;
+       // _bgImageLoad.y = -80;
+        addChildAt(_bgImageLoad, 0);
     }
 
     private function _addedToStageEvent(e:Event):void {
@@ -85,13 +87,15 @@ public class BackGroundLay extends MovieClip {
 
     //------------------尺寸变化
     private function _resizeStageEvent(e:Event):void {
-        var _leftHeight:Number = this.stage.stageHeight - this.leftBase.y;
-        if (_leftHeight < 610) {
-            _leftHeight = 610;
-        }
+        var _leftHeight:Number = this.stage.stageHeight - this.leftBase.y-30;
+//        if (_leftHeight < 610) {∫
+//            _leftHeight = 610;
+//        }
         if (_leftHeight > 820) {
             _leftHeight= 820;
         }
+        _bgImageLoad.y = 0;
+        _bgImageLoad.x = -300;
         this.leftBase.height = _leftHeight;
         this.rightBase.height = _leftHeight;
         var _h:int = int(this.rightBase.height);
@@ -99,14 +103,15 @@ public class BackGroundLay extends MovieClip {
             _h = 820;
         }
         this.chatBase.y = _h - 50;
-        this.x = (this.stage.stageWidth - 1400) / 2
+        this.x = (this.stage.stageWidth - 1300) / 2;
+
         this.renderLayout();//提交布局
     }
 
     //------------------------
     //更新布局
     private function renderLayout():void {
-        this.layoutData.view = {x: this.x, y: this.y, w: 1400, h: this.body_mc.height};
+        this.layoutData.view = {x: this.x, y: this.y, w: 100, h: this.body_mc.height};
         this.layoutData.leftBase = {
             x: this.body_mc.x + this.leftBase.x,
             y: this.body_mc.y + this.leftBase.y,

@@ -55,9 +55,7 @@ import tool.VideoTool;
 
 import videoRoom.bulletin;
 
-[SWF(width=1500, height=800, backgroundColor="#00000")]
-//[Frame(factoryClass="Preloader")]
-//-frame VideoRoom VideoRoom -use-network=false
+[SWF(width=1500, height=900, backgroundColor="#00000")]
 public class VideoRoom extends BaseResRoom implements IVideoRoom {
     public var appLay:Sprite;
     public var backGround:Sprite;
@@ -69,7 +67,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     public var body:Sprite;
     public var backGroundSprite:MovieClip;
     public var rankMenu_Moudle:MovieClip;
-    public var leftMenu2_Moudle:MovieClip;
     public var roomPlayInfor:MovieClip;
     public var video_Module:IPlayer;
     public var videoUIView:Sprite;
@@ -94,6 +91,8 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     //进入限制模块
     public var enterLimit_Module:MovieClip;
     public var rightSelectObject:Object;//右键选择对象
+
+    public var rightMenuBar:MovieClip;//右键选择对象
     /**http://www.1room.my/
      * 事件处理者 看做保姆.. 做所有的功能
      */
@@ -211,7 +210,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             vipModule.height = _layout.leftBase.h - (rankMenu_Moudle.height+20);
 
 
-
            // vipModule.y = rankMenu_Moudle.y + rankMenu_Moudle.height + 10;
             videoUIView.x = _layout.centerBase.x;
             videoUIView.y = _layout.centerBase.y - 8;
@@ -221,7 +219,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             {
                 this.gift_Module.y = dh;
             }
-            video_Module["x"]=  100 ;
+
             roomEastUIView.x =_layout.rightBase.x;
             this.userInfo_Module.x = _layout.rightBase.x;
 //            video_Module["width"]=  720 ;
@@ -324,6 +322,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //Cc.log(VideoConfig.httpTomcat + VideoConfig.configXML.head.@gifturl + "?time=" + Math.random())
         this.gift_Module.configURLS(VideoConfig.httpTomcat + VideoConfig.configXML.head.@gifturl + "?time=" + Math.random(), VideoConfig.httpTomcat + VideoConfig.configXML.head.@depoturl, VideoConfig.HTTP);
         this.gift_Module.y = 470;
+
         this.gift_Module.addEventListener("sendGift", onGiftMouseEvent);
         videoUIView.addChild(this.gift_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.GIFT_MODULE, gift_Module);
@@ -335,6 +334,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     }
 
     private function initEastUI():void {
+
         //聊天框
         var mc:MovieClip = new bulletin();
       //  mc.x = 920;
@@ -353,6 +353,10 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         userInfo_Module.addEventListener(StatusEvent.STATUS, roomHandler.onUserInfo);
         roomEastUIView.addChild(this.userInfo_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.USERINFOUI, userInfo_Module);
+        //6左侧
+        this.rightMenuBar = VideoTool.getMCTaven("common.RightMenuBar");
+        roomEastUIView.addChild(rightMenuBar);
+        this.rightMenuBar.y = 85;
     }
 
     /**
@@ -363,6 +367,8 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         this.logo_Module.y = 10;
         this.logo_Module.num_txt.visible = false;
         this.logo_Module.buttonMode = true;
+        this.logo_Module.visible =false;
+
         this.logo_Module.addEventListener(MouseEvent.CLICK, VideoTool.jumpToMainURL);
         this.stageSpr.addChild(this.logo_Module);
         this.playInfo_Module = VideoTool.getMCTaven("PlayInfoModule");
@@ -514,7 +520,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
      * @param e
      */
     private function onGiftMouseEvent(e:Event):void {
-        trace("onGiftMouseEvent...")
+        trace("onGiftMouseEvent...");
         if (ClientManger.getInstance().isGuestAndGuestRegister()) {
             Cc.debug("没有登录....");
             return;

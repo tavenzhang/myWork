@@ -41,7 +41,7 @@ public class RankVipModule extends BaseModule {
         this.addChild(_usrList);
         this.addChild(_managList);
         _managList.x=_usrList.x=40;
-        _managList.y=_usrList.y=40
+        _managList.y=_usrList.y=40;
         _managList.addEventListener(TavenScrollList.SCROLL_END, scrollEndHandle);
         _usrList.addEventListener(TavenScrollList.SCROLL_END, scrollEndHandle);
         _loadIngMc = new taven_dataKLoading();
@@ -51,7 +51,7 @@ public class RankVipModule extends BaseModule {
         _view.btnVipOpen.visible =false;
         _loadIngMc.width = _loadIngMc.height = 24;
         showLoading(false);
-        _view.menuBtn1.txtName.text = "观众"
+        _view.menuBtn1.txtName.text = "观众";
         _view.menuBtn2.txtName.text = "管理员";
         _tabBar = new TTabBar([_view.menuBtn1, _view.menuBtn2], onTabChange, 0);
         this.addChild(_tabBar);
@@ -75,10 +75,10 @@ public class RankVipModule extends BaseModule {
 
     private function c2sGetUsrList(isManage:Boolean, startIndex:int = 0):void {
         if (isManage) {
-            EventUtils.secndNetDataNew(11008, new Object(), handMessage);
+            EventUtils.secndNetDataNew(11008, {}, handMessage);
         }
         else {
-            var data:Object = new Object();
+            var data:Object = {};
             data.start = startIndex;
             data.end = startIndex + 20;
             EventUtils.secndNetDataNew(11001, data, handMessage);
@@ -263,10 +263,6 @@ public class RankVipModule extends BaseModule {
                 if (item.hidden == 0 ) {
                     tempArr = item.power == 0 ? _usrArr : _mamageArr;
                     tempArr.push(item);
-                    if(item.name.indexOf("游客")>-1)
-                    {
-                        trace("item.name=="+item.name);
-                    }
                 }
             }
         }

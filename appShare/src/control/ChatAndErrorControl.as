@@ -71,7 +71,7 @@ public class ChatAndErrorControl extends BaseControl {
 					case 3://系统喇叭
 						ClientManger.getInstance().addChatSpanMessage({
 							message: "[系统消息]:" + sObject.content,
-							color:   "0xFFCC00"
+							color:   "0x00b4dc"
 						});
 						break;
 					case 4://小喇叭
