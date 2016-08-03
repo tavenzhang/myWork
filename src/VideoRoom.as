@@ -214,14 +214,15 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
 
            // vipModule.y = rankMenu_Moudle.y + rankMenu_Moudle.height + 10;
             videoUIView.x = _layout.centerBase.x;
-            videoUIView.y = _layout.centerBase.y -8 ;
+            videoUIView.y = _layout.centerBase.y -4 ;
             this.gift_Module.y = 550;
-            this.gift_Module.y = this.stage.stageHeight -  this.gift_Module.height-10;
-            if(this.stage.stageHeight> _layout.leftBase.h)
-            {
-                this.gift_Module.y =  _layout.leftBase.y+ _layout.leftBase.h -  this.gift_Module.height+40;
-            }
-            this.gift_Module.y= this.gift_Module.y<=550? 550:this.gift_Module.y;
+            this.gift_Module.y =  seats_Module.y+seats_Module.height -40;
+
+//            if(this.stage.stageHeight> _layout.leftBase.h)
+//            {
+//                this.gift_Module.y =  _layout.leftBase.y+ _layout.leftBase.h -  this.gift_Module.height+40;
+//            }
+//            this.gift_Module.y= this.gift_Module.y<=550? 550:this.gift_Module.y;
 
 //            var dh=_layout.leftBase.h- this.gift_Module.height+_layout.leftBase.y;
 //            if(this.gift_Module.y>dh)
@@ -244,7 +245,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             this.logo_Module.x = this.rootSpr.x;
             this.playInfo_Module.x = this.rootSpr.x;
         }
-        this.playInfo_Module.height = _layout.leftBase.h - 50;
+        //this.playInfo_Module.height = _layout.leftBase.h ;
         this.speaker_Module.y = _layout.view.h - this.speaker_Module.getSpeakHeight();
         this.speaker_Module.width = this.stage.stageWidth;
 
@@ -355,7 +356,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         ModuleLoaderManger.getInstance().register(ModuleNameType.ROOMMESS, mc);
         chatRoomModule = VideoTool.getMovieClipInstance("ChatRoomModule");
         //chat2.x = 920;
-        chatRoomModule.y = 100;
+        chatRoomModule.y = 50;
         chatRoomModule.x = 5;
         roomEastUIView.addChild(chatRoomModule);
         addEventListener(CBModuleEvent.PLAYNAMELINK, onChatLinkEvent);
@@ -369,7 +370,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //6左侧
         this.rightMenuBar = VideoTool.getMCTaven("common.RightMenuBar");
         roomEastUIView.addChild(rightMenuBar);
-        this.rightMenuBar.y = 60;
+        this.rightMenuBar.y = 15;
         this.rightMenuBar.x = -5;
     }
 
@@ -386,7 +387,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         this.logo_Module.addEventListener(MouseEvent.CLICK, VideoTool.jumpToMainURL);
         this.stageSpr.addChild(this.logo_Module);
         this.playInfo_Module = VideoTool.getMCTaven("PlayInfoModule");
-        this.playInfo_Module.y = 120;
+        this.playInfo_Module.y = 10;
         this.stageSpr.addChild(this.playInfo_Module);
         this.playInfo_Module.headFormat = VideoTool.getAudienceHeadImg(
         );

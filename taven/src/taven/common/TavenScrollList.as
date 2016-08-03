@@ -68,10 +68,10 @@ public class TavenScrollList extends Sprite
 		//轨道元件
 		_track=new scaleSprite(trackImageUI);
 		_track.scale9Grid=new Rectangle(1, 10, 1, 10);
-		_track.x+=4
+		_track.x+=0;
 		_scrollPannel=new baseScroll_taven(new Sprite(),_thumb, _track);
 		_scrollPannel.view.x=_itemPoint.x-_scrollPannel.view.width ;
-		this.addChild(_scrollPannel.view)
+		this.addChild(_scrollPannel.view);
 		_scrollPannel.autoScale=false; //滑块是否自适应
 		_scrollPannel.addEventListener(Event.SCROLL, _selScrollEvent); //滚动事件
 		_scrollPannel.addEventListener("scrollFalse", _selScrollFalseEvent); //隐藏事件
@@ -212,14 +212,14 @@ public class TavenScrollList extends Sprite
 	private function updateDisplauView(startIndex:int=0):void
 	{
 		//先做清理工作
-		disposeListView()
+		disposeListView();
 		var endIndex:int = startIndex+maxCount;
 		var index:int=0;
 		var selectUid:int=0;
 		if(seclecItem&&seclecItem.data)
 		{
 			selectUid = seclecItem.data.uid;
-			seclecItem.select=false;;
+			seclecItem.select = false;
 			seclecItem=null;
 		}
 		for (var i:int=startIndex;i<=endIndex;i++)

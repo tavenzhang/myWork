@@ -17,10 +17,10 @@ public class VideoConfig {
 	public static var ENV_XML:XML            = null;
 	public static var HTTP:String            = "";
 	public static var HOST:String            = "116.31.99.233";
-	public static var PORT:int               = 9005;
+	public static var PORT:int               = 9001;
 	public static var connectRTMP:String;
-	public static var roomID:int             = 1790844;//rover022 101116443,101116441,101120981,101116395,101116444,101116395
-	public static var loginKey:String        = "m5oqjfkc4iieoiaotdhcendjr0";
+	public static var roomID:int             = 1448411;//rover022 101116443,101116441,101120981,101116395,101116444,101116395
+	public static var loginKey:String        = "58ab891a1192ce091713bbf3bb938e3a";
 	public static var testUID:String         = "zxhua@163.com";
 	public static var testPASS:String        = "shallay";
 	//版本控制
@@ -58,6 +58,7 @@ public class VideoConfig {
 			return configXML.httpRes;
 		}
 	}
+
 
 	public static function get httpFunction():String {
 		if (ExternalInterface.available) {

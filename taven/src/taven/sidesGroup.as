@@ -204,6 +204,7 @@ public class sidesGroup extends BaseModule {
 //                        _view.btnChange.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
                     }
                     stage.addChild(_changeLineView);
+                    break;
                 case _view.btnClearGit:
                 {
                     if(_view.btnClearGit.currentFrame==1)

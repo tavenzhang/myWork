@@ -40,7 +40,7 @@ public class RankVipModule extends BaseModule {
         this.addChild(_view);
         this.addChild(_usrList);
         this.addChild(_managList);
-        _managList.x=_usrList.x=40;
+        _managList.x=_usrList.x=20;
         _managList.y=_usrList.y=40;
         _managList.addEventListener(TavenScrollList.SCROLL_END, scrollEndHandle);
         _usrList.addEventListener(TavenScrollList.SCROLL_END, scrollEndHandle);

@@ -32,14 +32,14 @@ public class BackGroundLay extends MovieClip {
         this.addChild(this.body_mc);
         this.leftBase = new ScaleBitmap(new baseBorder(84, 84));
         this.leftBase.scale9Grid = new Rectangle(20, 20, 10, 10);
-        this.leftBase.y = 50;
+        this.leftBase.y = 10;
         this.leftBase.width = 300;
        //∫ this.body_mc.addChild(this.leftBase);
         //**************中间
         this.centerBase = new ScaleBitmap(new baseBorder2(607, 41));
         this.centerBase.scale9Grid = new Rectangle(50, 10, 500, 20);
         this.centerBase.x = this.leftBase.width + 60;
-        this.centerBase.y = 5;
+        this.centerBase.y = 10;
         this.centerBase.width = 630;
         this.centerBase.height = 420;
         //this.body_mc.addChild(this.centerBase);
@@ -55,7 +55,7 @@ public class BackGroundLay extends MovieClip {
         this.rightBase = new ScaleBitmap(new baseBorder(84, 84));
         this.rightBase.scale9Grid = new Rectangle(20, 20, 10, 10);
         this.rightBase.x = this.centerBase.x + this.centerBase.width -15;
-        this.rightBase.y = 50;
+        this.rightBase.y = 6;
         this.rightBase.width = 304;
         this.body_mc.addChild(this.rightBase);
         //消息
