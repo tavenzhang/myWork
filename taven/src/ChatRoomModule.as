@@ -44,9 +44,9 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	public var giftOutput:RichText;
 	public var publicOutput:RichText;
 	public var privateOutput:RichText;
-	private var _width:Number            = 260;
+	private var _width:Number            = 280;
 	private var _height:Number           = 330;
-	private var beasHeight:Number        = 378 - 48;
+	//private var beasHeight:Number        = 378 - 48;
 	private var view:chatUIMC            = new chatUIMC();
 	private var maxChars:uint            = 30;
 	private const ERROR_TXT1:String      = "您发送消息过于频繁,请休息一下.";
@@ -54,13 +54,14 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	private const ERROR_TXT3:String      = "发送消息文字过长.";
 	private const ERROR_TXT4:String      = "[系统提示]:请先登录.";
 	public var minY:Number               = -5;
-	public var maxY:Number               = 905;
+	public var maxHeight:Number            = 820;
 	public static var faceArr:Dictionary = new Dictionary();
 	public var lastSendTime:Number       = -30000;
 	public var lastGiftSendTime:Number   = 0;
 	public var giftObjectArray:Array     = [];
-	//
+	//max
 	public var VIPColor:Array            = [];
+
 	private var giftHeight:int;
 
 	public function ChatRoomModule():void {
@@ -72,7 +73,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		VIPColor[1106] = 0xfdebeb;
 		VIPColor[1107] = 0xFFED00;
 		//
-		addChild(view);
+		//addChild(view);
 		initChatUI();
 		addEventListener(Event.ADDED_TO_STAGE, addStageHandle);
 	}
@@ -90,18 +91,25 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	}
 
 	public function clear():void {
-		giftOutput.clear();
+		//giftOutput.clear();
 		publicOutput.clear();
 		privateOutput.clear();
 		_input.clear()
 	}
 
+
+	override public function set height(value:Number):void {
+		//super.height = value;
+
+		setHeight(value);
+	}
+
 	private function onResizeHandle(event:Event):void {
-		var num:Number = stage.stageHeight <= maxY ? stage.stageHeight : maxY;
-		var chaNum:int = num - 700;
-		chaNum         = chaNum >= minY ? chaNum : minY;
-		//trace(chaNum)
-		setHeight(chaNum + beasHeight);
+//		var num:Number = stage.stageHeight <= maxHeight ? stage.stageHeight : maxHeight;
+//		var chaNum:int = num - 700;
+//		chaNum         = chaNum >= minY ? chaNum : minY;
+//		//trace(chaNum)
+//		setHeight(num);
 	}
 
 	public function initChatUI():void {
@@ -109,29 +117,30 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		Style.embedFonts     = false;
 		Style.fontSize       = 12;
 		//输出wenb
-		giftHeight           = 110;
-		giftOutput           = new RichText(_width, giftHeight);
-		giftOutput.maxLength = 10;
-		addChild(giftOutput);
-		var _mc:spileLineMc = new spileLineMc();
-		_mc.y               = giftHeight;
-		_mc.width           = _width;
-		addChild(_mc);
-		publicOutput   = new RichText(_width, _height - giftHeight + 100);
-		publicOutput.y = giftHeight + 10;
+//		giftHeight           = 110;
+//		giftOutput           = new RichText(_width, giftHeight);
+//		giftOutput.maxLength = 10;
+		//addChild(giftOutput);
+
+		//var _mc:spileLineMc = new spileLineMc();
+		//_mc.y               = giftHeight;
+		//_mc.width           = _width;
+		//	addChild(_mc);
+//		publicOutput   = new RichText(_width, _height - giftHeight + 100);
+//		publicOutput.y = giftHeight + 10;
+		publicOutput   = new RichText(_width, _height+100);
+		publicOutput.y =  10;
 		addChild(publicOutput);
 		privateOutput   = new RichText(_width, 100);
-		privateOutput.y = _height + 10;//下移动10个像素
 		addChild(privateOutput);
 		//输入文本框
 		_input = new InputUI(_width, this);
 		_input.view.sendNews_bt.addEventListener(MouseEvent.CLICK, sendMessage);
 		_input.view.flyNews_bt.addEventListener(MouseEvent.CLICK, sendFlyMessage);
-		_input.y = _height + 100 + 10;
 		addChild(_input);
 		//横线
-		view.line_mc.width = _width;
-		view.line_mc.y     = _height + 4;
+		//view.line_mc.width = _width;
+		//view.line_mc.y     = _height + 4;
 		addEventListener("addItem", onAddItemHandle);
 		//
 //		setTimeout(function ():void {
@@ -282,15 +291,16 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 
 	public function setHeight(_h:Number):void {
 		_height = _h;
-		updateUI();
+		_input.y  = _height - _input.height-30;
+		privateOutput.y = _input.y - privateOutput.height-10;
+		publicOutput.setHeight(_height-260);
+//		publicOutput.graphics.beginFill(0xFF00FF,1);
+//		publicOutput.graphics.drawRect(0,0,publicOutput.width,publicOutput.height);
+//		publicOutput.graphics.endFill();
+		trace("_input.y=="+_input.y +"---------privateOutput.y="+privateOutput.y +"--publicOutput.height=="+publicOutput.height);
 	}
 
-	public function updateUI():void {
-		publicOutput.setHeight(_height - giftHeight - 20);
-		view.line_mc.y  = _height + 4;
-		privateOutput.y = _height + 10;
-		_input.y        = _height + 100 + 10;
-	}
+
 
 	public function set videoRoom(src:IVideoRoom):void {
 		_videoRoom = src
@@ -308,7 +318,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	}
 
 	public function onChatSystemMessage(src:Object):void {
-		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement(src.message, src.color)
+		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement(src.message, src.color);
 		privateOutput.addRichChild(pCustom);
 	}
 
@@ -401,27 +411,27 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	 * @param sObject
 	 */
 	public function onPlayGiftInfor(sObject:Object):void {
-		var recObject:UserVo = new UserVo();
-		recObject.init(sObject.recUid, sObject.recName, sObject.recRichLv, sObject.recLv, sObject.recIcon);
-		recObject.hidden  = sObject.recHidden;
-		//
-		var sender:UserVo = new UserVo();
-		sender.init(sObject.sendUid, sObject.sendName, sObject.richLv, sObject.lv, sObject.icon);
-		sender.hidden                = sObject.sendHidden;
-		//
-		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement();
-		var giftS:SpanElement        = makeSpan("[礼物]", 0xf955ff);
-		pCustom.addChild(giftS);
-		buildMC(sender, pCustom);
-		giftS = makeSpan(" 赠送给 ", 0xFF33CC);
-		pCustom.addChild(giftS);
-		buildMC(recObject, pCustom);
-		var giftIcon:InlineGraphicElement = buildImageIcon(videoRoom.getDataByName(ModuleNameType.HTTPROOT) + "image/gift_material/" + sObject.gid + ".png", 24, 24);
-		pCustom.addChild(giftIcon);
-		giftS = makeSpan(sObject.sendCount + "个", 0xFF33CC);
-		pCustom.addChild(giftS);
-		//进入
-		giftOutput.addRichChild(pCustom);
+//		var recObject:UserVo = new UserVo();
+//		recObject.init(sObject.recUid, sObject.recName, sObject.recRichLv, sObject.recLv, sObject.recIcon);
+//		recObject.hidden  = sObject.recHidden;
+//		//
+//		var sender:UserVo = new UserVo();
+//		sender.init(sObject.sendUid, sObject.sendName, sObject.richLv, sObject.lv, sObject.icon);
+//		sender.hidden                = sObject.sendHidden;
+//		//
+//		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement();
+//		var giftS:SpanElement        = makeSpan("[礼物]", 0xf955ff);
+//		pCustom.addChild(giftS);
+//		buildMC(sender, pCustom);
+//		giftS = makeSpan(" 赠送给 ", 0xFF33CC);
+//		pCustom.addChild(giftS);
+//		buildMC(recObject, pCustom);
+//		var giftIcon:InlineGraphicElement = buildImageIcon(videoRoom.getDataByName(ModuleNameType.HTTPROOT) + "image/gift_material/" + sObject.gid + ".png", 24, 24);
+//		pCustom.addChild(giftIcon);
+//		giftS = makeSpan(sObject.sendCount + "个", 0xFF33CC);
+//		pCustom.addChild(giftS);
+//		//进入
+//		giftOutput.addRichChild(pCustom);
 	}
 
 	/**
@@ -656,7 +666,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		skinMc.view.doubleTxt.text   = "x" + sObject.times;
 		skinMc.loaderImageIcon(imageUrl);
 		addChild(skinMc);
-		return;
+
 	}
 }
 }

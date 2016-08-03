@@ -9,6 +9,8 @@ import com.rover022.ModuleNameType;
 import com.rover022.event.CBModuleEvent;
 import com.rover022.vo.VideoConfig;
 
+import display.BaseModule;
+
 import display.ui.Alert;
 
 import flash.display.MovieClip;
@@ -63,6 +65,8 @@ public class GlobalControl extends BaseControl {
 				//VideoTool.jumpToMainURL(null);
 				break;
 			case CBProtocol.login://10001用户信息
+				var vipModule:BaseModule = ModuleLoaderManger.getInstance().getModule(ModuleNameType.RANK_VIP) as BaseModule;
+				vipModule.handMessage(data);
 				//KTVUnion.setLoadInfo("",92);//-----------loading信息
 				//UserVoDataManger.userData = JSON.parse('{"icon":1104,"vip":1104,"port":0,"car":120104,"cmd":10001,"ruled":0,"sex":0,"uid":1626669,"hidden":0,"roomid":0,"headimg":"","activityName":"","lv":1,"expTotal":10000,"gid":0,"points":0,"name":"ronnie","gamepop":"1","exp":0,"downloadUrl":"http://pan.baidu.com/s/1pJV9S9t","ret":0,"emailValid":0,"host":"","richLv":13}')
 				UserVoDataManger.userData  = sObject;//用户信息
@@ -128,7 +132,7 @@ public class GlobalControl extends BaseControl {
 				view.sides_Module.isAnchor          = UserVoDataManger.roomAdmin;
 				view.video_Module.isAnchor          = UserVoDataManger.roomAdmin;
 				UserVoDataManger.roomData.pingMange = UserVoDataManger.userPingManger;
-				trace("----" + UserVoDataManger.roomAdmin)
+				trace("----" + UserVoDataManger.roomAdmin);
 				if (UserVoDataManger.roomData && UserVoDataManger.roomData.rtmp != "") {//不是在大厅时
 					if (UserVoDataManger.roomAdmin) {
 						NetManager.getInstance().sendDataObject({"cmd": CBProtocol.listRtmpRoom_80001});//获取rtmp列表

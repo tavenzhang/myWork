@@ -38,7 +38,7 @@ public class LeftMenu extends leftMenuMc {
         this.graphics.clear();
         this.graphics.beginFill(0x000000, 0.7);
         // this.graphics.drawRoundRectComplex(2,(-h+6),(width-4),(heigh+h),0,0,10,10);
-        this.graphics.drawRoundRectComplex(-2, -4, (menuWidth + 4), (heigh + tabBar.height + 10), 0, 0, 2, 2);
+        this.graphics.drawRoundRectComplex(-2, -4, (menuWidth + 4), (heigh + tabBar.height + 10), 0, 0, 5, 5);
         this.graphics.endFill();
     }
 

@@ -9,6 +9,7 @@ import com.rover022.vo.VideoConfig;
 import flash.display.SimpleButton;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
+import flash.geom.Rectangle;
 import flash.text.TextField;
 import flash.text.TextFieldType;
 import flash.text.TextFormat;
@@ -24,6 +25,7 @@ public class InputUI extends Sprite {
     public var uDict:Array;
     public var faceUI:FaceView;
     public var textField:TextField;
+    private var chatBase:ScaleBitmap;
 
     public function InputUI(_width:Number, _module:ChatRoomModule) {
         uDict = [{label: "所有人", data: {}}];
@@ -57,6 +59,12 @@ public class InputUI extends Sprite {
         _sendBtn.addEventListener(MouseEvent.CLICK, chatRoomModule.sendMessage);
         view.exp_bt.addEventListener(MouseEvent.CLICK, onExpClick);
         view.exp_bt.visible = true;
+        this.chatBase = new ScaleBitmap(new baseChatBorder(51, 81));
+        this.chatBase.scale9Grid = new Rectangle(20, 20, 10, 10);
+        this.chatBase.x = 0;
+        this.chatBase.y = -9;
+        this.chatBase.width = 276;
+        this.addChildAt(this.chatBase,0);
         //建立快捷键插件
 
     }

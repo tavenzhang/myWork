@@ -38,7 +38,7 @@ public class BackGroundLay extends MovieClip {
         //**************中间
         this.centerBase = new ScaleBitmap(new baseBorder2(607, 41));
         this.centerBase.scale9Grid = new Rectangle(50, 10, 500, 20);
-        this.centerBase.x = this.leftBase.width + 50;
+        this.centerBase.x = this.leftBase.width + 60;
         this.centerBase.y = 5;
         this.centerBase.width = 630;
         this.centerBase.height = 420;
@@ -54,9 +54,9 @@ public class BackGroundLay extends MovieClip {
         //****************右边
         this.rightBase = new ScaleBitmap(new baseBorder(84, 84));
         this.rightBase.scale9Grid = new Rectangle(20, 20, 10, 10);
-        this.rightBase.x = this.centerBase.x + this.centerBase.width +10;
+        this.rightBase.x = this.centerBase.x + this.centerBase.width -15;
         this.rightBase.y = 50;
-        this.rightBase.width = 300;
+        this.rightBase.width = 304;
         this.body_mc.addChild(this.rightBase);
         //消息
 //        this.chatNewsBase = new ScaleBitmap(new baseNewsBorder(91, 41));
@@ -66,11 +66,6 @@ public class BackGroundLay extends MovieClip {
 //        this.chatNewsBase.width = 270;
 //        this.body_mc.addChild(this.chatNewsBase);
         //聊天
-        this.chatBase = new ScaleBitmap(new baseChatBorder(51, 81));
-        this.chatBase.scale9Grid = new Rectangle(20, 20, 10, 10);
-        this.chatBase.x = this.rightBase.x + 2;
-        this.chatBase.width = 276;
-        this.body_mc.addChild(this.chatBase);
         this.addEventListener(Event.ADDED_TO_STAGE, _addedToStageEvent);
         _bgImageLoad = new CGLoader();
         _bgImageLoad.load(new URLRequest(VideoConfig.HTTP + "image/other/background.jpg"));
@@ -102,7 +97,7 @@ public class BackGroundLay extends MovieClip {
         if (this.rightBase.height > 820) {
             _h = 820;
         }
-        this.chatBase.y = _h - 50;
+      //  this.chatBase.y = _h - 50;
         this.x = (this.stage.stageWidth - 1300) / 2;
 
         this.renderLayout();//提交布局

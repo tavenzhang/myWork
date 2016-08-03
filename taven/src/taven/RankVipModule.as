@@ -90,14 +90,6 @@ public class RankVipModule extends BaseModule {
       //  onTabChange(0);
     }
 
-    public function s2cGetUsrList(data:Object):void {
-        //trace("s2cGetUsrList--------------------------------------=" +data);
-//        if (_loadingView) {
-//            _loadingView.stopAllMovieClips();
-//            _loadingView.parent.removeChild(_loadingView);
-//            _loadingView = null;
-//        }
-    }
 
     //ui 消息处理
     override public function handMessage(data:*):void {
@@ -124,6 +116,11 @@ public class RankVipModule extends BaseModule {
             case CBProtocol.onGetMoreUserInfor://查询获取更多用户
                 updataDataList(FormatDataTool.userDataArray(data.items));
                 break;
+            case CBProtocol.login:
+                onTabChange(1);
+                onTabChange(0);
+                break;
+
         }
     }
 
@@ -142,7 +139,7 @@ public class RankVipModule extends BaseModule {
         this.graphics.clear();
         this.graphics.beginFill(0x000000, 0.7);
         var h:Number = _tabBar.height;
-        this.graphics.drawRoundRectComplex(-4, -4, _tabBar.width + 16, (heigh + h), 0, 0, 2, 2);
+        this.graphics.drawRoundRectComplex(-4, -4, _tabBar.width + 16, (heigh + h), 0, 0, 5, 5);
         this.graphics.endFill();
     }
 
@@ -157,37 +154,6 @@ public class RankVipModule extends BaseModule {
         }
     }
 
-
-//    private function c2sGetUsrList(startIndex:int = 0):void {
-//        var data:Object = new Object();
-//        data.start      = startIndex;
-//        data.end        = startIndex + 20;
-//        showLoading(true);
-//        NetManager.getInstance().sendDataObject({
-//            "cmd": CBProtocol.VIP_LIST_18002,
-//            "start": data.start,
-//            "end": data.end
-//        });//获取更多vip贵族信息
-//    }
-
-    //跳转到贵族链接
-//    private function onClickVip(evt:MouseEvent):void {
-//        VideoTool.jumpToGuiZhuURL();
-//    }
-
-//    private function test():void {
-//        var resut:Object = new Object();
-//        resut.items      = [];
-//        for (var i:int = 1; i <= 10; i++) {
-//            var data:Object = new Object();
-//            data.uid        = int(Math.random() * 9999) + 1;
-//            data.vip        = int(Math.random() * 6) + 1;
-//            data.name       = "taven" + int(Math.random() * 100);
-//            resut.items.push(data)
-//        }
-//        resut.isSingle = 0;
-//        addSeat(resut.items);
-//    }
 
     private var _totalList:Array;
 
@@ -272,31 +238,6 @@ public class RankVipModule extends BaseModule {
         _managList.dataList = _mamageArr;
         _view.menuBtn2.txtName.text = "管理员" + "(" + _mamageArr.length.toString() + ")";
         _view.menuBtn1.txtName.text = "观众" + "(" + _usrArr.length.toString() + ")";
-//        if (_dispatcherObj.peopleInfo) {
-//            if (_dispatcherObj.peopleInfo.total != null) {
-//                _peopleTotal = _dispatcherObj.peopleInfo.total;
-//            }
-//            if (_dispatcherObj.peopleInfo.guests != null) {
-//                _peopleGuet = _dispatcherObj.peopleInfo.guests;
-//            }
-//            var peopleNum:int = _peopleTotal - _peopleGuet - (_mamageArr.length); //必须把主播自己去掉
-//            peopleNum                          = peopleNum < 0 ? 0 : peopleNum;
-//
-//            _view.mcAudice["txtAudience"].text = peopleNum + "";
-//            if (peopleNum < 15) {
-//                _view.mcAudice["txtAudience"].text = "";
-//            }
-//            //trace("_dispatcherObj.peopleInfo.flushPerson ="+_dispatcherObj.peopleInfo.flushPerson);
-//        }
-//        else {
-//            _view.menuBtn1.txtName.text = "观众"+"";
-//            _view.mcAudice["txtAudience"].text = "";
-//        }
-//        _view.mcAudice.y  = _view.mcManage.y + _view.mcManage.height;
-//        _view.mcBg.height = _view.mcAudice.y + _view.mcAudice.height + 15;
-//        if (_view.parent) {
-//            _view.y = ((_view.parent as MovieClip).mcBg.height - _view.mcBg.height) / 2;
-//        }
     }
 
 

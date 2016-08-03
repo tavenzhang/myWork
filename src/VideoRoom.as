@@ -91,8 +91,10 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     //进入限制模块
     public var enterLimit_Module:MovieClip;
     public var rightSelectObject:Object;//右键选择对象
-
+    //右边菜单
     public var rightMenuBar:MovieClip;//右键选择对象
+    public var chatRoomModule:MovieClip;
+
     /**http://www.1room.my/
      * 事件处理者 看做保姆.. 做所有的功能
      */
@@ -207,21 +209,29 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             this.rankMenu_Moudle.y = _layout.leftBase.y ;
             rankMenu_Moudle.adjustHeiht(200);
             vipModule.y = rankMenu_Moudle.y + rankMenu_Moudle.height + 5;
-            vipModule.height = _layout.leftBase.h - (rankMenu_Moudle.height+20);
+            vipModule.height = _layout.leftBase.h - (rankMenu_Moudle.height+40);
 
 
            // vipModule.y = rankMenu_Moudle.y + rankMenu_Moudle.height + 10;
             videoUIView.x = _layout.centerBase.x;
-            videoUIView.y = _layout.centerBase.y - 8;
-            this.gift_Module.y = this.stage.stageHeight -  this.gift_Module.height+10;
-            var dh=_layout.leftBase.h- this.gift_Module.height+_layout.leftBase.y;
-            if(this.gift_Module.y>dh)
+            videoUIView.y = _layout.centerBase.y -8 ;
+            this.gift_Module.y = 550;
+            this.gift_Module.y = this.stage.stageHeight -  this.gift_Module.height-10;
+            if(this.stage.stageHeight> _layout.leftBase.h)
             {
-                this.gift_Module.y = dh;
+                this.gift_Module.y =  _layout.leftBase.y+ _layout.leftBase.h -  this.gift_Module.height+40;
             }
+            this.gift_Module.y= this.gift_Module.y<=550? 550:this.gift_Module.y;
 
-            roomEastUIView.x =_layout.rightBase.x;
+//            var dh=_layout.leftBase.h- this.gift_Module.height+_layout.leftBase.y;
+//            if(this.gift_Module.y>dh)
+//            {
+//                this.gift_Module.y = dh;
+//            }
+
+            roomEastUIView.x =_layout.rightBase.x+4;
             this.userInfo_Module.x = _layout.rightBase.x;
+            chatRoomModule.height = _layout.rightBase.h;
 //            video_Module["width"]=  720 ;
 //            video_Module["height"]=  540 ;
             this.rootSpr.x = _layout.view.x;
@@ -292,11 +302,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     }
 
     private function initVideoUI():void {
-        //10********视频
-        this.video_Module = VideoTool.getClassByModule("video.VideoPlayerView", "videoModule") as IPlayer;
-        this.video_Module.addEventListener("reGOHallEvent", onBackHallEvent);//回到大厅
-        videoUIView.addChild(video_Module as DisplayObject);
-        ModuleLoaderManger.getInstance().register(ModuleNameType.VIDEOPLAYER, video_Module as DisplayObject);
+
         //12 中间视频设置
         sides_Module = VideoTool.getMCTaven("sidesGroup");
         videoUIView.addChild(sides_Module);
@@ -311,8 +317,8 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         this.roomPlayInfor.y = 340;
         //18座位
         this.seats_Module = VideoTool.getMCTaven("seatView.Userpark");
-        seats_Module.x = 10;
-        this.seats_Module.y = 436;
+        seats_Module.x = 16;
+        this.seats_Module.y = 470;
         this.seats_Module.addEventListener(ktvEvent.KTV_TypeEvent, onSeatsKTVEvent);
         videoUIView.addChild(this.seats_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.SEATS_MODULE, seats_Module);
@@ -322,6 +328,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //Cc.log(VideoConfig.httpTomcat + VideoConfig.configXML.head.@gifturl + "?time=" + Math.random())
         this.gift_Module.configURLS(VideoConfig.httpTomcat + VideoConfig.configXML.head.@gifturl + "?time=" + Math.random(), VideoConfig.httpTomcat + VideoConfig.configXML.head.@depoturl, VideoConfig.HTTP);
         this.gift_Module.y = 470;
+        this.gift_Module.x =-20;
 
         this.gift_Module.addEventListener("sendGift", onGiftMouseEvent);
         videoUIView.addChild(this.gift_Module);
@@ -331,6 +338,11 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         enterLimit_Module.hide();
         videoUIView.addChild(enterLimit_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.LIMIT_EnterModule, enterLimit_Module);
+        //10********视频
+        this.video_Module = VideoTool.getClassByModule("video.VideoPlayerView", "videoModule") as IPlayer;
+        this.video_Module.addEventListener("reGOHallEvent", onBackHallEvent);//回到大厅
+        videoUIView.addChild(video_Module as DisplayObject);
+        ModuleLoaderManger.getInstance().register(ModuleNameType.VIDEOPLAYER, video_Module as DisplayObject);
     }
 
     private function initEastUI():void {
@@ -338,15 +350,16 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //聊天框
         var mc:MovieClip = new bulletin();
       //  mc.x = 920;
-        mc.y = 95;
-        roomEastUIView.addChild(mc);
+        //mc.y = 95;
+       // roomEastUIView.addChild(mc);
         ModuleLoaderManger.getInstance().register(ModuleNameType.ROOMMESS, mc);
-        var chat2:MovieClip = VideoTool.getMovieClipInstance("ChatRoomModule");
+        chatRoomModule = VideoTool.getMovieClipInstance("ChatRoomModule");
         //chat2.x = 920;
-        chat2.y = 140;
-        roomEastUIView.addChild(chat2);
+        chatRoomModule.y = 100;
+        chatRoomModule.x = 5;
+        roomEastUIView.addChild(chatRoomModule);
         addEventListener(CBModuleEvent.PLAYNAMELINK, onChatLinkEvent);
-        ModuleLoaderManger.getInstance().register(ModuleNameType.CHAT_MODULE2, chat2);
+        ModuleLoaderManger.getInstance().register(ModuleNameType.CHAT_MODULE2, chatRoomModule);
         //***********
         userInfo_Module = VideoTool.getMCTaven("UserInfo");
         userInfo_Module.y = 10;
@@ -356,7 +369,8 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //6左侧
         this.rightMenuBar = VideoTool.getMCTaven("common.RightMenuBar");
         roomEastUIView.addChild(rightMenuBar);
-        this.rightMenuBar.y = 85;
+        this.rightMenuBar.y = 60;
+        this.rightMenuBar.x = -5;
     }
 
     /**
