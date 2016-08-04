@@ -1,5 +1,6 @@
 package taven {
 import com.bit101.components.VBox;
+import com.junkbyte.console.Cc;
 import com.rover022.CBProtocol;
 import com.rover022.ModuleNameType;
 import com.rover022.event.CBModuleEvent;
@@ -456,6 +457,7 @@ public class PlayInfoModule extends BaseModule {
 	 * @private
 	 */
 	public function set data(value:Object):void {
+		Cc.log("play data===="+data);
 		_data = value;
 		if (_data) {
 			if (_data.headUrl != null) {

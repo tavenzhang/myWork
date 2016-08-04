@@ -78,19 +78,20 @@ public class GlobalControl extends BaseControl {
 //				}
 				var _arr:Object = JSON.parse(sObject.gamepop);
 				var _gameEvent:CBModuleEvent;
-				if (_arr["1"] == 1) {
-					_gameEvent = new CBModuleEvent(CBModuleEvent.SHOW_CAR_GAME);
-					RootManager.stage.dispatchEvent(_gameEvent);
-				}
-				if (_arr["2"] == 1) {
-					_gameEvent = new CBModuleEvent(CBModuleEvent.SHOW_FINGER_GAME);
-					RootManager.stage.dispatchEvent(_gameEvent);
-				}
+//				if (_arr["1"] == 1) {
+//					_gameEvent = new CBModuleEvent(CBModuleEvent.SHOW_CAR_GAME);
+//					RootManager.stage.dispatchEvent(_gameEvent);
+//				}
+//				if (_arr["2"] == 1) {
+//					_gameEvent = new CBModuleEvent(CBModuleEvent.SHOW_FINGER_GAME);
+//					RootManager.stage.dispatchEvent(_gameEvent);
+//				}
 				//
 				RootManager.stage.dispatchEvent(new CBModuleEvent(CBModuleEvent.RECONNECT_SOCKET));
 				//
 				trace("UserVoDataManger.userData.items---" + UserVoDataManger.userData.items);
 				view.playInfo_Module.showActiveBtns(UserVoDataManger.userData.items);
+				Cc.log("UserVoDataManger.userData.ruled==="+UserVoDataManger.userData.ruled);
 				if (int(UserVoDataManger.userData.ruled) != -1) {//已登祟
 					view.playInfo_Module.data = FormatDataTool.personInfo(UserVoDataManger.userData);//新版左侧
 				}

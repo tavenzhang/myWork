@@ -3,9 +3,9 @@
     2015年1月8日修改说明
     只对本地独立版本有效 页面正式版会 RootManager.getValue("httpTomcat") 方式从页面获取变量
     -->
-    <httpFunction>http://www.d1fang.cc</httpFunction>
-    <httpRes>http://www.d1fang.cc/flash</httpRes>
-    <httpTomcat>http://v.d1fang.cc</httpTomcat>
+    <httpFunction>http://www.o-front-test.com</httpFunction>
+    <httpRes>http://www.o-front-test.com/flash</httpRes>
+    <httpTomcat>http://v.o-front-test.com</httpTomcat>
     <!--这个socket 本地独立版本有效，正式环境会通过js 参数获取 -->
     <socket url="10.1.100.103"
             port="9056"

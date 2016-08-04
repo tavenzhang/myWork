@@ -1,5 +1,6 @@
 package giftModule {
 import com.greensock.TweenLite;
+import com.junkbyte.console.Cc;
 
 import flash.display.SimpleButton;
 import flash.display.Sprite;
@@ -262,7 +263,9 @@ public class GiftUI extends giftUIMc {
         if (!this.giftLoadData) {
             this.giftLoadData = new URLLoader();
         }
-        this.giftLoadData.load(new URLRequest(_url + "?v=" + int(Math.random() * 100000)));
+        var surl:String=_url + "?v=" + int(Math.random() * 100000);
+        this.giftLoadData.load(new URLRequest(surl));
+        Cc.log("sur==="+surl);
         this.giftLoadData.addEventListener(IOErrorEvent.IO_ERROR, _loadDataErrorEvent);
         this.giftLoadData.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _loadDataErrorEvent);
         this.giftLoadData.addEventListener(Event.COMPLETE, _loadDataComplete);
@@ -276,6 +279,7 @@ public class GiftUI extends giftUIMc {
         //trace("gift2:",e.target.data)
         try {
             giftData = JSON.parse(e.target.data);
+
         } catch (error:Error) {
             trace("礼物模块数据加载出错...");
         }
@@ -283,7 +287,8 @@ public class GiftUI extends giftUIMc {
 
     public function set giftData(_v:Object):void {
         this.giftDataObject = _v;
-        var _menuArr:Array = new Array;
+        Cc.log("giftData==="+_v.toString());
+        var _menuArr:Array = [];
         if (this.giftDataObject) {
             for (var i:int = 0; i < this.giftDataObject.length; i++) {
                 _menuArr.push({"label": this.giftDataObject[i].name, "data": this.giftDataObject[i].category});
