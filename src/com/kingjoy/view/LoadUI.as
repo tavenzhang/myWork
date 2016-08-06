@@ -28,13 +28,15 @@ public class LoadUI extends Sprite {
         this.addEventListener(Event.REMOVED_FROM_STAGE, _removedFromStageEvent);
         pButton.addEventListener(MouseEvent.CLICK, jumpToHelpURL);
         pButton.buttonMode = true;
-        pBtnText.defaultTextFormat.underline = true;
-        var defaultextformat:TextFormat = new TextFormat("宋体", 12, 0xBEA890, true, null, true);
-        pBtnText.setTextFormat(defaultextformat);
+        this._loading.mcView.width=10;
+       // pBtnText.defaultTextFormat.underline = true;
+       // var defaultextformat:TextFormat = new TextFormat("宋体", 12, 0xBEA890, true, null, true);
+       // pBtnText.setTextFormat(defaultextformat);
 //        var googleAdClip:GoogleAdSence = new GoogleAdSence();
 //        googleAdClip
          
     }
+
 
     public function get pButton():MovieClip {
         return _loading.helpBtn;
@@ -43,6 +45,8 @@ public class LoadUI extends Sprite {
     public function get pBtnText():TextField {
         return _loading.helpBtn._mession;
     }
+
+
 
     /**
      * 设置加载面板上面的信息
@@ -61,6 +65,7 @@ public class LoadUI extends Sprite {
         }
         if (_progress != -1) {
             loadingUI.progressValue = _progress;
+
         }
         if (_progress >= 100) {
             loadingUI.parent.removeChild(loadingUI);
@@ -109,7 +114,9 @@ public class LoadUI extends Sprite {
         var matr:Matrix = new Matrix();
         matr.createGradientBox(this.stage.stageWidth, this.stage.stageHeight, 80, 0, 0);
         //this.graphics.beginGradientFill(GradientType.LINEAR, [0x421C4F,0xD84EBA], [1, 1], [0x00, 0xFF],matr);
-        this.graphics.beginFill(0xF6F1EB);
+       // this.graphics.beginFill(0xF6F1EB);
+        this.graphics.beginFill(0xfefefe);
+
         this.graphics.drawRect(0, 0, this.stage.stageWidth, this.stage.stageHeight);
         this.graphics.endFill();
     }
@@ -118,6 +125,7 @@ public class LoadUI extends Sprite {
         if (this._loading) {
             this._loading.txt.text = int(_value) + "%";
         }
+        _loading.mcView.width=(_value/100)*725;
     }
 
     public function set infoText(_value:String):void {
