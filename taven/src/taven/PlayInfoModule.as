@@ -1,4 +1,5 @@
 package taven {
+import com.adobe.utils.StringUtil;
 import com.bit101.components.VBox;
 import com.junkbyte.console.Cc;
 import com.rover022.CBProtocol;
@@ -28,6 +29,7 @@ import taven.playerInfo.RankStartView;
 import taven.playerInfo.VideoHomeView;
 import taven.utils.HeadIconBuildTool;
 import taven.utils.MathUtils;
+import taven.utils.StringUtils;
 import taven.utils.TweenHelp;
 
 import tool.VideoTool;
@@ -85,9 +87,11 @@ public class PlayInfoModule extends BaseModule {
 		gameBox = new VBox(_view, 0, 0);
 		gameBox.addChild(_view.mcJuBao);
 		gameBox.addChild(_view.mcCaiQuan);
+		_view.mcInfo.visible =false;
 		initNewBtn();
-
 	}
+
+
 	private function  initNewBtn():void{
 		_view.mcBtnIndex.txtBtnName.text = "首页";
 		_view.mcBtnRank.txtBtnName.text="排行";
@@ -98,11 +102,17 @@ public class PlayInfoModule extends BaseModule {
 		_view.mcBtnMsg.txtBtnName.text="消息";
 		initListnerBtn(_view.mcBtnIndex);
 		initListnerBtn(_view.mcBtnRank);
+		_view.mcBtnRank.btnView.gotoAndStop(2);
 		initListnerBtn(_view.mcBtnHome);
+		_view.mcBtnHome.btnView.gotoAndStop(3);
 		initListnerBtn(_view.mcBtnShop);
+		_view.mcBtnShop.btnView.gotoAndStop(4);
 		initListnerBtn(_view.mcBtnFuni);
+		_view.mcBtnFuni.btnView.gotoAndStop(5);
 		initListnerBtn(_view.mcBtnCJ);
+		_view.mcBtnCJ.btnView.gotoAndStop(6);
 		initListnerBtn(_view.mcBtnMsg);
+		_view.mcBtnMsg.btnView.gotoAndStop(7);
 	}
 
 	private  function initListnerBtn(mc:MovieClip):void{
@@ -117,7 +127,23 @@ public class PlayInfoModule extends BaseModule {
 			target.gotoAndStop(1);
 		});
 		mc.addEventListener(MouseEvent.CLICK,onNewBtnClick);
+		headMc.addEventListener(MouseEvent.ROLL_OVER,onRollOverHandle);
+		headMc.addEventListener(MouseEvent.ROLL_OUT,onRollOverHandle);
 	}
+
+	private function onRollOverHandle(evt:Event):void
+	{
+		if(evt.type == MouseEvent.ROLL_OVER)
+		{
+			_view.mcInfo.visible = true;
+		}
+		else
+		{
+			_view.mcInfo.visible = false;
+		}
+	}
+
+
 
 	private  function  onNewBtnClick(evt:Event):void
 	{
@@ -466,6 +492,9 @@ public class PlayInfoModule extends BaseModule {
 			_view.btnRegist.visible = _view.btnLogin.visible = false;
 			headMc.visible = true;
 			_view.mcMail.gotoAndStop(1);
+			_view.mcInfo.txtName.text=_data.name;
+			_view.mcInfo.txtDetail.text=StringUtils.strStitute("等级: {0}级 \n钻石: {1}个",_data.richLv,_data.points);
+			trace("_view.mcInfo.txtDetail.text="+_view.mcInfo.txtDetail.text)
 		}
 		else {
 			headMc.visible          = false;

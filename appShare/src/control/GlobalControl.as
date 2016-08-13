@@ -97,6 +97,7 @@ public class GlobalControl extends BaseControl {
 				}
 				UserVoDataManger.userData.headimg = VideoTool.formatHeadURL(UserVoDataManger.userData.headimg);
 				view.userInfo_Module.userObject   = UserVoDataManger.userData;//右下角用户信息
+
 				UserVoDataManger.userDataFirst    = false;
 				//收到信息之后发送 签到任务
 				var iPlay:IPlayer                 = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as IPlayer;

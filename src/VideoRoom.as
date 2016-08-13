@@ -214,7 +214,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
 
            // vipModule.y = rankMenu_Moudle.y + rankMenu_Moudle.height + 10;
             videoUIView.x = _layout.centerBase.x;
-            videoUIView.y = _layout.centerBase.y -4 ;
+            videoUIView.y = _layout.centerBase.y +5 ;
             this.gift_Module.y = 550;
             this.gift_Module.y =  seats_Module.y+seats_Module.height -40;
 
@@ -232,6 +232,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
 
             roomEastUIView.x =_layout.rightBase.x+4;
             this.userInfo_Module.x = _layout.rightBase.x;
+            this.userInfo_Module.visible=true;
             chatRoomModule.height = _layout.rightBase.h;
 //            video_Module["width"]=  720 ;
 //            video_Module["height"]=  540 ;
@@ -363,7 +364,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         ModuleLoaderManger.getInstance().register(ModuleNameType.CHAT_MODULE2, chatRoomModule);
         //***********
         userInfo_Module = VideoTool.getMCTaven("UserInfo");
-        userInfo_Module.y = 10;
+        userInfo_Module.y = 20;
         userInfo_Module.addEventListener(StatusEvent.STATUS, roomHandler.onUserInfo);
         roomEastUIView.addChild(this.userInfo_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.USERINFOUI, userInfo_Module);

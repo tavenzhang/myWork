@@ -117,6 +117,7 @@ public class UserIconMovieClip extends MovieClip {
         }
     }
 
+
     public function updateLvByImage(_id:int):void {
         _image.url = VideoConfig.HTTP + "image/rlv_icon/" + _id + ".png";
         _image.load();

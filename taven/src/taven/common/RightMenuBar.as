@@ -18,11 +18,19 @@ public class RightMenuBar extends leftMenuMc {
     public function RightMenuBar() {
 
         menuBarView = new taven_rankMenu();
-        menuBarView.menuBtn1.txtName.text = "聊天";
-        menuBarView.menuBtn2.txtName.text = "点歌";
-        menuBarView.menuBtn3.txtName.text = "麦序";
-        tabBar = new TTabBar([menuBarView.menuBtn1, menuBarView.menuBtn2, menuBarView.menuBtn3], onTabChange, 0);
+//        menuBarView.menuBtn1.txtName.text = "聊天";
+//        menuBarView.menuBtn2.txtName.text = "点歌";
+//        menuBarView.menuBtn3.txtName.text = "麦序";
+      tabBar = new TTabBar([menuBarView.menuBtn1, menuBarView.menuBtn2, menuBarView.menuBtn3], onTabChange, 1);
+        menuBarView.menuBtn1.txtName.text = "";
+        menuBarView.menuBtn2.txtName.text = "聊天";
+        menuBarView.menuBtn3.txtName.text = "";
+        menuBarView.menuBtn1.stop();
+        menuBarView.menuBtn2.gotoAndStop(1);
+        menuBarView.menuBtn3.stop();
         menuWidth = tabBar.width;
+        tabBar.mouseEnabled=tabBar.mouseChildren=false;
+        menuBarView.menuBtn1.mouseEnabled=menuBarView.menuBtn2.mouseEnabled=menuBarView.menuBtn3.mouseEnabled=false;
         this.addChild(menuBarView);
         this.addChild(tabBar);
 

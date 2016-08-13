@@ -15,7 +15,6 @@
     <testUID>hajea10@qq.com</testUID>
     <testPASS>111111</testPASS>
     <testRoomID>hajea10@qq.com</testRoomID>
- 
 
     <addressPublisher>/download/1room_newaddress.zip</addressPublisher>
 
@@ -28,7 +27,7 @@
           gxmlurl="gift/gift_xml/"
           giconurl="/image/gift_material/{0}.png"
 
-          upurl="/video_gs/video/img/coverUpload"
+          upurl="coverUpload"
           gifturl="/video_gs/conf"
           depoturl="/video_gs/pack/list2"
           videoUrl="/public/images/anchorimg/{0}_{1}.jpg"/>"

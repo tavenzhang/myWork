@@ -89,7 +89,7 @@ public class BackGroundLay extends MovieClip {
         if (_leftHeight > 820) {
             _leftHeight= 820;
         }
-        _bgImageLoad.y = 0;
+        _bgImageLoad.y = -150;
         _bgImageLoad.x = -300;
         this.leftBase.height = _leftHeight;
         this.rightBase.height = _leftHeight;

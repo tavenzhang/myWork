@@ -172,7 +172,7 @@ document.domain = document.domain;
 			document.domain=gsserver.replace("http://www.","");
 		}
 		//alert("showLogin");
-		showAdIFrame(gserver+'/loginwin/winLogin.html',535, 650);
+		showAdIFrame(gserver+'/loginwin/winLogin.html',535, 390);
 		flashClickEvent();//广告调用
 		return false;
 		
@@ -185,7 +185,7 @@ document.domain = document.domain;
                 if(gsserver.indexOf("http://www.")>-1){              
 		          document.domain=gsserver.replace("http://www.","");
                 }
-		showAdIFrame(gserver+'/loginwin/winLogin.html',535, 650);
+		showAdIFrame(gserver+'/loginwin/winLogin.html',535, 390);
 		flashClickEvent();//广告调用
 		return false;
 		

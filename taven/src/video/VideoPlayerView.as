@@ -42,6 +42,7 @@ import sk.video.videoPlayer;
 import tool.GoogleAdSence;
 import tool.VideoTool;
 
+
 public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer {
 	public var isAnchor:Boolean               = false;
 	public var flvName:String                 = "";
@@ -74,6 +75,8 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 //    public var signView:SignViewUI;
 	public var rtmpReadyOK:Boolean            = false;
 	private var googleAdClip:GoogleAdSence;
+
+
 
 	public function VideoPlayerView():void {
 		googleAdClip = new GoogleAdSence();
@@ -172,7 +175,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		if (arglenth == 3) {
 			var result:int = int(args[2]);
 			if (result > 1) {
-				result = VideoTool.encrypt(result)
+				result = VideoTool.encrypt(result);
 				Cc.log("second----------------------" + result);
 				nc.call("netping", null, result);
 			}
@@ -438,7 +441,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			case "NetStream.Record.Failed"://Error
 				trace("录制出错..严重bug");
 				this.removeMic();//出错,切麦
-				this.infoText = "对不起,您没有录制权限."
+				this.infoText = "对不起,您没有录制权限.";
 				break;
 			case "NetStream.Play.Start":
 				break;
@@ -792,7 +795,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		upImgLoad.addEventListener(Event.COMPLETE, _upImgCompleteEvent);
 		upImgLoad.addEventListener(IOErrorEvent.IO_ERROR, _upImgError);
 		upImgLoad.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _upImgError);
-		var url:String            = videoRoom.getDataByName(ModuleNameType.TOMCATROOT) + videoRoom.getDataByName(ModuleNameType.CONFIGXML).head.@upurl;
+		var url:String            = VideoConfig.HTTP + videoRoom.getDataByName(ModuleNameType.CONFIGXML).head.@upurl;
 		var urlRequest:URLRequest = new URLRequest(url);
 		urlRequest.data           = headData;
 		urlRequest.method         = URLRequestMethod.POST;

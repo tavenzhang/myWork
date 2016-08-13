@@ -16,11 +16,11 @@ public class VideoConfig {
 	public static var P2P_OPEN:Boolean       = false;
 	public static var ENV_XML:XML            = null;
 	public static var HTTP:String            = "";
-	public static var HOST:String            = "183.131.213.175";
-	public static var PORT:int               = 9013;
+	public static var HOST:String            = "116.31.99.233";
+	public static var PORT:int               = 9003;
 	public static var connectRTMP:String;
-	public static var roomID:int             = 1761828;//rover022 101116443,101116441,101120981,101116395,101116444,101116395
-	public static var loginKey:String        = "111";
+	public static var roomID:int             = 1973520;//rover022 101116443,101116441,101120981,101116395,101116444,101116395
+	public static var loginKey:String        = "30d0340ac6d7fcd92dd4f9775efd8312";
 	public static var testUID:String         = "test1@qq.com";
 	public static var testPASS:String        = "123456";
 	//版本控制
