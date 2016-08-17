@@ -30,7 +30,7 @@ public class LoaderHelp extends Sprite {
         loader = new Loader();
         //loader.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS, progressHandler);
         loader.contentLoaderInfo.addEventListener(Event.COMPLETE, completeHandler);
-        loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onError)
+        loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onError);
         loader.load(new URLRequest(url));
         trace(" URLRequest.load===="+url);
     }
@@ -44,7 +44,7 @@ public class LoaderHelp extends Sprite {
         }
         loader.unloadAndStop();
         loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, completeHandler);
-        loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR, onError)
+        loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR, onError);
         _sucFun =null;
     }
 

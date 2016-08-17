@@ -65,7 +65,7 @@ public class ChoiceBox extends Sprite {
 		} else {
 			TweenLite.to(_pane.guiZhuContain, 0.3, {x: 0});
 		}
-		_pane.guizhuBtn._nameTxt.text = isShowSubView ? "贵族专属 >>>" : "贵族专属 <<<"
+		_pane.guizhuBtn._nameTxt.text = isShowSubView ? "贵族专属 >>>" : "贵族专属 <<<";
 		event.stopPropagation();
 	}
 

@@ -80,7 +80,7 @@ public class RankStartView extends taven_starViewRank{
         super.visible = value;
         if(this.parent&&visible)
         {
-            this.parent.addChildAt(this,this.parent.numChildren-1)
+            this.parent.addChildAt(this,this.parent.numChildren-1);
             if(!_isSending)
                 c2sGetListData();
         }
@@ -90,7 +90,7 @@ public class RankStartView extends taven_starViewRank{
 
 
     public function c2sGetListData():void {
-        var data:Object = new Object();
+        var data:Object = {};
         /**获取魅力之星排行 */
             //  public static const list_start_15004:int = 15004;
         EventUtils.secndNetData(_baseModule.videoRoom, CBProtocol.list_start_15004, data, s2cGetListData);

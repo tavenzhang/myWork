@@ -86,7 +86,7 @@ public class BaseResRoom extends MovieClip {
             }
             if (ExternalInterface.available) {
                 regAS_JsFuntion();
-                var serverUrlList:String = ExternalInterface.call("getRoomKey")
+                var serverUrlList:String = ExternalInterface.call("getRoomKey");
                 var dataArr:Array = serverUrlList.split(":");
                 var port:int = dataArr[1];
                 var soketString:String = dataArr[0];
@@ -115,7 +115,7 @@ public class BaseResRoom extends MovieClip {
                     _isTestingSocket = false;
                     readyConnectSocket();
                 }
-        )
+        );
         socketPingManager.testSocktList(ipList, port);
     }
 
@@ -227,7 +227,7 @@ public class BaseResRoom extends MovieClip {
 
     private function onFail(event:LoaderEvent):void {
         Alert.Show("文件加载错误,请刷新页面重试...", "文件加载错误");
-        return;
+
     }
 
     public function initModules():void {

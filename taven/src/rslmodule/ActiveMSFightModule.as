@@ -16,7 +16,7 @@ public class ActiveMSFightModule extends BaseRslModule{
 
     override  public function initView():void {
         _ui = new active_moshouView();
-        resetUI()
+        resetUI();
         this.addChild(_ui);
         _ui.x =20;
         _ui.y =80;
@@ -28,7 +28,7 @@ public class ActiveMSFightModule extends BaseRslModule{
 
     override public function show():void {
         super.show();
-        var data:Object = new Object();
+        var data:Object = {};
         EventUtils.secndNetDataNew( CBProtocol.list_Active_15007, data, s2cGetListData);
     }
 
@@ -45,7 +45,7 @@ public class ActiveMSFightModule extends BaseRslModule{
                         var guestArray:Array=[];
                         var dataRankItems:Array = dataList[i].rankJsonList.split("||");
                         for (var k:int = 0; k < dataRankItems.length; k++) {
-                            var item:Object = JSON.parse(dataRankItems[k])
+                            var item:Object = JSON.parse(dataRankItems[k]);
                             if (item&&item.type==1) {
                                 hostArr.push(item);
                             }

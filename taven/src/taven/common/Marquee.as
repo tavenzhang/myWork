@@ -17,7 +17,7 @@ public class Marquee extends MovieClip {
 		public var txt:TextField;
 		private var _tweenText:TweenLite;
 		private var _tweenBool:Boolean = false;
-		private var msgArray:Array = new Array();
+		private var msgArray:Array = [];
 		
 		private var aTime:int=30;
 		private var cTime:int=0;

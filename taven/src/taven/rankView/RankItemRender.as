@@ -104,7 +104,7 @@ public class RankItemRender extends tave_rankItemRender implements IListItem {
             if (_txtRank.text.length < 2) {
                 _txtRank.text = "0" + _txtRank.text;
             }
-            _txtName.htmlText = '<a href="com.rover022.event:' + data.rank + '">' + data.name + '</a>'
+            _txtName.htmlText = '<a href="com.rover022.event:' + data.rank + '">' + data.name + '</a>';
             switch (_txtRank.text) {
                 case "01":
                     rackBg.gotoAndStop(1);
@@ -133,7 +133,7 @@ public class RankItemRender extends tave_rankItemRender implements IListItem {
             {
                 //this.width=wide;
                 _mcMoney.x    = wide - 100;
-                _txtName.x    = _txtRank.x + _txtRank.width + ((wide - MIX_WIDTH) / 4) * 3 + 20
+                _txtName.x    = _txtRank.x + _txtRank.width + ((wide - MIX_WIDTH) / 4) * 3 + 20;
                 _mcLine.width = wide - 4;
                 //_mcMoney.scaleX=_reWidth/wide;
             }

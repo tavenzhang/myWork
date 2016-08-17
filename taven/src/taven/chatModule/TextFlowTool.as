@@ -142,7 +142,7 @@ public class TextFlowTool {
     public static function buildInlineGraphicElement(soure:* = null):InlineGraphicElement {
         var inlineGraphicElement:InlineGraphicElement = new InlineGraphicElement;
         if (soure != "" && soure != null) {
-            inlineGraphicElement.width = undefined
+            inlineGraphicElement.width = undefined;
             inlineGraphicElement.height = undefined;
             inlineGraphicElement.source = soure;
             inlineGraphicElement.paddingBottom = 0;

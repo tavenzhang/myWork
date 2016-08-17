@@ -132,7 +132,7 @@ public class RichText extends MovieClip {
         trace("appendRichTxt");
         var copyMc:TextFlow = TextConverter.importToFlow(markup, TextConverter.TEXT_LAYOUT_FORMAT);
         if (copyMc == null) {
-            trace("丢进来的聊天元素不是TextFlow")
+            trace("丢进来的聊天元素不是TextFlow");
             return;
         }
         if (isFirstContain) {
@@ -140,7 +140,7 @@ public class RichText extends MovieClip {
             isFirstContain = false;
         }
         while (copyMc.numChildren > 0) {
-            var item:FlowElement = copyMc.getChildAt(0)
+            var item:FlowElement = copyMc.getChildAt(0);
             textFlow.addChild(copyMc.getChildAt(0));
             poolArray.push(item);
             if (poolArray.length > maxLength) {

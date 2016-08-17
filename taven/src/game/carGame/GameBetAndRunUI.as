@@ -103,7 +103,7 @@ public class GameBetAndRunUI extends IGamePane {
 			return;
 		}
 		if (carGame.uid < 50000) {
-			carGame.showMessage("用户未登录")
+			carGame.showMessage("用户未登录");
 			return
 		}
 		var userObjct:Object = carGame.videoRoom.getDataByName(ModuleNameType.USERDATA);
@@ -349,7 +349,7 @@ class RaceSkin extends MovieClip {
 	}
 
 	public function init():void {
-		setSelfPoint(0)
+		setSelfPoint(0);
 		setTopPoint(0);
 		for (var i:int = 1; i <= 3; i++) {
 			var _btn:MovieClip = view.bitSkin["brt" + i + "_btn"];

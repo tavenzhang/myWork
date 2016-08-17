@@ -34,7 +34,7 @@ public class RunTool {
             var drageMc:Sprite = e.currentTarget as Sprite;
             //soureMc.isDown = true;
             //soureMc.initPoint = new Point(com.rover022.event.stageX, com.rover022.event.stageY);
-            drageMc.stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp)
+            drageMc.stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
             drageMc.startDrag()
         }
     }
@@ -51,7 +51,7 @@ public class RunTool {
     public static function buildBtn(parent:DisplayObjectContainer, classSkin:String, fontsize:Number, fontcolor:Number, txt:String, clickFun:Function, _x:Number, _y:Number):SimpleGameButton {
         var _class:Class = getDefinitionByName(classSkin) as Class;
         var skin:MovieClip = new _class as MovieClip;
-        var btn:SimpleGameButton = new SimpleGameButton(skin, fontsize, fontcolor, txt)
+        var btn:SimpleGameButton = new SimpleGameButton(skin, fontsize, fontcolor, txt);
         btn.addEventListener(MouseEvent.CLICK, clickFun);
         parent.addChild(btn);
         btn.x = _x;

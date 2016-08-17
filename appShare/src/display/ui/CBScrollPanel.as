@@ -27,7 +27,7 @@ public class CBScrollPanel extends Sprite {
         addChild(view);
 
         bgBitMap            = new ScaleBitmap(new trackImage_taven().bitmapData);
-        bgBitMap.scale9Grid = new Rectangle(2, 14, 8, 20)
+        bgBitMap.scale9Grid = new Rectangle(2, 14, 8, 20);
         bgBitMap.height     = contontHeight;
         bgView.addChild(bgBitMap);
         bgView.x = 270;

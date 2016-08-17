@@ -15,7 +15,7 @@ package taven.common {
         private var totalValue:int = 135;
         public function progress(uiView:MovieClip) {
             mask_mc = uiView.mask_mc;
-            bar_mc= uiView.bar_mc
+            bar_mc= uiView.bar_mc;
             this.bar_mc = new scaleSprite(this.bar_mc);
             this.bar_mc.mask = this.mask_mc;
         }

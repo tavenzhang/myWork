@@ -36,7 +36,7 @@ public class VideoControlView extends videoControl {
         this.speaker_mc.addEventListener(MouseEvent.CLICK, _speakerClickEvent);
         this.playControl_mc.visible = false;
         //
-        _parent = src
+        _parent = src;
         _parent.addEventListener(MouseEvent.ROLL_OVER, _rollOverEvent);
         _parent.addEventListener(MouseEvent.ROLL_OUT, _rollOutEvent);
         addEventListener(Event.CHANGE, controlChangeEvent);

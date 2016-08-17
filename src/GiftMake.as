@@ -92,7 +92,7 @@ public class GiftMake extends MovieClip {
         numTxt = new TextField();
         numTxt.text = "1";
         numTxt.maxChars = 4;
-        numTxt.restrict = "0-9"
+        numTxt.restrict = "0-9";
         numTxt.x = 104;
         numTxt.y = 300;
         numTxt.type = TextFieldType.INPUT;

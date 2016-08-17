@@ -96,7 +96,7 @@ public class SignActivityPanel extends Sprite implements IVideoModule {
         //0,0 ,0 , 0,1,0,1,1
         pointClip = btnGet;
 
-        topTime = 10 *60
+        topTime = 10 *60;
         if (sObject.ret == 1 || sObject.ret == 2112) {
 
             points = sObject.points;
@@ -104,7 +104,7 @@ public class SignActivityPanel extends Sprite implements IVideoModule {
 
             time = sObject.time;
             systime = sObject.systime;
-            systimeDate = VideoTool.getDateByString(systime)
+            systimeDate = VideoTool.getDateByString(systime);
             view.num_txt.text = num.toString();
             view.pointTxt.text = points.toString();
         }
@@ -174,7 +174,7 @@ public class SignActivityPanel extends Sprite implements IVideoModule {
     public function loadShareData():Object {
         var _signal:Object = VideoTool.getShareObject("MaxSinging");
         if (_signal == null) {
-            _signal = new Object();
+            _signal = {};
             _signal.current = 0;
             _signal.time = new Date();
         } else {

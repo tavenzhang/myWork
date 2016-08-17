@@ -10,7 +10,7 @@ import taven.utils.HeadIconBuildTool;
 
 public class MenuUserInfo extends menuUserInfoMc {
     private var _textFormat:TextFormat = new TextFormat("宋体", 14, 0xFFFFFF, true);
-    private var _icoMc:UserIconMovieClip
+    private var _icoMc:UserIconMovieClip;
 
 
     public function MenuUserInfo() {

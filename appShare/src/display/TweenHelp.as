@@ -46,7 +46,7 @@ package display
 					{
 						onComplete();
 					}
-					return;
+
 				}
 				else
 				{

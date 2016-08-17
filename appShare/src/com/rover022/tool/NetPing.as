@@ -24,7 +24,7 @@ public class NetPing extends EventDispatcher {
         var _arr:Array = param1.split("@@");
         _rtmp = _arr[0];
         _name = _arr[1] == undefined ? "未知线路" : _arr[1];
-        return;
+
     }// end function
     public function get label():String {
         return _name;//+ ":" + desc;
@@ -77,7 +77,7 @@ public class NetPing extends EventDispatcher {
                 this.callNetPing();
             }
         }
-        return;
+
     }// end function
     private function _netStatusEvent(event:NetStatusEvent):void {
         //trace("this rtmp=" + this.rtmp + "------------------------------com.rover022.event.info.code ==" + com.rover022.event.info.code);
@@ -107,7 +107,7 @@ public class NetPing extends EventDispatcher {
                 break;
             }
         }
-        return;
+
     }// end function
 // end function
     private function callNetPing():void {
@@ -133,7 +133,7 @@ public class NetPing extends EventDispatcher {
         if (_nc && _nc.connected) {
             _nc.close();
         }
-        return;
+
     }// end function
     public function get speedOk():Boolean {
         return _speedOk;
@@ -155,17 +155,17 @@ public class NetPing extends EventDispatcher {
 
     private function _netErrorEvent(param1:Object):void {
         speedOk = true;
-        return;
+
     }
 
     public function onBWCheck(...args):void {
-        return;
+
     }// end function
     public function onBWDone(...args):void {
-        return;
+
     }// end function
     public function onMetaData(...args):void {
-        return;
+
     }// end function
     public function get isForceClose():Boolean {
         return _isForceClose;

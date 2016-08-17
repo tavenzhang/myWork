@@ -15,7 +15,7 @@ public class SocketPingManager extends  EventDispatcher{
     public  var bestHost:String="";
     private var _socktList:Array=[];
     private var _socketClient:Socket;
-    private var _socketPort:int=0
+    private var _socketPort:int=0;
     public  function SocketPingManager() {
         _socketClient = new Socket();
     }

@@ -22,7 +22,7 @@ public class GiftCircleView {
     private var _videoRomm:IVideoRoom ;
     private var _waitList:Array;
     private var _firstItem:ItemGiftCircle;
-    private var _secondItem:ItemGiftCircle
+    private var _secondItem:ItemGiftCircle;
     private var itemPool:ObjectPool;
     private var _isMoving:Boolean=false;
     public function GiftCircleView(view:taven_mcCurcle,roomI:IVideoRoom) {

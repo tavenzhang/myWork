@@ -12,7 +12,7 @@ public class CCComboBox extends ComboBox{
     }
     public function update():void{
 
-        setLabelButtonLabel()
+        setLabelButtonLabel();
         _list.draw();
     }
 

@@ -99,7 +99,7 @@ public class PlayerListView {
                 c2sGetUsrList(false);
             }
             if (_isFirDataManage) {
-                c2sGetUsrList(true)
+                c2sGetUsrList(true);
                 //_isFirDataManage =false;
             }
         }
@@ -211,10 +211,10 @@ public class PlayerListView {
 
     private function c2sGetUsrList(isManage:Boolean, startIndex:int = 0):void {
         if (isManage) {
-            EventUtils.secndNetData(_dispatcherObj.videoRoom, 11008, new Object(), s2cGetUsrList);
+            EventUtils.secndNetData(_dispatcherObj.videoRoom, 11008, {}, s2cGetUsrList);
         }
         else {
-            var data:Object = new Object();
+            var data:Object = {};
             data.start      = startIndex;
             data.end        = startIndex + 20;
             EventUtils.secndNetData(_dispatcherObj.videoRoom, 11001, data, s2cGetUsrList);
@@ -232,7 +232,7 @@ public class PlayerListView {
 
     private function c2sFindUsrInfo(name:String, isUserRequest:Boolean):void {
         if (name != "" && name.length <= 8) {
-            var data:Object = new Object();
+            var data:Object = {};
             if (!_loadingView) {
                 _loadingView        = new res_taveLoading();
                 _loadingView.scaleX = _loadingView.scaleY = 0.8;
@@ -260,7 +260,7 @@ public class PlayerListView {
         if (view.currentFrame != view.totalFrames) {
             if (view.btnFound == evt.target) //点击查找
             {
-                view.gotoAndStop(view.totalFrames)
+                view.gotoAndStop(view.totalFrames);
                 view.txtInput.text = isUsrRetirve ? _lastUsrInfo : _lastManageInfo;
                 if (!view.txtInput.hasEventListener(Event.CHANGE)) {
                     view.txtInput.addEventListener(Event.CHANGE, onFindTxtChange);

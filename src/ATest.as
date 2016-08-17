@@ -62,13 +62,13 @@ public class ATest extends Sprite {
 
 	public function testClip():void {
 		var loader:Loader = new Loader();
-		loader.load(new URLRequest("demo.swf"))
+		loader.load(new URLRequest("demo.swf"));
 		addChild(loader);
 		loader.x = Math.random() * 800;
 		loader.y = Math.random() * 800;
-		addChild(loader)
+		addChild(loader);
 		var _class:Class = getDefinitionByName("_fla.sprite35_2") as Class;
-		trace(_class)
+		trace(_class);
 		for (var i:int = 0; i < 100; i++) {
 		}
 	}

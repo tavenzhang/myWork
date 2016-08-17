@@ -243,23 +243,30 @@ public class RankVipModule extends BaseModule {
 
     private function sortFuc(a:Object, b:Object):int {
         var resutlt:int = 0;
-        if (a.power > b.power) {
-            resutlt = -1;
-        }
-        else if (a.power < b.power) {
+        if(a.vip>=b.vip){
             resutlt = 1;
         }
-        else {
-            if (a.level > b.level) {
+        else
+        {
+            if (a.power > b.power) {
                 resutlt = -1;
             }
-            else if (a.level < b.level) {
+            else if (a.power < b.power) {
                 resutlt = 1;
             }
             else {
-                resutlt = 0;
+                if (a.level > b.level) {
+                    resutlt = -1;
+                }
+                else if (a.level < b.level) {
+                    resutlt = 1;
+                }
+                else {
+                    resutlt = 0;
+                }
             }
         }
+
         return resutlt;
     }
 

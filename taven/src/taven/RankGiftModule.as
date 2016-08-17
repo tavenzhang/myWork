@@ -97,7 +97,7 @@ public class RankGiftModule extends BaseModule {
 
     /**设置数据接口*/
     public function updateData(dataArr:Array, isDelete:Boolean = false):void {
-        dataArr              = ( dataArr == null) ? new Array() : dataArr;
+        dataArr              = ( dataArr == null) ? [] : dataArr;
         var isChange:Boolean = false;
         if (isDelete) //删除元素
         {

@@ -48,7 +48,7 @@ public class RankGiftRender extends taven_giftRender implements IListItem {
             CSS_STYPE_SHEET.parseCSS("a:hover{textDecoration:underline}");
         }
         _itemIcoMc = new loadHeadElement();
-        DisplayUtils.replaceDisplayer(_mcGiftIco.sp, _itemIcoMc)
+        DisplayUtils.replaceDisplayer(_mcGiftIco.sp, _itemIcoMc);
         _itemIcoMc.width          = _mcGiftIco.sp.width;
         _itemIcoMc.height         = _mcGiftIco.sp.height;
         _reWidth                  = this.width;

@@ -99,8 +99,8 @@ public class baseScroll_taven extends  EventDispatcher {
 				this.rect = this.trackRect.clone();
 				this.rect.height -= this.Thumb.height;//去除滑块的高度
 			}
-			_containView.addEventListener(MouseEvent.MOUSE_DOWN,onPanClick)
-			_containView.addEventListener(MouseEvent.MOUSE_UP,onPanClick)
+			_containView.addEventListener(MouseEvent.MOUSE_DOWN,onPanClick);
+			_containView.addEventListener(MouseEvent.MOUSE_UP,onPanClick);
 			this.Thumb.y = this.rect.y;
 			if (this.UpButton || this.DownButton) {
 				this.time = new Timer(600);
@@ -138,7 +138,7 @@ public class baseScroll_taven extends  EventDispatcher {
 					break;
 				case this.DownButton:
 					this.incre = int(this._stepNum);
-					this.increBool = true
+					this.increBool = true;
 					this.time.delay = 600;
 					this.time.start();
 					break;

@@ -94,12 +94,12 @@ public class ChildStreamView extends Sprite {
                 }
                 break;
             case "NetStream.Publish.BadName"://Error 流发布失败,已被人发布
-                this.infoText = "对不起,流被占用,无法发言."
+                this.infoText = "对不起,流被占用,无法发言.";
                 this.dispatchEvent(new Event("publishAudioComplete"));
                 break;
             case "NetStream.Record.NoAccess"://Error 录制出错..严重bug
             case "NetStream.Record.Failed"://Error
-                this.infoText = "对不起,您没有录制权限."
+                this.infoText = "对不起,您没有录制权限.";
                 this.dispatchEvent(new Event("publishAudioComplete"));
                 break;
             case "NetStream.Play.Start"://连上开始播放
@@ -156,7 +156,7 @@ public class ChildStreamView extends Sprite {
                 this.ns.play(this.flvName);
                 this.video_mc.attachNetStream(this.ns);
 
-                this._playOldTimer == 0
+                this._playOldTimer == 0;
                 this.checkPlayTimer.reset();
                 this.checkPlayTimer.start();
                 break;
@@ -170,20 +170,20 @@ public class ChildStreamView extends Sprite {
 
     public function playVideo(_flvName:String):void {
         this.flvName = _flvName;
-        this.statusValue = 1
+        this.statusValue = 1;
         this.initStream();
     }
 
     public function playAudio(_flvName:String):void {
         this.flvName = _flvName;
-        this.statusValue = 2
+        this.statusValue = 2;
         this.initStream();
     }
 
     public function publishAudio(_flvName:String, _mic:Microphone):void {
         this.mic = _mic;
         this.flvName = _flvName;
-        this.statusValue = 22
+        this.statusValue = 22;
         this.initStream();
     }
 

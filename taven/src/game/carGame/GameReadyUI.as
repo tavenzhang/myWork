@@ -90,7 +90,7 @@ public class GameReadyUI extends IGamePane {
 	}
 
 	public function makeButton(mc:MovieClip, _txt:String, fun:Function):void {
-		var myText:TextField = (mc.name_txt as TextField)
+		var myText:TextField = (mc.name_txt as TextField);
 		myText.text          = _txt;
 		myText.mouseEnabled  = false;
 		mc.addEventListener(MouseEvent.CLICK, fun);

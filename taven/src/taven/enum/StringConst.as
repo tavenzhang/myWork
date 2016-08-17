@@ -8,10 +8,10 @@ package taven.enum
 		public static var   IS_DEBUG:Boolean =true ;  //用户面板  点击头像
 		
 		/**--------------------------------------------------------------------------------------礼物列表--------------------------------------------------------------------------------------*/
-		public static const  GIFT_NUM:String ="{0}个"    //用户面板  点击头像
-		public static const  GIFT_NAME:String ="送{0}"    //用户面板  点击头像
+		public static const  GIFT_NUM:String ="{0}个";    //用户面板  点击头像
+		public static const  GIFT_NAME:String ="送{0}";    //用户面板  点击头像
 		/**--------------------------------------------------------------------------------------个人信息--------------------------------------------------------------------------------------*/
-		public static const  PERSON_MAIL_MAX_LEN:String ="还能输入200字"    //用户面板  点击头像
+		public static const  PERSON_MAIL_MAX_LEN:String ="还能输入200字";    //用户面板  点击头像
 			
 			
 	}

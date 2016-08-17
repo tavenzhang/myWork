@@ -47,7 +47,7 @@ public class LimitEnterModule extends BaseModule {
     }
 
     private function onQiangEnterHandle(event:CBModuleEvent):void {
-        trace("................")
+        trace("................");
         //{"cmd":10014,"uid":101116443,"restCount":0}
         this.visible = false;
     }

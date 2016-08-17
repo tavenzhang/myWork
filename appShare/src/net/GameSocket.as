@@ -184,7 +184,7 @@ public class GameSocket extends EventDispatcher {
 			_byteArray.compress();
 			socketClient.writeBytes(_byteArray);
 			socketClient.writeUTF("\r\n");
-			socketClient.flush()            //
+			socketClient.flush();            //
 			Cc.logch("gamesocket", "send-->", _obj.cmd + "," + JSON.stringify(_obj));
 			//trace("gameSocket:", "-->" + _obj.cmd + "," + JSON.stringify(_obj));
 		} catch (e:*) {

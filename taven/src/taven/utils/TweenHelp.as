@@ -47,7 +47,7 @@ package taven.utils
 					{
 						onComplete();
 					}
-					return;
+
 				}
 				else
 				{

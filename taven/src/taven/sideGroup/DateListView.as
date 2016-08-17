@@ -47,7 +47,7 @@ public class DateListView {
     }
 
     public function c2sGetListData():void {
-        var data:Object = new Object();
+        var data:Object = {};
         //cmd:50005,type:4
         EventUtils.secndNetData(_dispatcherObj.videoRoom, CBProtocol.list_dateUsers_50005, data, s2cGetListData);
     }

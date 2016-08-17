@@ -25,7 +25,7 @@ public class ItemGiftCircle extends res_richGiftItem {
 
     public function ItemGiftCircle() {
         _itemIcoMc = new loadHeadElement();
-        DisplayUtils.replaceDisplayer(mcIco, _itemIcoMc)
+        DisplayUtils.replaceDisplayer(mcIco, _itemIcoMc);
         _itemIcoMc.width  = mcIco.width;
         _itemIcoMc.height = mcIco.height;
         if (CSS_STYPE_SHEET == null) {
@@ -79,7 +79,6 @@ public class ItemGiftCircle extends res_richGiftItem {
         }
         else {
             this.visible = false;
-            ;
         }
     }
 }

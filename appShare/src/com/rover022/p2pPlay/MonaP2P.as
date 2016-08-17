@@ -16,7 +16,7 @@ import flash.net.NetStream;
 import flash.utils.clearInterval;
 
 public class MonaP2P extends BaseLiveP2P {
-    private var groupID:String = "oneRoom"
+    private var groupID:String = "oneRoom";
     private var rtmfp:String ="rtmfp://10.1.80.239/"; //rtmfp://p2p.rtmfp.net/d8c6d5b18ddf65bf1529fd4c-c98c749416ce/";
     private var nc:NetConnection;
     private var ns:NetStream;
@@ -81,7 +81,7 @@ public class MonaP2P extends BaseLiveP2P {
             return;
         }
         this.ns = new NetStream(this.nc, this.gsp2p.groupspecWithAuthorizations());
-        var _obj:Object = new Object;
+        var _obj:Object = {};
         this.ns.client = _obj;
         this.ns.addEventListener(NetStatusEvent.NET_STATUS, netStramStatusEvent);
         this.formatStream();
@@ -143,7 +143,7 @@ public class MonaP2P extends BaseLiveP2P {
                 break;
             case "NetGroup.Neighbor.Connect":
                 trace("e.info=="+e.info);
-                break
+                break;
 
             default:
         }

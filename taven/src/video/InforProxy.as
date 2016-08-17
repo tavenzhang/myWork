@@ -16,7 +16,7 @@ import flash.net.URLRequest;
  */
 public class InforProxy {
     private var _videoPlayerView:VideoPlayerView;
-    public var addressArray:Array = ["http://vlog1.gagaten.com/index.html", "http://vlog2.gagaten.com/index.html"]
+    public var addressArray:Array = ["http://vlog1.gagaten.com/index.html", "http://vlog2.gagaten.com/index.html"];
     public var count:int = 0;
     public var messageCount:Number = 0;
 

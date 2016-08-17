@@ -82,12 +82,12 @@ public class RankVipRender extends taven_vipItemRender  implements IListItem{
             {
                 _txtRank.text="0" + _txtRank.text;
             }
-            _txtName.htmlText='<a href="com.rover022.event:' + _data.rank + '">' + _data.name + '</a>'
+            _txtName.htmlText='<a href="com.rover022.event:' + _data.rank + '">' + _data.name + '</a>';
             switch (_txtRank.text)
             {
                 case "01":
                     rackBg.gotoAndStop(1);
-                    _txtName.textColor=0xF6FF00
+                    _txtName.textColor=0xF6FF00;
                     break;
                 case "02":
                     rackBg.gotoAndStop(2);
@@ -116,7 +116,7 @@ public class RankVipRender extends taven_vipItemRender  implements IListItem{
             if (wide >= MIX_WIDTH) //如果尺寸大于最小尺寸 动态调整位置
             {
                 //this.width=wide;
-                _txtName.x=_txtRank.x + _txtRank.width +  ((wide - MIX_WIDTH)/3)*3 +20
+                _txtName.x=_txtRank.x + _txtRank.width +  ((wide - MIX_WIDTH)/3)*3 +20;
                 _mcLine.width=wide-4;
                 //_mcMoney.scaleX=_reWidth/wide;
             }

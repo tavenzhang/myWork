@@ -137,7 +137,7 @@ public class VideoHomeView {
         var item:tean_videoHome_itemRender;
         pageId = MathUtils.clamp(pageId, 1, maxPage);
 
-        length = data.length - (pageId - 1) * PAGE_SIZE
+        length = data.length - (pageId - 1) * PAGE_SIZE;
         length = length > PAGE_SIZE ? PAGE_SIZE : length;
         _curPageHot = pageId;
         resutArr = data.slice((pageId - 1) * PAGE_SIZE, ((pageId - 1) * PAGE_SIZE) + length);

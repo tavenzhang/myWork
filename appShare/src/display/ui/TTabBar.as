@@ -20,7 +20,7 @@ public class TTabBar extends  Sprite {
         data = dataItems;
         itemList =[];
         _itemClickHandle = _clickHanlde;
-        addTab(dataItems)
+        addTab(dataItems);
         if(defaultIndex>-1)
         {
             selectIndex =defaultIndex;

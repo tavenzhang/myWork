@@ -19,18 +19,14 @@ public class BaseLiveP2P extends Sprite {
     public var video:Video;
 
     public function initStream():void {
-    };
-
+    }
     public function close(_bool:Boolean = true):void {
-    };
-
+    }
     public function play(_flv:String, _roomid:* = ""):void {
-    };
-
+    }
     public function publish(_flv:String, _roomid:* = ""):void {
 
-    };
-
+    }
     public function formatStream():void{
 
     }

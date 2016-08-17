@@ -15,7 +15,7 @@ public class Userpark extends userparkMc {
     public var load4_mc:ParkLoad;
 
     public function Userpark():void {
-        this.parkArr = new Array();
+        this.parkArr = [];
         this.parkArr.push("");
         load1_mc = buildLoaderMc(23, 23);
         load2_mc = buildLoaderMc(108, 23);
@@ -39,7 +39,7 @@ public class Userpark extends userparkMc {
         _mc.x = _x;
         _mc.y = _y;
         _mc.visible = false;
-        addChild(_mc)
+        addChild(_mc);
         parkArr.push(_mc);
         return _mc;
     }

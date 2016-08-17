@@ -92,7 +92,7 @@ public class UserIconMovieClip extends MovieClip {
             pngLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, function (e:IOErrorEvent):void {
 
             });
-            pngLoader.x = -30 - 20;
+            pngLoader.x = -30 - 30;
             pngLoader.y = -7 - 7;
             s.addChild(pngLoader);
             _activeIcoMap[url] = s;

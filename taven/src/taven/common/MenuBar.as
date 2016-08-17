@@ -306,7 +306,7 @@ public class MenuBar extends MovieClip
 		private function _menuOverEvent(e:MouseEvent):void {
 			if (e.target is MenuItem) {
 				if(this.overBase){
-					TweenLite.to(this.overBase, .5, { "alpha":1 } )
+					TweenLite.to(this.overBase, .5, { "alpha":1 } );
 					TweenLite.to(this.over_mc, .5, { "x":e.target.x } )
 				}else if (this.over_mc) {
 					this.over_mc.x = e.target.x;

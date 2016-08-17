@@ -99,7 +99,7 @@ public class ClientManger {
 
 	public function getMsgKeyFromWeb(username:String, userpassword:String, onCompleteFun:Function):void {
 		var url:String = VideoConfig.httpFunction + "/login?uname=" + username + "&password=" + userpassword + "&_m=test";
-		trace("web:", url)
+		trace("web:", url);
 		var urlRequest:URLRequest = new URLRequest(url);
 		var urlLoader:URLLoader   = new URLLoader();
 		urlLoader.load(urlRequest);
@@ -472,7 +472,7 @@ public class ClientManger {
 	 */
 	public function playGiftAnimation(_giftObj:Object):void {
 		if (!UserVoDataManger.isShowGiftEffect)//全局设置是否显示礼物特效
-			return
+			return;
 		var vo:GiftVo = ClientManger.getInstance().getGiftVoByID(_giftObj.gid);
 		vo.sendName   = _giftObj.sendName;
 		vo.recName    = _giftObj.recName;
@@ -679,7 +679,7 @@ public class ClientManger {
 		});
 		//测试礼物轮播
 		Cc.bindKey(new KeyBind(Keyboard.NUMBER_7, false, true), function ():void {
-			var _str:String = '{"outName":"ronnie3","uid":100003,"hidden":1,"name":"test20","outId":1011200281,"cmd":18005,"outHidden":0,"mark":1}'
+			var _str:String = '{"outName":"ronnie3","uid":100003,"hidden":1,"name":"test20","outId":1011200281,"cmd":18005,"outHidden":0,"mark":1}';
 //            var _str:String = '{"outId":101120028,"mark":1,"hidden":1,"uid":1011200281,"outHidden":0,"outName":"ronnie2","name":"test20","cmd":18005}';
 			var obj:Object  = JSON.parse(_str);
 			trace("测试新的数据");
@@ -699,7 +699,7 @@ public class ClientManger {
 			//trace("删除指令", _cmd);
 			if (UserVoDataManger.filterCMDArray.indexOf(_cmd) != -1) {
 				var _index:int = UserVoDataManger.filterCMDArray.indexOf(_cmd);
-				UserVoDataManger.filterCMDArray.splice(_index, 1)
+				UserVoDataManger.filterCMDArray.splice(_index, 1);
 				Cc.error("添加指令成功")
 			}
 		});
@@ -720,6 +720,6 @@ public class ClientManger {
 				Cc.log("后台小弟欢迎你,后面可以接一个参数", src);
 			});
 		}
-	}
+	};
 }
 }

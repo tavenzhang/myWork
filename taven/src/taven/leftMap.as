@@ -33,7 +33,7 @@ public class leftMap extends BaseModule {
     /*设置数据源*/
     private var _focusInfo:*;
     /**alert 信息*/
-    public var alertMsg:Object = new Object();
+    public var alertMsg:Object = {};
     private var _isPlayer:Boolean;
     private var _isDisplayFocus:Boolean;
     private var _showTranUser:Boolean;
@@ -97,9 +97,9 @@ public class leftMap extends BaseModule {
             _mc.head_mc.mask = _mc.mask_mc;
             _mc.name_txt.text = _obj.name;
             _mc.time_txt.text = _obj.sdate;
-            _mc.sex_mc.gotoAndStop(int(_obj.sex) + 1)
+            _mc.sex_mc.gotoAndStop(int(_obj.sex) + 1);
             _mc.asset_mc.gotoAndStop(int(_obj.richLv));
-            HeadIconBuildTool.loaderUserHead(_obj.headimg, _mc.head_mc)
+            HeadIconBuildTool.loaderUserHead(_obj.headimg, _mc.head_mc);
             _mc.vip_mc.gotoAndStop(int(_obj.vip) + 1);
             _mc.rname_txt.text = _obj.rname;
             this.updataExp(_obj);
@@ -222,13 +222,13 @@ public class leftMap extends BaseModule {
         if (_focusInfo) {
             isBeFocus = _isBeFocus;
             c2sFocusStatue(0);
-            space_bt.visible = true //访问空间按钮
+            space_bt.visible = true; //访问空间按钮
         }
         else {
-            atten_bt.visible = false //关注按钮
+            atten_bt.visible = false; //关注按钮
             hasAtten_bt.visible = false//已关注按
-            space_bt.visible = false //访问空间按钮
-        }
+            space_bt.visible = false; //访问空间按钮
+        };
     }
 
     private function s2cFocusStatue(data:String):void {

@@ -21,7 +21,7 @@ public class ActiveGoldHouseRModule extends BaseRslModule{
 
    override  public function initView():void {
        _ui = new taven_myHouseView();
-       resetUI()
+       resetUI();
        this.addChild(_ui);
        _ui.x =100;
        _ui.y =200;
@@ -35,7 +35,7 @@ public class ActiveGoldHouseRModule extends BaseRslModule{
     override public function show():void {
         super.show();
        // NetManager.getInstance().sendDataObject()
-        var data:Object = new Object();
+        var data:Object = {};
         EventUtils.secndNetDataNew( CBProtocol.list_Active_15006, data, s2cGetListData);
     }
 
@@ -79,8 +79,8 @@ public class ActiveGoldHouseRModule extends BaseRslModule{
         time = time%(60*60*24);
         var hour:int = time/(60*60);
         _ui.txtHour.text = hour<10 ?("0"+hour):hour.toString();
-        time =time%(60*60)
-        var min:int = time/60
+        time =time%(60*60);
+        var min:int = time/60;
         _ui.txtMin.text = min<10 ?("0"+min):min.toString();
         if(min<=0&&day<=0&&hour<=0)
         {
@@ -102,7 +102,7 @@ public class ActiveGoldHouseRModule extends BaseRslModule{
             _ui["itemGuest"+i].visible = false;
             _ui["itemGuest"+i].mouseChildren=false;
             _ui.txtDay.text="00";
-            _ui.txtHour.text="00"
+            _ui.txtHour.text="00";
             _ui.txtMin.text="00";
 
         }

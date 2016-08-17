@@ -335,7 +335,7 @@ public class RoomEventHandler extends IEventHandler {
         }
         if (UserVoDataManger.playerState == PlayerType.GUEST) {//游客
             //ClientManger.getInstance().guestLogin();
-            return;
+
         }
     }
 

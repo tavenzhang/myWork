@@ -44,7 +44,7 @@ public class GiftPool {
     private var xmlData:XML;
 
     public function GiftPool() {
-        xmlData = XML(new dataClassXML())
+        xmlData = XML(new dataClassXML());
         giftArray = new <GiftView>[];
     }
 
@@ -109,7 +109,7 @@ public class GiftPool {
             var loader:Loader = new Loader();
             loader.load(new URLRequest(VideoConfig.HTTP + "image/gift_material/" + src.id + ".png"));
             _mc.txtMc.recName.htmlText = makeHtmlText(src.sendName, "#0000FF") + makeHtmlText(" 赠送给 ", "#ff0000") + makeHtmlText(src.recName, "#0000FF");
-            trace(_mc.txtMc.recName.htmlText)
+            trace(_mc.txtMc.recName.htmlText);
             _mc.txtMc.numTxt.text = src.num + "个";
             _mc.loadMc.addChild(loader);
             _mc.HandMc.visible = false;

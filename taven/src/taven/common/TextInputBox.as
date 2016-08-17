@@ -59,9 +59,9 @@ public class TextInputBox extends MovieClip {
 			switch(e.target) {
 				case this.close_bt:
 					this.visible = false;
-					break
+					break;
 				case this.send_bt:
-					this.dispatchEvent(new Event("inputCompleteEvent"))
+					this.dispatchEvent(new Event("inputCompleteEvent"));
 					this.visible = false;
 					break;
 				default:
