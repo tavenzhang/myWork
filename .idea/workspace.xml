@@ -7,647 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="new">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/ModuleInterFace.swc" afterPath="$PROJECT_DIR$/appShare/ModuleInterFace.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/appShare.swc" afterPath="$PROJECT_DIR$/appShare/appShare.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/thumbImage_taven.png" afterPath="$PROJECT_DIR$/appShare/src/display/ui/thumbImage_taven.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/trackImage_taven.png" afterPath="$PROJECT_DIR$/appShare/src/display/ui/trackImage_taven.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/CarGame.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/CarGame.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/FingerGuessingGame.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/FingerGuessingGame.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/GiftModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/GiftModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/TavenModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/TavenModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/VideoModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/VideoModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveGoldHouseRModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveGoldHouseRModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveMSFightModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveMSFightModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/shareElement.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/shareElement.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/skin/FingerGuessingGameSkin.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/skin/FingerGuessingGameSkin.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/skin/GiftEff.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/skin/GiftEff.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/skin/carGameSkin.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/skin/carGameSkin.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/skin/uiMake.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/skin/uiMake.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/01.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/01.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/02.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/02.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/03.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/03.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/04.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/04.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/05.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/05.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/06.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/06.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/07.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/07.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/08.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/08.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/09.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/09.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/10.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/10.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/100001.png" afterPath="$PROJECT_DIR$/bin-debug/image/face/100001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/11.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/11.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/12.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/12.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/13.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/13.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/14.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/14.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/15.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/15.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/16.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/16.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/17.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/17.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/18.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/18.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/19.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/19.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/20.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/20.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/21.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/21.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/22.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/22.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/23.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/23.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/24.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/24.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/25.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/25.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/26.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/26.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/27.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/27.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/28.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/28.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/29.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/29.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/30.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/30.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/31.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/31.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/32.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/32.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/33.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/33.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/34.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/34.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/35.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/35.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/36.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/36.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/37.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/37.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/38.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/38.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/39.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/39.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/40.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/40.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/41.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/41.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/face/42.swf" afterPath="$PROJECT_DIR$/bin-debug/image/face/42.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/100001.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/100001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/100002.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/100002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/100003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/100003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/100004.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/100004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/100005.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/100005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/100006.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/100006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200001.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200002.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200004.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200005.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200006.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200007.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200008.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200008.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200009.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_icon/200010.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_icon/200010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/100003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/100003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120001.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120001.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120001.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120003.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120003.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120004.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120004.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120004.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120006.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120006.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120006.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120007.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120007.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120007.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120008.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120008.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120008.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120008.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120009.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120009.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120009.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120010.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120010.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120010.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120011.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120011.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120011.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120011.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120012.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120012.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120012.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120012.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120013.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120013.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120013.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120013.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120014.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120014.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120014.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120014.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120015.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120015.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120015.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120015.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120016.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120016.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120016.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120016.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120017.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120017.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120017.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120017.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120018.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120018.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120019.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120019.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120019.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120019.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120020.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120020.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120020.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120020.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120101.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120101.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120101.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120101.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120102.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120102.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120102.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120102.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120103.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120103.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120103.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120103.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120104.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120104.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120104.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120104.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120105.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120105.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120105.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120105.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120106.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120106.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120106.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120106.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120107.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120107.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120107.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120107.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/200001.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/200001.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/200003.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/200003.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/200008.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/200008.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/210003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/210003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310001.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310002.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310004.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310005.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310006.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310007.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310009.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310010.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310011.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310011.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310012.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310012.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310013.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310013.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310014.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310014.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310015.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310015.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310016.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310016.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310017.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310017.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310018.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310018.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310019.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310019.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310020.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310020.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310021.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310021.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310021.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310021.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310022.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310022.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310023.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310023.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310024.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310024.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310025.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310025.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310026.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310026.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310027.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310027.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310028.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310028.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310029.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310029.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310030.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310030.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310031.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310031.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310032.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310032.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310033.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310033.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310034.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310034.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310035.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310035.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310036.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310036.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310036.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310036.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310037.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310037.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310038.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310038.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310039.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310039.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310040.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310040.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310041.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310041.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310042.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310042.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310043.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310043.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310044.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310044.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310045.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310045.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310046.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310046.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310047.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310047.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310048.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310048.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320001.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320001.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320001.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320002.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320002.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320002.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320003.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320003.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320004.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320004.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320004.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320005.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320005.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320005.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320006.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320006.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320006.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320007.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320007.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320007.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320008.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320008.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320008.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320008.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320009.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320009.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320009.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320010.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320010.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320010.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320011.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320011.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320011.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320011.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320012.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320012.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320012.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320012.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320013.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320013.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320013.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320013.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320014.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320014.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320014.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320014.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320015.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320015.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320015.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320015.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320016.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320016.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320016.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320016.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320017.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320017.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320017.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320017.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320019.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320019.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320019.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320019.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320020.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320020.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320020.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320020.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320021.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320021.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320021.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320021.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320022.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320022.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320022.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320022.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320023.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320023.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320023.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320023.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320024.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320024.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320024.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320024.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320025.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320025.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320025.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320025.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320026.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320026.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320026.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320026.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320027.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320027.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320027.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320027.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320028.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320028.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320028.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320028.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320029.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320029.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320029.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320029.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320030.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320030.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320030.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320030.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320031.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320031.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320031.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320031.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320032.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320032.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320032.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320032.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320033.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320033.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320033.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320033.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320034.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320034.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320034.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320034.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320035.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320035.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320035.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320035.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320036.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320036.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320036.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320036.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320037.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320037.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320037.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320037.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320038.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320038.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320038.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320038.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320039.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320039.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320039.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320039.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320040.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320040.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320040.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320040.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320041.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320041.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320041.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320041.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320042.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320042.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/320042.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/320042.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330001.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330001.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330001.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330002.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330002.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330002.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330003.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330003.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330004.jpg" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330004.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330004.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330004.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330004.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330005.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/330005.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/330005.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340001.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340001.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340001.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340002.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340002.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340002.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340003.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340003.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340004.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340004.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340004.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340005.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340005.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340005.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340006.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/340006.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/340006.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/55698.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/55698.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/55698.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/55698.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/700001.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/700001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/700002.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/700002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/700003.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/700003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r1.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r10.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r11.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r12.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r13.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r13.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r14.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r14.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r15.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r15.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r16.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r17.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r17.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r18.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r18.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r19.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r19.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r2.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r3.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r4.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r5.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r6.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r7.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r8.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/lv_icon/r9.png" afterPath="$PROJECT_DIR$/bin-debug/image/lv_icon/r9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/other/address.jpg" afterPath="$PROJECT_DIR$/bin-debug/image/other/address.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/other/background.jpg" afterPath="$PROJECT_DIR$/bin-debug/image/other/background.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/other/loading_fail.png" afterPath="$PROJECT_DIR$/bin-debug/image/other/loading_fail.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/1.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/10.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/11.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/12.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/13.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/13.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/14.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/14.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/15.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/15.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/16.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/17.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/17.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/18.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/18.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/19.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/19.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/2.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/20.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/20.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/21.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/21.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/22.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/22.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/23.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/23.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/24.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/24.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/25.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/25.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/26.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/26.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/27.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/27.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/28.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/28.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/29.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/29.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/3.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/30.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/30.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/31.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/31.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/4.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/5.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/6.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/7.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/8.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/rlv_icon/9.png" afterPath="$PROJECT_DIR$/bin-debug/image/rlv_icon/9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/signal_icon/1101.png" afterPath="$PROJECT_DIR$/bin-debug/image/signal_icon/1101.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/signal_icon/900000.png" afterPath="$PROJECT_DIR$/bin-debug/image/signal_icon/900000.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/signal_icon/900001.png" afterPath="$PROJECT_DIR$/bin-debug/image/signal_icon/900001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/signal_icon/900002.png" afterPath="$PROJECT_DIR$/bin-debug/image/signal_icon/900002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/signal_icon/900003.png" afterPath="$PROJECT_DIR$/bin-debug/image/signal_icon/900003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/signal_icon/900004.png" afterPath="$PROJECT_DIR$/bin-debug/image/signal_icon/900004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/signal_icon/900005.png" afterPath="$PROJECT_DIR$/bin-debug/image/signal_icon/900005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/signal_icon/900006.png" afterPath="$PROJECT_DIR$/bin-debug/image/signal_icon/900006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120001.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120004.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120007.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120008.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120008.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120009.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120010.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120011.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120011.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120012.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120012.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120013.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120013.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120014.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120014.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120015.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120015.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120016.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120016.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120019.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120019.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/transportation/120020.png" afterPath="$PROJECT_DIR$/bin-debug/image/transportation/120020.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/js/close_bt.png" afterPath="$PROJECT_DIR$/bin-debug/js/close_bt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/playerProductInstall.swf" afterPath="$PROJECT_DIR$/bin-debug/playerProductInstall.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/videoRoom.swf" afterPath="$PROJECT_DIR$/bin-debug/videoRoom.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Console2.6+asdoc.swc" afterPath="$PROJECT_DIR$/libs/Console2.6+asdoc.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/GhostCat.swc" afterPath="$PROJECT_DIR$/libs/GhostCat.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/as3corelib.swc" afterPath="$PROJECT_DIR$/libs/as3corelib.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/as3crypto.swc" afterPath="$PROJECT_DIR$/libs/as3crypto.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/greensock.swc" afterPath="$PROJECT_DIR$/libs/greensock.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/minicomponent.swc" afterPath="$PROJECT_DIR$/libs/minicomponent.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/resource.fla" afterPath="$PROJECT_DIR$/libs/resource.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/resource.swc" afterPath="$PROJECT_DIR$/libs/resource.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/Console2.6+asdoc.swc" afterPath="$PROJECT_DIR$/taven/libs/Console2.6+asdoc.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/GhostCat.swc" afterPath="$PROJECT_DIR$/taven/libs/GhostCat.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/Myshare.swc" afterPath="$PROJECT_DIR$/taven/libs/Myshare.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/activeHouse.swc" afterPath="$PROJECT_DIR$/taven/libs/activeHouse.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/alawnClass.swc" afterPath="$PROJECT_DIR$/taven/libs/alawnClass.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/chat.swc" afterPath="$PROJECT_DIR$/taven/libs/chat.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/common.swc" afterPath="$PROJECT_DIR$/taven/libs/common.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/cotrolPanel.swc" afterPath="$PROJECT_DIR$/taven/libs/cotrolPanel.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/enterLimit.swc" afterPath="$PROJECT_DIR$/taven/libs/enterLimit.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/giftModule.swc" afterPath="$PROJECT_DIR$/taven/libs/giftModule.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/minicomponent.swc" afterPath="$PROJECT_DIR$/taven/libs/minicomponent.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/personInfo.swc" afterPath="$PROJECT_DIR$/taven/libs/personInfo.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/rankView.swc" afterPath="$PROJECT_DIR$/taven/libs/rankView.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/rightMenuList.swc" afterPath="$PROJECT_DIR$/taven/libs/rightMenuList.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/textLayout.swc" afterPath="$PROJECT_DIR$/taven/libs/textLayout.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/userInfoWin.swc" afterPath="$PROJECT_DIR$/taven/libs/userInfoWin.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/videoModule.swc" afterPath="$PROJECT_DIR$/taven/libs/videoModule.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/active.fla" afterPath="$PROJECT_DIR$/taven/resource/active.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/common.fla" afterPath="$PROJECT_DIR$/taven/resource/common.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/enterLimit.fla" afterPath="$PROJECT_DIR$/taven/resource/enterLimit.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/giftModule.fla" afterPath="$PROJECT_DIR$/taven/resource/giftModule.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/newContolPanel.fla" afterPath="$PROJECT_DIR$/taven/resource/newContolPanel.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/personInfo.fla" afterPath="$PROJECT_DIR$/taven/resource/personInfo.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/rankView.fla" afterPath="$PROJECT_DIR$/taven/resource/rankView.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/rightMenuList.fla" afterPath="$PROJECT_DIR$/taven/resource/rightMenuList.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/userInfoWin.fla" afterPath="$PROJECT_DIR$/taven/resource/userInfoWin.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/videoModule.fla" afterPath="$PROJECT_DIR$/taven/resource/videoModule.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/猜拳小游戏.fla" afterPath="$PROJECT_DIR$/taven/resource/猜拳小游戏.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/聊天.fla" afterPath="$PROJECT_DIR$/taven/resource/聊天.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/赛跑动物小游戏.fla" afterPath="$PROJECT_DIR$/taven/resource/赛跑动物小游戏.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/tools/ant-contrib.jar" afterPath="$PROJECT_DIR$/tools/antbuild/tools/ant-contrib.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/tools/temp/ModuleInterFace.swc" afterPath="$PROJECT_DIR$/tools/antbuild/tools/temp/ModuleInterFace.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/V项目2.1版本PRD.doc" afterPath="$PROJECT_DIR$/tools/通用资源/V项目2.1版本PRD.doc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/V项目需求列表.xls" afterPath="$PROJECT_DIR$/tools/通用资源/V项目需求列表.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/greensock.swc" afterPath="$PROJECT_DIR$/tools/通用资源/greensock.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/modulesSWC.swc" afterPath="$PROJECT_DIR$/tools/通用资源/modulesSWC.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/shareElement.fla" afterPath="$PROJECT_DIR$/tools/通用资源/shareElement.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/shareElement.swc" afterPath="$PROJECT_DIR$/tools/通用资源/shareElement.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/videoView.fla" afterPath="$PROJECT_DIR$/tools/通用资源/videoView.fla" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/flexCompiler.xml" afterPath="$PROJECT_DIR$/.idea/flexCompiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TVideo.iml" afterPath="$PROJECT_DIR$/TVideo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/appShare.iml" afterPath="$PROJECT_DIR$/appShare/appShare.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/IChat.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IChat.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/IPlayer.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IPlayer.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoModule.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoRoom.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/IVideoRoom.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/ModuleNameType.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/ModuleNameType.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/display/IAssetMovieClip.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/IAssetMovieClip.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/display/IBaseRslModule.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/IBaseRslModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/display/UserIconMovieClip.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/display/UserIconMovieClip.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/event/CBModuleEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/CBModuleEvent.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/event/ModuleEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/ModuleEvent.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/event/PingEvent.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/event/PingEvent.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/BaseLiveP2P.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/BaseLiveP2P.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/MonaP2P.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/MonaP2P.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/livep2p.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/p2pPlay/livep2p.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/NetPing.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/NetPing.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/PingManager.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/PingManager.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SensitiveWordFilter.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SensitiveWordFilter.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPingManager.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPingManager.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/tool/TreeNode.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/tool/TreeNode.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/ChatState.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/ChatState.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/GiftVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/GiftVo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/PlayerType.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/PlayerType.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/RespondVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/RespondVo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/UserVo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/UserVo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VipInfo.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VipInfo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/BaseControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/BaseControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/ChatAndErrorControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/ChatAndErrorControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/ControlsManger.as" afterPath="$PROJECT_DIR$/appShare/src/control/ControlsManger.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/GiftAndVideoUIControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/GiftAndVideoUIControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/GlobalControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/GlobalControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/IControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/IControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/ParkAndSeatControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/ParkAndSeatControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/RankAndInfoControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/RankAndInfoControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/RoomManageControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/RoomManageControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/VideoControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/VideoControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/BaseModule.as" afterPath="$PROJECT_DIR$/appShare/src/display/BaseModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/BaseRslModule.as" afterPath="$PROJECT_DIR$/appShare/src/display/BaseRslModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/LoaderHelp.as" afterPath="$PROJECT_DIR$/appShare/src/display/LoaderHelp.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/RslModuleManager.as" afterPath="$PROJECT_DIR$/appShare/src/display/RslModuleManager.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/TweenHelp.as" afterPath="$PROJECT_DIR$/appShare/src/display/TweenHelp.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/Alert.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/Alert.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/CBScrollPanel.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/CBScrollPanel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/CGLoader.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/CGLoader.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/MaskLoaderMc.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/MaskLoaderMc.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/ScaleBitmap.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/ScaleBitmap.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/SignActivityPanel.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/SignActivityPanel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/TTab.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/TTab.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/display/ui/TTabBar.as" afterPath="$PROJECT_DIR$/appShare/src/display/ui/TTabBar.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/ktvEvent.as" afterPath="$PROJECT_DIR$/appShare/src/ktvEvent.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/ktvStageEvent.as" afterPath="$PROJECT_DIR$/appShare/src/ktvStageEvent.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/ISocketApp.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ISocketApp.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/ModuleLoaderManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ModuleLoaderManger.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/UserVoDataManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/UserVoDataManger.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/CBHttpServiceProxy.as" afterPath="$PROJECT_DIR$/appShare/src/net/CBHttpServiceProxy.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/GameSocket.as" afterPath="$PROJECT_DIR$/appShare/src/net/GameSocket.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/NetManager.as" afterPath="$PROJECT_DIR$/appShare/src/net/NetManager.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/NetSocket.as" afterPath="$PROJECT_DIR$/appShare/src/net/NetSocket.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/TavenHttpService.as" afterPath="$PROJECT_DIR$/appShare/src/net/TavenHttpService.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/CTimeoutOper.as" afterPath="$PROJECT_DIR$/appShare/src/tool/CTimeoutOper.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/FormatDataTool.as" afterPath="$PROJECT_DIR$/appShare/src/tool/FormatDataTool.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/GoogleAdSence.as" afterPath="$PROJECT_DIR$/appShare/src/tool/GoogleAdSence.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/JsHelp.as" afterPath="$PROJECT_DIR$/appShare/src/tool/JsHelp.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/tool/VideoTool.as" afterPath="$PROJECT_DIR$/appShare/src/tool/VideoTool.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/static_cdn.conf" afterPath="$PROJECT_DIR$/bin-debug/Modules/static_cdn.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/login.min.js" afterPath="$PROJECT_DIR$/bin-debug/image/login.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/js/admin.js" afterPath="$PROJECT_DIR$/bin-debug/js/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/js/login.js" afterPath="$PROJECT_DIR$/bin-debug/js/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/js/login.min.js" afterPath="$PROJECT_DIR$/bin-debug/js/login.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/xml/ActiveInfo.xml" afterPath="$PROJECT_DIR$/bin-debug/xml/ActiveInfo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/xml/env.xml" afterPath="$PROJECT_DIR$/bin-debug/xml/env.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/xml/giftConfig.xml" afterPath="$PROJECT_DIR$/bin-debug/xml/giftConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/xml/videoConfig.xml" afterPath="$PROJECT_DIR$/bin-debug/xml/videoConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ATest.as" afterPath="$PROJECT_DIR$/src/ATest.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GiftMake.as" afterPath="$PROJECT_DIR$/src/GiftMake.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Preloader.as" afterPath="$PROJECT_DIR$/src/Preloader.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VideoRoom.as" afterPath="$PROJECT_DIR$/src/VideoRoom.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/handler/IEventHandler.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/handler/IEventHandler.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/handler/RoomEventHandler.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/handler/RoomEventHandler.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/AddressPublishSprite.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/AddressPublishSprite.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/BackGroundLay.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/BackGroundLay.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/BaseResRoom.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/BaseResRoom.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/DivisionContainer.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/DivisionContainer.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/GiftPool.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/GiftPool.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/GiftView.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/GiftView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/LoadUI.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/LoadUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/control/FlyMessgaeModule.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/control/FlyMessgaeModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/control/RoomEditViewUI.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/control/RoomEditViewUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/control/ScrollStageControl.as" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/control/ScrollStageControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kingjoy/view/g_data.xml" afterPath="$PROJECT_DIR$/src/com/kingjoy/view/g_data.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/CarGame.as" afterPath="$PROJECT_DIR$/taven/src/CarGame.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/ChatRoomModule.as" afterPath="$PROJECT_DIR$/taven/src/ChatRoomModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/FingerGuessingGame.as" afterPath="$PROJECT_DIR$/taven/src/FingerGuessingGame.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/GiftModule.as" afterPath="$PROJECT_DIR$/taven/src/GiftModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/TavenModule.as" afterPath="$PROJECT_DIR$/taven/src/TavenModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/VideoModule.as" afterPath="$PROJECT_DIR$/taven/src/VideoModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/carGame/GameBetAndRunUI.as" afterPath="$PROJECT_DIR$/taven/src/game/carGame/GameBetAndRunUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/carGame/GameInfor.as" afterPath="$PROJECT_DIR$/taven/src/game/carGame/GameInfor.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/carGame/GameReadyUI.as" afterPath="$PROJECT_DIR$/taven/src/game/carGame/GameReadyUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/carGame/GameWaitUI.as" afterPath="$PROJECT_DIR$/taven/src/game/carGame/GameWaitUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/carGame/IGamePane.as" afterPath="$PROJECT_DIR$/taven/src/game/carGame/IGamePane.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/BattlePane.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/BattlePane.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/FWindon.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/FWindon.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/FingerGameRoomVo.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/FingerGameRoomVo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/ItemUserContion.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/ItemUserContion.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/ListPane.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/ListPane.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/RoomOptionPane.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/RoomOptionPane.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/RulePane.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/RulePane.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/TipText.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/TipText.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/ui/AlphaScrollPane.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/ui/AlphaScrollPane.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/ui/ResPanel.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/ui/ResPanel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/fingerGame/ui/SimpleGameButton.as" afterPath="$PROJECT_DIR$/taven/src/game/fingerGame/ui/SimpleGameButton.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/game/tool/RunTool.as" afterPath="$PROJECT_DIR$/taven/src/game/tool/RunTool.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/giftModule/ChoiceBox.as" afterPath="$PROJECT_DIR$/taven/src/giftModule/ChoiceBox.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/giftModule/GiftUI.as" afterPath="$PROJECT_DIR$/taven/src/giftModule/GiftUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/giftModule/LoadGiftElement.as" afterPath="$PROJECT_DIR$/taven/src/giftModule/LoadGiftElement.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/giftModule/MenuItem.as" afterPath="$PROJECT_DIR$/taven/src/giftModule/MenuItem.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/rslmodule/ActiveGoldHouseRModule.as" afterPath="$PROJECT_DIR$/taven/src/rslmodule/ActiveGoldHouseRModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/rslmodule/ActiveMSFightModule.as" afterPath="$PROJECT_DIR$/taven/src/rslmodule/ActiveMSFightModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/LimitEnterModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/LimitEnterModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/MenuBarModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/MenuBarModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/ParkingModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/ParkingModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/PersonInfoModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/PersonInfoModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/PlayInfoModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/PlayInfoModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/RankGiftModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/RankGiftModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/RankViewModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/RankViewModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/RankVipModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/RankVipModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/SpeakerModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/SpeakerModule.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/UserInfo.as" afterPath="$PROJECT_DIR$/taven/src/taven/UserInfo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/chatModule/CBScrollBar.as" afterPath="$PROJECT_DIR$/taven/src/taven/chatModule/CBScrollBar.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/chatModule/ChatEvent.as" afterPath="$PROJECT_DIR$/taven/src/taven/chatModule/ChatEvent.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/chatModule/ComboxPane.as" afterPath="$PROJECT_DIR$/taven/src/taven/chatModule/ComboxPane.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/chatModule/FaceSprite.as" afterPath="$PROJECT_DIR$/taven/src/taven/chatModule/FaceSprite.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/chatModule/FaceView.as" afterPath="$PROJECT_DIR$/taven/src/taven/chatModule/FaceView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/chatModule/InputUI.as" afterPath="$PROJECT_DIR$/taven/src/taven/chatModule/InputUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/chatModule/RichText.as" afterPath="$PROJECT_DIR$/taven/src/taven/chatModule/RichText.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/chatModule/TextFlowTool.as" afterPath="$PROJECT_DIR$/taven/src/taven/chatModule/TextFlowTool.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/IListItem.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/IListItem.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/LeftMenu.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/LeftMenu.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/Marquee.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/Marquee.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/MenuBar.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/MenuBar.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/MenuItem.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/MenuItem.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/RightMenu.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/RightMenu.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/RightMenuBar.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/RightMenuBar.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/TScroll.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/TScroll.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/TavenScrollList.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/TavenScrollList.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/TextInputBox.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/TextInputBox.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/common/progress.as" afterPath="$PROJECT_DIR$/taven/src/taven/common/progress.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/enum/EventConst.as" afterPath="$PROJECT_DIR$/taven/src/taven/enum/EventConst.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/enum/EventUtils.as" afterPath="$PROJECT_DIR$/taven/src/taven/enum/EventUtils.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/enum/StringConst.as" afterPath="$PROJECT_DIR$/taven/src/taven/enum/StringConst.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/flyScreen/MessageVo.as" afterPath="$PROJECT_DIR$/taven/src/taven/flyScreen/MessageVo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/leftMap.as" afterPath="$PROJECT_DIR$/taven/src/taven/leftMap.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/parking/ParkingItemRender.as" afterPath="$PROJECT_DIR$/taven/src/taven/parking/ParkingItemRender.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/playerInfo/ItemRenerManage.as" afterPath="$PROJECT_DIR$/taven/src/taven/playerInfo/ItemRenerManage.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/playerInfo/PlayerListView.as" afterPath="$PROJECT_DIR$/taven/src/taven/playerInfo/PlayerListView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/playerInfo/PlayerVo.as" afterPath="$PROJECT_DIR$/taven/src/taven/playerInfo/PlayerVo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/playerInfo/RankStartView.as" afterPath="$PROJECT_DIR$/taven/src/taven/playerInfo/RankStartView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/playerInfo/VideoHomeView.as" afterPath="$PROJECT_DIR$/taven/src/taven/playerInfo/VideoHomeView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/playerInfo/VideoItemRender.as" afterPath="$PROJECT_DIR$/taven/src/taven/playerInfo/VideoItemRender.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/rankView/RankGiftRender.as" afterPath="$PROJECT_DIR$/taven/src/taven/rankView/RankGiftRender.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/rankView/RankItemRender.as" afterPath="$PROJECT_DIR$/taven/src/taven/rankView/RankItemRender.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/rankView/RankVipRender.as" afterPath="$PROJECT_DIR$/taven/src/taven/rankView/RankVipRender.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/rightView/MenuItem.as" afterPath="$PROJECT_DIR$/taven/src/taven/rightView/MenuItem.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/rightView/MenuList.as" afterPath="$PROJECT_DIR$/taven/src/taven/rightView/MenuList.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/rightView/MenuUserInfo.as" afterPath="$PROJECT_DIR$/taven/src/taven/rightView/MenuUserInfo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/seatView/LoadMaterial.as" afterPath="$PROJECT_DIR$/taven/src/taven/seatView/LoadMaterial.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/seatView/NumBox.as" afterPath="$PROJECT_DIR$/taven/src/taven/seatView/NumBox.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/seatView/ParkLoad.as" afterPath="$PROJECT_DIR$/taven/src/taven/seatView/ParkLoad.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/seatView/Userpark.as" afterPath="$PROJECT_DIR$/taven/src/taven/seatView/Userpark.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/sideGroup/BasePaneUI.as" afterPath="$PROJECT_DIR$/taven/src/taven/sideGroup/BasePaneUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/sideGroup/ChangeLineView.as" afterPath="$PROJECT_DIR$/taven/src/taven/sideGroup/ChangeLineView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/sideGroup/DateListItemRender.as" afterPath="$PROJECT_DIR$/taven/src/taven/sideGroup/DateListItemRender.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/sideGroup/DateListView.as" afterPath="$PROJECT_DIR$/taven/src/taven/sideGroup/DateListView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/sideGroup/GiftCircleView.as" afterPath="$PROJECT_DIR$/taven/src/taven/sideGroup/GiftCircleView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/sideGroup/ItemGiftCircle.as" afterPath="$PROJECT_DIR$/taven/src/taven/sideGroup/ItemGiftCircle.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/sidesGroup.as" afterPath="$PROJECT_DIR$/taven/src/taven/sidesGroup.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/utils/CCComboBox.as" afterPath="$PROJECT_DIR$/taven/src/taven/utils/CCComboBox.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/utils/HeadIconBuildTool.as" afterPath="$PROJECT_DIR$/taven/src/taven/utils/HeadIconBuildTool.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/utils/TweenHelp.as" afterPath="$PROJECT_DIR$/taven/src/taven/utils/TweenHelp.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/utils/baseScroll_taven.as" afterPath="$PROJECT_DIR$/taven/src/taven/utils/baseScroll_taven.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/utils/loadHeadElement.as" afterPath="$PROJECT_DIR$/taven/src/taven/utils/loadHeadElement.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/ChildStreamView.as" afterPath="$PROJECT_DIR$/taven/src/video/ChildStreamView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/InforProxy.as" afterPath="$PROJECT_DIR$/taven/src/video/InforProxy.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/P2PVideoPlayerView.as" afterPath="$PROJECT_DIR$/taven/src/video/P2PVideoPlayerView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/SignViewUI.as" afterPath="$PROJECT_DIR$/taven/src/video/SignViewUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/VideoControlView.as" afterPath="$PROJECT_DIR$/taven/src/video/VideoControlView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/VideoParamView.as" afterPath="$PROJECT_DIR$/taven/src/video/VideoParamView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" afterPath="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/VideoShotView.as" afterPath="$PROJECT_DIR$/taven/src/video/VideoShotView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/taven.iml" afterPath="$PROJECT_DIR$/taven/taven.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/build.properties" afterPath="$PROJECT_DIR$/tools/antbuild/build.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/build.xml" afterPath="$PROJECT_DIR$/tools/antbuild/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/windowns/build.properties" afterPath="$PROJECT_DIR$/tools/antbuild/windowns/build.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/windowns/build.xml" afterPath="$PROJECT_DIR$/tools/antbuild/windowns/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/windowns/build_run.properties" afterPath="$PROJECT_DIR$/tools/antbuild/windowns/build_run.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/windowns/build_run.xml" afterPath="$PROJECT_DIR$/tools/antbuild/windowns/build_run.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/SWC类参考/ScaleBitmap.as" afterPath="$PROJECT_DIR$/tools/通用资源/SWC类参考/ScaleBitmap.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/SWC类参考/baseScroll.as" afterPath="$PROJECT_DIR$/tools/通用资源/SWC类参考/baseScroll.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/SWC类参考/ktvEvent.as" afterPath="$PROJECT_DIR$/tools/通用资源/SWC类参考/ktvEvent.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/SWC类参考/ktvStageEvent.as" afterPath="$PROJECT_DIR$/tools/通用资源/SWC类参考/ktvStageEvent.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/shareElement/autoTextField.as" afterPath="$PROJECT_DIR$/tools/通用资源/shareElement/autoTextField.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/shareElement/loadHeadElement.as" afterPath="$PROJECT_DIR$/tools/通用资源/shareElement/loadHeadElement.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/shareElement/loadMaterial.as" afterPath="$PROJECT_DIR$/tools/通用资源/shareElement/loadMaterial.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/shareElement/logo.as" afterPath="$PROJECT_DIR$/tools/通用资源/shareElement/logo.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/shareElement/progress.as" afterPath="$PROJECT_DIR$/tools/通用资源/shareElement/progress.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/shareElement/scrollShare.as" afterPath="$PROJECT_DIR$/tools/通用资源/shareElement/scrollShare.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/通用资源/videoView/view.as" afterPath="$PROJECT_DIR$/tools/通用资源/videoView/view.as" />
     </list>
     <list id="0b8432f8-703d-4449-8515-06a7a62d6e77" name="ignore-on-commit" comment="" />
     <ignored path="videoRoom.iws" />
@@ -722,8 +83,8 @@
       <file leaf-file-name="UserIconMovieClip.as" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/display/UserIconMovieClip.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+            <state relative-caret-position="197">
+              <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -866,9 +227,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -952,6 +312,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="videoRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="antbuild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="videoRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="taven" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1002,7 +394,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="image" />
+              <option name="myItemId" value="Modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1872,7 +1264,7 @@
       <workItem from="1470831168175" duration="7347000" />
       <workItem from="1470887586849" duration="220000" />
       <workItem from="1470917677696" duration="4668000" />
-      <workItem from="1471451473769" duration="1616000" />
+      <workItem from="1471451473769" duration="2897000" />
     </task>
     <task id="LOCAL-00001" summary="change module">
       <created>1470040579516</created>
@@ -1944,11 +1336,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471058693021</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="new">
+      <created>1471453369880</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1471453369880</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="858751000" />
+    <option name="totallyTimeSpent" value="860032000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1960,7 +1359,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1968,19 +1367,19 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2264151" sideWeight="0.34984025" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31380337" sideWeight="0.57561237" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27647868" sideWeight="0.5767367" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24267101" sideWeight="0.51534736" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2696011" sideWeight="0.4749596" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12992546" sideWeight="0.755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19709209" sideWeight="0.755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23454158" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13859275" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06503198" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31380337" sideWeight="0.42438763" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27647868" sideWeight="0.42326334" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20575693" sideWeight="0.24530663" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2332,7 +1731,7 @@
         <state relative-caret-position="164">
           <caret line="86" column="40" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
           <folding>
-            <element signature="e#16#50#0" expanded="true" />
+            <element signature="e#16#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2364,6 +1763,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2371,6 +1771,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2394,6 +1795,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2440,6 +1842,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2495,8 +1898,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/display/UserIconMovieClip.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+        <state relative-caret-position="197">
+          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
           <folding />
         </state>
       </provider>
