@@ -19,6 +19,8 @@ import flash.geom.PerspectiveProjection;
 import flash.ui.Keyboard;
 import flash.utils.Dictionary;
 
+import ghostcat.util.display.DisplayUtil;
+
 import manger.UserVoDataManger;
 
 import taven.enum.EventConst;
@@ -27,6 +29,7 @@ import taven.seatView.LoadMaterial;
 import taven.sideGroup.ChangeLineView;
 import taven.sideGroup.DateListView;
 import taven.sideGroup.GiftCircleView;
+import taven.utils.DisplayUtils;
 
 import tool.VideoTool;
 
@@ -150,6 +153,7 @@ public class sidesGroup extends BaseModule {
     }
     private function dispatchModuleEvent(_data:String):void {
         this.dispatchEvent(new StatusEvent(StatusEvent.STATUS, false, false, "sides", _data));
+
     }
     private function _sidesMouseEvent(e:MouseEvent):void {
         if (e.target) {
@@ -177,17 +181,17 @@ public class sidesGroup extends BaseModule {
                     if (_shareMC == null) {
                         _shareMC = new shareMC();
                         _shareMC.btnClose.addEventListener(MouseEvent.CLICK, function (e:MouseEvent):void {
-                            removeChild(_shareMC);
+                            DisplayUtils.removeFromParent(_shareMC);
                         });
                         _shareMC.btnOk.addEventListener(MouseEvent.CLICK, function (e:MouseEvent):void {
-                            removeChild(_shareMC);
+                            DisplayUtils.removeFromParent(_shareMC);
                         })
                     }
-                    _shareMC.x = 175;
-                    _shareMC.y = 181;
+                    _shareMC.x = (stage.stageWidth -_shareMC.width)/2;
+                    _shareMC.y =  (stage.stageHeight -_shareMC.height)/2;
                     _shareMC.alpha = 0;
                     TweenLite.to(_shareMC, 0.5, {alpha: 1});
-                    addChild(_shareMC);
+                    stage.addChild(_shareMC);
                     if (ExternalInterface.available) {
                         var textToCopy:String = ExternalInterface.call('function(){return document.location.href.toString()}');
                         Clipboard.generalClipboard.clear();
