@@ -188,7 +188,7 @@ public class sidesGroup extends BaseModule {
                         })
                     }
                     _shareMC.x = (stage.stageWidth -_shareMC.width)/2;
-                    _shareMC.y =  (stage.stageHeight -_shareMC.height)/2;
+                    _shareMC.y =  (stage.stageHeight -_shareMC.height)/2-30;
                     _shareMC.alpha = 0;
                     TweenLite.to(_shareMC, 0.5, {alpha: 1});
                     stage.addChild(_shareMC);
