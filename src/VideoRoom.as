@@ -168,7 +168,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         var gcontextMenu:GContextMenu = new GContextMenu();
         gcontextMenu.addMenu("NUM1.co 开发");
         gcontextMenu.addMenu("版本:" + VideoConfig.VERSION);
-        gcontextMenu.addMenu("编译时间:" + VideoConfig.BUILDTIME);
+       // gcontextMenu.addMenu("编译时间:" + VideoConfig.BUILDTIME);
         this.contextMenu = gcontextMenu.contextMenu;
         //注册各个模块的冒泡事件
         addEventListener("rechargeEvent", onGiftRechargeEvent);//充值
@@ -203,15 +203,11 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     private function onViewLayoutStageHandle(e:ktvStageEvent):void {
         var _layout:Object = e.data;
         if (this.rightMenu_Module) {
-
-
             vipModule.x =this.rankMenu_Moudle.x = _layout.leftBase.x +40;
             this.rankMenu_Moudle.y = _layout.leftBase.y ;
             rankMenu_Moudle.adjustHeiht(200);
             vipModule.y = rankMenu_Moudle.y + rankMenu_Moudle.height + 5;
             vipModule.height = _layout.leftBase.h - (rankMenu_Moudle.height+40);
-
-
            // vipModule.y = rankMenu_Moudle.y + rankMenu_Moudle.height + 10;
             videoUIView.x = _layout.centerBase.x;
             videoUIView.y = _layout.centerBase.y +5 ;
@@ -291,7 +287,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             rankWeek_Module.updateData(FormatDataTool.rankViewArray(obj as Array));
         }
 
-        //27左用户栏
         //28用户信息面板 弹出式
         this.personInfo_Module = VideoTool.getMCTaven("PersonInfoModule");
         this.personInfo_Module.visible = false;
@@ -304,7 +299,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     }
 
     private function initVideoUI():void {
-
         //12 中间视频设置
         sides_Module = VideoTool.getMCTaven("sidesGroup");
         videoUIView.addChild(sides_Module);
@@ -529,7 +523,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             NetManager.getInstance().sendDataObject({"cmd": 14002, seatid: e.dataObject.seatid, num: _num});
         }
     }
-
     /**
      * 礼物模块gift_Module
      * 礼物事件...

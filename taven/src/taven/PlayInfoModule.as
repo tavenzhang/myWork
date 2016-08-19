@@ -20,6 +20,7 @@ import flash.net.URLRequest;
 import flash.net.navigateToURL;
 
 import manger.ClientManger;
+import manger.NavigatorManager;
 import manger.UserVoDataManger;
 
 import taven.enum.EventConst;
@@ -109,8 +110,10 @@ public class PlayInfoModule extends BaseModule {
 		_view.mcBtnShop.btnView.gotoAndStop(4);
 		initListnerBtn(_view.mcBtnFuni);
 		_view.mcBtnFuni.btnView.gotoAndStop(5);
+		_view.mcBtnFuni.visible=false;
 		initListnerBtn(_view.mcBtnCJ);
 		_view.mcBtnCJ.btnView.gotoAndStop(6);
+		_view.mcBtnCJ.visible=false;
 		initListnerBtn(_view.mcBtnMsg);
 		_view.mcBtnMsg.btnView.gotoAndStop(7);
 	}
@@ -154,8 +157,10 @@ public class PlayInfoModule extends BaseModule {
 		switch (evt.currentTarget)
 		{
 			case _view.mcBtnIndex: //首页
+				NavigatorManager.gotoIndex();
 				break;
 			case _view.mcBtnRank://排行
+				NavigatorManager.gotoRank();
 				break;
 			case _view.mcBtnHome://大厅
 				_view.mcHome.visible = !videoVisible;
@@ -165,6 +170,7 @@ public class PlayInfoModule extends BaseModule {
 				EventUtils.secndStatusEvent(this, EventConst.PLAYER_HOME);
 				break;
 			case _view.mcBtnShop://商城
+				NavigatorManager.gotoShop();
 				break;
 			case _view.mcBtnFuni://福利
 				break;

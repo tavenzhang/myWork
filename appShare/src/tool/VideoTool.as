@@ -58,7 +58,7 @@ public class VideoTool {
 
     /**视频大厅*/
     public static function formatVideoHeadURL(_id:*, versin:String):String {
-        var _str:String = VideoConfig.httpStaticPic + VideoConfig.configXML.head.@videoUrl.toString();
+        var _str:String = VideoConfig.configXML.httpGetCover + VideoConfig.configXML.head.@videoUrl.toString();
         _str = _str.replace("{0}", _id);
         _str = _str.replace("{1}", versin);
         _str = _str;

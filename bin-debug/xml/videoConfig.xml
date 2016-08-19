@@ -7,8 +7,8 @@
     <httpRes>http://www.o-front-test.com/flash</httpRes>
     <httpTomcat>http://v.o-front-test.com</httpTomcat>
     <!--这个socket 本地独立版本有效，正式环境会通过js 参数获取 -->
-    <socket url="10.1.100.103"
-            port="9056"
+    <socket url="138.68.15.251"
+            port="1056"
             http="/video_gs/room_load/login"/>
 
     <httpGetCover>{0}</httpGetCover>
@@ -26,7 +26,6 @@
     <head url="{1}/{0}"
           gxmlurl="gift/gift_xml/"
           giconurl="/image/gift_material/{0}.png"
-
           upurl="coverUpload"
           gifturl="/video_gs/conf"
           depoturl="/video_gs/pack/list2"

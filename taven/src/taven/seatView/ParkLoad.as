@@ -101,7 +101,7 @@ class SpeedkTxt extends Sprite {
         textF.autoSize = TextFormatAlign.LEFT;
         textF.x = 10;
         textF.y = 10;
-        textF.defaultTextFormat = new TextFormat("宋体", 12, 0xffffff);
+        textF.defaultTextFormat = new TextFormat("黑体", 14, 0xffffff);
         mouseChildren = false;
         mouseEnabled = false;
         var filter:flash.filters.DropShadowFilter = new DropShadowFilter(3);

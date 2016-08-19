@@ -24,8 +24,6 @@ package taven.enum
 		public static const  PERSON_UN_FOCUS:String ="unFocus";    //用户面板  添取消关注
 		public static const  PERSON_SEND_MAIL:String ="sendMail";    //用户面板  添取消关注
 		public static const  PERSON_ALERT:String ="Alert";    //用户面板  添取消关注
-		
-		
 		/**--------------------------------------------------------------------------------------登录面板--------------------------------------------------------------------------------------*/
 		
 		public static const  LOGIN:String ="login";    //用户点击登录

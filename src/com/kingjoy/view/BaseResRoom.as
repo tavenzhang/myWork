@@ -2,37 +2,27 @@
  * Created by Roger on 2014/11/24.
  */
 package com.kingjoy.view {
-import com.adobe.utils.StringUtil;
 import com.greensock.events.LoaderEvent;
 import com.greensock.loading.LoaderMax;
 import com.greensock.loading.SWFLoader;
 import com.greensock.loading.XMLLoader;
 import com.junkbyte.console.Cc;
-import com.rover022.tool.NetPing;
-import com.rover022.tool.PingManager;
+import com.rover022.display.UserIconMovieClip;
+import com.rover022.tool.SocketPingManager;
+import com.rover022.vo.VideoConfig;
 
 import display.ui.Alert;
-
-import com.rover022.display.UserIconMovieClip;
-import com.rover022.vo.VideoConfig;
 
 import flash.display.MovieClip;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.external.ExternalInterface;
-import flash.net.SharedObject;
 import flash.system.ApplicationDomain;
 import flash.system.LoaderContext;
 
 import ghostcat.manager.RootManager;
 
-import com.rover022.tool.SocketPingManager;
-
 import manger.ClientManger;
-import manger.UserVoDataManger;
-
-import net.TavenHttpService;
-import net.NetManager;
 
 import tool.VideoTool;
 
@@ -221,7 +211,7 @@ public class BaseResRoom extends MovieClip {
             context: tavenContext
         }));
         _loaderMax.append(new XMLLoader(VideoConfig.HTTP + "xml/giftConfig.xml" + "?version=" + VideoConfig.VERSION, {name: "giftConfig"}));
-        _loaderMax.append(new XMLLoader(VideoConfig.HTTP + "xml/ActiveInfo.xml" + "?version=" + VideoConfig.VERSION, {name: "ActiveInfo"}));
+       // _loaderMax.append(new XMLLoader(VideoConfig.HTTP + "xml/ActiveInfo.xml" + "?version=" + VideoConfig.VERSION, {name: "ActiveInfo"}));
         _loaderMax.load();
     }
 

@@ -49,13 +49,10 @@ public class GiftMake extends MovieClip {
         RootManager.register(this);
         Security.loadPolicyFile("saft.xml");
         loadConfig();
-
-
         setTimeout(function ():void {
             var s2:Sprite = GhostCatMVC.instance.getM("Test2");
             s2["click"]();
         }, 1000);
-
 
     }
 

@@ -74,7 +74,13 @@ public class LoadUI extends Sprite {
     }
 
     public function jumpToHelpURL(e:MouseEvent = null):void {
-        var str:String = VideoConfig.localHttpAddress + "about/help#flasherror";
+        var urlStr:String =  VideoConfig.HTTP;
+            if (VideoConfig.HTTP.length > 1) {
+                urlStr= VideoConfig.HTTP.substr(0, VideoConfig.HTTP.length - 6);
+            } else {
+                urlStr= "";
+            }
+        var str:String = urlStr + "about/help#flasherror";
         str = VideoConfig.httpFunction + "/nac/47";
         Cc.log("jumpToHelpURL" + str);
         navigateToURL(new URLRequest(str))

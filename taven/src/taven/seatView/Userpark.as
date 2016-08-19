@@ -18,9 +18,9 @@ public class Userpark extends userparkMc {
         this.parkArr = [];
         this.parkArr.push("");
         load1_mc = buildLoaderMc(23, 23);
-        load2_mc = buildLoaderMc(108, 23);
-        load3_mc = buildLoaderMc(490, 23);
-        load4_mc = buildLoaderMc(575, 23);
+        load2_mc = buildLoaderMc(198, 23);
+        load3_mc = buildLoaderMc(370, 23);
+        load4_mc = buildLoaderMc(545, 23);
         addChild(park1_bt);
         addChild(park2_bt);
         addChild(park3_bt);

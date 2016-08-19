@@ -25,6 +25,7 @@ import flash.events.IOErrorEvent;
 import flash.external.ExternalInterface;
 import flash.net.URLLoader;
 import flash.net.URLRequest;
+import flash.net.navigateToURL;
 import flash.ui.Keyboard;
 import flash.utils.setInterval;
 
@@ -239,14 +240,7 @@ public class ClientManger {
 	 * 游客注册
 	 */
 	public function guestRegister():void {
-		try {
-			if (ExternalInterface.available) {
-				var funcName:String = VideoConfig.configXML.js.@reg;
-				var timeOver:int    = VideoTool.isOverTime();
-				ExternalInterface.call(funcName, timeOver);
-			}
-		} catch (e:*) {
-		}
+		NavigatorManager.guestRegister();
 	}
 
 	/**
@@ -522,6 +516,7 @@ public class ClientManger {
 			}
 		} catch (e:*) {
 		}
+
 	}
 
 	/**

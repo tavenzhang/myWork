@@ -75,6 +75,7 @@ public class RslModuleManager implements IVideoModule {
         else
         {
             _rslContainer.addChild(module.view);
+            module.show();
         }
     }
 
