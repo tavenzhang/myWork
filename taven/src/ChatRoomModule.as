@@ -411,27 +411,27 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	 * @param sObject
 	 */
 	public function onPlayGiftInfor(sObject:Object):void {
-		var recObject:UserVo = new UserVo();
-		recObject.init(sObject.recUid, sObject.recName, sObject.recRichLv, sObject.recLv, sObject.recIcon);
-		recObject.hidden  = sObject.recHidden;
-		//
-		var sender:UserVo = new UserVo();
-		sender.init(sObject.sendUid, sObject.sendName, sObject.richLv, sObject.lv, sObject.icon);
-		sender.hidden                = sObject.sendHidden;
-		//
-		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement();
-		var giftS:SpanElement        = makeSpan("[礼物]", 0xf955ff);
-		pCustom.addChild(giftS);
-		buildMC(sender, pCustom);
-		giftS = makeSpan(" 赠送给 ", 0xFF33CC);
-		pCustom.addChild(giftS);
-		buildMC(recObject, pCustom);
-		var giftIcon:InlineGraphicElement = buildImageIcon(videoRoom.getDataByName(ModuleNameType.HTTPROOT) + "image/gift_material/" + sObject.gid + ".png", 24, 24);
-		pCustom.addChild(giftIcon);
-		giftS = makeSpan(sObject.sendCount + "个", 0xFF33CC);
-		pCustom.addChild(giftS);
-		//进入
-		giftOutput.addRichChild(pCustom);
+//		var recObject:UserVo = new UserVo();
+//		recObject.init(sObject.recUid, sObject.recName, sObject.recRichLv, sObject.recLv, sObject.recIcon);
+//		recObject.hidden  = sObject.recHidden;
+//		//
+//		var sender:UserVo = new UserVo();
+//		sender.init(sObject.sendUid, sObject.sendName, sObject.richLv, sObject.lv, sObject.icon);
+//		sender.hidden                = sObject.sendHidden;
+//		//
+//		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement();
+//		var giftS:SpanElement        = makeSpan("[礼物]", 0xf955ff);
+//		pCustom.addChild(giftS);
+//		buildMC(sender, pCustom);
+//		giftS = makeSpan(" 赠送给 ", 0xFF33CC);
+//		pCustom.addChild(giftS);
+//		buildMC(recObject, pCustom);
+//		var giftIcon:InlineGraphicElement = buildImageIcon(videoRoom.getDataByName(ModuleNameType.HTTPROOT) + "image/gift_material/" + sObject.gid + ".png", 24, 24);
+//		pCustom.addChild(giftIcon);
+//		giftS = makeSpan(sObject.sendCount + "个", 0xFF33CC);
+//		pCustom.addChild(giftS);
+//		//进入
+//		giftOutput.addRichChild(pCustom);
 	}
 
 	/**
