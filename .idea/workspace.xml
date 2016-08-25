@@ -7,10 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="13">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/videoRoom.swf" afterPath="$PROJECT_DIR$/bin-debug/videoRoom.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/appShare.swc" afterPath="$PROJECT_DIR$/appShare/appShare.swc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120004.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120004.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120004.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120004.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120006.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120006.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120006.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120006.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120013.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120013.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/120013.swf" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/120013.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/image/gift_material/310031.png" afterPath="$PROJECT_DIR$/bin-debug/image/gift_material/310031.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/ChatRoomModule.as" afterPath="$PROJECT_DIR$/taven/src/ChatRoomModule.as" />
     </list>
     <list id="0b8432f8-703d-4449-8515-06a7a62d6e77" name="ignore-on-commit" comment="" />
     <ignored path="videoRoom.iws" />
@@ -40,21 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RoomEventHandler.as" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RoomEventHandler.as" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/kingjoy/handler/RoomEventHandler.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4210">
-              <caret line="323" column="14" selection-start-line="323" selection-start-column="14" selection-end-line="323" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientManger.as" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/appShare/src/manger/ClientManger.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="614" column="34" selection-start-line="614" selection-start-column="34" selection-end-line="614" selection-end-column="34" />
+            <state relative-caret-position="450">
+              <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -102,7 +98,6 @@
         <option value="$PROJECT_DIR$/taven/src/taven/common/RighMenuBar.as" />
         <option value="$PROJECT_DIR$/taven/src/TavenModule.as" />
         <option value="$PROJECT_DIR$/taven/src/taven/chatModule/InputUI.as" />
-        <option value="$PROJECT_DIR$/taven/src/ChatRoomModule.as" />
         <option value="$PROJECT_DIR$/taven/src/taven/common/LeftMenu.as" />
         <option value="$PROJECT_DIR$/taven/src/taven/common/TavenScrollList.as" />
         <option value="$PROJECT_DIR$/taven/src/giftModule/GiftUI.as" />
@@ -136,6 +131,7 @@
         <option value="$PROJECT_DIR$/appShare/src/tool/ViewUtils.as" />
         <option value="$PROJECT_DIR$/taven/src/taven/sidesGroup.as" />
         <option value="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" />
+        <option value="$PROJECT_DIR$/taven/src/ChatRoomModule.as" />
       </list>
     </option>
   </component>
@@ -213,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -256,50 +253,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="o-flash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="o-flash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="bin-debug" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="o-flash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="o-flash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin-debug" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,7 +326,7 @@
       <recent name="D:\work\videoRoom\ModuleInterFace\src\com\rover022\p2pPlay" />
     </key>
   </component>
-  <component name="RunManager" selected="Flash App.videoRoom">
+  <component name="RunManager" selected="Flash App.ModuleGift">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1172,7 +1132,9 @@
       <workItem from="1471620553890" duration="2163000" />
       <workItem from="1471622971720" duration="80000" />
       <workItem from="1471623083193" duration="1119000" />
-      <workItem from="1471922177612" duration="129000" />
+      <workItem from="1471922177612" duration="1116000" />
+      <workItem from="1471923595051" duration="360000" />
+      <workItem from="1471924073649" duration="960000" />
     </task>
     <task id="LOCAL-00001" summary="change module">
       <created>1470040579516</created>
@@ -1286,11 +1248,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471624210512</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="13">
+      <created>1471922318133</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1471922318133</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="873499000" />
+    <option name="totallyTimeSpent" value="875806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1303,11 +1272,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24592833" sideWeight="0.4450727" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2503439" sideWeight="0.60339254" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3149931" sideWeight="0.56785136" order="12" side_tool="true" content_ui="tabs" />
@@ -1317,12 +1285,12 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2696011" sideWeight="0.4749596" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3634895" sideWeight="0.755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22132471" sideWeight="0.755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23454158" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13859275" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06503198" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2255846" sideWeight="0.43214864" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29986244" sideWeight="0.43214864" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20575693" sideWeight="0.24530663" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1330,6 +1298,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18390192" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2503439" sideWeight="0.60339254" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="218" y="125" width="1062" height="607" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.48933902" order="10" side_tool="false" content_ui="tabs" />
@@ -1386,7 +1355,8 @@
     <MESSAGE value="新版本调整" />
     <MESSAGE value="new" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="13" />
+    <option name="LAST_COMMIT_MESSAGE" value="13" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1525,14 +1495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1030">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taven/src/ChatRoomModule.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="608" column="45" selection-start-line="608" selection-start-column="45" selection-end-line="608" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1807,22 +1769,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="218" column="24" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appShare/src/manger/ClientManger.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="614" column="34" selection-start-line="614" selection-start-column="34" selection-end-line="614" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taven/src/ChatRoomModule.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="207" column="24" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kingjoy/handler/RoomEventHandler.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4210">
-          <caret line="323" column="14" selection-start-line="323" selection-start-column="14" selection-end-line="323" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appShare/src/manger/ClientManger.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="614" column="34" selection-start-line="614" selection-start-column="34" selection-end-line="614" selection-end-column="34" />
+        <state relative-caret-position="450">
+          <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1879,7 +1848,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>videoRoom|TVideo</last-edited>
+          <last-edited>ActiveMsFight|taven</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
