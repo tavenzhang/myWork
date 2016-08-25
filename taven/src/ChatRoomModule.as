@@ -64,6 +64,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 
 	private var giftHeight:int;
 
+
 	public function ChatRoomModule():void {
 		VIPColor[1101] = 0xfdebeb;
 		VIPColor[1102] = 0xc9fbcc;
@@ -91,7 +92,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	}
 
 	public function clear():void {
-		//giftOutput.clear();
+		giftOutput.clear();
 		publicOutput.clear();
 		privateOutput.clear();
 		_input.clear()
@@ -117,19 +118,19 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		Style.embedFonts     = false;
 		Style.fontSize       = 12;
 		//输出wenb
-//		giftHeight           = 110;
-//		giftOutput           = new RichText(_width, giftHeight);
-//		giftOutput.maxLength = 10;
-		//addChild(giftOutput);
+		giftHeight           = 110;
+		giftOutput           = new RichText(_width, giftHeight);
+		giftOutput.maxLength = 10;
+		addChild(giftOutput);
 
-		//var _mc:spileLineMc = new spileLineMc();
-		//_mc.y               = giftHeight;
-		//_mc.width           = _width;
-		//	addChild(_mc);
+//		var _mc:spileLineMc = new spileLineMc();
+//		_mc.y               = giftHeight;
+//		_mc.width           = _width;
+//		addChild(_mc);
 //		publicOutput   = new RichText(_width, _height - giftHeight + 100);
 //		publicOutput.y = giftHeight + 10;
 		publicOutput   = new RichText(_width, _height+100);
-		publicOutput.y =  10;
+		publicOutput.y =  giftHeight+10;
 		addChild(publicOutput);
 		privateOutput   = new RichText(_width, 100);
 		addChild(privateOutput);
@@ -293,7 +294,11 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		_height = _h;
 		_input.y  = _height - _input.height-30;
 		privateOutput.y = _input.y - privateOutput.height-10;
-		publicOutput.setHeight(_height-260);
+		publicOutput.setHeight(_height-260 -giftOutput.height);
+//		publicOutput.graphics.beginFill(0xFFFF00,1);
+//		publicOutput.graphics.drawRect(0,0,publicOutput.width,publicOutput.height);
+//		publicOutput.graphics.endFill();
+
 //		publicOutput.graphics.beginFill(0xFF00FF,1);
 //		publicOutput.graphics.drawRect(0,0,publicOutput.width,publicOutput.height);
 //		publicOutput.graphics.endFill();
@@ -411,27 +416,27 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	 * @param sObject
 	 */
 	public function onPlayGiftInfor(sObject:Object):void {
-//		var recObject:UserVo = new UserVo();
-//		recObject.init(sObject.recUid, sObject.recName, sObject.recRichLv, sObject.recLv, sObject.recIcon);
-//		recObject.hidden  = sObject.recHidden;
-//		//
-//		var sender:UserVo = new UserVo();
-//		sender.init(sObject.sendUid, sObject.sendName, sObject.richLv, sObject.lv, sObject.icon);
-//		sender.hidden                = sObject.sendHidden;
-//		//
-//		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement();
-//		var giftS:SpanElement        = makeSpan("[礼物]", 0xf955ff);
-//		pCustom.addChild(giftS);
-//		buildMC(sender, pCustom);
-//		giftS = makeSpan(" 赠送给 ", 0xFF33CC);
-//		pCustom.addChild(giftS);
-//		buildMC(recObject, pCustom);
-//		var giftIcon:InlineGraphicElement = buildImageIcon(videoRoom.getDataByName(ModuleNameType.HTTPROOT) + "image/gift_material/" + sObject.gid + ".png", 24, 24);
-//		pCustom.addChild(giftIcon);
-//		giftS = makeSpan(sObject.sendCount + "个", 0xFF33CC);
-//		pCustom.addChild(giftS);
-//		//进入
-//		giftOutput.addRichChild(pCustom);
+		var recObject:UserVo = new UserVo();
+		recObject.init(sObject.recUid, sObject.recName, sObject.recRichLv, sObject.recLv, sObject.recIcon);
+		recObject.hidden  = sObject.recHidden;
+		//
+		var sender:UserVo = new UserVo();
+		sender.init(sObject.sendUid, sObject.sendName, sObject.richLv, sObject.lv, sObject.icon);
+		sender.hidden                = sObject.sendHidden;
+		//
+		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement();
+		var giftS:SpanElement        = makeSpan("[礼物]", 0xf955ff);
+		pCustom.addChild(giftS);
+		buildMC(sender, pCustom);
+		giftS = makeSpan(" 赠送给 ", 0xFF33CC);
+		pCustom.addChild(giftS);
+		buildMC(recObject, pCustom);
+		var giftIcon:InlineGraphicElement = buildImageIcon(videoRoom.getDataByName(ModuleNameType.HTTPROOT) + "image/gift_material/" + sObject.gid + ".png", 24, 24);
+		pCustom.addChild(giftIcon);
+		giftS = makeSpan(sObject.sendCount + "个", 0xFF33CC);
+		pCustom.addChild(giftS);
+		//进入
+		giftOutput.addRichChild(pCustom);
 	}
 
 	/**

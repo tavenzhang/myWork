@@ -367,6 +367,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         roomEastUIView.addChild(rightMenuBar);
         this.rightMenuBar.y = 15;
         this.rightMenuBar.x = -5;
+
     }
 
     /**
