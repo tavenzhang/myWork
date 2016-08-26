@@ -31,6 +31,7 @@ public class VideoConfig {
 	public static var isShowGameHelp:Boolean = true;
 
 
+
 	public static function get httpTomcat():String {
 		if (ExternalInterface.available) {
 			return RootManager.getValue("httpTomcat")
