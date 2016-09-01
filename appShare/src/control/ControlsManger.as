@@ -22,6 +22,7 @@ public class ControlsManger {
         new RankAndInfoControl().regMsg();
         new RoomManageControl().regMsg();
         new VideoControl().regMsg();
+        new ActiveControl().regMsg();
     }
 
     //用于  一次性请求消息 ,无需一直监听的请求  减少control 数量  直接回调处理函数，回调一次后自动消除引用

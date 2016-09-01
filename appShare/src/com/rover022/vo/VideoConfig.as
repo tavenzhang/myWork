@@ -64,6 +64,10 @@ public class VideoConfig {
 		return HTTP + "Modules/rslModules/" + modlueName + ".swf";
 	}
 
+	public static function getSKinPath(modlueName:String):String {
+		return HTTP + "Modules/skin/" + modlueName + ".swf";
+	}
+
 	public static function get isValidRtmp():Boolean {
 		var result:Boolean = false;
 		if (configXML && configXML.isVideoValid == "1") {

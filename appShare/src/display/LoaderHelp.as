@@ -42,7 +42,7 @@ public class LoaderHelp extends Sprite {
         {
             _sucFun(loader.content);
         }
-        loader.unloadAndStop();
+        //loader.unload();
         loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, completeHandler);
         loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR, onError);
         _sucFun =null;

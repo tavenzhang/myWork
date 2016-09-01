@@ -59,9 +59,8 @@ public class VideoControl extends BaseControl {
             case CBProtocol.listRtmpRoom_80001://rtmp择优  主播列表
                 Cc.log(sObject.rtmp);
                 onRtmpListResult(String(sObject.rtmp).split(","));
-                // UserVoDataManger.adminPingManger.addRtmpArray(String(sObject.rtmp).split(","));
+                //UserVoDataManger.adminPingManger.addRtmpArray(String(sObject.rtmp).split(","));
                 //UserVoDataManger.adminPingManger.addCliendRtmpArr(HttpService.RTMP_LIST);
-
                 break;
             case CBProtocol.songActionListPlay://麦序 20002上麦,20003下麦(传流ID)
                 //收到信息之后发送 签到任务
@@ -108,7 +107,6 @@ public class VideoControl extends BaseControl {
                 DataCenterManger.adminPingManger.addCliendRtmpArr(rtmpList);      //NetManager.getInstance().sendDataObject({"cmd": CBProtocol.listRtmpRoom});//获取rtmp列表
                 DataCenterManger.adminPingManger.startTestSped();
                 DataCenterManger.adminPingManger.dispatchEvent(new Event(PingManager.ITEM_TESTOK));
-
 
         }
     }

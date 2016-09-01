@@ -41,13 +41,13 @@ public class ModuleNameType {
     public static const CONFIGXML:String = "CONFIGXML";
 
     public static var SOCKETISCONNECT:String = "SOCKETISCONNECT";
-
-    //-------------------------------------------------------rls 不在游戏进入时 加载的模块，减少开始加载时间----------------------------------------------------------//
     public static const LIMIT_EnterModule:String = "LimitEnterModule";
+    //-------------------------------------------------------rls 不在游戏进入时 加载的模块，减少开始加载时间----------------------------------------------------------//
 
 
     public static const ActiveGoldHouseRModule:String = "ActiveGoldHouseRModule";
     public static const ActiveMsFight:String = "ActiveMSFightModule";
+    public static const ActiveCJ:String = "ActiveCJ";
 
 }
 }

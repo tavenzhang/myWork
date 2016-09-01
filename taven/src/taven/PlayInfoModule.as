@@ -202,6 +202,7 @@ public class PlayInfoModule extends BaseModule {
 
 				break;
 			case _view.mcBtnMsg://消息
+				//ClientManger.getInstance().getMsgKeyFromWeb(VideoConfig.testUID, VideoConfig.testPASS, ClientManger.getInstance().view["AirConnectService"]);
 				if (!mailVisilbe) {
 					_view.mcMail.visible = true;
 					changeSelcedBtn(_view.btnMail);
@@ -220,7 +221,7 @@ public class PlayInfoModule extends BaseModule {
 		}
 	}
 	private function onStarCJClick(evt:Event){
-		EventUtils.secndNetDataNew(CBProtocol.activeCj_62001,{"title":"","num":view_cj.txtNum.text,"detail":"","cmd":CBProtocol.activeCj_62001});
+		EventUtils.secndNetDataNew(CBProtocol.activeCj_62001,{"title":view_cj.txtTitle.text,"num":view_cj.txtNum.text,"detail":view_cj.txtDesc.text,"cmd":CBProtocol.activeCj_62001});
 		view_cj.visible=false;
 	}
 

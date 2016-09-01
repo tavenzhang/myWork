@@ -29,7 +29,7 @@ public class BaseRslModule extends Sprite implements IBaseRslModule{
         initView();
         addEventListeners();
         addEventListener(Event.ADDED_TO_STAGE,onShowView);
-        this.filters = [new DropShadowFilter()];
+      //  this.filters = [new DropShadowFilter()];
     }
 
     private function  onResize(evt:Event):void
@@ -54,7 +54,7 @@ public class BaseRslModule extends Sprite implements IBaseRslModule{
         this.stage.removeEventListener(Event.RESIZE,onResize);
         removeEventListener(Event.ADDED_TO_STAGE,onShowView);
     }
-    //��ʾui
+    //显示窗口
     public function show():void {
         this.visible=true;
         this.mouseChildren = true;

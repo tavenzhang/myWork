@@ -3,7 +3,7 @@
   <component name="FlexBuildConfigurationManager" active="videoRoom">
     <configurations>
       <configuration name="videoRoom" pure-as="true" main-class="VideoRoom" output-file="videoRoom.swf" output-folder="$MODULE_DIR$/bin-debug">
-        <dependencies target-player="18.0">
+        <dependencies target-player="22.0">
           <entries>
             <entry library-id="fc9476c4-f1a2-4c39-b5c6-9f4dd7800913">
               <dependency linkage="Merged" />
@@ -12,7 +12,7 @@
               <dependency linkage="Include" />
             </entry>
           </entries>
-          <sdk name="AIRSDK18" />
+          <sdk name="air22" />
         </dependencies>
         <compiler-options>
           <map>
@@ -20,6 +20,26 @@
           </map>
           <option name="resourceFilesMode" value="None" />
         </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="ATest" pure-as="true" main-class="ATest" output-file="ATest.swf" output-folder="$MODULE_DIR$/bin-debug">
+        <dependencies target-player="18.0">
+          <entries>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="83da02a2-31b2-474b-a31e-87d15dbf1fc9">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="3fcd3963-d85e-45bb-87e8-8f774d016461">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK18" />
+        </dependencies>
+        <compiler-options />
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />
@@ -32,7 +52,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="AIRSDK18" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="air22&#9;AIRSDK18" jdkType="__CompositeFlexSdk__" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
@@ -46,5 +66,27 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="appShare" exported="" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="83da02a2-31b2-474b-a31e-87d15dbf1fc9" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="3fcd3963-d85e-45bb-87e8-8f774d016461" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/taven/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/taven/libs" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

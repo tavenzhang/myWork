@@ -25,7 +25,6 @@ public class DataCenterManger extends Object implements ISocketApp {
     public static var roomData:Object;
     public static var videoOwner:Object;//当前视频对象
     public static var cutoData:Object;//socket切换数据
-    //, ,
     /**
      * -1:游客,
      * 0:PLAYER:玩家
@@ -45,6 +44,8 @@ public class DataCenterManger extends Object implements ISocketApp {
     private static var _instance:DataCenterManger;
     //特效屏蔽
     private  static var _isShowGiftEffect:Boolean=true;
+
+    public static var activeCJData:Object;
 
     /**
      * 是不是这个房间的主播
