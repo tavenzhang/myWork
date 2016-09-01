@@ -19,7 +19,7 @@ import ghostcat.util.core.Singleton;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import net.NetManager;
 
@@ -41,7 +41,7 @@ public class VideoControl extends BaseControl {
         switch (data.cmd) {
 
             case CBProtocol.rtmp_client_80002: //主播不处理 80002消息  80002消息返回{cmd:80002,result:(0：未直播 1：直播中)}
-                if (!UserVoDataManger.roomAdmin) {
+                if (!DataCenterManger.roomAdmin) {
                     var isLive:Boolean = int(data.result) == 1;
                     var rtmpArr:Array = sObject.userrtmp == null ? [] : String(sObject.userrtmp).split(",");
                     onRtmpListResult(rtmpArr);
@@ -67,17 +67,17 @@ public class VideoControl extends BaseControl {
                 //收到信息之后发送 签到任务
                 if (sObject.items.length > 0) {
                     for (var i:int = 0; i < sObject.items.length; i++) {  //目前数组只有1 肯定1个视频
-                        if (UserVoDataManger.userData.uid == sObject.items[i].uid) {
-                            UserVoDataManger.userData.sid = sObject.items[i].sid;
+                        if (DataCenterManger.userData.uid == sObject.items[i].uid) {
+                            DataCenterManger.userData.sid = sObject.items[i].sid;
                         }
                         sObject.items[i].headimg = VideoTool.formatHeadURL(sObject.items[i].headimg);
                     }
                     //播放视频
-                    UserVoDataManger.formatStream(sObject.items[0]);//有视频
-                    UserVoDataManger.userData.lastRtmp = sObject.items[0].rtmp; //记录最后使用的rtmp地址 用于地址选择判断
+                    DataCenterManger.formatStream(sObject.items[0]);//有视频
+                    DataCenterManger.userData.lastRtmp = sObject.items[0].rtmp; //记录最后使用的rtmp地址 用于地址选择判断
                 } else {
-                    UserVoDataManger.formatStream(null);//没有视频
-                    UserVoDataManger.userData.lastRtmp = ""; //记录最后使用的rtmp地址
+                    DataCenterManger.formatStream(null);//没有视频
+                    DataCenterManger.userData.lastRtmp = ""; //记录最后使用的rtmp地址
                 }
                 break;
         }
@@ -88,26 +88,26 @@ public class VideoControl extends BaseControl {
     public function onRtmpListResult(rtmpList:Array):void {
         rtmpList = rtmpList == null ? [] : rtmpList;
         Cc.log("onRtmpListResult------------------------------------------:" + rtmpList);
-        if (!UserVoDataManger.roomAdmin) {
+        if (!DataCenterManger.roomAdmin) {
             if (rtmpList.length > 0) {
-                UserVoDataManger.userPingManger.addCliendRtmpArr(rtmpList);
-                UserVoDataManger.userPingManger.addEventListener(PingManager.ITEM_TESTOK, function (evt:Event):void {
-                    var ping:NetPing = UserVoDataManger.userPingManger.fastBalanceRtmp;
+                DataCenterManger.userPingManger.addCliendRtmpArr(rtmpList);
+                DataCenterManger.userPingManger.addEventListener(PingManager.ITEM_TESTOK, function (evt:Event):void {
+                    var ping:NetPing = DataCenterManger.userPingManger.fastBalanceRtmp;
                     if (ping) {
                         NetManager.getInstance().sendDataObject({"cmd": 20001, "rtmp": ping.rtmp});
-                        UserVoDataManger.userPingManger.removeEventListener(PingManager.ITEM_TESTOK, arguments.callee);
+                        DataCenterManger.userPingManger.removeEventListener(PingManager.ITEM_TESTOK, arguments.callee);
                     }
                 });
-                UserVoDataManger.userPingManger.startTestSped();
+                DataCenterManger.userPingManger.startTestSped();
             }
             else {
                 NetManager.getInstance().sendDataObject({"cmd": 20001, "rtmp": ""});
             }
         } else {
             //设置直播rtml列表
-                UserVoDataManger.adminPingManger.addCliendRtmpArr(rtmpList);      //NetManager.getInstance().sendDataObject({"cmd": CBProtocol.listRtmpRoom});//获取rtmp列表
-                UserVoDataManger.adminPingManger.startTestSped();
-                UserVoDataManger.adminPingManger.dispatchEvent(new Event(PingManager.ITEM_TESTOK));
+                DataCenterManger.adminPingManger.addCliendRtmpArr(rtmpList);      //NetManager.getInstance().sendDataObject({"cmd": CBProtocol.listRtmpRoom});//获取rtmp列表
+                DataCenterManger.adminPingManger.startTestSped();
+                DataCenterManger.adminPingManger.dispatchEvent(new Event(PingManager.ITEM_TESTOK));
 
 
         }

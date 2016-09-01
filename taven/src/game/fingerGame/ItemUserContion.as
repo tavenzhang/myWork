@@ -13,7 +13,7 @@ import flash.events.MouseEvent;
 import game.fingerGame.ui.SimpleGameButton;
 import game.tool.RunTool;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 public class ItemUserContion extends IAssetMovieClip {
 	public var vo:FingerGameRoomVo;
@@ -31,7 +31,7 @@ public class ItemUserContion extends IAssetMovieClip {
 		view.money_txt.text = _vo.points + "钻石";
 		view.time_txt.text  = "剩余:" + _vo.time + "秒";
 		canyuBtn            = RunTool.buildBtn(this, "asset.c_btnSkin", 14, 0xffffff, "参与", onClick, 437, 0);
-		if (vo.sendUid == UserVoDataManger.userData.uid) {
+		if (vo.sendUid == DataCenterManger.userData.uid) {
 			canyuBtn.visible = false;
 		}
 	}
@@ -46,7 +46,7 @@ public class ItemUserContion extends IAssetMovieClip {
 	}
 
 	private function onClick(e:MouseEvent):void {
-		if (UserVoDataManger.playerState != PlayerType.GUEST) {
+		if (DataCenterManger.playerState != PlayerType.GUEST) {
 			parentPane.sendSocketData({cmd: 61004, gameId: vo.gameId, rid: VideoConfig.roomID});
 		} else {
 			Alert.Show("请先登录");

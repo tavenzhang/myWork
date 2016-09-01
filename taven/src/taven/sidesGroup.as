@@ -21,7 +21,7 @@ import flash.utils.Dictionary;
 
 import ghostcat.util.display.DisplayUtil;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import taven.enum.EventConst;
 import taven.enum.EventUtils;
@@ -214,12 +214,12 @@ public class sidesGroup extends BaseModule {
                     if(_view.btnClearGit.currentFrame==1)
                     {
                         _view.btnClearGit.gotoAndStop(2);
-                        UserVoDataManger.isShowGiftEffect=false;
+                        DataCenterManger.isShowGiftEffect=false;
                     }
                     else
                     {
                         _view.btnClearGit.gotoAndStop(1);
-                        UserVoDataManger.isShowGiftEffect=true;
+                        DataCenterManger.isShowGiftEffect=true;
                     }
                 }
                 default:
@@ -300,7 +300,7 @@ public class sidesGroup extends BaseModule {
         }
         tweenVisible(_view.mvVideo, visible);
         //如果这个用户不是主播 显示一个换线动画元件;
-        if (visible && UserVoDataManger.playerState != PlayerType.ANCHOR) {
+        if (visible && DataCenterManger.playerState != PlayerType.ANCHOR) {
             showTishiMc(_view.btnChange);
         }
     }

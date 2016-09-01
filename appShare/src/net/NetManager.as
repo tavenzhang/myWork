@@ -26,7 +26,7 @@ import ghostcat.manager.RootManager;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import tool.VideoTool;
 
@@ -244,6 +244,7 @@ public class NetManager extends EventDispatcher {
         if (socketClient == null || socketClient.connected == false) {
             return;
         }
+
         try {
             if (cmd != -1 || !_obj.hasOwnProperty("cmd")) {
                 _obj.cmd = cmd;
@@ -254,11 +255,11 @@ public class NetManager extends EventDispatcher {
             socketClient.writeBytes(_byteArray);
             socketClient.writeUTF("\r\n");
             socketClient.flush();
-            if (UserVoDataManger.filterCMDArray.indexOf(_obj.cmd) == -1) {
+            if (DataCenterManger.filterCMDArray.indexOf(_obj.cmd) == -1) {
                 Cc.logch("taven", "-->" + _obj.cmd + "," + JSON.stringify(_obj));
             }
         } catch (e:*) {
-            trace("NetManager->sendDataObject:" + e);
+            Cc.log("NetManager->sendDataObject:" + e);
         }
     }
 

@@ -15,7 +15,7 @@ import flash.utils.setInterval;
 import game.fingerGame.ui.AlphaScrollPane;
 import game.tool.RunTool;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 public class ListPane extends FWindon {
 	public var scrollPanel:ScrollPane;
@@ -49,7 +49,7 @@ public class ListPane extends FWindon {
 	}
 
 	private function onCreateClick(event:MouseEvent):void {
-		if (UserVoDataManger.playerState == PlayerType.GUEST) {
+		if (DataCenterManger.playerState == PlayerType.GUEST) {
 			Alert.Show("请先登录");
 			return;
 		}

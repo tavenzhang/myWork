@@ -1,4 +1,5 @@
 package taven.enum {
+import com.junkbyte.console.Cc;
 import com.rover022.IVideoRoom;
 
 import control.ControlsManger;
@@ -39,6 +40,7 @@ public class EventUtils {
     /**通用发生 事件接口，方便统一处理*/
     public static function secndNetDataNew(cmdId:int, dataStr:Object, func:Function = null):void
     {
+
         dataStr.cmd = cmdId;
         if (func != null) {
             dataStr.callBack = func;
@@ -48,6 +50,7 @@ public class EventUtils {
         else
         {
             NetManager.getInstance().sendDataObject(dataStr);
+
         }
 
     }

@@ -126,7 +126,7 @@ public class ClientManger {
 	 */
 	public function formatPurview(_v:int):void {//格式化权限
 		var uiRoom:IVideoRoom        = view;
-		UserVoDataManger.playerState = _v;
+		DataCenterManger.playerState = _v;
 		var sides_Module:MovieClip   = ModuleLoaderManger.getInstance().getModule(ModuleNameType.SIDESGROUP) as MovieClip;
 		sides_Module.showTranUsers(false);//转移观众按钮
 		var video_Module:IPlayer = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as IPlayer;
@@ -139,9 +139,9 @@ public class ClientManger {
 	 */
 	public function removeUserVideo(_obj:Object):void {
 		var uiRoom:IVideoRoom = view;
-		if (UserVoDataManger.userData.uid == _obj.uid) {
+		if (DataCenterManger.userData.uid == _obj.uid) {
 			var video_Module:IPlayer = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as IPlayer;
-			video_Module.playRTMP(UserVoDataManger.videoOwner.sid, UserVoDataManger.roomData.rtmp);
+			video_Module.playRTMP(DataCenterManger.videoOwner.sid, DataCenterManger.roomData.rtmp);
 		}
 	}
 
@@ -152,21 +152,21 @@ public class ClientManger {
 		if (_pass != null && _pass != "") {//有密码
 			Alert.Show("密码房", "警告");
 			return;
-		} else if (UserVoDataManger.roomData.roomid != _roomid || _bool) {//无密码
-			if (_roomid != 0 && UserVoDataManger.cutoData && UserVoDataManger.cutoData.host) {
-				NetManager.getInstance().connectSocket(UserVoDataManger.cutoData.host, UserVoDataManger.cutoData.port, _roomid, VideoConfig.loginKey);
+		} else if (DataCenterManger.roomData.roomid != _roomid || _bool) {//无密码
+			if (_roomid != 0 && DataCenterManger.cutoData && DataCenterManger.cutoData.host) {
+				NetManager.getInstance().connectSocket(DataCenterManger.cutoData.host, DataCenterManger.cutoData.port, _roomid, VideoConfig.loginKey);
 			} else {
 				NetManager.getInstance().sendDataObject({"cmd": 10010, roomid: _roomid});//切换房间
 			}
 		}
-		UserVoDataManger.cutoData = null;
+		DataCenterManger.cutoData = null;
 	}
 
 	/**
 	 * 是否是房间视频流的发布者
 	 */
 	public function get isRoomPublisher():Boolean {
-		return UserVoDataManger.userData.uid == UserVoDataManger.roomData.roomid;
+		return DataCenterManger.userData.uid == DataCenterManger.roomData.roomid;
 	}
 
 	/**
@@ -193,8 +193,8 @@ public class ClientManger {
 			return;
 		}
 		// var video_Module:MovieClip =  ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as MovieClip;
-		if (UserVoDataManger.getInstance().isSelf(_obj.uid)) {
-			UserVoDataManger.getInstance().isVideoPublisher = true;
+		if (DataCenterManger.getInstance().isSelf(_obj.uid)) {
+			DataCenterManger.getInstance().isVideoPublisher = true;
 			Cc.log("主播发布模式：", "sid:" + _obj.sid, "rtmp地址:", _obj.rtmp);
 			video_Module.publish(_obj.sid, _obj.rtmp);
 			VideoConfig.connectRTMP = _obj.rtmp;
@@ -247,7 +247,7 @@ public class ClientManger {
 	 * 检查然后弹出登录窗口
 	 */
 	public function isGuestAndGuestRegister():Boolean {
-		if (UserVoDataManger.playerState == PlayerType.GUEST) {
+		if (DataCenterManger.playerState == PlayerType.GUEST) {
 			guestRegister();
 			return true;
 		} else {
@@ -465,7 +465,7 @@ public class ClientManger {
 	 * @param _giftObj
 	 */
 	public function playGiftAnimation(_giftObj:Object):void {
-		if (!UserVoDataManger.isShowGiftEffect)//全局设置是否显示礼物特效
+		if (!DataCenterManger.isShowGiftEffect)//全局设置是否显示礼物特效
 			return;
 		var vo:GiftVo = ClientManger.getInstance().getGiftVoByID(_giftObj.gid);
 		vo.sendName   = _giftObj.sendName;
@@ -692,16 +692,16 @@ public class ClientManger {
 		//添加一些指令
 		Cc.addSlashCommand("addCommond", function (_cmd:int):void {
 			//trace("删除指令", _cmd);
-			if (UserVoDataManger.filterCMDArray.indexOf(_cmd) != -1) {
-				var _index:int = UserVoDataManger.filterCMDArray.indexOf(_cmd);
-				UserVoDataManger.filterCMDArray.splice(_index, 1);
+			if (DataCenterManger.filterCMDArray.indexOf(_cmd) != -1) {
+				var _index:int = DataCenterManger.filterCMDArray.indexOf(_cmd);
+				DataCenterManger.filterCMDArray.splice(_index, 1);
 				Cc.error("添加指令成功")
 			}
 		});
 		Cc.addSlashCommand("deleteCommond", function (_cmd:int):void {
 			//trace("删除指令", _cmd);
-			if (UserVoDataManger.filterCMDArray.indexOf(_cmd) == -1) {
-				UserVoDataManger.filterCMDArray.push(_cmd);
+			if (DataCenterManger.filterCMDArray.indexOf(_cmd) == -1) {
+				DataCenterManger.filterCMDArray.push(_cmd);
 				Cc.error("删除指令成功")
 			}
 		});
@@ -715,6 +715,6 @@ public class ClientManger {
 				Cc.log("后台小弟欢迎你,后面可以接一个参数", src);
 			});
 		}
-	};
+    };
 }
 }

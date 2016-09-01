@@ -20,7 +20,7 @@ import flash.utils.setTimeout;
 import game.fingerGame.ui.SimpleGameButton;
 import game.tool.RunTool;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 public class BattlePane extends FWindon {
 	public const SUCCESS:int            = 2;
@@ -121,17 +121,17 @@ public class BattlePane extends FWindon {
 		if (obj[0].points == obj[1].points) {
 			return PING;
 		}
-		if (obj[0].uid == UserVoDataManger.userData.uid) {
+		if (obj[0].uid == DataCenterManger.userData.uid) {
 			return obj[0].points > obj[1].points ? SUCCESS : LOST;
 		}
-		if (obj[1].uid == UserVoDataManger.userData.uid) {
+		if (obj[1].uid == DataCenterManger.userData.uid) {
 			return obj[1].points > obj[0].points ? SUCCESS : LOST;
 		}
 		return PING;
 	}
 
 	private function getScoreobj(obj:Array):int {
-		if (obj[0].uid == UserVoDataManger.userData.uid) {
+		if (obj[0].uid == DataCenterManger.userData.uid) {
 			return obj[0].points;
 		} else {
 			return obj[1].points;
@@ -191,7 +191,7 @@ public class BattlePane extends FWindon {
 	}
 
 	public function get myTitleClip():MovieClip {
-		if (players[0].uid == UserVoDataManger.userData.uid) {
+		if (players[0].uid == DataCenterManger.userData.uid) {
 			return view.p1;
 		} else {
 			return view.p2;
@@ -232,7 +232,7 @@ public class BattlePane extends FWindon {
 		gameId            = obj.gameId;
 		view.p1_name.text = obj.items[0].name;
 		view.p2_name.text = obj.items[1].name;
-		if (obj.items[0].uid == UserVoDataManger.userData.uid) {
+		if (obj.items[0].uid == DataCenterManger.userData.uid) {
 			view.guanggao_txt.x = 52;
 			view.p2.gotoAndStop(5);
 		} else {

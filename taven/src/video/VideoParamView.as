@@ -15,7 +15,7 @@ import flash.media.Microphone;
 import flash.text.TextFormat;
 import flash.utils.setTimeout;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import sk.video.videoParam;
 
@@ -65,7 +65,7 @@ public class VideoParamView extends BasePaneUI {
         }
         videoBox.selectedIndex = 0;
         soundBox.selectedIndex = 0;
-        var _arr:PingManager = UserVoDataManger.adminPingManger;
+        var _arr:PingManager = DataCenterManger.adminPingManger;
         _arr.addEventListener(PingManager.ITEM_TESTOK, testSeedFinish);
         lineBox.items = _arr.rtmpSortlist;
         lineBox.selectedIndex = 0;
@@ -80,7 +80,7 @@ public class VideoParamView extends BasePaneUI {
     }
 
     public function onTestSpeddClick(evt:Event):void {
-        var _arr:PingManager = UserVoDataManger.adminPingManger;
+        var _arr:PingManager = DataCenterManger.adminPingManger;
         _arr.startTestSped();
         _pane.btnTestSpeed.visible = false; //只是2秒间隔 点击测速按钮 以免过于频繁
         setTimeout(function ():void {
@@ -91,7 +91,7 @@ public class VideoParamView extends BasePaneUI {
     public function testSeedFinish(evt:Event):void {
 
         trace("testSeedFinish");
-        var mage:PingManager = UserVoDataManger.adminPingManger;
+        var mage:PingManager = DataCenterManger.adminPingManger;
         var _select:int = 0;
         for (var i:int = 0; i < mage.rtmpSortlist.length; i++) {
             var object:NetPing = mage.rtmpSortlist[i];

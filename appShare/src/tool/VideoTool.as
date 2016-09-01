@@ -29,7 +29,7 @@ import flash.utils.ByteArray;
 import flash.utils.getDefinitionByName;
 import flash.utils.getTimer;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 public class VideoTool {
     public static var videoRomm:IVideoRoom;
@@ -52,7 +52,7 @@ public class VideoTool {
 
     public static function jumpToGuiZhuURL():void {
         if (ExternalInterface.available) {
-            ExternalInterface.call("Fla.showNobleDialog", UserVoDataManger.roomData.roomid);
+            ExternalInterface.call("Fla.showNobleDialog", DataCenterManger.roomData.roomid);
         }
     }
 

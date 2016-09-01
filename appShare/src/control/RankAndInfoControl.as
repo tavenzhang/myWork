@@ -11,7 +11,7 @@ import display.BaseModule;
 import flash.display.MovieClip;
 
 import manger.ClientManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import manger.ModuleLoaderManger;
 
@@ -48,19 +48,19 @@ public class RankAndInfoControl extends BaseControl {
                 break;
             case CBProtocol.moneyChange://主播费用增加通知
                 userInfo_Module = ModuleLoaderManger.getInstance().getModule(ModuleNameType.USERINFOUI) as MovieClip;
-                if (sObject.uid == UserVoDataManger.userData.uid) {
-                    UserVoDataManger.userData.lv = sObject.lv;
-                    userInfo_Module.userObject = UserVoDataManger.userData;//右上角用户信息
+                if (sObject.uid == DataCenterManger.userData.uid) {
+                    DataCenterManger.userData.lv = sObject.lv;
+                    userInfo_Module.userObject = DataCenterManger.userData;//右上角用户信息
                 }
                 var roomPlayInfor:MovieClip = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEO_PLAY_INFO) as MovieClip;
                 roomPlayInfor.updataExp(sObject);
                 break;
 
             case CBProtocol.moneyChange2://扣费心跳通知
-                UserVoDataManger.userData.points = sObject.points;
-                UserVoDataManger.userData.richLv = sObject.richLv;
+                DataCenterManger.userData.points = sObject.points;
+                DataCenterManger.userData.richLv = sObject.richLv;
                 userInfo_Module = ModuleLoaderManger.getInstance().getModule(ModuleNameType.USERINFOUI) as MovieClip;
-                userInfo_Module.userObject = UserVoDataManger.userData;//右上角用户信息
+                userInfo_Module.userObject = DataCenterManger.userData;//右上角用户信息
                 break;
             case CBProtocol.RankMonyDay_15005://本日贡献共计
                 rankView_Module.updateTotal(sObject.total, false);

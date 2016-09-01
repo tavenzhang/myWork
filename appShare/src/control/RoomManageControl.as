@@ -17,7 +17,7 @@ import ghostcat.manager.FontManager;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import net.NetManager;
 
@@ -66,7 +66,7 @@ public class RoomManageControl extends BaseControl {
                 (ModuleLoaderManger.getInstance().getModule(ModuleNameType.RANK_VIP) as BaseModule).handMessage(sObject);//vip贵宾席 交给module自己处理
                 view.logo_Module.peopleInfo = sObject;
                 if (sObject.ruled != -1) {
-                    if (UserVoDataManger.userData.uid == sObject.uid) {
+                    if (DataCenterManger.userData.uid == sObject.uid) {
                         ClientManger.getInstance().formatPurview(sObject.ruled);//用户
                     }
                     if (int(sObject.car && sObject.hidden != 1) > 0) {
@@ -102,7 +102,7 @@ public class RoomManageControl extends BaseControl {
             case CBProtocol.addManger://添加 管理员
                 vipModule.handMessage(data);
                 view.playInfo_Module.updateUserData(null, [FormatDataTool.userData(sObject)]);
-                if (UserVoDataManger.userData.uid == sObject.uid) {//是自己
+                if (DataCenterManger.userData.uid == sObject.uid) {//是自己
                     ClientManger.getInstance().formatPurview(sObject.ruled);//用户
                     Alert.Show("恭喜您被主播提升为本房间管理员!", "通知", true, 3, true);
                 }
@@ -113,7 +113,7 @@ public class RoomManageControl extends BaseControl {
                 if (_userObject) {
                     _userObject.ruled = 0;
                     view.playInfo_Module.updateUserData(null, [FormatDataTool.userData(_userObject)]);
-                    if (UserVoDataManger.userData.uid == sObject.uid) {//是自己
+                    if (DataCenterManger.userData.uid == sObject.uid) {//是自己
                         ClientManger.getInstance().formatPurview(0);//用户
                         Alert.Show("很遗憾!\n您被主播撤消了本房间管理员资格!", "通知", true, 3, true);
                     }
@@ -124,7 +124,7 @@ public class RoomManageControl extends BaseControl {
                 view.playInfo_Module.updateUserData(null, FormatDataTool.userDataArray(sObject.items));
                 break;
             case CBProtocol.kickOut://踢出房间
-                var isSelf:Boolean = UserVoDataManger.getInstance().isSelf(sObject.uid);
+                var isSelf:Boolean = DataCenterManger.getInstance().isSelf(sObject.uid);
                 //var outerIsSelf:Boolean = UserVoDataManger.getInstance().isSelf(sObject.outId);
                 var _names:String = FormatDataTool.getNickeNameByInt(sObject.name, sObject.hidden);
                 //0 禁言 1 踢人

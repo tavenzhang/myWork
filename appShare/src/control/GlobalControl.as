@@ -20,7 +20,7 @@ import ghostcat.manager.RootManager;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import mx.utils.StringUtil;
 
@@ -69,7 +69,7 @@ public class GlobalControl extends BaseControl {
 				vipModule.handMessage(data);
 				//KTVUnion.setLoadInfo("",92);//-----------loading信息
 				//UserVoDataManger.userData = JSON.parse('{"icon":1104,"vip":1104,"port":0,"car":120104,"cmd":10001,"ruled":0,"sex":0,"uid":1626669,"hidden":0,"roomid":0,"headimg":"","activityName":"","lv":1,"expTotal":10000,"gid":0,"points":0,"name":"ronnie","gamepop":"1","exp":0,"downloadUrl":"http://pan.baidu.com/s/1pJV9S9t","ret":0,"emailValid":0,"host":"","richLv":13}')
-				UserVoDataManger.userData  = sObject;//用户信息
+				DataCenterManger.userData  = sObject;//用户信息
 				VideoConfig.isShowGameHelp = sObject.introduced;
 //				var _gameEvent:CBModuleEvent;
 //				if (sObject.gamepop == 1) {
@@ -89,16 +89,16 @@ public class GlobalControl extends BaseControl {
 				//
 				RootManager.stage.dispatchEvent(new CBModuleEvent(CBModuleEvent.RECONNECT_SOCKET));
 				//
-				trace("UserVoDataManger.userData.items---" + UserVoDataManger.userData.items);
-				view.playInfo_Module.showActiveBtns(UserVoDataManger.userData.items);
-				Cc.log("UserVoDataManger.userData.ruled==="+UserVoDataManger.userData.ruled);
-				if (int(UserVoDataManger.userData.ruled) != -1) {//已登祟
-					view.playInfo_Module.data = FormatDataTool.personInfo(UserVoDataManger.userData);//新版左侧
+				trace("UserVoDataManger.userData.items---" + DataCenterManger.userData.items);
+				view.playInfo_Module.showActiveBtns(DataCenterManger.userData.items);
+				Cc.log("UserVoDataManger.userData.ruled==="+DataCenterManger.userData.ruled);
+				if (int(DataCenterManger.userData.ruled) != -1) {//已登祟
+					view.playInfo_Module.data = FormatDataTool.personInfo(DataCenterManger.userData);//新版左侧
 				}
-				UserVoDataManger.userData.headimg = VideoTool.formatHeadURL(UserVoDataManger.userData.headimg);
-				view.userInfo_Module.userObject   = UserVoDataManger.userData;//右下角用户信息
+				DataCenterManger.userData.headimg = VideoTool.formatHeadURL(DataCenterManger.userData.headimg);
+				view.userInfo_Module.userObject   = DataCenterManger.userData;//右下角用户信息
 
-				UserVoDataManger.userDataFirst    = false;
+				DataCenterManger.userDataFirst    = false;
 				//收到信息之后发送 签到任务
 				var iPlay:IPlayer                 = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as IPlayer;
 				if (iPlay && iPlay.isGetMic) {
@@ -110,15 +110,15 @@ public class GlobalControl extends BaseControl {
 				break;
 			case CBProtocol.roomInfo:// 房间信息 10002进入房间
 				//KTVUnion.setLoadInfo("获取房间信息..",96);//-----------loading信息
-				UserVoDataManger.roomData   = sObject;//房间信息
-				UserVoDataManger.videoOwner = null;//当前视频对象
+				DataCenterManger.roomData   = sObject;//房间信息
+				DataCenterManger.videoOwner = null;//当前视频对象
 				view.roomPlayInfor.isPlayer = false;//不是房主
 				view.resetModule();
 				var isHost:Boolean         = false;
-				UserVoDataManger.roomAdmin = false;//是否房间拥有者
-				if (int(UserVoDataManger.userData.ruled) == 3) {//是主播号
-					if (UserVoDataManger.userData.roomid == sObject.roomid) {//主播的情况下,在自己房间
-						UserVoDataManger.roomAdmin = true;//房间拥有者
+				DataCenterManger.roomAdmin = false;//是否房间拥有者
+				if (int(DataCenterManger.userData.ruled) == 3) {//是主播号
+					if (DataCenterManger.userData.roomid == sObject.roomid) {//主播的情况下,在自己房间
+						DataCenterManger.roomAdmin = true;//房间拥有者
 						ClientManger.getInstance().formatPurview(3);//是主播
 						//如果是主播 直接获取到rtml 列表
 						isHost = true;
@@ -128,15 +128,16 @@ public class GlobalControl extends BaseControl {
 						isHost = false;
 					}
 				} else {//用户与游客
-					ClientManger.getInstance().formatPurview(int(UserVoDataManger.userData.ruled));
+					ClientManger.getInstance().formatPurview(int(DataCenterManger.userData.ruled));
 				}
+				view.playInfo_Module.checkChoujiang(DataCenterManger.roomAdmin);//检查是否显示抽奖按钮
 				//为中间 切线 提示提供依据
-				view.sides_Module.isAnchor          = UserVoDataManger.roomAdmin;
-				view.video_Module.isAnchor          = UserVoDataManger.roomAdmin;
-				UserVoDataManger.roomData.pingMange = UserVoDataManger.userPingManger;
-				trace("----" + UserVoDataManger.roomAdmin);
-				if (UserVoDataManger.roomData && UserVoDataManger.roomData.rtmp != "") {//不是在大厅时
-					if (UserVoDataManger.roomAdmin) {
+				view.sides_Module.isAnchor          = DataCenterManger.roomAdmin;
+				view.video_Module.isAnchor          = DataCenterManger.roomAdmin;
+				DataCenterManger.roomData.pingMange = DataCenterManger.userPingManger;
+				trace("----" + DataCenterManger.roomAdmin);
+				if (DataCenterManger.roomData && DataCenterManger.roomData.rtmp != "") {//不是在大厅时
+					if (DataCenterManger.roomAdmin) {
 						NetManager.getInstance().sendDataObject({"cmd": CBProtocol.listRtmpRoom_80001});//获取rtmp列表
 						//  TavenHttpService.addHttpService(TavenHttpService.rtmp_SERVICE_U, onRtmpListResult);
 					}
@@ -154,9 +155,9 @@ public class GlobalControl extends BaseControl {
 				trace("房间进入限制验证", JSON.stringify(sObject));
 				//{"open":1,"mailCheckedLimit":0,"roomid":101152823,"richLimit":2000,"show":1,"cmd":10011,"richLvLimit":0}
 				var sides_Module:MovieClip           = ModuleLoaderManger.getInstance().getModule(ModuleNameType.SIDESGROUP) as MovieClip;
-				UserVoDataManger.userData.limitEnter = sObject;
+				DataCenterManger.userData.limitEnter = sObject;
 				var limitModule:MovieClip            = ModuleLoaderManger.getInstance().getModule(ModuleNameType.LIMIT_EnterModule) as MovieClip;
-				if ((int(UserVoDataManger.userData.ruled) == 3) && (sObject.roomid == UserVoDataManger.userData.uid))  //如果是主播 显示限制按钮
+				if ((int(DataCenterManger.userData.ruled) == 3) && (sObject.roomid == DataCenterManger.userData.uid))  //如果是主播 显示限制按钮
 				{
 					sides_Module.showLimitVisible(sObject.show, sObject.open);
 					limitModule.hide();
@@ -164,8 +165,8 @@ public class GlobalControl extends BaseControl {
 				else  //如果不是主播 并且打开了验证
 				{
 					sides_Module.showLimitVisible(false, sObject.open);
-					trace(UserVoDataManger.vipInfo.allowvisitroom);
-					if (!UserVoDataManger.vipInfo.allowvisitroom) //如果贵族开通了 不限制条件 不用判断
+					trace(DataCenterManger.vipInfo.allowvisitroom);
+					if (!DataCenterManger.vipInfo.allowvisitroom) //如果贵族开通了 不限制条件 不用判断
 					{
 						limitModule.dispatchEvent(new CBModuleEvent(CBModuleEvent.LIMIT_ROOM, false, sObject));
 					} else {
@@ -178,7 +179,7 @@ public class GlobalControl extends BaseControl {
 				limitModule.dispatchEvent(new CBModuleEvent(CBModuleEvent.LIMIT_ROOM_QAINGENTER, false, sObject));
 				break;
 			case CBProtocol.onEnterRoom_VIP_10013://初始化VIP信息
-				UserVoDataManger.vipInfo.initInfo(sObject);
+				DataCenterManger.vipInfo.initInfo(sObject);
 				break;
 			case CBProtocol.VIP_OPEN_18001:// 开通提示框
 				var hint:String    = "恭喜您!【{0}】在你房间内开通{1}，您获得{2}钻石返现!请到个人中心，佣金提成中查看记录.";

@@ -12,7 +12,7 @@ import flash.events.MouseEvent;
 import flash.text.TextField;
 import flash.utils.setInterval;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 public class SignViewUI extends Sprite {
     public var view:SignMc;
@@ -39,7 +39,7 @@ public class SignViewUI extends Sprite {
     }
 
     private function showDataBytesPerSecond():void {
-        if (UserVoDataManger.playerState > PlayerType.PLAYER) {
+        if (DataCenterManger.playerState > PlayerType.PLAYER) {
             view.speedTxt.text = playView.currentdataBytesPerSecond.toFixed(1) + "KB/S";
         } else {
             view.speedTxt.text = "";

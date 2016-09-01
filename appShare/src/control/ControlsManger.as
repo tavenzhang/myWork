@@ -4,7 +4,7 @@
 package control {
 import flash.utils.Dictionary;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import net.NetManager;
 

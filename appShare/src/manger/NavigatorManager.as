@@ -21,7 +21,7 @@ public class NavigatorManager {
  //   跳转到下载页面
     public static function  gotoDownloadUrl()
     {
-        navigateToURL(new URLRequest(UserVoDataManger.userData.downloadUrl))
+        navigateToURL(new URLRequest(DataCenterManger.userData.downloadUrl))
     }
 
     // 跳转排行榜

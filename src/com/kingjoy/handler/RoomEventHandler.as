@@ -21,7 +21,7 @@ import ghostcat.ui.PopupManager;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import net.NetManager;
 
@@ -68,12 +68,12 @@ public class RoomEventHandler extends IEventHandler {
                 Alert.Show("已经向'" + view.rightSelectObject.uname + "'发出邀请视频连麦请求.");
                 break;
             case 31://设置管理员
-                if (UserVoDataManger.roomAdmin) {//主播
+                if (DataCenterManger.roomAdmin) {//主播
                     ClientManger.getInstance().setManger(_uid, _uname);
                 }
                 break;
             case 32://取消管理员
-                if (UserVoDataManger.roomAdmin) {//主播
+                if (DataCenterManger.roomAdmin) {//主播
                     ClientManger.getInstance().disposeManger(_uid, _uname);
                 }
                 break;
@@ -236,7 +236,7 @@ public class RoomEventHandler extends IEventHandler {
                         ClientManger.getInstance().guestRegister();
                         break;
                     case "useHead"://用户头像
-                        _userObj = UserVoDataManger.userData;
+                        _userObj = DataCenterManger.userData;
                         var _userVO:UserVo = new UserVo(_userObj);
                         dispatchNameLink(_userVO);
                         break;
@@ -290,7 +290,7 @@ public class RoomEventHandler extends IEventHandler {
             case"sides"://房间公告
                 switch (e.level) {
                     case "bulletin":
-                        if (UserVoDataManger.playerState == PlayerType.ANCHOR) {
+                        if (DataCenterManger.playerState == PlayerType.ANCHOR) {
                             var _rUi:RoomEditViewUI = new RoomEditViewUI(onRoomPublish);
                             PopupManager.instance.showPopup(_rUi, null, true, CenterMode.RECT);
                             function onRoomPublish(_str:String):void {
@@ -306,7 +306,7 @@ public class RoomEventHandler extends IEventHandler {
                         Alert.Show(view.speaker_Module.msg, view.speaker_Module.title);
                         break;
                     case "tranUser":
-                        if (UserVoDataManger.getInstance().isVideoPublisher) {
+                        if (DataCenterManger.getInstance().isVideoPublisher) {
                             NetManager.getInstance().sendDataObject({
                                 "cmd": 12006,
                                 roomid: int(view.sides_Module.data)
@@ -333,7 +333,7 @@ public class RoomEventHandler extends IEventHandler {
                 }
                 break;
         }
-        if (UserVoDataManger.playerState == PlayerType.GUEST) {//游客
+        if (DataCenterManger.playerState == PlayerType.GUEST) {//游客
             //ClientManger.getInstance().guestLogin();
 
         }
@@ -345,7 +345,7 @@ public class RoomEventHandler extends IEventHandler {
      */
     public function setPersonInfo(_infoObj:Object):void {
         view.personInfo_Module.data = FormatDataTool.personInfo(_infoObj);
-        view.personInfo_Module.data.myUid = UserVoDataManger.userData.uid;
+        view.personInfo_Module.data.myUid = DataCenterManger.userData.uid;
         if (view.personInfo_Module.width + view.mouseX <= view.stage.stageWidth) {
             view.personInfo_Module.x = view.mouseX;
         } else {

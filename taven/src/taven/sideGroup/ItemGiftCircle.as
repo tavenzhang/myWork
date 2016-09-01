@@ -9,7 +9,7 @@ import flash.events.MouseEvent;
 import flash.events.StatusEvent;
 import flash.text.StyleSheet;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import taven.UserInfo;
 import taven.utils.DisplayUtils;

@@ -13,7 +13,7 @@ import flash.display.MovieClip;
 import flash.events.Event;
 import flash.events.MouseEvent;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import net.NetManager;
 
@@ -58,21 +58,21 @@ public class LimitEnterModule extends BaseModule {
         //{"open":1,"mailCheckedLimit":0,"roomid":101152823,"richLimit":2000,"show":1,"cmd":10011,"richLvLimit":0}
         visible = false;
         var isGetPower:Boolean = true;//已经达到限制权限;
-        _view.use_up.visible = UserVoDataManger.userData.ruled >= 0 ? true : false;
+        _view.use_up.visible = DataCenterManger.userData.ruled >= 0 ? true : false;
         _view.use_up.visible = false;
         if (obj.open == 1) {
-            if (obj.richLimit > UserVoDataManger.userData.points) {
+            if (obj.richLimit > DataCenterManger.userData.points) {
                 isGetPower = false;
                 _view.txtMony.textColor = 0xff0000;
             }
-            if (obj.richLvLimit > UserVoDataManger.userData.richLv) {
+            if (obj.richLvLimit > DataCenterManger.userData.richLv) {
                 isGetPower = false;
                 _view.txtRlvError.textColor = 0xff0000;
             } else {
                 _view.txtRlvError.text = "";
             }
             //trace(obj.mailCheckedLimit == 1)
-            if (obj.mailCheckedLimit == 1 && UserVoDataManger.userData.emailValid == 0) {
+            if (obj.mailCheckedLimit == 1 && DataCenterManger.userData.emailValid == 0) {
                 isGetPower = false;
                 _view.txtmail.textColor = 0xff0000;
             }
@@ -81,7 +81,7 @@ public class LimitEnterModule extends BaseModule {
             visible = true;
         }
         //设置数据
-        var uservo:Object = UserVoDataManger.userData;
+        var uservo:Object = DataCenterManger.userData;
         _view.txtMony.text = uservo.points.toString();
         _view.txtmail.text = uservo.emailValid ? "已验证" : "未验证";
         icoRich.updateLvByImage(uservo.richLv);
@@ -110,10 +110,10 @@ public class LimitEnterModule extends BaseModule {
                 VideoTool.jumpToGuiZhuURL();
                 break;
             case _view.use_up:
-                if (UserVoDataManger.vipInfo.limitRoomCount <= 0) {
+                if (DataCenterManger.vipInfo.limitRoomCount <= 0) {
                     Alert.Show("没有特权,请提升你的用户或贵族等级", "消息");
                 } else {
-                    Alert.Show("当前剩余特权次数为 " + UserVoDataManger.vipInfo.limitRoomCount + "次,是否消耗1次特权来进入房间", "消息", false, 3, false, requestGuiZhuPower);
+                    Alert.Show("当前剩余特权次数为 " + DataCenterManger.vipInfo.limitRoomCount + "次,是否消耗1次特权来进入房间", "消息", false, 3, false, requestGuiZhuPower);
                 }
                 break;
         }

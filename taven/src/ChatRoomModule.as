@@ -31,7 +31,7 @@ import ghostcat.text.NumberUtil;
 import ghostcat.util.Tick;
 
 import manger.ClientManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import taven.chatModule.*;
 
@@ -260,13 +260,13 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		}
 		//聊天限制检查
 		if (videoRoom.checkState() == PlayerType.PLAYER) {
-			if (lenth > UserVoDataManger.vipInfo.chatlimit) {
-				videoRoom.showAlert("您当前的身份，只能输入" + UserVoDataManger.vipInfo.chatlimit + "个字符,请努力提高等级吧!", "聊天");
+			if (lenth > DataCenterManger.vipInfo.chatlimit) {
+				videoRoom.showAlert("您当前的身份，只能输入" + DataCenterManger.vipInfo.chatlimit + "个字符,请努力提高等级吧!", "聊天");
 				return;
 			}
-			if (getTimer() - lastSendTime < UserVoDataManger.vipInfo.chatsecond * 1000) {
-				var needTime:int = (UserVoDataManger.vipInfo.chatsecond * 1000 - (getTimer() - lastSendTime)) * 0.001;
-				videoRoom.showAlert("您当前的身份，只能" + UserVoDataManger.vipInfo.chatsecond + "秒发送一次,剩余" + needTime + "秒.", "聊天");
+			if (getTimer() - lastSendTime < DataCenterManger.vipInfo.chatsecond * 1000) {
+				var needTime:int = (DataCenterManger.vipInfo.chatsecond * 1000 - (getTimer() - lastSendTime)) * 0.001;
+				videoRoom.showAlert("您当前的身份，只能" + DataCenterManger.vipInfo.chatsecond + "秒发送一次,剩余" + needTime + "秒.", "聊天");
 				return;
 			}
 		}
@@ -380,7 +380,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	 * @param sObject
 	 */
 	public function onGiftChat(sObject:Object):void {
-		if (UserVoDataManger.getInstance().isRoomAdmin) {
+		if (DataCenterManger.getInstance().isRoomAdmin) {
 			sObject.sendCount = sObject.gnum;
 			onPlayGiftInfor(sObject);
 		} else {
@@ -447,7 +447,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 	 */
 	private function buildMC(user:UserVo, contion:ParagraphElement, isUseOwerWord:Boolean = true):void {
 		var isSelf:Boolean   = videoRoom.getDataByName(ModuleNameType.USERDATA).uid == user.uid;//
-		var isAnchor:Boolean = user.uid == UserVoDataManger.roomData.roomid;
+		var isAnchor:Boolean = user.uid == DataCenterManger.roomData.roomid;
 		if (isUseOwerWord) {
 			var _name:String = (isSelf ? "我" : FormatDataTool.getNickeName(user));
 		} else {

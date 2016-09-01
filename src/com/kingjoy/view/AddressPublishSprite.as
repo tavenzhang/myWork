@@ -13,7 +13,7 @@ import flash.net.navigateToURL;
 
 import ghostcat.manager.RootManager;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 /**
  * 地址
@@ -38,7 +38,7 @@ public class AddressPublishSprite extends MovieClip {
 
        // navigateToURL(new URLRequest(VideoConfig.httpFunction+VideoConfig.configXML.addressPublisher))
        // 现在改成 支持后台读取
-        navigateToURL(new URLRequest(UserVoDataManger.userData.downloadUrl))
+        navigateToURL(new URLRequest(DataCenterManger.userData.downloadUrl))
     }
 }
 }

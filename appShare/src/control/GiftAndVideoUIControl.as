@@ -10,7 +10,7 @@ import com.rover022.vo.RespondVo;
 import flash.display.MovieClip;
 
 import manger.ClientManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 import manger.ModuleLoaderManger;
 
 import net.NetManager;
@@ -42,11 +42,11 @@ public class GiftAndVideoUIControl extends BaseControl {
             case CBProtocol.list_dateUsers_50005://查看预约列表人数
                 // 通用处理  对于模块内部消息处理，不影响其他的模块的话 采取默认通用处理
                 var id:int = int(sObject.cmd);
-                if (UserVoDataManger.respondDic[id] != null) {
-                    var item:RespondVo = UserVoDataManger.respondDic[id];
+                if (DataCenterManger.respondDic[id] != null) {
+                    var item:RespondVo = DataCenterManger.respondDic[id];
                     item.hanldeFuc(sObject);
                     item.destroy();
-                    delete UserVoDataManger.respondDic[id];
+                    delete DataCenterManger.respondDic[id];
                 }
                 break;
             case CBProtocol.sendGift://礼物

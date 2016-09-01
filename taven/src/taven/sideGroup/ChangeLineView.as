@@ -20,7 +20,7 @@ import flash.text.TextFormat;
 import flash.utils.setTimeout;
 
 import manger.ModuleLoaderManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import net.NetManager;
 
@@ -67,8 +67,8 @@ public class ChangeLineView extends BasePaneUI {
 
     private function firstOpenLineBox():void {
         if (_module.videoRoom.getDataByName(ModuleNameType.USERROOMDATA)) {
-            _rtmpManage = UserVoDataManger.userPingManger;
-            _lastChooseRtmp = UserVoDataManger.userData.lastRtmp;
+            _rtmpManage = DataCenterManger.userPingManger;
+            _lastChooseRtmp = DataCenterManger.userData.lastRtmp;
             _lastChooseRtmp = (_lastChooseRtmp == null) ? "" : _lastChooseRtmp;
             _rtmpManage.addEventListener(PingManager.ITEM_TESTOK, testSeedFinish);
             //页面刚进入是时候已经完成了一次速度测试
@@ -113,7 +113,7 @@ public class ChangeLineView extends BasePaneUI {
         DisplayUtils.removeFromParent(this);
         if (!lineBox.selectedItem)
             return;
-        if (UserVoDataManger.videoOwner == null) {
+        if (DataCenterManger.videoOwner == null) {
             Alert.Show("后台小弟遗憾的告诉你:当前房间主播还没有上麦,或者刚下麦.", "系统消息");
             return;
         }
@@ -130,7 +130,7 @@ public class ChangeLineView extends BasePaneUI {
                 // _module.videoRoom.sendDataObject({"cmd": 20001, "rtmp": lineBox.selectedItem.data});//通知服务器 切换播放线路 客户端优化 不用通知服务器 直接切换即可。 主播因为需要广播 必须发消息
                 _lastChooseRtmp = lineBox.selectedItem.rtmp;
                 var iPlay:IPlayer = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as IPlayer;
-                iPlay.playRTMP(UserVoDataManger.videoOwner.sid, _lastChooseRtmp);
+                iPlay.playRTMP(DataCenterManger.videoOwner.sid, _lastChooseRtmp);
             }
             else {
                 _module.videoRoom.showAlert("您当前正在使用此线路，请切换其他线路试试!", "");

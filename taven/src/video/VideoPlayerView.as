@@ -35,7 +35,7 @@ import flash.utils.ByteArray;
 import flash.utils.Timer;
 import flash.utils.setInterval;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import sk.video.videoPlayer;
 
@@ -149,8 +149,8 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 
 	public function downMicClick(event:MouseEvent):void {
 		closeRtmpNoResetConnect();
-		if (UserVoDataManger.videoOwner) {
-			videoRoom.sendDataObject({"cmd": CBProtocol.stopTalkPlay, "sid": UserVoDataManger.videoOwner.sid});//下麦;
+		if (DataCenterManger.videoOwner) {
+			videoRoom.sendDataObject({"cmd": CBProtocol.stopTalkPlay, "sid": DataCenterManger.videoOwner.sid});//下麦;
 		}
 		isGetMic = false;
 		updateUI(null);
@@ -235,7 +235,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 				headShot_bt.visible   = false;
 				break;
 			case PlayerType.ANCHOR://主播
-				if (UserVoDataManger.getInstance().isRoomAdmin) {
+				if (DataCenterManger.getInstance().isRoomAdmin) {
 					headShot_bt.visible = false;
 					if (isGetMic) {
 						upMic_bt.visible      = false;

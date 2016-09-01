@@ -235,5 +235,7 @@ public class CBProtocol {
 	//获取贵宾席位 列表
 	public static const VIP_LIST_18002:int        = 18002;
 	public static const enterRoomLimit_10014:int  = 10014;
+		//抽奖
+	public static const activeCj_62001:int  = 62001;
 }
 }

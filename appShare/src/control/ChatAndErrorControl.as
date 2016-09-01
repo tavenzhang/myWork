@@ -49,6 +49,10 @@ public class ChatAndErrorControl extends BaseControl {
 		errorArray[2116] = "直播暂未开始，不能广播！";
 		errorArray[1514] = "只有主播和管理员才能踢人！";
 		errorArray[1516] = "不是房主不能踢人！";
+		//抽奖活动
+		errorArray[2118] = "抽奖人数不能大于房间用户数";
+		errorArray[2117] = "非主播不能发起抽奖";
+		errorArray[3] = "参数错误";
 	}
 
 	override public function handleMessgae(data:*):void {

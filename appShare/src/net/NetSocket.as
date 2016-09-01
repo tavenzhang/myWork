@@ -5,7 +5,7 @@ import flash.events.ProgressEvent;
 import flash.net.Socket;
 import flash.utils.ByteArray;
 
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 public class NetSocket extends Socket {
     private var amfStream:ByteArray;
@@ -46,7 +46,7 @@ public class NetSocket extends Socket {
                 amfStream.uncompress();
                 var msg:Object    = this.amfStream.readObject();
                 //trace(JSON.stringify(msg));
-                UserVoDataManger.getInstance().socketApp(msg);
+                DataCenterManger.getInstance().socketApp(msg);
             } else if (this.amfStream.length > this.amfStreamLength) {
                 //如果读出来的对象大于所需的长度立即中断
                 //trace("Error!");

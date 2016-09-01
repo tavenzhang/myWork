@@ -46,7 +46,7 @@ import ghostcat.manager.RootManager;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
 
 import net.NetManager;
 
@@ -180,7 +180,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     }
 
     public function checkIsLoginAndPopPane():void {
-        if (UserVoDataManger.playerState == PlayerType.GUEST) {
+        if (DataCenterManger.playerState == PlayerType.GUEST) {
             ClientManger.getInstance().addChatSpanMessage({message: "你已经观看5分钟请注册以后再来观看...", color: "0xFF00FF"});
             ClientManger.getInstance().addChatSpanMessage({message: "后台小弟已经把RTMP视频流中断...", color: "0xFF00FF"});
             NetManager.getInstance().closeSocket();
@@ -286,6 +286,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         function rankWeek(obj:Object):void {
             rankWeek_Module.updateData(FormatDataTool.rankViewArray(obj as Array));
         }
+
 
         //28用户信息面板 弹出式
         this.personInfo_Module = VideoTool.getMCTaven("PersonInfoModule");
@@ -455,7 +456,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
      */
     override public function connectService():void {
         VideoConfig.loginKey = ClientManger.getInstance().getUserKey();
-        UserVoDataManger.getInstance().register(this);
+        DataCenterManger.getInstance().register(this);
         NetManager.getInstance().connectSocket(VideoConfig.HOST, VideoConfig.PORT, VideoConfig.roomID, VideoConfig.loginKey)
     }
 
@@ -517,7 +518,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         if (ClientManger.getInstance().isGuestAndGuestRegister()) {
             return;
         }
-        if (UserVoDataManger.userData.uid == e.dataObject.uid) {
+        if (DataCenterManger.userData.uid == e.dataObject.uid) {
             Alert.Show("该座位已经被您所占,无须再占！", "占位失败");
         } else {
             var _num:int = int(e.dataObject.value);
@@ -542,17 +543,17 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //贵族检测
         var guizu:Array = [66, 168, 366, 666];
         if (guizu.indexOf(gift_Module.gnum) != -1) {
-            if (UserVoDataManger.getInstance().isGuiZhu == false) {
+            if (DataCenterManger.getInstance().isGuiZhu == false) {
                 Alert.Show("您必须成为贵族才能赠送贵族专属礼物轨迹！点击开启贵族!", "提醒", true, 3, false, function ():void {
                     VideoTool.jumpToGuiZhuURL();
                 });
                 return;
             }
         }
-        if (!UserVoDataManger.videoOwner) {
+        if (!DataCenterManger.videoOwner) {
             Alert.Show("当前房间没有主播，无法赠送礼物！", "提醒");
             return;
-        } else if (UserVoDataManger.userData.uid == UserVoDataManger.videoOwner.uid) {
+        } else if (DataCenterManger.userData.uid == DataCenterManger.videoOwner.uid) {
             Alert.Show("您是当前主播,不能自己给自己送礼！", "提醒");
             return;
         }
@@ -560,7 +561,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         NetManager.getInstance().sendDataObject({
             "cmd": 40001,
             "gid": gift_Module.gid,
-            "uid": UserVoDataManger.videoOwner.uid,
+            "uid": DataCenterManger.videoOwner.uid,
             "gnum": gift_Module.gnum
         });//
     }
@@ -580,26 +581,26 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
      * @param e
      */
     private function onChatLinkEvent(e:*):void {
-        if (UserVoDataManger.playerState == PlayerType.GUEST) {//游客
+        if (DataCenterManger.playerState == PlayerType.GUEST) {//游客
             return;
         }
         var _userObj:UserVo = e.dataObject;
         //如果是神秘人不可以点  但是是自己的话可以点
-        if (UserVoDataManger.getInstance().isSelf(_userObj.uid) == false) {
+        if (DataCenterManger.getInstance().isSelf(_userObj.uid) == false) {
             if (_userObj.hidden == 1) {
                 return;
             }
         }
         var _ar:Array = [{label: "查看资料", data: 92}, {label: "@他", data: ChatState.FACETOFACE}];
-        if (UserVoDataManger.getInstance().isSelf(_userObj.uid) == false) {
+        if (DataCenterManger.getInstance().isSelf(_userObj.uid) == false) {
             //_ar.push({label: "发送私聊", data: 1});
-            if (UserVoDataManger.getInstance().canGetMangerCompetence) {
+            if (DataCenterManger.getInstance().canGetMangerCompetence) {
                 if (_userObj.ruled < 1 && _userObj.lv < 2) {
                     _ar.push({label: "禁止聊天", data: 42});
                     _ar.push({label: "T出房间", data: 41});
                 }
             }
-            if (UserVoDataManger.roomAdmin) {
+            if (DataCenterManger.roomAdmin) {
                 if (_userObj.ruled < 1) {
                     _ar.push({label: "设为管理员", data: 31});
                 } else {
@@ -640,7 +641,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
                 _json.letterURL = VideoConfig.httpFunction + VideoConfig.configXML.http.@letter.toString();
                 _json.focusURL = VideoConfig.httpFunction + VideoConfig.configXML.http.@focus.toString();
                 this.roomPlayInfor.dataFocus = FormatDataTool.personInfo(_json);
-                this.roomPlayInfor.isPlayer = UserVoDataManger.getInstance().isVideoPublisher;
+                this.roomPlayInfor.isPlayer = DataCenterManger.getInstance().isVideoPublisher;
             }
         } catch (e:*) {
         }
@@ -655,7 +656,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             "cmd": 30001,
             "type": 5,
             "recUid": 0,
-            "content": this.speaker_Module.text + "?rname=" + UserVoDataManger.roomData.name + "&rid=" + UserVoDataManger.roomData.roomid
+            "content": this.speaker_Module.text + "?rname=" + DataCenterManger.roomData.name + "&rid=" + DataCenterManger.roomData.roomid
         });//拉取用户列表
     }
 
@@ -672,18 +673,18 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
      * @param e
      */
     private function onVideoRoomChangeHandle(e:ktvStageEvent):void {
-        if (UserVoDataManger.roomData.roomid == e.data.data.roomid) {
+        if (DataCenterManger.roomData.roomid == e.data.data.roomid) {
             Alert.Show("您当前正在该房间内!", "提示");
             return;
         }
-        if (UserVoDataManger.getInstance().isVideoPublisher) {//主播
+        if (DataCenterManger.getInstance().isVideoPublisher) {//主播
             Alert.Show("亲,如果您去别的主播房间就会中断自己的直播,您确定还要切换房间吗?", "房间切换",
                     false,
                     3,
                     true,
                     function (_v:*):void {
                         if (_v == 1) {
-                            UserVoDataManger.cutoData = e.data.data;
+                            DataCenterManger.cutoData = e.data.data;
                             //UserVoDataManger.roomFactorFilter(e.data.data);//开始进入进房流程
                         }
                     });
@@ -723,7 +724,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
      */
     public function checkState():int {
 //        Cc.log(UserVoDataManger.playerState)
-        return UserVoDataManger.playerState;
+        return DataCenterManger.playerState;
     }
 
     /**
@@ -775,10 +776,10 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     public function getDataByName(_name:String):Object {
         switch (_name) {
             case ModuleNameType.USERDATA:
-                return UserVoDataManger.userData;
+                return DataCenterManger.userData;
                 break;
             case ModuleNameType.USERROOMDATA:
-                return UserVoDataManger.roomData;
+                return DataCenterManger.roomData;
                 break;
             case ModuleNameType.HTTPROOT:
                 return VideoConfig.HTTP;
@@ -799,7 +800,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
                 return VideoConfig.connectRTMP;
                 break;
             case ModuleNameType.MAINRTMPADDRESSLIST:
-                return UserVoDataManger.adminPingManger;
+                return DataCenterManger.adminPingManger;
                 break;
             case ModuleNameType.SOCKETISCONNECT:
                 return NetManager.getInstance().socketClient.connected;

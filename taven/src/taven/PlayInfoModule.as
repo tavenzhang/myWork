@@ -21,7 +21,9 @@ import flash.net.navigateToURL;
 
 import manger.ClientManger;
 import manger.NavigatorManager;
-import manger.UserVoDataManger;
+import manger.DataCenterManger;
+
+import net.NetManager;
 
 import taven.enum.EventConst;
 import taven.enum.EventUtils;
@@ -52,6 +54,7 @@ public class PlayInfoModule extends BaseModule {
 	public var peopleInfo:Object;
 	public var headMc:MovieClip;
 	public var gameBox:Sprite    = new Sprite();
+	public var view_cj:taven_viewCJ;
 
 	override protected function initView():void {
 		_view          = new taven_PlayerInfoView();
@@ -176,7 +179,27 @@ public class PlayInfoModule extends BaseModule {
 			case _view.mcBtnFuni://福利
 				break;
 			case _view.mcBtnCJ://抽奖
-				ClientManger.getInstance().showCarGame();
+				//ClientManger.getInstance().showCarGame();
+					if(!view_cj)
+					{
+						view_cj = new taven_viewCJ();
+						view_cj.x=82;
+						view_cj.y=502;
+						view_cj.txtNum.restrict="0-9";
+						view_cj.txtNum.maxChars=2;
+						_view.addChild(view_cj);
+						view_cj.btnClose.addEventListener(MouseEvent.CLICK, function (e:*) {
+							view_cj.visible=false;
+						});
+						view_cj.btnCj.addEventListener(MouseEvent.CLICK,onStarCJClick);
+						view_cj.visible=false;
+					}
+				 view_cj.visible = !view_cj.visible;
+					if(view_cj.visible)
+					{
+						TweenHelp.fade(_view.mcMail, 0.3, 0.2, 1);
+					}
+
 				break;
 			case _view.mcBtnMsg://消息
 				if (!mailVisilbe) {
@@ -196,7 +219,10 @@ public class PlayInfoModule extends BaseModule {
 
 		}
 	}
-
+	private function onStarCJClick(evt:Event){
+		EventUtils.secndNetDataNew(CBProtocol.activeCj_62001,{"title":"","num":view_cj.txtNum.text,"detail":"","cmd":CBProtocol.activeCj_62001});
+		view_cj.visible=false;
+	}
 
 	override protected function onAddToStageHandle(event:Event):void {
 		trace(stage);
@@ -216,7 +242,7 @@ public class PlayInfoModule extends BaseModule {
 	public function onButtonClickHandle(e:MouseEvent):void {
 		switch (e.currentTarget.name) {
 			case "btnDown":
-				navigateToURL(new URLRequest(VideoConfig.httpFunction + UserVoDataManger.userData.downloadUrl));
+				navigateToURL(new URLRequest(VideoConfig.httpFunction + DataCenterManger.userData.downloadUrl));
 				break;
 			case "btnGet":
 				var panel:Sprite = videoRoom.getModule("SignActivityPanel") as Sprite;
@@ -512,6 +538,7 @@ public class PlayInfoModule extends BaseModule {
 
 	public function showActiveBtns(activeList:Array):void {
 		//每次进入获取一下消息数
+
 		EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, {}, s2cNoticeData);
 		for each(var item:Object in activeList) {
 			if (item) {
@@ -540,6 +567,10 @@ public class PlayInfoModule extends BaseModule {
 				}
 			}
 		}
+	}
+
+	public function checkChoujiang(isOpen:Boolean){
+		_view.mcBtnCJ.visible=isOpen;
 	}
 
 	public function get view():taven_PlayerInfoView {
