@@ -48,7 +48,7 @@ public class ActiveCJ extends BaseRslModule {
         {
             for(var i:int=0;i<_userlist.length;i++)
             {
-                _ui.txtUsr.text +=_userlist[i].name;
+                _ui.txtUsr.text +=_userlist[i].name+" ";
                 if(i>0&&(i+1)%3==0)
                 {
                     _ui.txtUsr.text +="\n";

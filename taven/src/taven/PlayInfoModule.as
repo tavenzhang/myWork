@@ -217,7 +217,6 @@ public class PlayInfoModule extends BaseModule {
 					_view.mcMail.visible = false;
 				}
 				break;
-
 		}
 	}
 	private function onStarCJClick(evt:Event){
