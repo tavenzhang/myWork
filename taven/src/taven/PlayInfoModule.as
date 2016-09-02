@@ -185,8 +185,8 @@ public class PlayInfoModule extends BaseModule {
 						view_cj = new taven_viewCJ();
 						view_cj.x=82;
 						view_cj.y=502;
-						view_cj.txtNum.restrict="0-9";
 						view_cj.txtNum.maxChars=2;
+						view_cj.txtNum.restrict="0-9";
 						_view.addChild(view_cj);
 						view_cj.btnClose.addEventListener(MouseEvent.CLICK, function (e:*) {
 							view_cj.visible=false;
