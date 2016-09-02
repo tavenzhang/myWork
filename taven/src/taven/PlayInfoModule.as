@@ -23,7 +23,6 @@ import manger.ClientManger;
 import manger.NavigatorManager;
 import manger.DataCenterManger;
 
-import net.NetManager;
 
 import taven.enum.EventConst;
 import taven.enum.EventUtils;
@@ -187,6 +186,8 @@ public class PlayInfoModule extends BaseModule {
 						view_cj.y=502;
 						view_cj.txtNum.maxChars=2;
 						view_cj.txtNum.restrict="0-9";
+						view_cj.txtDesc.text="";
+
 						_view.addChild(view_cj);
 						view_cj.btnClose.addEventListener(MouseEvent.CLICK, function (e:*) {
 							view_cj.visible=false;
