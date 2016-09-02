@@ -29,7 +29,7 @@
           upurl="coverUpload"
           gifturl="/video_gs/conf"
           depoturl="/video_gs/pack/list2"
-          videoUrl="{1}.jpg"/>"
+          videoUrl="/{1}"/>"
     />
 
     <!--head[头像路径配置]  url=头像加载地址  upurl=头像上传地址 gifturl=礼物数据请求接口 depoturl=库存请求接口 giconurl=礼物图标加载地址{0}为变量名-->
