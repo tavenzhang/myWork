@@ -580,7 +580,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
      * 超链接点击
      * @param e
      */
-    private function onChatLinkEvent(e:*):void {
+    public function onChatLinkEvent(e:*):void {
         if (DataCenterManger.playerState == PlayerType.GUEST) {//游客
             return;
         }

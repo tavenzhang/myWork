@@ -32,11 +32,11 @@ public class PlayerListView {
         _dispatcherObj           = dispatcherObj;
         _findUsrview             = _view.mcAudice["mcFindView"];
         _findManageview          = _view.mcManage["mcFindView"];
-        var item:ItemRenerManage = new ItemRenerManage();
+        var item:ItemUserRender = new ItemUserRender();
         _itemHeight              = item.height;
         item                     = null;
-        _usrList                 = new TavenScrollList(ItemRenerManage, 6);
-        _managList               = new TavenScrollList(ItemRenerManage, 3);
+        _usrList                 = new TavenScrollList(ItemUserRender, 6);
+        _managList               = new TavenScrollList(ItemUserRender, 3);
         _usrListSp.removeChildren();
         _managerListSp.removeChildren();
         _usrListSp.addChild(_usrList);
@@ -74,7 +74,7 @@ public class PlayerListView {
     private var _managerListSp:Sprite;
     private var _managList:TavenScrollList;
     private var _usrList:TavenScrollList;
-    private var _curSelectItem:ItemRenerManage;
+    private var _curSelectItem:ItemUserRender;
     private var _dispatcherObj:PlayInfoModule;
     private var _normalLegth:Number;
     private var _loadingView:res_taveLoading;
@@ -371,7 +371,7 @@ public class PlayerListView {
         var list:TavenScrollList = evt.currentTarget as TavenScrollList;
         if (_curSelectItem)
             _curSelectItem.select = false;
-        _curSelectItem            = list.seclecItem as ItemRenerManage;
+        _curSelectItem            = list.seclecItem as ItemUserRender;
         _dispatcherObj.selectItem = _curSelectItem.data;
         TavenHttpService.addHttpService(StringUtils.strStitute(_dispatcherObj.headFormat, _curSelectItem.data.uid), onGetHeandImg);
     }

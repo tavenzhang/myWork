@@ -7,7 +7,7 @@ import display.ui.CBScrollPanel;
 import flash.display.Bitmap;
 
 import taven.common.TavenScrollList;
-import taven.playerInfo.ItemRenerManage;
+import taven.playerInfo.ItemUserRender;
 
 import taven.rankView.RankItemRender;
 import taven.utils.ObjectPool;

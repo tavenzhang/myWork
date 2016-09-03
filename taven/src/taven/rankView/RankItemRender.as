@@ -9,6 +9,8 @@ import flash.events.StatusEvent;
 import flash.text.StyleSheet;
 import flash.text.TextField;
 
+import manger.ClientManger;
+
 import taven.common.IListItem;
 
 import tool.FormatDataTool;
@@ -55,10 +57,6 @@ public class RankItemRender extends tave_rankItemRender implements IListItem {
         _data      = src;
     }
 
-    public function get dataObject():UserVo {
-        return _data as UserVo;
-    }
-
     public function setIndex(src:int):void {
         if (src < 9) {
             _txtRank.text = "0" + (src + 1);
@@ -73,8 +71,9 @@ public class RankItemRender extends tave_rankItemRender implements IListItem {
 //        var com.rover022.event:StatusEvent = new StatusEvent(StatusEvent.STATUS, false, false, _data.name);
 //        this.dispatchEvent(com.rover022.event);
         var event:CBModuleEvent = new CBModuleEvent(CBModuleEvent.PLAYNAMELINK, true);
-        event.dataObject        = dataObject;
-        dispatchEvent(event);
+        var usrVo = new UserVo(_data);
+        event.dataObject        = usrVo;
+        VideoTool.sendUserLinkEvent(event);
     }
 
     private function initUI():void {

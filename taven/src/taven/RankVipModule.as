@@ -12,7 +12,7 @@ import flash.events.Event;
 
 import taven.common.TavenScrollList;
 import taven.enum.EventUtils;
-import taven.playerInfo.ItemRenerManage;
+import taven.playerInfo.ItemUserRender;
 
 import tool.FormatDataTool;
 
@@ -34,8 +34,8 @@ public class RankVipModule extends BaseModule {
     private var _usrList:TavenScrollList;
 
     public function RankVipModule() {
-        _usrList = new TavenScrollList(ItemRenerManage, 6);
-        _managList = new TavenScrollList(ItemRenerManage, 6);
+        _usrList = new TavenScrollList(ItemUserRender, 6);
+        _managList = new TavenScrollList(ItemUserRender, 6);
         _view = new tave_vipSeatView();
         this.addChild(_view);
         this.addChild(_usrList);
@@ -270,13 +270,13 @@ public class RankVipModule extends BaseModule {
         return resutlt;
     }
 
-    private var _curSelectItem:ItemRenerManage;
+    private var _curSelectItem:ItemUserRender;
 
     private function onClickHandle(evt:Event):void {
         var list:TavenScrollList = evt.currentTarget as TavenScrollList;
         if (_curSelectItem)
             _curSelectItem.select = false;
-        _curSelectItem = list.seclecItem as ItemRenerManage;
+        _curSelectItem = list.seclecItem as ItemUserRender;
         //   _dispatcherObj.selectItem = _curSelectItem.data;
         //  TavenHttpService.addHttpService(StringUtils.strStitute(_dispatcherObj.headFormat, _curSelectItem.data.uid), onGetHeandImg);
     }

@@ -11,6 +11,7 @@ import com.hurlant.crypto.symmetric.CBCMode;
 import com.hurlant.crypto.symmetric.PKCS5;
 import com.hurlant.util.Hex;
 import com.rover022.IVideoRoom;
+import com.rover022.event.CBModuleEvent;
 import com.rover022.vo.VideoConfig;
 import com.rover022.IVideoModule;
 
@@ -28,6 +29,8 @@ import flash.text.TextField;
 import flash.utils.ByteArray;
 import flash.utils.getDefinitionByName;
 import flash.utils.getTimer;
+
+import manger.ClientManger;
 
 import manger.DataCenterManger;
 
@@ -313,6 +316,11 @@ public class VideoTool {
         function onOut(e:MouseEvent):void {
             btnChongzhi.scaleX = btnChongzhi.scaleY = 1;
         }
+    }
+
+    public static  function sendUserLinkEvent(evt:CBModuleEvent):void
+    {
+        (ClientManger.getInstance().view as MovieClip).onChatLinkEvent(evt);
     }
 }
 }

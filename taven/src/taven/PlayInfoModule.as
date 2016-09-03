@@ -38,7 +38,7 @@ import tool.VideoTool;
 
 public class PlayInfoModule extends BaseModule {
 	private var _view:taven_PlayerInfoView;
-	private var _playListView:PlayerListView;
+	//private var _playListView:PlayerListView;
 	private var _videoHomeView:VideoHomeView;
 	private var _starView:RankStartView;
 	/*--------------------------外部接口------------------*/
@@ -58,10 +58,8 @@ public class PlayInfoModule extends BaseModule {
 	override protected function initView():void {
 		_view          = new taven_PlayerInfoView();
 		_maxHeigh      = _view.mcBg.height;
-		_playListView  = new PlayerListView(_view.mcPlayList, this);
 		_videoHomeView = new VideoHomeView(_view.mcHome, this);
 		this.addChild(_view);
-		_view.mcPlayList.visible = false;
 		_view.mcMail.visible     = false;
 		_view.bgBtnStart.visible = false;
 		_view.mcSelectBg.visible = false;
@@ -150,11 +148,9 @@ public class PlayInfoModule extends BaseModule {
 	}
 
 
-
 	private  function  onNewBtnClick(evt:Event):void
 	{
 		trace("onNewBtnClick ---"+evt.currentTarget.name);
-		var listVisible:Boolean  = _view.mcPlayList.visible;
 		var videoVisible:Boolean = _view.mcHome.visible;
 		var mailVisilbe:Boolean  = _view.mcMail.visible;
 		switch (evt.currentTarget)
@@ -202,7 +198,7 @@ public class PlayInfoModule extends BaseModule {
 					}
 
 				break;
-			case _view.mcBtnMsg://消息
+            case _view.mcBtnMsg://消息
 				//ClientManger.getInstance().getMsgKeyFromWeb(VideoConfig.testUID, VideoConfig.testPASS, ClientManger.getInstance().view["AirConnectService"]);
 				if (!mailVisilbe) {
 					_view.mcMail.visible = true;
@@ -277,12 +273,12 @@ public class PlayInfoModule extends BaseModule {
 	private function onViewClick(evt:MouseEvent):void {
 		if (evt.target is SimpleButton) {
 			_view.mcSelectBg.visible = false;
-			var listVisible:Boolean  = _view.mcPlayList.visible;
+			//var listVisible:Boolean  = _view.mcPlayList.visible;
 			var videoVisible:Boolean = _view.mcHome.visible;
 			var mailVisilbe:Boolean  = _view.mcMail.visible;
 			if (evt.target == _view.btnHome || evt.target == _view.btnMail || evt.target == _view.mcPerson) //这三个子ui 不要同时存在
 			{
-				_view.mcHome.visible = _view.mcMail.visible = _view.mcPlayList.visible = false;
+				_view.mcHome.visible = _view.mcMail.visible = false;
 			}
 			switch (evt.target) {
 				case _view.btnChonZhi: //点击充值
@@ -314,12 +310,7 @@ public class PlayInfoModule extends BaseModule {
 					}
 					break;
 				case _view.mcPerson: //
-					_view.mcPlayList.visible = !listVisible;
-					if (_view.mcPlayList.visible) {
-						TweenHelp.fade(_view.mcPlayList, 0.3, 0.2, 1);
-						_playListView.openView();
-					}
-					changeSelcedBtn(_view.mcPerson);
+					//changeSelcedBtn(_view.mcPerson);
 					break;
 				case _view.btnSound: //点击声音广播
 					EventUtils.secndStatusEvent(this, EventConst.PLAYER_BROADCAST);
@@ -398,7 +389,7 @@ public class PlayInfoModule extends BaseModule {
 		value = MathUtils.clamp(value, 600, _maxHeigh);
 		if (_curHeight != value) {
 			_view.mcBg.height = value;
-			_playListView.updateMaxHeight(value);
+		//	_playListView.updateMaxHeight(value);
 			gameBox.y      = value - 80;
 			//_view.mcJuBao.y = value - _view.mcJuBao.height - 30;
 			_view.mcHome.y = (value - _view.mcHome.height) / 2
@@ -486,7 +477,7 @@ public class PlayInfoModule extends BaseModule {
 		}
 		if (isChange || (peopleInfo && peopleInfo.flushPerson)) {
 			_userList = srcArr;
-			_playListView.updateView(srcArr);
+		//	_playListView.updateView(srcArr);
 		}
 	}
 

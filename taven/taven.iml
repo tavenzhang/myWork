@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="tavenTavenModule">
+  <component name="FlexBuildConfigurationManager" active="TavenModule">
     <configurations>
-      <configuration name="tavenTavenModule" pure-as="true" main-class="TavenModule" output-file="TavenModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules">
+      <configuration name="TavenModule" pure-as="true" main-class="TavenModule" output-file="TavenModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules">
         <dependencies target-player="18.0">
           <entries>
             <entry library-id="eb6480d0-d2a0-4855-9061-7ceb3a2e6f25">
