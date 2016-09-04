@@ -67,7 +67,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	private var screenshot_mc:VideoShotView;
 	private var _isGetMic:Boolean             = false;
 	//信息收集器
-	public var inforProxy:InforProxy          = new InforProxy(this as VideoPlayerView);
+	//public var inforProxy:InforProxy          = new InforProxy(this as VideoPlayerView);
 	//是否关闭rtmp 不在继续重连了
 	public var isCloseRestConnectRtmp:Boolean = false;
 	public var callTime:Number                = 0;
@@ -194,7 +194,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	 * 每个5秒发送一次收集到的信息到服务采集服务器
 	 */
 	public function updatePer30Second():void {
-		inforProxy.sendInforToServer(false);
+		//inforProxy.sendInforToServer(false);
 	}
 
 	//断开rtmp服务器 且不再重连
