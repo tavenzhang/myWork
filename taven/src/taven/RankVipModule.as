@@ -234,6 +234,7 @@ public class RankVipModule extends BaseModule {
         }
         _usrArr.sortOn("level", Array.NUMERIC | Array.DESCENDING);
         _mamageArr.sort(sortFuc);
+        _usrArr.sort(sortFuc);
         _usrList.dataList = _usrArr;
         _managList.dataList = _mamageArr;
         _view.menuBtn2.txtName.text = "管理员" + "(" + _mamageArr.length.toString() + ")";

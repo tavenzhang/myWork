@@ -144,8 +144,6 @@ public class DataCenterManger extends Object implements ISocketApp {
     }
 
     public static function set isShowGiftEffect(value:Boolean):void {
-        if(_isShowGiftEffect!=value)
-        {
             _isShowGiftEffect = value;
             if(value)
             {
@@ -159,6 +157,5 @@ public class DataCenterManger extends Object implements ISocketApp {
             }
         }
 
-    }
 }
 }
