@@ -6,12 +6,10 @@
     <bookmark url="file://$PROJECT_DIR$/appShare/src/manger/NavigatorManager.as" line="33" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="礼物更新">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/TavenModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/TavenModule.swf" />
+    <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="细节调整">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/appShare.swc" afterPath="$PROJECT_DIR$/appShare/appShare.swc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/videoRoom.swf" afterPath="$PROJECT_DIR$/bin-debug/videoRoom.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/RankVipModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/RankVipModule.as" />
     </list>
     <list id="0b8432f8-703d-4449-8515-06a7a62d6e77" name="ignore-on-commit" comment="" />
     <ignored path="videoRoom.iws" />
@@ -54,7 +52,7 @@
       <file leaf-file-name="VideoPlayerView.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taven/src/video/VideoPlayerView.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
+            <state relative-caret-position="2205">
               <caret line="188" column="13" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
               <folding />
             </state>
@@ -64,7 +62,7 @@
       <file leaf-file-name="InforProxy.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taven/src/video/InforProxy.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="1245">
               <caret line="91" column="96" selection-start-line="91" selection-start-column="96" selection-end-line="91" selection-end-column="96" />
               <folding />
             </state>
@@ -74,7 +72,7 @@
       <file leaf-file-name="ModuleNameType.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/ModuleNameType.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="525">
               <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding />
             </state>
@@ -84,7 +82,7 @@
       <file leaf-file-name="VideoParamView.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taven/src/video/VideoParamView.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1410">
+            <state relative-caret-position="45">
               <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding />
             </state>
@@ -94,7 +92,7 @@
       <file leaf-file-name="VideoRoom.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VideoRoom.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="11145">
               <caret line="796" column="38" selection-start-line="796" selection-start-column="38" selection-end-line="796" selection-end-column="38" />
               <folding />
             </state>
@@ -104,7 +102,7 @@
       <file leaf-file-name="RankVipModule.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taven/src/taven/RankVipModule.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="3330">
               <caret line="236" column="30" selection-start-line="236" selection-start-column="30" selection-end-line="236" selection-end-column="30" />
               <folding />
             </state>
@@ -114,7 +112,7 @@
       <file leaf-file-name="sidesGroup.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taven/src/taven/sidesGroup.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
+            <state relative-caret-position="2760">
               <caret line="216" column="50" selection-start-line="216" selection-start-column="50" selection-end-line="216" selection-end-column="50" />
               <folding />
             </state>
@@ -124,7 +122,7 @@
       <file leaf-file-name="DataCenterManger.as" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="408">
               <caret line="145" column="31" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
               <folding />
             </state>
@@ -296,7 +294,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -363,6 +360,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,7 +457,10 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
@@ -482,7 +483,10 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
@@ -1277,7 +1281,8 @@
       <workItem from="1472732235963" duration="17467000" />
       <workItem from="1472818150686" duration="1427000" />
       <workItem from="1472909634363" duration="4203000" />
-      <workItem from="1472972686512" duration="1764000" />
+      <workItem from="1472972686512" duration="2293000" />
+      <workItem from="1473039586330" duration="49000" />
     </task>
     <task id="LOCAL-00001" summary="change module">
       <created>1470040579516</created>
@@ -1538,11 +1543,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472972975864</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="细节调整">
+      <created>1473001080128</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1473001080128</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="920770000" />
+    <option name="totallyTimeSpent" value="921348000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1555,27 +1567,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24528302" sideWeight="0.4418417" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25722146" sideWeight="0.2835218" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25722146" sideWeight="0.28029078" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25722146" sideWeight="0.71647817" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27647868" sideWeight="0.588853" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24209079" sideWeight="0.51534736" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2696011" sideWeight="0.4749596" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22132471" sideWeight="0.755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22132471" sideWeight="0.755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23454158" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27647868" sideWeight="0.39660743" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13859275" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06503198" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27647868" sideWeight="0.41357028" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27647868" sideWeight="0.411147" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20575693" sideWeight="0.24530663" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1586,6 +1597,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="109" y="128" width="1062" height="543" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.48933902" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27647868" sideWeight="0.39660743" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1642,7 +1654,8 @@
     <MESSAGE value="add new gift" />
     <MESSAGE value="新调整" />
     <MESSAGE value="礼物更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="礼物更新" />
+    <MESSAGE value="细节调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="细节调整" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1785,7 +1798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1041">
           <caret line="46" column="40" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1874,7 +1886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="15" column="37" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1889,7 +1900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1919,7 +1929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1935,7 +1944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1943,7 +1951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="304" column="9" selection-start-line="304" selection-start-column="9" selection-end-line="304" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1959,7 +1966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1967,7 +1973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1975,7 +1980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1983,7 +1987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1991,7 +1994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="20" column="22" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1999,9 +2001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
           <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <marker date="1472913720000" expanded="true" signature="6526:6582" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2017,15 +2016,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="201" column="18" selection-start-line="201" selection-start-column="18" selection-end-line="201" selection-end-column="18" />
-          <folding>
-            <element signature="e#16#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/taven/src/video/VideoParamView.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1410">
+        <state relative-caret-position="45">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
         </state>
@@ -2041,7 +2037,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taven/src/video/VideoPlayerView.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
+        <state relative-caret-position="2205">
           <caret line="188" column="13" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
           <folding />
         </state>
@@ -2049,7 +2045,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taven/src/video/InforProxy.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="1245">
           <caret line="91" column="96" selection-start-line="91" selection-start-column="96" selection-end-line="91" selection-end-column="96" />
           <folding />
         </state>
@@ -2057,7 +2053,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/ModuleNameType.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="525">
           <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
           <folding />
         </state>
@@ -2065,7 +2061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VideoRoom.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="11145">
           <caret line="796" column="38" selection-start-line="796" selection-start-column="38" selection-end-line="796" selection-end-column="38" />
           <folding />
         </state>
@@ -2081,7 +2077,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taven/src/taven/RankVipModule.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="3330">
           <caret line="236" column="30" selection-start-line="236" selection-start-column="30" selection-end-line="236" selection-end-column="30" />
           <folding />
         </state>
@@ -2089,7 +2085,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taven/src/taven/sidesGroup.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="2760">
           <caret line="216" column="50" selection-start-line="216" selection-start-column="50" selection-end-line="216" selection-end-column="50" />
           <folding />
         </state>
@@ -2097,7 +2093,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="408">
           <caret line="145" column="31" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
           <folding />
         </state>
