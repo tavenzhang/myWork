@@ -70,11 +70,9 @@ public class CBScrollPanel extends Sprite {
     public function setSize(w:Number, h:Number):void {
         thumbView.x = w - 10;
         bgView.x    = w - 10;
-
         //
         contontWidth  = w;
         contontHeight = h;
-
 
         //
         bgBitMap.height = contontHeight;

@@ -1,16 +1,8 @@
 ﻿package taven {
-import com.rover022.vo.UserVo;
-
 import display.BaseModule;
-import display.ui.CBScrollPanel;
-
-import flash.display.Bitmap;
 
 import taven.common.TavenScrollList;
-import taven.playerInfo.ItemUserRender;
-
 import taven.rankView.RankItemRender;
-import taven.utils.ObjectPool;
 
 public class RankViewModule extends BaseModule {
     /** 当前点击的item数据*/
@@ -30,7 +22,6 @@ public class RankViewModule extends BaseModule {
         _rankList.adjustScrollPost(10);
         _totalView.x =35;
     }
-
 
     /**--------------------------------------------------------------------------公共接口-----------------------------------------------------------------------------------------------------------*/
     override public function get width():Number {

@@ -321,7 +321,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         ModuleLoaderManger.getInstance().register(ModuleNameType.SEATS_MODULE, seats_Module);
         //15******礼物面板 //roger 重构
         this.gift_Module = VideoTool.getMovieClipInstance("giftModule.GiftUI");
-        //Cc.log("==========================================================")
         //Cc.log(VideoConfig.httpTomcat + VideoConfig.configXML.head.@gifturl + "?time=" + Math.random())
         this.gift_Module.configURLS(VideoConfig.httpTomcat + VideoConfig.configXML.head.@gifturl + "?time=" + Math.random(), VideoConfig.httpTomcat + VideoConfig.configXML.head.@depoturl, VideoConfig.HTTP);
         this.gift_Module.y = 470;

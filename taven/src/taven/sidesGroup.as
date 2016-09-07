@@ -21,6 +21,8 @@ import flash.utils.Dictionary;
 
 import ghostcat.util.display.DisplayUtil;
 
+import manger.ClientManger;
+
 import manger.DataCenterManger;
 
 import taven.enum.EventConst;
@@ -78,7 +80,7 @@ public class sidesGroup extends BaseModule {
         VideoTool.buildButtonEff(_view.btnDate);
         VideoTool.buildButtonEff(_view.bulletin_bt);
         VideoTool.buildButtonEff(_view.btnShare);
-        VideoTool.buildButtonEff(_view.btnTransUser);
+        //VideoTool.buildButtonEff(_view.btnTransUser);
         VideoTool.buildButtonEff(_view.btnChange);
         VideoTool.buildButtonEff(_view.btnClearGit);
         $view = _view;
@@ -101,7 +103,7 @@ public class sidesGroup extends BaseModule {
         this.mouseEnabled = false;
         _view.mouseEnabled = false;
         this.addEventListener(MouseEvent.CLICK, _sidesMouseEvent);
-        _view.btnTransUser.visible = false;
+     //   _view.btnTransUser.visible = false;
         _view.viewTransUser.visible = false;
         _view.viewTransUser.txtHouse.restrict = "0-9";
         _view.viewTransUser.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
@@ -171,9 +173,9 @@ public class sidesGroup extends BaseModule {
                         _view.viewTransUser.visible = false;
                     }
                     break;
-                case _view.btnTransUser:
-                    showTranUser(!_view.viewTransUser.visible);
-                    break;
+//                case _view.btnTransUser:
+//                    showTranUser(!_view.viewTransUser.visible);
+//                    break;
                 case _view.mvVideo.btnNexPage:
                     updateVideoData(_videoList, _curvideoPage + 1);
                     break;
@@ -222,6 +224,12 @@ public class sidesGroup extends BaseModule {
                         DataCenterManger.isShowGiftEffect=true;
                     }
                 }
+                case _view.btnMoney://在线充值
+                    ClientManger.getInstance().userPay();
+                    break;
+                case _view.btnVip://办理vip
+                    ClientManger.getInstance().userVIP();
+                    break;
                 default:
             }
         }
@@ -355,7 +363,7 @@ public class sidesGroup extends BaseModule {
 
     /**是否显示转移按钮*/
     public function showTranUsers(visible:Boolean):void {
-        _view.btnTransUser.visible = visible;
+      //  _view.btnTransUser.visible = visible;
     }
 
     /**是否显示切换线路。 只有用户才显示*/
