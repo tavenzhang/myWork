@@ -228,7 +228,7 @@ public class sidesGroup extends BaseModule {
                     ClientManger.getInstance().userPay();
                     break;
                 case _view.btnVip://办理vip
-                    ClientManger.getInstance().userVIP();
+                    VideoTool.jumpToGuiZhuURL();
                     break;
                 default:
             }
