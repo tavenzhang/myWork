@@ -206,6 +206,7 @@ public class PlayInfoModule extends BaseModule {
 					TweenHelp.fade(_view.mcMail, 0.3, 0.2, 1);
 					_view.mcMail.txtPrivate.text = "";
 					_view.mcMail.txtSystem.text  = "";
+					view_cj.txtTitle.text="";
 					if (_view.mcMail.btnPrivate)
 						_view.mcMail.btnPrivate.mouseEnabled = false;
 					EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, {}, s2cNoticeData);

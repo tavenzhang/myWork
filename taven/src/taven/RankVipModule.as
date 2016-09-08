@@ -234,40 +234,56 @@ public class RankVipModule extends BaseModule {
         }
         _usrArr.sortOn("level", Array.NUMERIC | Array.DESCENDING);
         _mamageArr.sort(sortFuc);
-        _usrArr.sort(sortFuc);
+        _usrArr.sort(sortUserFuc);
         _usrList.dataList = _usrArr;
         _managList.dataList = _mamageArr;
         _view.menuBtn2.txtName.text = "管理员" + "(" + _mamageArr.length.toString() + ")";
         _view.menuBtn1.txtName.text = "观众" + "(" + _usrArr.length.toString() + ")";
     }
 
-
-    private function sortFuc(a:Object, b:Object):int {
+    private function sortUserFuc(a:Object, b:Object):int {
         var resutlt:int = 0;
-        if(a.vip>=b.vip){
-            resutlt = 1;
-        }
-        else
+        if(a.vip>b.vip)
         {
-            if (a.power > b.power) {
+            resutlt=-1;
+        }
+        else if(a.vip<b.vip){
+            resutlt=1;
+        }
+        else{
+            if (a.level > b.level) {
                 resutlt = -1;
             }
-            else if (a.power < b.power) {
+            else if (a.level < b.level) {
                 resutlt = 1;
             }
             else {
-                if (a.level > b.level) {
-                    resutlt = -1;
-                }
-                else if (a.level < b.level) {
-                    resutlt = 1;
-                }
-                else {
-                    resutlt = 0;
-                }
+                resutlt = 0;
             }
         }
+        return resutlt;
+    }
 
+
+    private function sortFuc(a:Object, b:Object):int {
+        var resutlt:int = 0;
+        if (a.power > b.power) {
+            resutlt = -1;
+        }
+        else if (a.power < b.power) {
+            resutlt = 1;
+        }
+        else {
+            if (a.level > b.level) {
+                resutlt = -1;
+            }
+            else if (a.level < b.level) {
+                resutlt = 1;
+            }
+            else {
+                resutlt = 0;
+            }
+        }
         return resutlt;
     }
 

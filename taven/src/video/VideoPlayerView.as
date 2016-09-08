@@ -855,6 +855,10 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		}
 	}
 
+	public function hideVideo(isHide:Boolean):void
+	{
+		this.visible =  !isHide;
+	}
 	/**
 	 * 可以根据这个值判断主播是否在直播...
 	 */

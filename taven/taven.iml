@@ -65,7 +65,11 @@
           </entries>
           <sdk name="air22" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />
@@ -82,7 +86,11 @@
           </entries>
           <sdk name="AIRSDK18" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />
@@ -99,7 +107,11 @@
           </entries>
           <sdk name="AIRSDK18" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />
@@ -119,7 +131,11 @@
           </entries>
           <sdk name="AIRSDK18" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />

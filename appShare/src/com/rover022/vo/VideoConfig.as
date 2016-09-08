@@ -19,7 +19,7 @@ public class VideoConfig {
 	public static var HOST:String            = "";
 	public static var PORT:int               = 0;
 	public static var connectRTMP:String;
-	public static var roomID:int             = 10000;//rover022 101116443,101116441,101120981,101116395,101116444,101116395
+	public static var roomID:int             = 101239396;//rover022 101116443,101116441,101120981,101116395,101116444,101116395
 	public static var loginKey:String        = "";
 	public static var testUID:String         = "2@163.com";
 	public static var testPASS:String        = "aaaaaa";

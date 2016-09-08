@@ -27,5 +27,7 @@ public interface IPlayer {
     function get isGetMic():Boolean;
 
     function updatePer30Second():void;
+
+    function hideVideo(isHide:Boolean):void;
 }
 }

@@ -18,7 +18,7 @@ import flash.text.TextFieldAutoSize;
 import flash.ui.Keyboard;
 import flash.utils.Dictionary;
 import flash.utils.getTimer;
-import flash.utils.setTimeout;
+
 
 import flashx.textLayout.elements.InlineGraphicElement;
 import flashx.textLayout.elements.LinkElement;

@@ -336,9 +336,10 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         ModuleLoaderManger.getInstance().register(ModuleNameType.LIMIT_EnterModule, enterLimit_Module);
         //10********视频
         this.video_Module = VideoTool.getClassByModule("video.VideoPlayerView", "videoModule") as IPlayer;
+        ModuleLoaderManger.getInstance().register(ModuleNameType.VIDEOPLAYER, video_Module as DisplayObject);
         this.video_Module.addEventListener("reGOHallEvent", onBackHallEvent);//回到大厅
         videoUIView.addChild(video_Module as DisplayObject);
-        ModuleLoaderManger.getInstance().register(ModuleNameType.VIDEOPLAYER, video_Module as DisplayObject);
+
     }
 
     private function initEastUI():void {

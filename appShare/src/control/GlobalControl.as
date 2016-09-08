@@ -14,13 +14,15 @@ import display.BaseModule;
 import display.ui.Alert;
 
 import flash.display.MovieClip;
-import flash.events.Event;
+
 
 import ghostcat.manager.RootManager;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
 import manger.DataCenterManger;
+
+import mx.modules.ModuleManager;
 
 import mx.utils.StringUtil;
 
@@ -65,6 +67,11 @@ public class GlobalControl extends BaseControl {
 				//VideoTool.jumpToMainURL(null);
 				break;
 			case CBProtocol.login://10001用户信息
+				var videoModule:IPlayer = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as IPlayer;
+				if(videoModule)
+				{
+					videoModule.hideVideo(false);
+				}
 				var vipModule:BaseModule = ModuleLoaderManger.getInstance().getModule(ModuleNameType.RANK_VIP) as BaseModule;
 				vipModule.handMessage(data);
 				//KTVUnion.setLoadInfo("",92);//-----------loading信息

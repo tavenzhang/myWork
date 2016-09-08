@@ -31,6 +31,8 @@ import flash.utils.setInterval;
 
 import ghostcat.manager.RootManager;
 
+import mx.modules.ModuleManager;
+
 import net.CBHttpServiceProxy;
 import net.NetManager;
 
@@ -75,6 +77,7 @@ public class ClientManger {
 	private function checkisGuestFun():void {
 		if (NetManager.getInstance().appInit) {
 			ClientManger.getInstance().isGuestAndGuestRegister();
+
 		}
 	}
 
@@ -249,8 +252,11 @@ public class ClientManger {
 	public function isGuestAndGuestRegister():Boolean {
 		if (DataCenterManger.playerState == PlayerType.GUEST) {
 			guestRegister();
+			var player:IPlayer=   ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as IPlayer;
+			player.hideVideo(true);
 			return true;
 		} else {
+			(ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as IPlayer).hideVideo(false);
 			return false;
 		}
 	}
@@ -715,6 +721,6 @@ public class ClientManger {
 				Cc.log("后台小弟欢迎你,后面可以接一个参数", src);
 			});
 		}
-    };
+	};
 }
 }
