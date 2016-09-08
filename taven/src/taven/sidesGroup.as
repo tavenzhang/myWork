@@ -224,6 +224,7 @@ public class sidesGroup extends BaseModule {
                         DataCenterManger.isShowGiftEffect=true;
                     }
                 }
+                    break;
                 case _view.btnMoney://在线充值
                     ClientManger.getInstance().userPay();
                     break;
