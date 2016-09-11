@@ -15,6 +15,7 @@ public class BaseModule extends MovieClip implements IVideoModule {
     /**主程序接口 可以获取各种公用模块*/
     protected var $videoroom:IVideoRoom;
 
+    private var _people;
     public function BaseModule() {
         initView();
         initListeners();
@@ -61,7 +62,7 @@ public class BaseModule extends MovieClip implements IVideoModule {
         }
         /*else
          {
-         if(isShowEffect)
+         if(isShowEffect);
          TweenUtils.fade(this,0.5,1,0);
          }*/
 

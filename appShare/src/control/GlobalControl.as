@@ -50,6 +50,7 @@ public class GlobalControl extends BaseControl {
 	override public function handleMessgae(data:*):void {
 		var sObject:Object = data;
 		var view:MovieClip = ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEO_ROOM) as MovieClip;
+		var vipModule:BaseModule = ModuleLoaderManger.getInstance().getModule(ModuleNameType.RANK_VIP) as BaseModule;
 		switch (data.cmd) {
 			case CBProtocol.getKey://拿到服务器的验证钥匙 生成ase;
 				NetManager.getInstance().createKey(sObject.limit);
@@ -72,7 +73,6 @@ public class GlobalControl extends BaseControl {
 				{
 					videoModule.hideVideo(false);
 				}
-				var vipModule:BaseModule = ModuleLoaderManger.getInstance().getModule(ModuleNameType.RANK_VIP) as BaseModule;
 				vipModule.handMessage(data);
 				//KTVUnion.setLoadInfo("",92);//-----------loading信息
 				//UserVoDataManger.userData = JSON.parse('{"icon":1104,"vip":1104,"port":0,"car":120104,"cmd":10001,"ruled":0,"sex":0,"uid":1626669,"hidden":0,"roomid":0,"headimg":"","activityName":"","lv":1,"expTotal":10000,"gid":0,"points":0,"name":"ronnie","gamepop":"1","exp":0,"downloadUrl":"http://pan.baidu.com/s/1pJV9S9t","ret":0,"emailValid":0,"host":"","richLv":13}')
@@ -187,6 +187,7 @@ public class GlobalControl extends BaseControl {
 				break;
 			case CBProtocol.onEnterRoom_VIP_10013://初始化VIP信息
 				DataCenterManger.vipInfo.initInfo(sObject);
+				vipModule.handMessage(sObject);
 				break;
 			case CBProtocol.VIP_OPEN_18001:// 开通提示框
 				var hint:String    = "恭喜您!【{0}】在你房间内开通{1}，您获得{2}钻石返现!请到个人中心，佣金提成中查看记录.";

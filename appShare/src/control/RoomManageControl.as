@@ -43,6 +43,7 @@ public class RoomManageControl extends BaseControl {
         super.regMagHanlde(CBProtocol.listAutor, handleMessgae);
         super.regMagHanlde(CBProtocol.onListUserChange, handleMessgae);
         super.regMagHanlde(CBProtocol.closeRtmp, handleMessgae);
+        super.regMagHanlde(CBProtocol.userListNum_50007, handleMessgae);
     }
 
     override public function handleMessgae(data:*):void {
@@ -194,6 +195,9 @@ public class RoomManageControl extends BaseControl {
                 view.sides_Module.updateVideoInfos(_vItem);
                 view.playInfo_Module.peopleInfo = sObject;
                 view.playInfo_Module.updateVideoInfos(_vItem);
+                break;
+            case CBProtocol.userListNum_50007:
+                vipModule.handMessage(data);
                 break;
         }
     }

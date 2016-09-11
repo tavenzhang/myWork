@@ -199,9 +199,10 @@ public class CBProtocol {
 	 */
 	public static const onListUserChange:int      = 50002;
 	/**
-	 * 主播房间列表
+	 * 	//房间人数情况
 	 */
-	public static const listAdminRoom:int         = 50004;
+	public static const userListNum_50007:int      = 50007;
+
 	/**
 	 * listRtmpRoom 主播列表
 	 */

@@ -10,6 +10,8 @@ import display.ui.TTabBar;
 import flash.display.MovieClip;
 import flash.events.Event;
 
+import manger.DataCenterManger;
+
 import taven.common.TavenScrollList;
 import taven.enum.EventUtils;
 import taven.playerInfo.ItemUserRender;
@@ -32,7 +34,8 @@ public class RankVipModule extends BaseModule {
     private var _tabBar:TTabBar;
     private var _managList:TavenScrollList;
     private var _usrList:TavenScrollList;
-
+    private  var totalUsrs:int=0;
+    private  var totalManage:int=0;
     public function RankVipModule() {
         _usrList = new TavenScrollList(ItemUserRender, 6);
         _managList = new TavenScrollList(ItemUserRender, 6);
@@ -120,7 +123,17 @@ public class RankVipModule extends BaseModule {
                 onTabChange(1);
                 onTabChange(0);
                 break;
-
+            case CBProtocol.userListNum_50007:
+                totalUsrs = (data.guests+data.players);
+                totalManage = data.managers;
+               // <--50007 {"total":11,"cmd":50007,"users":11,"managers":2,"guests":0,"players":9}  貌似感觉可以
+                _view.menuBtn1.txtName.text = "观众" + "(" + (totalUsrs*DataCenterManger.vipInfo.userTimes).toString() + ")";
+                _view.menuBtn2.txtName.text = "管理员" + "(" + totalManage.toString() + ")";
+                break;
+            case CBProtocol.onEnterRoom_VIP_10013:
+                _view.menuBtn1.txtName.text = " 观众" + "(" + (totalUsrs*DataCenterManger.vipInfo.userTimes).toString() + ")";
+                _view.menuBtn2.txtName.text =  "管理员" + "(" + totalManage.toString() + ")";
+                break;
         }
     }
 
@@ -181,11 +194,10 @@ public class RankVipModule extends BaseModule {
                 if(item&&item.ruled>-1)
                 {
                     dataList.push(item);
-                    trace("--item.ruled>-1--"+item.name);
                 }
                 else
                 {
-                    trace("--item.ruled<=-1--"+item.name);
+                   // trace("--item.ruled<=-1--"+item.name);
                 }
             }
             if(dataList.length<=0)
@@ -237,8 +249,6 @@ public class RankVipModule extends BaseModule {
         _usrArr.sort(sortUserFuc);
         _usrList.dataList = _usrArr;
         _managList.dataList = _mamageArr;
-        _view.menuBtn2.txtName.text = "管理员" + "(" + _mamageArr.length.toString() + ")";
-        _view.menuBtn1.txtName.text = "观众" + "(" + _usrArr.length.toString() + ")";
     }
 
     private function sortUserFuc(a:Object, b:Object):int {
