@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="bug 修复">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/videoRoom.swf" afterPath="$PROJECT_DIR$/bin-debug/videoRoom.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VideoRoom.as" afterPath="$PROJECT_DIR$/src/VideoRoom.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/taven/RankVipModule.as" afterPath="$PROJECT_DIR$/taven/src/taven/RankVipModule.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/xml/giftConfig.xml" afterPath="$PROJECT_DIR$/bin-debug/xml/giftConfig.xml" />
     </list>
     <list id="0b8432f8-703d-4449-8515-06a7a62d6e77" name="ignore-on-commit" comment="" />
     <ignored path="videoRoom.iws" />
@@ -44,14 +41,14 @@
       <file leaf-file-name="RankVipModule.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taven/src/taven/RankVipModule.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="1230">
               <caret line="98" column="46" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoRoom.as" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VideoRoom.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VideoRoom.as">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="86">
@@ -61,10 +58,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="env.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin-debug/xml/env.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="giftConfig.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin-debug/xml/giftConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CBProtocol.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-190">
+            <state relative-caret-position="3015">
               <caret line="203" column="41" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="41" />
               <folding />
             </state>
@@ -74,18 +91,8 @@
       <file leaf-file-name="GlobalControl.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appShare/src/control/GlobalControl.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
+            <state relative-caret-position="2370">
               <caret line="187" column="49" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseModule.as" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appShare/src/display/BaseModule.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -94,7 +101,7 @@
       <file leaf-file-name="DataCenterManger.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
+            <state relative-caret-position="615">
               <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
               <folding />
             </state>
@@ -121,20 +128,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoConfig.as" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RoomManageControl.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appShare/src/control/RoomManageControl.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="2430">
               <caret line="183" column="44" selection-start-line="183" selection-start-column="44" selection-end-line="183" selection-end-column="44" />
               <folding />
             </state>
@@ -175,7 +172,6 @@
         <option value="$PROJECT_DIR$/taven/src/taven/seatView/ParkLoad.as" />
         <option value="$PROJECT_DIR$/appShare/src/manger/navigatorManager.as" />
         <option value="$PROJECT_DIR$/appShare/src/tool/ViewUtils.as" />
-        <option value="$PROJECT_DIR$/bin-debug/xml/giftConfig.xml" />
         <option value="$PROJECT_DIR$/bin-debug/xml/env.xml" />
         <option value="$PROJECT_DIR$/taven/src/taven/enum/EventUtils.as" />
         <option value="$PROJECT_DIR$/appShare/src/net/NetManager.as" />
@@ -217,6 +213,7 @@
         <option value="$PROJECT_DIR$/taven/src/TavenModule.as" />
         <option value="$PROJECT_DIR$/taven/src/taven/RankVipModule.as" />
         <option value="$PROJECT_DIR$/src/VideoRoom.as" />
+        <option value="$PROJECT_DIR$/bin-debug/xml/giftConfig.xml" />
       </list>
     </option>
   </component>
@@ -294,6 +291,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -394,10 +392,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="o-flash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="o-flash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin-debug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1325,14 +1340,8 @@
       <workItem from="1473321156023" duration="660000" />
       <workItem from="1473333928798" duration="9575000" />
       <workItem from="1473403034846" duration="3409000" />
-      <workItem from="1473565105506" duration="4930000" />
-    </task>
-    <task id="LOCAL-00001" summary="change module">
-      <created>1470040579516</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1470040579516</updated>
+      <workItem from="1473565105506" duration="5056000" />
+      <workItem from="1473682661979" duration="1296000" />
     </task>
     <task id="LOCAL-00002" summary="优化">
       <created>1470041299678</created>
@@ -1670,11 +1679,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473651454607</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="bug 修复">
+      <created>1473651556792</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1473651556794</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="946161000" />
+    <option name="totallyTimeSpent" value="947583000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1687,11 +1703,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24528302" sideWeight="0.4418417" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.4434572" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.5565428" order="12" side_tool="true" content_ui="tabs" />
@@ -1715,6 +1730,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18390192" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.4434572" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="109" y="128" width="1062" height="543" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.48933902" order="10" side_tool="false" content_ui="tabs" />
@@ -1872,7 +1888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="37" column="98" selection-start-line="37" selection-start-column="98" selection-end-line="37" selection-end-column="98" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1901,15 +1916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="7608" column="35" selection-start-line="7608" selection-start-column="35" selection-end-line="7608" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin-debug/xml/giftConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1931,7 +1937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-685">
           <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1968,7 +1973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1976,7 +1980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1991,7 +1994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1999,7 +2001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1191">
           <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2053,7 +2054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2068,7 +2068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2084,7 +2083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2099,7 +2097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="797" column="49" selection-start-line="797" selection-start-column="49" selection-end-line="797" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2123,15 +2120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2970">
           <caret line="232" column="26" selection-start-line="232" selection-start-column="26" selection-end-line="232" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin-debug/xml/env.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2155,7 +2143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="63" column="99" selection-start-line="63" selection-start-column="91" selection-end-line="63" selection-end-column="99" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2171,7 +2158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5550">
           <caret line="405" column="5" selection-start-line="405" selection-start-column="5" selection-end-line="405" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2179,13 +2165,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="165">
           <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
           <folding />
         </state>
@@ -2193,7 +2178,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/display/BaseModule.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="885">
           <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
           <folding />
         </state>
@@ -2201,7 +2186,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/control/RoomManageControl.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="2430">
           <caret line="183" column="44" selection-start-line="183" selection-start-column="44" selection-end-line="183" selection-end-column="44" />
           <folding />
         </state>
@@ -2209,7 +2194,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/control/GlobalControl.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
+        <state relative-caret-position="2370">
           <caret line="187" column="49" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="49" />
           <folding />
         </state>
@@ -2225,7 +2210,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
+        <state relative-caret-position="3015">
           <caret line="203" column="41" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="41" />
           <folding />
         </state>
@@ -2233,7 +2218,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
+        <state relative-caret-position="615">
           <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
           <folding />
         </state>
@@ -2249,7 +2234,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taven/src/taven/RankVipModule.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="1230">
           <caret line="98" column="46" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
           <folding />
         </state>
@@ -2259,6 +2244,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
           <caret line="314" column="0" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin-debug/xml/env.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin-debug/xml/giftConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
