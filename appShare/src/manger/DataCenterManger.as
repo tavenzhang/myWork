@@ -37,6 +37,7 @@ public class DataCenterManger extends Object implements ISocketApp {
     public static var adminPingManger:PingManager = new PingManager();
     public static var vipInfo:VipInfo = new VipInfo();
     public static var userPingManger:PingManager = new PingManager();
+
     public static var respondDic:Dictionary;
     public static var filterCMDArray:Array = [9999];
     public var view:IVideoRoom;

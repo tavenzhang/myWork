@@ -97,6 +97,7 @@ public class RankVipModule extends BaseModule {
     //ui 消息处理
     override public function handMessage(data:*):void {
         trace("handMessage===" + handMessage);
+
         switch (data.cmd) {
             case CBProtocol.onEnterRoom://玩家进入
                 updataDataList([FormatDataTool.userData(data)]);
@@ -134,8 +135,10 @@ public class RankVipModule extends BaseModule {
                 _view.menuBtn1.txtName.text = " 观众" + "(" + (totalUsrs*DataCenterManger.vipInfo.userTimes).toString() + ")";
                 _view.menuBtn2.txtName.text =  "管理员" + "(" + totalManage.toString() + ")";
                 break;
+
         }
     }
+
 
 
     private function showLoading(visible:Boolean) {
