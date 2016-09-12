@@ -137,7 +137,7 @@ public class NetManager extends EventDispatcher {
                 _playSid = iPlay["flvName"];
             }
         }
-        var _sting:String = userCode + roomID + "jugg123";
+        var _sting:String = userCode + roomID + "73*96&58ut";
         var passw:String = VideoTool.buildAseString(ASEkey, _sting);
         sendDataObject({
             "key": userCode,
