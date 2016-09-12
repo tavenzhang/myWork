@@ -97,7 +97,6 @@ public class RankVipModule extends BaseModule {
     //ui 消息处理
     override public function handMessage(data:*):void {
         trace("handMessage===" + handMessage);
-
         switch (data.cmd) {
             case CBProtocol.onEnterRoom://玩家进入
                 updataDataList([FormatDataTool.userData(data)]);

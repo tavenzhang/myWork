@@ -312,6 +312,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         this.videoUIView.addChild(this.roomPlayInfor);
         this.roomPlayInfor.x = -148;
         this.roomPlayInfor.y = 340;
+
         //18座位
         this.seats_Module = VideoTool.getMCTaven("seatView.Userpark");
         seats_Module.x = 16;
