@@ -198,11 +198,11 @@ public class ClientManger {
 		// var video_Module:MovieClip =  ModuleLoaderManger.getInstance().getModule(ModuleNameType.VIDEOPLAYER) as MovieClip;
 		if (DataCenterManger.getInstance().isSelf(_obj.uid)) {
 			DataCenterManger.getInstance().isVideoPublisher = true;
-			Cc.log("主播发布模式：", "sid:" + _obj.sid, "rtmp地址:", _obj.rtmp);
+			Cc.log("主播发布模式：", "sid:" + _obj.sid, "rtmp地址:", _obj.rtmp,"vtype:",DataCenterManger.videoQType);
 			video_Module.publish(_obj.sid, _obj.rtmp);
 			VideoConfig.connectRTMP = _obj.rtmp;
 		} else {
-			Cc.log("正常播放模式", _obj.sid, _obj.rtmp);
+			Cc.log("正常播放模式", _obj.sid, _obj.rtmp,"vtype:",DataCenterManger.videoQType);
 			video_Module.playRTMP(_obj.sid, _obj.rtmp);
 			VideoConfig.connectRTMP = _obj.rtmp;
 		}

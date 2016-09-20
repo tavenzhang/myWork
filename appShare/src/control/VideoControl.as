@@ -33,7 +33,7 @@ public class VideoControl extends BaseControl {
         super.regMagHanlde(CBProtocol.faildContactMic, handleMessgae);
         super.regMagHanlde(CBProtocol.deleteContactMic, handleMessgae);
         super.regMagHanlde(CBProtocol.listRtmpRoom_80001, handleMessgae);
-        super.regMagHanlde(CBProtocol.songActionListPlay, handleMessgae);
+        super.regMagHanlde(CBProtocol.songActionListPlay_20001, handleMessgae);
     }
 
     override public function handleMessgae(data:*):void {
@@ -62,7 +62,7 @@ public class VideoControl extends BaseControl {
                 //UserVoDataManger.adminPingManger.addRtmpArray(String(sObject.rtmp).split(","));
                 //UserVoDataManger.adminPingManger.addCliendRtmpArr(HttpService.RTMP_LIST);
                 break;
-            case CBProtocol.songActionListPlay://麦序 20002上麦,20003下麦(传流ID)
+            case CBProtocol.songActionListPlay_20001://麦序 20002上麦,20003下麦(传流ID)
                 //收到信息之后发送 签到任务
                 if (sObject.items.length > 0) {
                     for (var i:int = 0; i < sObject.items.length; i++) {  //目前数组只有1 肯定1个视频
@@ -74,6 +74,7 @@ public class VideoControl extends BaseControl {
                     //播放视频
                     DataCenterManger.formatStream(sObject.items[0]);//有视频
                     DataCenterManger.userData.lastRtmp = sObject.items[0].rtmp; //记录最后使用的rtmp地址 用于地址选择判断
+                    DataCenterManger.userData.qtype = sObject.items[0].qtype; //记录最后使用的rtmp地址 用于地址选择判断
                 } else {
                     DataCenterManger.formatStream(null);//没有视频
                     DataCenterManger.userData.lastRtmp = ""; //记录最后使用的rtmp地址

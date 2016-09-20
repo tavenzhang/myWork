@@ -1,6 +1,8 @@
 package video {
+import com.bit101.components.CheckBox;
 import com.bit101.components.ComboBox;
 import com.bit101.components.Label;
+import com.bit101.components.RadioButton;
 import com.bit101.components.Style;
 import com.greensock.TweenLite;
 import com.rover022.CBProtocol;
@@ -20,7 +22,7 @@ import manger.DataCenterManger;
 import sk.video.videoParam;
 
 import taven.sideGroup.BasePaneUI;
-import taven.utils.CCComboBox;
+
 
 public class VideoParamView extends BasePaneUI {
     private var operaBool:Boolean = false;
@@ -30,11 +32,15 @@ public class VideoParamView extends BasePaneUI {
     public var videoPlayerView:VideoPlayerView;
     private var _lastChooseRtmp:String = "";
     public var _pane:videoParam = new videoParam();
-
+    private var  _highRtn:RadioButton = new RadioButton();
+    private var  _normalRtn:RadioButton = new RadioButton();
+    private var  _lowRtn:RadioButton = new RadioButton();
+    private var _lastOverButton:RadioButton;
     public function VideoParamView(_v:VideoPlayerView):void {
         addChild(_pane);
         videoPlayerView = _v;
         _pane.yes_bt.addEventListener(MouseEvent.CLICK, suerClick);
+        _pane.mcTip.visible = false;
         Style.embedFonts = false;
         Style.fontSize = 12;
         Style.fontName = "宋体";
@@ -53,6 +59,72 @@ public class VideoParamView extends BasePaneUI {
             lineBox.addItem({label: "测试"});
         }
         super();
+        _highRtn.label ="高清";
+        _normalRtn.label ="默认";
+        _lowRtn.label ="流畅";
+        _pane.addChild(_highRtn);
+        _pane.addChild(_normalRtn);
+        _pane.addChild(_lowRtn);
+         addChild(_pane.mcTip);
+        _highRtn.y =  _normalRtn.y = _lowRtn.y = 50;
+        _highRtn.x =90;
+        _normalRtn.x = _highRtn.x + _lowRtn.width +50;
+        _lowRtn.x =_normalRtn.x +_normalRtn.width+50;
+        _highRtn.mouseChildren=_normalRtn.mouseChildren=_lowRtn.mouseChildren=false;
+        _normalRtn.selected = true;
+        _lastOverButton = _normalRtn;
+        _pane.mcTip.txt.autoSize = "left";
+        _pane.mcTip.txt.wordWrap = true;
+        initAddTips();
+    }
+
+    private function  initAddTips():void{
+        _highRtn.addEventListener(MouseEvent.ROLL_OVER,onMoveHandle);
+        _normalRtn.addEventListener(MouseEvent.ROLL_OVER,onMoveHandle);
+        _lowRtn.addEventListener(MouseEvent.ROLL_OVER,onMoveHandle);
+//        _highRtn.addEventListener(MouseEvent.ROLL_OUT ,onMoveHandle);
+//        _normalRtn.addEventListener(MouseEvent.ROLL_OUT,onMoveHandle);
+//        _lowRtn.addEventListener(MouseEvent.ROLL_OUT,onMoveHandle);
+        this.addEventListener(MouseEvent.MOUSE_MOVE,onViewRollOver);
+    }
+
+    private function  onViewRollOver(evt:MouseEvent):void
+    {
+        if(evt.target !=_highRtn && evt.target != _normalRtn && evt.target!=_lowRtn)
+        {
+            _pane.mcTip.visible = false;
+        }
+    }
+
+    private function onMoveHandle(evt:Event):void
+    {
+        if(evt.type == MouseEvent.ROLL_OVER)
+        {
+            _pane.mcTip.visible = true;
+            _lastOverButton = evt.currentTarget as RadioButton;
+            switch (evt.currentTarget)
+            {
+                case _highRtn:
+                    _pane.mcTip.txt.text="可以有效提高画面清晰度,但是需要稳定的高上传带宽!";
+                    _pane.mcTip.x = _highRtn.x+20;
+                    _pane.mcTip.y = _highRtn.y -10;
+                    break;
+                case _normalRtn:
+                    _pane.mcTip.txt.text="默认采集参数,在清晰度与流程之前争取平衡。";
+                    _pane.mcTip.x = _normalRtn.x+20;
+                    _pane.mcTip.y = _normalRtn.y -10;
+                    break;
+                case _lowRtn:
+                    _pane.mcTip.txt.text="优先保障画面流程, 会损失一定的清晰度. 但消耗上传带宽比较小";
+                    _pane.mcTip.x = _lowRtn.x+20;
+                    _pane.mcTip.y = _lowRtn.y -10;
+                    break;
+            }
+            _pane.mcTip.bg_mc.height =  _pane.mcTip.txt.height + 10;
+        }
+//        else{
+//                _pane.mcTip.visible = false;
+//        }
     }
 
     override protected function init():void {
@@ -120,8 +192,21 @@ public class VideoParamView extends BasePaneUI {
         operaBool = true;
         videoPlayerView.initUI();
         _lastChooseRtmp = lineBox.selectedItem.rtmp;
+        var videQtype:int =0;
+        if(_highRtn.selected)
+        {
+            videQtype =2;
+        }
+        else if(_normalRtn.selected)
+        {
+            videQtype =1;
+        }
+        else
+        {
+            videQtype = 0;
+        }
         //Cc.log("主播手动选择的线路是:", _lastChooseRtmp);
-        videoPlayerView.videoRoom.sendDataObject({"cmd": CBProtocol.startTalkPlay, "rtmp": _lastChooseRtmp});//上麦
+        videoPlayerView.videoRoom.sendDataObject({"cmd": CBProtocol.startTalkPlay_20002, "rtmp": _lastChooseRtmp,"qtype":videQtype});//上麦
         videoPlayerView.onGetMic(null);
         videoPlayerView.reconCount = 0;
         videoPlayerView.isCloseRestConnectRtmp = false;

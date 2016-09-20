@@ -45,7 +45,7 @@ public class DataCenterManger extends Object implements ISocketApp {
     private static var _instance:DataCenterManger;
     //特效屏蔽
     private  static var _isShowGiftEffect:Boolean=true;
-
+    //活动数据
     public static var activeCJData:Object;
 
     /**
@@ -67,6 +67,20 @@ public class DataCenterManger extends Object implements ISocketApp {
             return true;
         }
         return false;
+    }
+
+    /**
+     * 是否是贵族
+     */
+    public static function get videoQType():int {
+
+        if (userData && userData.qtype) {
+            return userData.qtype;
+        }
+       else
+        {
+            return 1;
+        }
     }
 
     /**

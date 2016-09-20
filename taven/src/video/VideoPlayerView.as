@@ -31,6 +31,7 @@ import flash.net.NetStream;
 import flash.net.URLLoader;
 import flash.net.URLRequest;
 import flash.net.URLRequestMethod;
+import flash.trace.Trace;
 import flash.utils.ByteArray;
 import flash.utils.Timer;
 import flash.utils.setInterval;
@@ -117,12 +118,6 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	}
 
 	private function onStageHandle(event:Event):void {
-		var _xml:XML           = VideoConfig.ENV_XML as XML;
-		cameraConfig.frame     = _xml.videoQ.frame;
-		cameraConfig.fps       = _xml.videoQ.fps;
-		cameraConfig.favorArea = _xml.videoQ.favorArea;
-		cameraConfig.bandwidth = _xml.videoQ.bandwidth;
-		cameraConfig.quality   = _xml.videoQ.quality;
 		ownerTimeout.addEventListener(TimerEvent.TIMER, _ownerTimerEvent);
 		ownerTimeout.start();//启动判断是否有上麦者
 		setInterval(updatePer30Second, 30000);
@@ -150,7 +145,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	public function downMicClick(event:MouseEvent):void {
 		closeRtmpNoResetConnect();
 		if (DataCenterManger.videoOwner) {
-			videoRoom.sendDataObject({"cmd": CBProtocol.stopTalkPlay, "sid": DataCenterManger.videoOwner.sid});//下麦;
+			videoRoom.sendDataObject({"cmd": CBProtocol.stopTalkPlay_20003, "sid": DataCenterManger.videoOwner.sid});//下麦;
 		}
 		isGetMic = false;
 		updateUI(null);
@@ -289,6 +284,25 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		//摄像头
 		if (Camera.names.length > 0) {
 			//设置每秒的最大带宽或当前输出视频输入信号所需的图片品质。此方法通常只在您使用 Flash Communication Server 传输视频时适用。
+			var _xml:XML =VideoConfig.ENV_XML as XML ;
+			var dataXMl:XMLList;
+			  switch (DataCenterManger.videoQType)
+			  {
+				  case 0://流程
+					  dataXMl  = _xml.videoH ;
+					  break;
+				  case 1://默认
+					  dataXMl  = _xml.videoM ;
+					  break;
+				  case 2://高清
+					  dataXMl  = _xml.videoL ;
+					  break;
+			  }
+			cameraConfig.frame     = int(dataXMl.frame);
+			cameraConfig.fps       = int(dataXMl.fps);
+			cameraConfig.favorArea = dataXMl.favorArea;
+			cameraConfig.bandwidth = int(dataXMl.bandwidth);
+			cameraConfig.quality   = int(dataXMl.quality);
 			this.cam = Camera.getCamera(this.videoparam_mc.cameraValue.toString());
 			if (this.cam) {
 				this.cam.addEventListener(StatusEvent.STATUS, _cameraStatusEvent);
@@ -394,7 +408,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	}
 
 	private function _netStatusEvent(e:NetStatusEvent):void {
-		Cc.log(e.info.code + "-----------" + this.nc.uri);
+		Cc.log(e.info.code + "-----------" + this.nc.uri+"-----------------vtype:"+DataCenterManger.videoQType);
 		switch (e.info.code) {
 			case "NetConnection.Connect.Success":
 				reConnTimer.stop();//暂停计时器

@@ -141,15 +141,15 @@ public class CBProtocol {
 	/**
 	 * 麦序
 	 */
-	public static const songActionListPlay:int    = 20001;
+	public static const songActionListPlay_20001:int    = 20001;
 	/**
 	 * 上麦
 	 */
-	public static const startTalkPlay:int         = 20002;
+	public static const startTalkPlay_20002:int         = 20002;
 	/**
-	 * 上麦
+	 * 下麦
 	 */
-	public static const stopTalkPlay:int          = 20003;
+	public static const stopTalkPlay_20003:int          = 20003;
 	/**
 	 * 电影flv
 	 */
