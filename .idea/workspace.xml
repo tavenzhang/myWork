@@ -7,30 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="bug 修复">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/taven/libs/userInfoWin.swc" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/appShare.swc" afterPath="$PROJECT_DIR$/appShare/appShare.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/ChatRoomModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/GiftModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/GiftModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/TavenModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/TavenModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/VideoModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/VideoModule.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/videoRoom.swf" afterPath="$PROJECT_DIR$/bin-debug/videoRoom.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/libs/videoModule.swc" afterPath="$PROJECT_DIR$/taven/libs/videoModule.swc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/userInfoWin.fla" afterPath="$PROJECT_DIR$/taven/resource/userInfoWin.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/resource/videoModule.fla" afterPath="$PROJECT_DIR$/taven/resource/videoModule.fla" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveCJ.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveCJ.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveGoldHouseRModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveGoldHouseRModule.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveMSFightModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/rslModules/ActiveMSFightModule.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TVideo.iml" afterPath="$PROJECT_DIR$/TVideo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/CBProtocol.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as" afterPath="$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/control/VideoControl.as" afterPath="$PROJECT_DIR$/appShare/src/control/VideoControl.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as" afterPath="$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appShare/src/net/NetManager.as" afterPath="$PROJECT_DIR$/appShare/src/net/NetManager.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/xml/env.xml" afterPath="$PROJECT_DIR$/bin-debug/xml/env.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/xml/videoConfig.xml" afterPath="$PROJECT_DIR$/bin-debug/xml/videoConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/VideoParamView.as" afterPath="$PROJECT_DIR$/taven/src/video/VideoParamView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" afterPath="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/taven.iml" afterPath="$PROJECT_DIR$/taven/taven.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/antbuild/build.xml" afterPath="$PROJECT_DIR$/tools/antbuild/build.xml" />
     </list>
     <list id="0b8432f8-703d-4449-8515-06a7a62d6e77" name="ignore-on-commit" comment="" />
     <ignored path="videoRoom.iws" />
@@ -230,8 +210,8 @@
         <option value="$PROJECT_DIR$/appShare/src/manger/DataCenterManger.as" />
         <option value="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" />
         <option value="$PROJECT_DIR$/bin-debug/xml/env.xml" />
-        <option value="$PROJECT_DIR$/taven/src/video/VideoParamView.as" />
         <option value="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" />
+        <option value="$PROJECT_DIR$/taven/src/video/VideoParamView.as" />
       </list>
     </option>
   </component>
@@ -1398,14 +1378,7 @@
       <workItem from="1473682661979" duration="1517000" />
       <workItem from="1473688155858" duration="1653000" />
       <workItem from="1474266615058" duration="6641000" />
-      <workItem from="1474338173279" duration="13738000" />
-    </task>
-    <task id="LOCAL-00004" summary="调整">
-      <created>1470043243405</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1470043243405</updated>
+      <workItem from="1474338173279" duration="13868000" />
     </task>
     <task id="LOCAL-00005" summary="调整">
       <created>1470101342814</created>
@@ -1743,11 +1716,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473689178166</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="bug 修复">
+      <created>1474359621603</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1474359621605</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="969836000" />
+    <option name="totallyTimeSpent" value="969966000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
