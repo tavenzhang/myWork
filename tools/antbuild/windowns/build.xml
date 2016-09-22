@@ -133,7 +133,7 @@
 			 <sequential>
 				 <propertyregex override="yes" property="compile.target.name" input="@{file}" regexp="src\${pathSplit}rslmodule\${pathSplit}(.*)(as)" select="\1swf" />
 				 <echo message="start rsl-------------${compile.target.name}"/>
-				 <mxmlc file="@{file}" output="${project.taven.binRsl}/${compile.target.name}" accessible="true" fork="true" maxmemory="512m">
+				 <mxmlc file="@{file}" output="${project.taven.binRsl}/${compile.target.name}" accessible="true" fork="true" maxmemory="64m">
 					 <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
 					 <static-link-runtime-shared-libraries>false</static-link-runtime-shared-libraries>
 					 <source-path path-element="${project.taven}/src" />
