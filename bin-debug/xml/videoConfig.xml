@@ -19,7 +19,7 @@
     <addressPublisher>/download/1room_newaddress.zip</addressPublisher>
 
     <isVideoValid>1</isVideoValid>
-    <isShowQuality>0</isShowQuality>
+    <isShowQuality>1</isShowQuality>
     <!--2015/01/20 添加是否启用debug模式 0关闭 1开启 说明-->
     <isDebug>1</isDebug>
 

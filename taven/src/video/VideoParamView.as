@@ -118,7 +118,7 @@ public class VideoParamView extends BasePaneUI {
                     _pane.mcTip.y = _highRtn.y -10;
                     break;
                 case _normalRtn:
-                    _pane.mcTip.txt.text="默认采集参数,在清晰度与流程之前争取平衡。";
+                    _pane.mcTip.txt.text="默认采集参数,在清晰度与流畅度之间争取平衡。";
                     _pane.mcTip.x = _normalRtn.x+20;
                     _pane.mcTip.y = _normalRtn.y -10;
                     break;
