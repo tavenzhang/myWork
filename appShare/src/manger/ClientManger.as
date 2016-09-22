@@ -629,7 +629,7 @@ public class ClientManger {
 
 	//===============   debug相关    ==================tryConnect
 	public function initCCdebug():void {
-		Cc.startOnStage(RootManager.stage,"55556666"); // "`" - change for password. This will start hidden
+		Cc.startOnStage(RootManager.stage,"7777888"); // "`" - change for password. This will start hidden
 		Cc.visible                   = false; // Show console, because having password hides console.
 		Cc.config.commandLineAllowed = true; // enable advanced (but security risk) features.
 		Cc.config.tracing            = true; // Also trace on flash's normal trace

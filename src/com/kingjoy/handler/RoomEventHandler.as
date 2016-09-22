@@ -31,7 +31,7 @@ import tool.FormatDataTool;
  * 最基本的房间处理者
  */
 public class RoomEventHandler extends IEventHandler {
-    public function RoomEventHandler(_view:VideoRoom) {
+    public function RoomEventHandler(_view:VideoMain) {
         super(_view);
     }
 

@@ -10,10 +10,10 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 
 public class ScrollStageControl {
-    public var view:VideoRoom;
+    public var view:VideoMain;
     public var scrollStage_Module:MovieClip;
 
-    public function ScrollStageControl(_view:VideoRoom) {
+    public function ScrollStageControl(_view:VideoMain) {
         view = _view;
         scrollStage_Module = VideoTool.getMovieClipInstance("shareElement.scrollShare");
         scrollStage_Module.height = 200;

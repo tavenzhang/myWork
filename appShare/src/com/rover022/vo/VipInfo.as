@@ -49,7 +49,6 @@ public class VipInfo {
         letout = data.letout;   //踢人到权限 0 无权限 大于1 表示禁言其他人到次数
         limitRoomCount = data.limitRoomCount;
         userTimes=data.userTimes;//用户显示系数
-        fpwd=data.fpwd;
     }
 }
 }
