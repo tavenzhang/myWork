@@ -313,7 +313,6 @@ public class VideoMain extends BaseResRoom implements IVideoRoom {
         this.videoUIView.addChild(this.roomPlayInfor);
         this.roomPlayInfor.x = -148;
         this.roomPlayInfor.y = 340;
-
         //18座位
         this.seats_Module = VideoTool.getMCTaven("seatView.Userpark");
         seats_Module.x = 16;
@@ -327,7 +326,6 @@ public class VideoMain extends BaseResRoom implements IVideoRoom {
         this.gift_Module.configURLS(VideoConfig.httpTomcat + VideoConfig.configXML.head.@gifturl + "?time=" + Math.random(), VideoConfig.httpTomcat + VideoConfig.configXML.head.@depoturl, VideoConfig.HTTP);
         this.gift_Module.y = 470;
         this.gift_Module.x =-20;
-
         this.gift_Module.addEventListener("sendGift", onGiftMouseEvent);
         videoUIView.addChild(this.gift_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.GIFT_MODULE, gift_Module);

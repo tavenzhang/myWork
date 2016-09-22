@@ -33,10 +33,13 @@ public class VideoConfig {
 	public static var isShowGameHelp:Boolean = true;
 
 
-
+    //网页参数
+    public static var netTomcat:String = "";
+    public static var nethttpRes:String = "";
+    public static var nethttpFunction:String = "";
 	public static function get httpTomcat():String {
 		if (ExternalInterface.available) {
-			return RootManager.getValue("httpTomcat")
+			return netTomcat;
 		} else {
 			return configXML.httpTomcat;
 		}
@@ -46,7 +49,7 @@ public class VideoConfig {
 
 	public static function get httpRes():String {
 		if (ExternalInterface.available) {
-			return RootManager.getValue("httpRes")
+			return nethttpRes
 		} else {
 			return configXML.httpRes;
 		}
@@ -55,7 +58,7 @@ public class VideoConfig {
 
 	public static function get httpFunction():String {
 		if (ExternalInterface.available) {
-			return RootManager.getValue("httpFunction");
+			return nethttpFunction;
 		} else {
 			return configXML.httpFunction;
 		}

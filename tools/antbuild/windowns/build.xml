@@ -25,6 +25,8 @@
  		<antcall target="init"/>
 		 <antcall target="videoRoom"/>
 		<antcall target="taven"/>
+		<antcall target="tavenRsl"/>
+
  		<!--<antcall target="wrapper" />-->
  	</target>
  	<target name="init">
@@ -86,8 +88,6 @@
 		 </mxmlc>
 		 <echo message="====================================videoRoom.swf=============================" />
 	 </target>
-
-
 	  <target name="setup-antcontrib"> 
 	  		<echo message="ant-------------${ant-contrib}"/>
                 <taskdef resource="net/sf/antcontrib/antlib.xml"> 
@@ -121,6 +121,9 @@
 				 <echo message="=====================${project.taven.bin}/${compile.target.name}==========================" />
 			 </sequential>
 		 </for>
+	 </target>
+
+	 <target name="tavenRsl"   depends="setup-antcontrib">
 		 <for param="file">
 			 <path>
 				 <fileset dir="${project.taven}/src/rslmodule">
@@ -144,10 +147,4 @@
 			 </sequential>
 		 </for>
 	 </target>
-
-
-	 <!--<target name="taven" depends="videoRoom">-->
-	 <!--<target name="tavenRsl"  >-->
-
-	 <!--</target>-->
  </project>
