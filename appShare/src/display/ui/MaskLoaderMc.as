@@ -11,7 +11,7 @@ import flash.utils.getTimer;
 import flash.utils.setTimeout;
 
 public class MaskLoaderMc extends Sprite {
-    public var mess:String = "后台小弟开始偷偷尝试重新连接...";
+    public var mess:String = "后台小兰开始偷偷尝试重新连接...";
     public var count:int = 1;
     private var textField:TextField;
     private var lastTime:int;

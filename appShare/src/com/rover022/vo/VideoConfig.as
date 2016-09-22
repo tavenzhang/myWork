@@ -18,11 +18,13 @@ public class VideoConfig {
 	public static var HTTP:String            = "";
 	public static var HOST:String            = "138.68.15.251";
 	public static var PORT:int               = 1001;
-	public static var connectRTMP:String;
+	public static var connectRTMP:String; //] 115.231.24.252: 连接成功------9007------------------costTime====781
 	public static var roomID:int             = 10000;//rover022 101116443,101116441,101120981,101116395,101116444,101116395
-	public static var loginKey:String        = "9mo6ajegc0lsgh73vuliuqtb64";
-	public static var testUID:String         = "2@163.com";
-	public static var testPASS:String        = "aaaaaa";
+	public static var loginKey:String        = "";
+//	public static var testUID:String         = "2@163.com";
+//	public static var testPASS:String        = "aaaaaa";
+    public static var testUID:String         = "admin@admin.com";
+	public static var testPASS:String        = "123456";
 	//版本控制
 	public static var VERSION:String         = "1.0.28";
 	//编译发布时间
@@ -71,6 +73,14 @@ public class VideoConfig {
 	public static function get isValidRtmp():Boolean {
 		var result:Boolean = false;
 		if (configXML && configXML.isVideoValid == "1") {
+			result = true;
+		}
+		return result;
+	}
+
+	public static function get isShowQuality():Boolean {
+		var result:Boolean = false;
+		if (configXML && configXML.isShowQuality == "1") {
 			result = true;
 		}
 		return result;

@@ -9,6 +9,7 @@ import com.rover022.CBProtocol;
 import com.rover022.ModuleNameType;
 import com.rover022.tool.NetPing;
 import com.rover022.tool.PingManager;
+import com.rover022.vo.VideoConfig;
 
 import flash.events.Event;
 import flash.events.MouseEvent;
@@ -36,6 +37,7 @@ public class VideoParamView extends BasePaneUI {
     private var  _normalRtn:RadioButton = new RadioButton();
     private var  _lowRtn:RadioButton = new RadioButton();
     private var _lastOverButton:RadioButton;
+
     public function VideoParamView(_v:VideoPlayerView):void {
         addChild(_pane);
         videoPlayerView = _v;
@@ -76,6 +78,12 @@ public class VideoParamView extends BasePaneUI {
         _pane.mcTip.txt.autoSize = "left";
         _pane.mcTip.txt.wordWrap = true;
         initAddTips();
+        addEventListener(Event.ADDED_TO_STAGE,onAddToStage);
+    }
+
+    private  function onAddToStage(evt:Event):void
+    {
+        _highRtn.visible=_normalRtn.visible=_lowRtn.visible = VideoConfig.isShowQuality;
     }
 
     private function  initAddTips():void{
