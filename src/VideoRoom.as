@@ -166,6 +166,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             ExternalInterface.addCallback("userFlashLogin", connectService);
         }
 
+
         //右键菜单
         var gcontextMenu:GContextMenu = new GContextMenu();
         gcontextMenu.addMenu("NUM1.co 开发");
