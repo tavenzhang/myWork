@@ -9,6 +9,7 @@ import com.rover022.CBProtocol;
 import com.rover022.ModuleNameType;
 import com.rover022.tool.NetPing;
 import com.rover022.tool.PingManager;
+import com.rover022.vo.VideoConfig;
 
 import flash.events.Event;
 import flash.events.MouseEvent;
@@ -36,6 +37,7 @@ public class VideoParamView extends BasePaneUI {
     private var  _normalRtn:RadioButton = new RadioButton();
     private var  _lowRtn:RadioButton = new RadioButton();
     private var _lastOverButton:RadioButton;
+
     public function VideoParamView(_v:VideoPlayerView):void {
         addChild(_pane);
         videoPlayerView = _v;
@@ -76,6 +78,13 @@ public class VideoParamView extends BasePaneUI {
         _pane.mcTip.txt.autoSize = "left";
         _pane.mcTip.txt.wordWrap = true;
         initAddTips();
+        addEventListener(Event.ADDED_TO_STAGE,onAddToStage);
+    }
+
+    private  function onAddToStage(evt:Event):void
+    {
+        _highRtn.visible=_normalRtn.visible=_lowRtn.visible = VideoConfig.isShowQuality;
+        firstOpenLineBox();
     }
 
     private function  initAddTips():void{
@@ -110,7 +119,7 @@ public class VideoParamView extends BasePaneUI {
                     _pane.mcTip.y = _highRtn.y -10;
                     break;
                 case _normalRtn:
-                    _pane.mcTip.txt.text="默认采集参数,在清晰度与流程之前争取平衡。";
+                    _pane.mcTip.txt.text="默认采集参数,在清晰度与流畅度之间争取平衡。";
                     _pane.mcTip.x = _normalRtn.x+20;
                     _pane.mcTip.y = _normalRtn.y -10;
                     break;
@@ -137,12 +146,23 @@ public class VideoParamView extends BasePaneUI {
         }
         videoBox.selectedIndex = 0;
         soundBox.selectedIndex = 0;
-        var _arr:PingManager = DataCenterManger.adminPingManger;
-        _arr.addEventListener(PingManager.ITEM_TESTOK, testSeedFinish);
-        lineBox.items = _arr.rtmpSortlist;
-        lineBox.selectedIndex = 0;
-        lineBox.draw();
+//        var _arr:PingManager = DataCenterManger.adminPingManger;
+//        _arr.addEventListener(PingManager.ITEM_TESTOK, testSeedFinish);
+//        lineBox.items = _arr.rtmpSortlist;
+//        lineBox.selectedIndex = 0;
+//        lineBox.draw();
         _pane.btnTestSpeed.addEventListener(MouseEvent.CLICK, onTestSpeddClick);
+    }
+
+    private function firstOpenLineBox():void {
+        if (_lastChooseRtmp=="") {
+            var _arr:PingManager = DataCenterManger.adminPingManger;
+            _arr.addEventListener(PingManager.ITEM_TESTOK, testSeedFinish);
+            lineBox.items = _arr.rtmpSortlist;
+            lineBox.selectedIndex = 0;
+            lineBox.draw();
+            onTestSpeddClick(null);
+        }
     }
 
     private function makeLabel(s:String, i:int, i2:int):Label {

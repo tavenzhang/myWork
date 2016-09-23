@@ -51,7 +51,7 @@ public class ClientManger {
 	/**
 	 * http请求代理员
 	 */
-					   public var httpProxy:CBHttpServiceProxy = new CBHttpServiceProxy("");
+	public var httpProxy:CBHttpServiceProxy = new CBHttpServiceProxy("");
 
 	/**
 	 * 注册被管理的客户端对象
@@ -243,7 +243,7 @@ public class ClientManger {
 	 * 游客注册
 	 */
 	public function guestRegister():void {
-		NavigatorManager.guestRegister();
+		HttpLinkManger.guestRegister();
 	}
 
 	/**
@@ -629,7 +629,7 @@ public class ClientManger {
 
 	//===============   debug相关    ==================tryConnect
 	public function initCCdebug():void {
-		Cc.startOnStage(RootManager.stage,"11112222"); // "`" - change for password. This will start hidden
+		Cc.startOnStage(RootManager.stage,"7777888"); // "`" - change for password. This will start hidden
 		Cc.visible                   = false; // Show console, because having password hides console.
 		Cc.config.commandLineAllowed = true; // enable advanced (but security risk) features.
 		Cc.config.tracing            = true; // Also trace on flash's normal trace

@@ -201,12 +201,12 @@ public class VideoHomeView {
     }
 
 
+
     private function initUI():void {
         _tjList.length = 0;
         _hotList.length = 0;
         DisplayUtils.enableButton(_view.btnLeftUp, false);
         DisplayUtils.enableButton(_view.btnRightUp,false);
-
     }
 }
 }

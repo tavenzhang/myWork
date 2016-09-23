@@ -71,7 +71,7 @@ public class RankItemRender extends tave_rankItemRender implements IListItem {
 //        var com.rover022.event:StatusEvent = new StatusEvent(StatusEvent.STATUS, false, false, _data.name);
 //        this.dispatchEvent(com.rover022.event);
         var event:CBModuleEvent = new CBModuleEvent(CBModuleEvent.PLAYNAMELINK, true);
-        var usrVo = new UserVo(_data);
+        var usrVo:UserVo = new UserVo(_data);
         event.dataObject        = usrVo;
         VideoTool.sendUserLinkEvent(event);
     }

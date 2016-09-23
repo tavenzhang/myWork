@@ -4,3 +4,7 @@
 */._*
 ._*
 .idea/*
+bin-debug/VideoMain.swf
+bin-debug/VideoRoom.swf
+/tools/antbuild/tools/temp/appShare.swc
+/bin-debug/com/kingjoy/view/g_data.xml

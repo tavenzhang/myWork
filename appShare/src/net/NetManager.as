@@ -138,8 +138,8 @@ public class NetManager extends EventDispatcher {
             }
         }
 
-       // var _sting:String = userCode + roomID + "73*96&58ut";
-        var _sting:String = userCode + roomID + "jugg123";
+
+        var _sting:String = userCode + roomID + "73uxh9*@(58u)fgxt";
         var passw:String = VideoTool.buildAseString(ASEkey, _sting);
         sendDataObject({
             "key": userCode,

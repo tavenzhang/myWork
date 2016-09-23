@@ -38,5 +38,6 @@ public class RoomEditViewUI extends MovieClip {
         this.parent.removeChild(this);
         func = null;
     }
+
 }
 }

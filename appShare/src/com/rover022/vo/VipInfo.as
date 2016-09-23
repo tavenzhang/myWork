@@ -30,7 +30,8 @@ public class VipInfo {
     public var limitRoomCount:int = 0;
     //用户系数
     public var userTimes:int = 10;
-
+    //fpwd
+    public var fpwd:String = "";
 
 
     public function initInfo(data:Object):void {

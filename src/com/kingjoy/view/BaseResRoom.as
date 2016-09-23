@@ -74,6 +74,15 @@ public class BaseResRoom extends MovieClip {
                 VideoConfig.HTTP = param["http"];
                 UserIconMovieClip.AROOT = VideoConfig.HTTP;
             }
+            if (param["httpTomcat"] != null) {
+                VideoConfig.netTomcat = param["httpTomcat"];
+            }
+            if (param["httpFunction"] != null) {
+                VideoConfig.nethttpFunction = param["httpFunction"];
+            }
+            if (param["httpRes"] != null) {
+                VideoConfig.nethttpRes = param["httpRes"];
+            }
             if (ExternalInterface.available) {
                 regAS_JsFuntion();
                 var serverUrlList:String = ExternalInterface.call("getRoomKey");
