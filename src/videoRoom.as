@@ -11,11 +11,12 @@ public class videoRoom extends Sprite {
 
     [Embed (source="../bin-debug/videoMain.swf", mimeType = "application/octet-stream")] // source = path to the swf you want to protect private var content:Class;
     public var mainClass:Class;
-    
+
     public function videoRoom() {
         var loader:Loader = new Loader();
         addChild(loader);
         loader.loadBytes(new mainClass(), new LoaderContext(false, new ApplicationDomain()));
+
     }
 }
 }

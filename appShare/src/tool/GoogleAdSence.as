@@ -63,7 +63,7 @@ public class GoogleAdSence extends Sprite {
         //
         type = _type;
         loader = new URLLoader();
-        var webUrl = src + url + Math.random();
+        var webUrl:String = src + url + Math.random();
         Cc.log("webUrl=="+webUrl);
         loader.load(new URLRequest(webUrl));
         loader.addEventListener(Event.COMPLETE, onComplete);

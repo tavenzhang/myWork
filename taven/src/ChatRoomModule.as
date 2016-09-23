@@ -19,6 +19,8 @@ import flash.ui.Keyboard;
 import flash.utils.Dictionary;
 import flash.utils.getTimer;
 
+import flashx.textLayout.elements.FlowElement;
+
 
 import flashx.textLayout.elements.InlineGraphicElement;
 import flashx.textLayout.elements.LinkElement;
@@ -32,6 +34,7 @@ import ghostcat.util.Tick;
 
 import manger.ClientManger;
 import manger.DataCenterManger;
+import manger.HttpLinkManger;
 
 import taven.chatModule.*;
 
@@ -322,9 +325,51 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		dispatchEvent(event);
 	}
 
+	//当点击httplink
+	public function onHttpClickHandle(httpLink:String):void {
+		HttpLinkManger.gotoCommonLinkOther(httpLink);
+	}
+
 	public function onChatSystemMessage(src:Object):void {
-		var pCustom:ParagraphElement = TextFlowTool.buildParagraphElement(src.message, src.color);
-		privateOutput.addRichChild(pCustom);
+		var smessage:String = src.message;
+		var pCustom:ParagraphElement;
+		if(smessage.indexOf("@")==-1)
+		{
+			pCustom = TextFlowTool.buildParagraphElement(src.message, src.color);
+			privateOutput.addRichChild(pCustom);
+		}
+		else
+		{
+			var tempStrList:Array = smessage.split("@");
+			pCustom = new ParagraphElement();
+			privateOutput.addRichChild(pCustom);
+			var pSpan:FlowElement;
+			for(var i=0;i<tempStrList.length;i++)
+			{
+				var temStr:String =tempStrList[i] as String;
+				if(temStr.indexOf("/>")==-1)
+				{
+					pSpan = TextFlowTool.buildSpanElement(temStr,src.color);
+					pCustom.addChild(pSpan);
+				}
+				else
+				{
+					try
+					{
+						var linkXml:XML = new XML(temStr);
+						//  trace(data.@text+"-------------link:=="+data.@link);
+						pSpan = TextFlowTool.buildSpanElement(linkXml.@text,0xFF00CC,onHttpClickHandle,linkXml.@link);
+						pCustom.addChild(pSpan);
+					}
+					catch (e:*)
+					{
+						trace("link error");
+					}
+
+				}
+			}
+		}
+
 	}
 
 	public function onPeopleEnter(sObject:Object):void {

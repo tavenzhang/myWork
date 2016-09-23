@@ -243,7 +243,7 @@ public class ClientManger {
 	 * 游客注册
 	 */
 	public function guestRegister():void {
-		NavigatorManager.guestRegister();
+		HttpLinkManger.guestRegister();
 	}
 
 	/**

@@ -82,9 +82,6 @@
 		 <mxmlc file="${project.video}/src/videoRoom.as" output="${project.video.bin}/videoRoom.swf" locale="${LOCALE}" static-rsls="true" accessible="true" debug="false">
 			 <source-path path-element="${project.video}/src"/>
 			 <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml" />
-			 <library-path dir="${FLEX_HOME}/frameworks/locale/${LOCALE}" includes="*"
-						   append="true" />
-			 <include-libraries   dir="${project.appShare.bin}" includes="*" append="true" />
 		 </mxmlc>
 		 <echo message="====================================videoRoom.swf=============================" />
 	 </target>
@@ -133,7 +130,8 @@
 			 <sequential>
 				 <propertyregex override="yes" property="compile.target.name" input="@{file}" regexp="src\${pathSplit}rslmodule\${pathSplit}(.*)(as)" select="\1swf" />
 				 <echo message="start rsl-------------${compile.target.name}"/>
-				 <mxmlc file="@{file}" output="${project.taven.binRsl}/${compile.target.name}" accessible="true" fork="true" maxmemory="64m">
+				 <!--<mxmlc file="@{file}" output="${project.taven.binRsl}/${compile.target.name}" accessible="true" fork="true" maxmemory="128m">-->
+				 <mxmlc file="@{file}" output="${project.taven.binRsl}/${compile.target.name}" accessible="true" fork="true" maxmemory="128m">
 					 <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
 					 <static-link-runtime-shared-libraries>false</static-link-runtime-shared-libraries>
 					 <source-path path-element="${project.taven}/src" />
