@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="VideoMain">
+  <component name="FlexBuildConfigurationManager" active="VideoRoom">
     <configurations>
-      <configuration name="VideoMain" pure-as="true" main-class="VideoMain" output-file="VideoMain.swf" output-folder="$MODULE_DIR$/bin-debug">
+      <configuration name="VideoRoom" pure-as="true" main-class="VideoRoom" output-file="VideoRoom.swf" output-folder="$MODULE_DIR$/bin-debug">
         <dependencies target-player="23.0">
           <entries>
             <entry library-id="fc9476c4-f1a2-4c39-b5c6-9f4dd7800913">
@@ -24,7 +24,7 @@
         <packaging-android />
         <packaging-ios />
       </configuration>
-      <configuration name="videoRoom" pure-as="true" main-class="videoRoom" output-file="videoRoom.swf" output-folder="$MODULE_DIR$/bin-debug">
+      <configuration name="videoRoomAes" pure-as="true" main-class="videoRoomAes" output-file="videoRoomAes.swf" output-folder="$MODULE_DIR$/bin-debug">
         <dependencies target-player="23.0">
           <sdk name="AIRSDK_Compiler23" />
         </dependencies>

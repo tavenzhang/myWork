@@ -7,9 +7,9 @@ package com.kingjoy.handler {
  * 把事件传到到这里来统一处理....
  */
 public class IEventHandler {
-	public var view:VideoMain;
+	public var view:VideoRoom;
 
-	public function IEventHandler(_view:VideoMain) {
+	public function IEventHandler(_view:VideoRoom) {
 		view = _view;
 	}
 

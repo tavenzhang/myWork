@@ -56,7 +56,7 @@ import tool.VideoTool;
 import videoRoom.bulletin;
 
 [SWF(width=1500, height=900, backgroundColor="#00000")]
-public class VideoMain extends BaseResRoom implements IVideoRoom {
+public class VideoRoom extends BaseResRoom implements IVideoRoom {
     public var appLay:Sprite;
     public var backGround:Sprite;
     public var rootSpr:Sprite;
@@ -101,7 +101,7 @@ public class VideoMain extends BaseResRoom implements IVideoRoom {
     public var roomHandler:RoomEventHandler;
     public var giftPool:GiftPool;
 
-    public function VideoMain():void {
+    public function VideoRoom():void {
         Security.allowInsecureDomain("*");
         Security.allowDomain("*");
         LoaderMax.defaultContext = new LoaderContext(false, ApplicationDomain.currentDomain);
@@ -165,6 +165,7 @@ public class VideoMain extends BaseResRoom implements IVideoRoom {
         if (ExternalInterface.available) {
             ExternalInterface.addCallback("userFlashLogin", connectService);
         }
+
         //右键菜单
         var gcontextMenu:GContextMenu = new GContextMenu();
         gcontextMenu.addMenu("NUM1.co 开发");
@@ -189,6 +190,8 @@ public class VideoMain extends BaseResRoom implements IVideoRoom {
             videoMoule.closePublish();
         }
     }
+
+
 
 
     public function netAppInit():void {

@@ -84,6 +84,7 @@ public class VideoParamView extends BasePaneUI {
     private  function onAddToStage(evt:Event):void
     {
         _highRtn.visible=_normalRtn.visible=_lowRtn.visible = VideoConfig.isShowQuality;
+        firstOpenLineBox();
     }
 
     private function  initAddTips():void{
@@ -145,12 +146,23 @@ public class VideoParamView extends BasePaneUI {
         }
         videoBox.selectedIndex = 0;
         soundBox.selectedIndex = 0;
-        var _arr:PingManager = DataCenterManger.adminPingManger;
-        _arr.addEventListener(PingManager.ITEM_TESTOK, testSeedFinish);
-        lineBox.items = _arr.rtmpSortlist;
-        lineBox.selectedIndex = 0;
-        lineBox.draw();
+//        var _arr:PingManager = DataCenterManger.adminPingManger;
+//        _arr.addEventListener(PingManager.ITEM_TESTOK, testSeedFinish);
+//        lineBox.items = _arr.rtmpSortlist;
+//        lineBox.selectedIndex = 0;
+//        lineBox.draw();
         _pane.btnTestSpeed.addEventListener(MouseEvent.CLICK, onTestSpeddClick);
+    }
+
+    private function firstOpenLineBox():void {
+        if (_lastChooseRtmp=="") {
+            var _arr:PingManager = DataCenterManger.adminPingManger;
+            _arr.addEventListener(PingManager.ITEM_TESTOK, testSeedFinish);
+            lineBox.items = _arr.rtmpSortlist;
+            lineBox.selectedIndex = 0;
+            lineBox.draw();
+            onTestSpeddClick(null);
+        }
     }
 
     private function makeLabel(s:String, i:int, i2:int):Label {

@@ -42,6 +42,7 @@ public class ChangeLineView extends BasePaneUI {
         _module = vidoRoom;
         _viewBtn.addEventListener(MouseEvent.CLICK, closeClick);
         _pane.yes_bt.addEventListener(MouseEvent.CLICK, suerClick);
+        _pane.mcTip.visible =false;
         Style.embedFonts = false;
         Style.fontSize = 12;
         Style.fontName = "宋体";
@@ -51,13 +52,22 @@ public class ChangeLineView extends BasePaneUI {
         lineBox = new CCComboBox(this, 105, 100);
         lineBox.setSize(150, 20);
         for (var i:int = 0; i < 50; i++) {
-            lineBox.addItem({label: "测试"});
+            lineBox.addItem({label: "wait..."});
         }
         _pane.btnTestSpeed.x = lineBox.x + lineBox.width + 5;
         _pane.btnTestSpeed.y = lineBox.y - 2;
-        firstOpenLineBox();
+        addEventListener(Event.ADDED_TO_STAGE,onAddtoStageHandle);
         super();
     }
+
+    private function onAddtoStageHandle(evt:Event):void
+    {
+        if(_lastChooseRtmp=="")
+        {
+            firstOpenLineBox();
+        }
+    }
+
 
     private function makeLabel(s:String, i:int, i2:int):Label {
         var label:Label = new Label(this, i, i2, s);

@@ -16,8 +16,8 @@ public class VideoConfig {
 	public static var P2P_OPEN:Boolean       = false;
 	public static var ENV_XML:XML            = null;
 	public static var HTTP:String            = "";
-	public static var HOST:String            = "138.68.15.251";
-	public static var PORT:int               = 1001;
+	public static var HOST:String            = "";
+	public static var PORT:int               = 5001;
 	public static var connectRTMP:String; //] 115.231.24.252: 连接成功------9007------------------costTime====781
 	public static var roomID:int             = 10000;//rover022 101116443,101116441,101120981,101116395,101116444,101116395
 	public static var loginKey:String        = "";
@@ -31,7 +31,6 @@ public class VideoConfig {
 	public static var BUILDTIME:String       = "7月26日10:00";
 	public static var giftConfig:XML;
 	public static var isShowGameHelp:Boolean = true;
-
 
     //网页参数
     public static var netTomcat:String = "";
