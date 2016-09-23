@@ -13,6 +13,7 @@ import tool.VideoTool;
 
 public class HttpLinkManger{
 
+
 //    通用跳转页面,打开其他页面
   public static function  gotoCommonLinkOther(linkUrl:String):void
  {
