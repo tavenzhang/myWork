@@ -20,12 +20,13 @@ public class SocketPingManager extends  EventDispatcher{
         _socketClient = new Socket();
     }
 
-    public function testSocktList(ipList:Array,port:int):void
+    public function testSocktList(ipList:Array):void
     {
-        _socketPort = port;
        for(var i:int=0;i<ipList.length;i++)
        {
-           var ipString:String =ipList[i];
+           var data:Array = (ipList[i] as String).split(":");
+           var ipString:String =data[0];
+           _socketPort = data[1];
            var socketP:SocketPing = new SocketPing(ipString,_socketPort,pingSucessFul);
            _socktList.push(socketP);
        }

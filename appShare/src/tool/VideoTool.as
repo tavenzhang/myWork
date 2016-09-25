@@ -38,6 +38,8 @@ public class VideoTool {
     public static var videoRomm:IVideoRoom;
     private static var KEY:int = 413256489;
 
+    public static var KEY2:String = "5467^&5thy67634(";
+
     public static function encrypt(plainText:int):int {
         return plainText ^ KEY;
     }
@@ -247,7 +249,7 @@ public class VideoTool {
     }
 
     //aes解码
-    public static function decodeAseString(messKey:String, _plain:String, ivStr:String):String {
+    public static function decodeAseString(messKey:String, _plain:String, ivStr:String="0102030405060708"):String {
         var _aseKey:String = messKey;
         var plain:String = _plain;
         //var ivString:String = '0102030405060708'; //key

@@ -130,6 +130,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //背景
         this.backGround = new Sprite();
         this.appLay.addChild(this.backGround);
+
         //主场景
         this.rootSpr = new Sprite;
         this.appLay.addChild(this.rootSpr);

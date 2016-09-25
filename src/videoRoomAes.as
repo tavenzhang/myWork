@@ -17,5 +17,6 @@ public class videoRoomAes extends Sprite {
         addChild(loader);
         loader.loadBytes(new mainClass(), new LoaderContext(false, new ApplicationDomain()));
     }
+
 }
 }
