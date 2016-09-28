@@ -412,7 +412,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		switch (e.info.code) {
 			case "NetConnection.Connect.Success":
 				reConnTimer.stop();//暂停计时器
-				if (VideoConfig.isValidRtmp) {
+				if ((VideoConfig.isValidRtmp&&!DataCenterManger.roomAdmin)||(VideoConfig.isValidRtmpUp&&DataCenterManger.roomAdmin)) {
 					rtmpValid();
 				}
 				else {

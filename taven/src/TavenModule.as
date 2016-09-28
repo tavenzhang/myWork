@@ -35,6 +35,7 @@ public class TavenModule extends Sprite
 		private var limitEnterModule:LimitEnterModule;
 		private  var rightBar:RightMenuBar;
 
+
 		public function TavenModule()
 		{
 		//	usrInfoView  = new UserInfo();
