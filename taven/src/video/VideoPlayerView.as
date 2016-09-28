@@ -161,7 +161,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 
 	private function rtmpValid():void {
 		Cc.log("strart------------------Valid");
-		nc.call("netping", null);
+		nc.call("netping", null,22);
 	}
 
 	public function netping(...args):void {

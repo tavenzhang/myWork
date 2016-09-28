@@ -344,7 +344,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 			pCustom = new ParagraphElement();
 			privateOutput.addRichChild(pCustom);
 			var pSpan:FlowElement;
-			for(var i=0;i<tempStrList.length;i++)
+			for(var i:int=0;i<tempStrList.length;i++)
 			{
 				var temStr:String =tempStrList[i] as String;
 				if(temStr.indexOf("/>")==-1)

@@ -98,6 +98,7 @@ public class BaseResRoom extends MovieClip {
                 _isTestingSocket = true;
                 onSocketListResult(socketList);
             }
+
             this.loadConfigData();//加载配置
         }
     }
