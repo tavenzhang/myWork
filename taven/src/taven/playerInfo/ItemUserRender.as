@@ -69,7 +69,7 @@ public class ItemUserRender extends taven_playerMRender implements IListItem {
     private function onClickHandle(evt:Event):void
     {
         var event:CBModuleEvent = new CBModuleEvent(CBModuleEvent.PLAYNAMELINK, true);
-        var usrVo = new UserVo(_data);
+        var usrVo:UserVo = new UserVo(_data);
         event.dataObject        = usrVo;
         VideoTool.sendUserLinkEvent(event);
     }

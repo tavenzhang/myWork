@@ -85,6 +85,7 @@ public class BaseResRoom extends MovieClip {
             }
             if (param["httpRes"] != null) {
                 VideoConfig.nethttpRes = param["httpRes"];
+
             }
             if (ExternalInterface.available) {
                 regAS_JsFuntion();
