@@ -10,6 +10,7 @@ import flash.system.LoaderContext;
 public class videoRoomAes extends Sprite {
 
 
+    
  [Embed (source="../bin-debug/videoRoom.swf", mimeType = "application/octet-stream")] // source = path to the swf you want to protect private var content:Class;
   public var mainClass:Class;
     public function videoRoomAes() {
@@ -17,6 +18,5 @@ public class videoRoomAes extends Sprite {
         addChild(loader);
         loader.loadBytes(new mainClass(), new LoaderContext(false, new ApplicationDomain()));
     }
-
 }
 }

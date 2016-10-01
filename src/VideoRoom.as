@@ -428,6 +428,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //
         //showCarGame();
         //showFingerGame();
+
         this.rslModuleContainer = RslModuleManager.instance.rslContainer;
         this.rslModuleContainer.mouseEnabled = false;
         RslModuleManager.instance.$videoroom = this;
