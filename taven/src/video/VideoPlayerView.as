@@ -549,7 +549,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		this.doSubscribe(this.flvName);
 		this.ns.play(this.flvName);
 		if (!this.checkPlayTimer) {
-			this.checkPlayTimer = new Timer(15000);
+			this.checkPlayTimer = new Timer(20000);
 			this.checkPlayTimer.addEventListener(TimerEvent.TIMER, _checkPlayTimerEvent);
 		}
 		this.checkPlayTimer.reset();
