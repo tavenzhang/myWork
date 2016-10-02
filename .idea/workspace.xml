@@ -6,7 +6,12 @@
     <bookmark url="file://$PROJECT_DIR$/appShare/src/manger/ClientManger.as" line="66" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="bug 修复" />
+    <list default="true" readonly="true" id="d9f34ff0-d4c9-4cd5-a8d5-ea4d8190343c" name="Default" comment="bug 修复">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/Modules/VideoModule.swf" afterPath="$PROJECT_DIR$/bin-debug/Modules/VideoModule.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/videoRoomAes.as" afterPath="$PROJECT_DIR$/src/videoRoomAes.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" afterPath="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" />
+    </list>
     <list id="0b8432f8-703d-4449-8515-06a7a62d6e77" name="ignore-on-commit" comment="" />
     <ignored path="videoRoom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,103 +40,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="giftConfig.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin-debug/xml/giftConfig.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videoRoomAes.as" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/videoRoomAes.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientManger.as" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/appShare/src/manger/ClientManger.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="654" column="58" selection-start-line="654" selection-start-column="58" selection-end-line="654" selection-end-column="58" />
-              <folding>
-                <element signature="e#60#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TavenHttpService.as" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appShare/src/net/TavenHttpService.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketPing.as" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseResRoom.as" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kingjoy/view/BaseResRoom.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="VideoRoom.as" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VideoRoom.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7334">
-              <caret line="439" column="7" selection-start-line="439" selection-start-column="7" selection-end-line="439" selection-end-column="7" />
+            <state relative-caret-position="550">
+              <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin-debug/js/login.min.js">
+      <file leaf-file-name="VideoPlayerView.as" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taven/src/video/VideoPlayerView.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5012" selection-start-line="0" selection-start-column="5012" selection-end-line="0" selection-end-column="5012" />
+            <state relative-caret-position="152">
+              <caret line="558" column="5" selection-start-line="558" selection-start-column="5" selection-end-line="558" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="videoConfig.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin-debug/xml/videoConfig.xml">
+      <file leaf-file-name="library.swf" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/AIRSDK_Compiler/frameworks/libs/player/23.0/playerglobal.swc!/library.swf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="env.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin-debug/xml/env.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="152608">
+              <caret line="8032" column="19" selection-start-line="8032" selection-start-column="19" selection-end-line="8032" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -201,7 +134,6 @@
         <option value="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPingManager.as" />
         <option value="$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as" />
         <option value="$PROJECT_DIR$/taven/src/TavenModule.as" />
-        <option value="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" />
         <option value="$PROJECT_DIR$/bin-debug/xml/videoConfig.xml" />
         <option value="$PROJECT_DIR$/taven/src/taven/playerInfo/VideoHomeView.as" />
         <option value="$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as" />
@@ -211,8 +143,9 @@
         <option value="$PROJECT_DIR$/taven/src/taven/playerInfo/ItemUserRender.as" />
         <option value="$PROJECT_DIR$/bin-debug/js/login.min.js" />
         <option value="$PROJECT_DIR$/src/VideoRoom.as" />
-        <option value="$PROJECT_DIR$/src/videoRoomAes.as" />
         <option value="$PROJECT_DIR$/appShare/src/manger/ClientManger.as" />
+        <option value="$PROJECT_DIR$/src/videoRoomAes.as" />
+        <option value="$PROJECT_DIR$/taven/src/video/VideoPlayerView.as" />
       </list>
     </option>
   </component>
@@ -292,6 +225,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -326,9 +261,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1341,6 +1274,12 @@
       <workItem from="1475298916640" duration="1033000" />
       <workItem from="1475301423946" duration="1259000" />
       <workItem from="1475304312944" duration="270000" />
+      <workItem from="1475306738411" duration="939000" />
+      <workItem from="1475321404846" duration="1764000" />
+      <workItem from="1475335090679" duration="1520000" />
+      <workItem from="1475370265414" duration="208000" />
+      <workItem from="1475371787343" duration="3005000" />
+      <workItem from="1475380755545" duration="767000" />
     </task>
     <task id="LOCAL-00004" summary="调整">
       <created>1470043243405</created>
@@ -1689,7 +1628,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1081574000" />
+    <option name="totallyTimeSpent" value="1089777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1702,14 +1641,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18303572" sideWeight="0.4163113" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2421875" sideWeight="0.4227079" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2421875" sideWeight="0.413113" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2421875" sideWeight="0.5772921" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2421875" sideWeight="0.586887" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24107143" sideWeight="0.5090618" order="12" side_tool="false" content_ui="tabs" />
@@ -1719,9 +1658,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16257995" sideWeight="0.755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23454158" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13813025" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09808102" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.234375" sideWeight="0.40778252" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19866072" sideWeight="0.46535182" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20575693" sideWeight="0.24530663" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1884,13 +1823,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/AIRSDK_Compiler/frameworks/libs/player/23.0/playerglobal.swc!/library.swf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="6832" column="34" selection-start-line="6832" selection-start-column="34" selection-end-line="6832" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kingjoy/view/control/RoomEditViewUI.as">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -2054,13 +1986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taven/src/video/VideoPlayerView.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9025">
-          <caret line="517" column="8" selection-start-line="517" selection-start-column="8" selection-end-line="517" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin-debug/videoConfig.xml" />
     <entry file="file://$PROJECT_DIR$/appShare/src/tool/FormatDataTool.as">
       <provider selected="true" editor-type-id="text-editor">
@@ -2073,7 +1998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3116">
           <caret line="185" column="59" selection-start-line="185" selection-start-column="59" selection-end-line="185" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2095,13 +2019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -2152,25 +2069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1121">
           <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <element signature="e#17#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appShare/src/net/TavenHttpService.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2178,7 +2076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2193,15 +2090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin-debug/xml/videoConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2209,41 +2097,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5012" selection-start-line="0" selection-start-column="5012" selection-end-line="0" selection-end-column="5012" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appShare/src/net/TavenHttpService.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/tool/SocketPing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin-debug/xml/videoConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appShare/src/manger/ClientManger.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="630" column="23" selection-start-line="630" selection-start-column="23" selection-end-line="630" selection-end-column="23" />
+          <folding>
+            <element signature="e#60#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appShare/src/com/rover022/vo/VideoConfig.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin-debug/xml/giftConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="29" column="111" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/videoRoomAes.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/AIRSDK_Compiler/frameworks/libs/player/23.0/playerglobal.swc!/library.swf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152608">
+          <caret line="8032" column="19" selection-start-line="8032" selection-start-column="19" selection-end-line="8032" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VideoRoom.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7334">
-          <caret line="439" column="7" selection-start-line="439" selection-start-column="7" selection-end-line="439" selection-end-column="7" />
+        <state relative-caret-position="550">
+          <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/videoRoomAes.as">
+    <entry file="file://$PROJECT_DIR$/taven/src/video/VideoPlayerView.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="152">
+          <caret line="558" column="5" selection-start-line="558" selection-start-column="5" selection-end-line="558" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appShare/src/manger/ClientManger.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="654" column="58" selection-start-line="654" selection-start-column="58" selection-end-line="654" selection-end-column="58" />
-          <folding>
-            <element signature="e#60#91#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

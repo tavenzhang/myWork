@@ -24,6 +24,7 @@ import flash.media.H264Level;
 import flash.media.H264Profile;
 import flash.media.H264VideoStreamSettings;
 import flash.media.Microphone;
+import flash.media.SoundCodec;
 import flash.media.SoundTransform;
 import flash.media.Video;
 import flash.net.NetConnection;
@@ -325,8 +326,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			if (!this.mic) {
 				this.mic = Microphone.getMicrophone(this.videoparam_mc.microphoneValue);
 				if (this.mic) {
-
-					//this.mic.codec = SoundCodec.SPEEX;
+					//this.mic.codec = SoundCodec.NELLYMOSER;
 					this.mic.setSilenceLevel(this.microphoneConfig.silence, this.microphoneConfig.timeout);
 					this.mic.rate = this.microphoneConfig.rate;
 					this.mic.gain = this.microphoneConfig.gain;
@@ -549,7 +549,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		this.doSubscribe(this.flvName);
 		this.ns.play(this.flvName);
 		if (!this.checkPlayTimer) {
-			this.checkPlayTimer = new Timer(10000);
+			this.checkPlayTimer = new Timer(15000);
 			this.checkPlayTimer.addEventListener(TimerEvent.TIMER, _checkPlayTimerEvent);
 		}
 		this.checkPlayTimer.reset();
