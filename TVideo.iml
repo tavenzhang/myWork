@@ -24,7 +24,7 @@
         <packaging-android />
         <packaging-ios />
       </configuration>
-      <configuration name="videoRoomNew" pure-as="true" main-class="videoRoomNew" output-file="videoRoomNew.swf" output-folder="$MODULE_DIR$/bin-debug">
+      <configuration name="videoRoomAes" pure-as="true" main-class="videoRoomAes" output-file="videoRoomAes.swf" output-folder="$MODULE_DIR$/bin-debug">
         <dependencies target-player="23.0">
           <sdk name="AIRSDK_Compiler23" />
         </dependencies>
