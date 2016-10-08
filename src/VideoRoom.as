@@ -176,6 +176,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //注册各个模块的冒泡事件
         addEventListener("rechargeEvent", onGiftRechargeEvent);//充值
         addEventListener(CBModuleEvent.FLY_PINGMU, onFlyPing);
+
     }
 
     private function onFlyPing(e:CBModuleEvent):void {

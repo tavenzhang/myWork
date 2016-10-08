@@ -539,6 +539,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		}
 	}
 
+
 	// 重置播放 如果是用户则播放
 	protected function rePlay():void {
 		if (!this.ns) {
