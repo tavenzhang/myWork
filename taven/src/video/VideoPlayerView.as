@@ -164,7 +164,6 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		Cc.log("strart------------------Valid");
 		nc.call("netping", null,22);
 	}
-
 	public function netping(...args):void {
 		//只有参数有3个时才开启验证流程
 		var arglenth:int = args.length;

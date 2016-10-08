@@ -340,6 +340,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		}
 		else
 		{
+
 			var tempStrList:Array = smessage.split("@");
 			pCustom = new ParagraphElement();
 			privateOutput.addRichChild(pCustom);
