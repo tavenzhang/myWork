@@ -326,7 +326,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			if (!this.mic) {
 				this.mic = Microphone.getMicrophone(this.videoparam_mc.microphoneValue);
 				if (this.mic) {
-					//this.mic.codec = SoundCodec.NELLYMOSER;
+					this.mic.codec = SoundCodec.SPEEX;
 					this.mic.setSilenceLevel(this.microphoneConfig.silence, this.microphoneConfig.timeout);
 					this.mic.rate = this.microphoneConfig.rate;
 					this.mic.gain = this.microphoneConfig.gain;

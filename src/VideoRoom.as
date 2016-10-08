@@ -43,6 +43,7 @@ import flash.utils.setTimeout;
 
 import ghostcat.display.other.GContextMenu;
 import ghostcat.manager.RootManager;
+import ghostcat.util.encrypt.AES;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
@@ -166,8 +167,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         if (ExternalInterface.available) {
             ExternalInterface.addCallback("userFlashLogin", connectService);
         }
-
-
         //右键菜单
         var gcontextMenu:GContextMenu = new GContextMenu();
         gcontextMenu.addMenu("NUM1.co 开发");
