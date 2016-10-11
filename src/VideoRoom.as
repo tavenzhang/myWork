@@ -306,6 +306,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     }
 
     private function initVideoUI():void {
+
         //12 中间视频设置
         sides_Module = VideoTool.getMCTaven("sidesGroup");
         videoUIView.addChild(sides_Module);

@@ -41,6 +41,7 @@ public class GiftUI extends giftUIMc {
 
 
     public function GiftUI():void {
+
         this.menuOver_mc.alpha = 0;
         this.menuSelect_mc.visible = false;
         this.giftSend_bt = this.control_mc.giftSend_bt;
@@ -249,6 +250,9 @@ public class GiftUI extends giftUIMc {
 
     //----------------加载数据
     public function configURLS(_dataurl:String, _depoturl:String, _iconurl:String):void {
+        trace("_dataurl--"+_dataurl);
+        trace("_depoturl--"+_depoturl);
+       trace("_iconurl--"+_iconurl);
         this.giftDataURL = _dataurl;
         this.giftDepotURL = _depoturl;
         this.giftIconURL = _iconurl;
@@ -260,6 +264,7 @@ public class GiftUI extends giftUIMc {
             //trace("url is null")
             return;
         }
+
         if (!this.giftLoadData) {
             this.giftLoadData = new URLLoader();
         }
@@ -278,6 +283,7 @@ public class GiftUI extends giftUIMc {
     private function _loadDataComplete(e:Event):void {
         //trace("gift2:",e.target.data)
         try {
+            trace("data="+e.target.data);
             giftData = JSON.parse(e.target.data);
 
         } catch (error:Error) {

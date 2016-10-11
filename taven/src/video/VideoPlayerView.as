@@ -201,6 +201,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		}
 	}
 
+
 	//获取麦克风
 	public function onGetMic(event:CBModuleEvent):void {
 		isGetMic = true;
@@ -319,13 +320,14 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		this.initMicrophone();//初始麦克风
 	}
 
+
 	protected function initMicrophone():void {
 		//麦克风
 		if (Microphone.names.length > 0) {
 			if (!this.mic) {
 				this.mic = Microphone.getMicrophone(this.videoparam_mc.microphoneValue);
 				if (this.mic) {
-					this.mic.codec = SoundCodec.SPEEX;
+					//this.mic.codec = SoundCodec.SPEEX;
 					this.mic.setSilenceLevel(this.microphoneConfig.silence, this.microphoneConfig.timeout);
 					this.mic.rate = this.microphoneConfig.rate;
 					this.mic.gain = this.microphoneConfig.gain;
