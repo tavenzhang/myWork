@@ -320,7 +320,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		this.initMicrophone();//初始麦克风
 	}
 
-
+	
 	protected function initMicrophone():void {
 		//麦克风
 		if (Microphone.names.length > 0) {
