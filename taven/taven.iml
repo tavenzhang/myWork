@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="TavenModule">
+    <configurations>
+      <configuration name="TavenModule" pure-as="true" main-class="TavenModule" output-file="TavenModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules">
+        <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="eb6480d0-d2a0-4855-9061-7ceb3a2e6f25">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="18ca1811-730d-4251-9725-0ddaf76a0a5d">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="External" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler23" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="videoModule" pure-as="true" main-class="VideoModule" output-file="VideoModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules">
+        <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="e984a02e-7bfa-4389-a340-2582c0ca617b">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="4c6563d4-2f29-4c8b-a0d4-2e5b909f1db9">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="External" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler23" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="chatRoom" pure-as="true" main-class="ChatRoomModule" output-file="ChatRoomModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules">
+        <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="886b33cf-c0a2-4eed-a854-8115c4f95f0e">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="d8cfdeea-aad5-4d43-a23b-dbaf9a0da8c0">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="External" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler23" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="GoldActive" pure-as="true" main-class="rslmodule.ActiveGoldHouseRModule" output-file="ActiveGoldHouseRModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules/rslModules">
+        <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="6f2b7371-ee11-4790-92ba-370a61bb0e82">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="External" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler23" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="ActiveMsFight" pure-as="true" main-class="rslmodule.ActiveMSFightModule" output-file="ActiveMSFightModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules/rslModules">
+        <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="8d2aa529-b2c8-4bce-b0f9-1860cd188cab">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="External" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler23" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="GiftModule" pure-as="true" main-class="GiftModule" output-file="GiftModule.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules">
+        <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="ba6358b4-b65c-49fb-bc28-c52f218b8c4b">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="5836a2c9-9d47-4567-862b-11a40c8d3aa0">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="External" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler23" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="ActveCJ" pure-as="true" main-class="rslmodule.ActiveCJ" output-file="ActiveCJ.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules/rslModules">
+        <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="6ee747b6-3a6d-4ae5-9ab3-3c25724ec01b">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="External" />
+            </entry>
+            <entry library-id="21e49cca-16ff-47fc-9607-dee587ef50c8">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler23" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="AIRSDK_Compiler23" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="appShare" exported="" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="eb6480d0-d2a0-4855-9061-7ceb3a2e6f25" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="18ca1811-730d-4251-9725-0ddaf76a0a5d" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="886b33cf-c0a2-4eed-a854-8115c4f95f0e" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="e984a02e-7bfa-4389-a340-2582c0ca617b" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="d8cfdeea-aad5-4d43-a23b-dbaf9a0da8c0" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="4c6563d4-2f29-4c8b-a0d4-2e5b909f1db9" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="6f2b7371-ee11-4790-92ba-370a61bb0e82" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="8d2aa529-b2c8-4bce-b0f9-1860cd188cab" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="ba6358b4-b65c-49fb-bc28-c52f218b8c4b" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="5836a2c9-9d47-4567-862b-11a40c8d3aa0" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="6ee747b6-3a6d-4ae5-9ab3-3c25724ec01b" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="21e49cca-16ff-47fc-9607-dee587ef50c8" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>
