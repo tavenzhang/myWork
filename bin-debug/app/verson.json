@@ -1,0 +1,37 @@
+{
+    "name": "兰讯互动",
+    "version": 1,
+    "page_active": "http://%@/act",
+    "domains": [
+        {
+            "domain": "www.lgfaa.com",
+            "vdomain": "v.lgfaa.com",
+            "pdomain": "p.lgfaa.com",
+            "isOneRoom": 0
+        },
+        {
+            "domain": "www.lgfxc.net",
+            "vdomain": "v.lgfxc.net",
+            "pdomain": "p.lgfxc.net",
+            "isOneRoom": 0
+        },
+        {
+            "domain": "www.lgfabcd.com",
+            "vdomain": "v.lgfabcd.com",
+            "pdomain": "p.lgfabcd.com",
+            "isOneRoom": 0
+        },
+        {
+            "domain": "www.the1room.com",
+            "vdomain": "v.the1room.com",
+            "pdomain": "v.the1room.com",
+            "isOneRoom": 1
+        },
+        {
+            "domain": "www.brqtl.com",
+            "vdomain": "v.brqtl.com",
+            "pdomain": "v.brqtl.com",
+            "isOneRoom": 1
+        }
+    ]
+}
