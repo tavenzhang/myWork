@@ -118,7 +118,6 @@ public class PlayInfoModule extends BaseModule {
 		_view.mcBtnMsg.btnView.gotoAndStop(7);
 	}
 
-
 	private  function initListnerBtn(mc:MovieClip):void{
 		mc.buttonMode = true;
 		mc.mouseChildren=false;

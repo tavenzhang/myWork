@@ -19,7 +19,7 @@ import taven.sidesGroup;
 
 public class TavenModule extends Sprite
 	{
-	
+
 		private var left:leftMap;
 		private var parkModle:ParkingModule;
 		private var personModule:PersonInfoModule;
@@ -34,6 +34,7 @@ public class TavenModule extends Sprite
 		private var rankVipModule:RankVipModule;
 		private var limitEnterModule:LimitEnterModule;
 		private  var rightBar:RightMenuBar;
+
 
 		public function TavenModule()
 		{

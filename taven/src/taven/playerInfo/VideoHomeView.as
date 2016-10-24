@@ -100,12 +100,15 @@ public class VideoHomeView {
         initUI();
         for (var i:int = 0; i < dataList.length; i++) {
             var item:Object = dataList[i];
-            if (item.type == 1 || item.type == 3) {
+            if (item.type == 1 || item.type == 3 || item.type==2 ) {
                 _tjList.push(dataList[i]);
             }
-            else if (item.type == 2 || item.type == 3) {
-                _hotList.push(dataList[i]);
-            }
+//            if (item.type == 1 || item.type == 3 ) {
+//                _tjList.push(dataList[i]);
+//            }
+//            else if (item.type == 2 || item.type == 3) {
+//                _hotList.push(dataList[i]);
+//            }
         }
         _curPageHot = 1;
         _curPageTJ = 1;

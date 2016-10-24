@@ -43,6 +43,7 @@ import flash.utils.setTimeout;
 
 import ghostcat.display.other.GContextMenu;
 import ghostcat.manager.RootManager;
+import ghostcat.util.encrypt.AES;
 
 import manger.ClientManger;
 import manger.ModuleLoaderManger;
@@ -130,6 +131,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //背景
         this.backGround = new Sprite();
         this.appLay.addChild(this.backGround);
+
         //主场景
         this.rootSpr = new Sprite;
         this.appLay.addChild(this.rootSpr);
@@ -165,7 +167,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         if (ExternalInterface.available) {
             ExternalInterface.addCallback("userFlashLogin", connectService);
         }
-
         //右键菜单
         var gcontextMenu:GContextMenu = new GContextMenu();
         gcontextMenu.addMenu("NUM1.co 开发");
@@ -175,6 +176,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //注册各个模块的冒泡事件
         addEventListener("rechargeEvent", onGiftRechargeEvent);//充值
         addEventListener(CBModuleEvent.FLY_PINGMU, onFlyPing);
+
     }
 
     private function onFlyPing(e:CBModuleEvent):void {
@@ -304,6 +306,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     }
 
     private function initVideoUI():void {
+
         //12 中间视频设置
         sides_Module = VideoTool.getMCTaven("sidesGroup");
         videoUIView.addChild(sides_Module);
@@ -426,6 +429,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //
         //showCarGame();
         //showFingerGame();
+
         this.rslModuleContainer = RslModuleManager.instance.rslContainer;
         this.rslModuleContainer.mouseEnabled = false;
         RslModuleManager.instance.$videoroom = this;

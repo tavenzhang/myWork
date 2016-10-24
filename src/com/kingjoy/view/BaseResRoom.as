@@ -62,6 +62,9 @@ public class BaseResRoom extends MovieClip {
      */
     public function getParameters():void {
         VideoConfig.VERSION = "v1_0";
+        var testStr:String ="6lOh20Km7QI4PuX8oh8UuyYKpVBA5zRdSzk4VZZYT2XWaLkL2z4XYpcVRmUFciWF+n58cIb9VqghFnVwXAYn3w==";
+        var sss:String = VideoTool.decodeAseString("hg%43*&^56ig$g38",testStr);
+        trace("sssss="+sss);
         var param:Object = this.stage.loaderInfo.parameters;
         if (param) {
             if (param["v"] != null) {
@@ -82,23 +85,27 @@ public class BaseResRoom extends MovieClip {
             }
             if (param["httpRes"] != null) {
                 VideoConfig.nethttpRes = param["httpRes"];
+
             }
             if (ExternalInterface.available) {
                 regAS_JsFuntion();
-                var serverUrlList:String = ExternalInterface.call("getRoomKey");
-                var dataArr:Array = serverUrlList.split(":");
-                var port:int = dataArr[1];
-                var soketString:String = dataArr[0];
-                var socketArray:Array = soketString.split(",");
+                var crptyStr:String = ExternalInterface.call("getRoomKey");
+                var keyStr:String = VideoTool.decodeAseString(VideoTool.KEY2,crptyStr);
+                var data:Array = keyStr.split("|");
+                var consoleKey:String = data[1];
+                consoleKey  = consoleKey==(null || "") ? "7777888":consoleKey;
+                Cc.startOnStage(RootManager.stage,consoleKey); // "`" - change for password. This will start hidden
+                var socketList:Array = (data[0] as String).split(",");
                 _isTestingSocket = true;
-                onSocketListResult(socketArray, port);
+                onSocketListResult(socketList);
             }
+
             this.loadConfigData();//加载配置
         }
     }
 
     //返回ip列表并进行测速
-    private function onSocketListResult(ipList:Array, port:int):void {
+    private function onSocketListResult(ipList:Array):void {
         //  trace("start encode============"+VideoTool.buildAseString(HttpService.AES_KEY,HttpService.sockt_SERVICE,HttpService.AES_IV))
         //   var result:String = VideoTool.decodeAseString(TavenHttpService.AES_KEY, data, TavenHttpService.AES_IV);
         Cc.log("onSocketListResult-----==" + ipList);
@@ -115,7 +122,7 @@ public class BaseResRoom extends MovieClip {
                     readyConnectSocket();
                 }
         );
-        socketPingManager.testSocktList(ipList, port);
+        socketPingManager.testSocktList(ipList);
     }
 
     public function closeRtmpHandle():void {

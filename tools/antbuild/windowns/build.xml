@@ -65,9 +65,9 @@
  	</target>
 	 <!--执行编译，注意debug参数，默认是false，如果您需要开启Debug功能，可以将它设置为true(会增大文件体
  积)-->
-	 <target name="videoMain" depends="appShare">
-		 <echo message="start-------------videoMain.swf"/>
-		 <mxmlc file="${project.video}/src/VideoMain.as" output="${project.video.bin}/VideoMain.swf" locale="${LOCALE}" static-rsls="true" accessible="true" debug="false">
+	 <target name="videoRoom" depends="appShare">
+		 <echo message="start-------------VideoRoom.swf"/>
+		 <mxmlc file="${project.video}/src/VideoRoom.as" output="${project.video.bin}/VideoRoom.swf" locale="${LOCALE}" static-rsls="true" accessible="true" debug="false">
 			 <source-path path-element="${project.video}/src"/>
 			 <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml" />
 			 <library-path dir="${FLEX_HOME}/frameworks/locale/${LOCALE}" includes="*"
@@ -77,9 +77,9 @@
 		 </mxmlc>
 		 <echo message="====================================videoRoom.swf=============================" />
 	 </target>
-	 <target name="videoRoom" depends="videoMain">
-		 <echo message="start-------------videoRoom.swf"/>
-		 <mxmlc file="${project.video}/src/videoRoom.as" output="${project.video.bin}/videoRoom.swf" locale="${LOCALE}" static-rsls="true" accessible="true" debug="false">
+	 <target name="videoRoomAes" >
+		 <echo message="start-------------videoRoomAes.swf"/>
+		 <mxmlc file="${project.video}/src/videoRoomAes.as" output="${project.video.bin}/videoRoomAes.swf" locale="${LOCALE}" static-rsls="true" accessible="true" debug="false">
 			 <source-path path-element="${project.video}/src"/>
 			 <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml" />
 		 </mxmlc>

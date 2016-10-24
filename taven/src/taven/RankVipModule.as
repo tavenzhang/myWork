@@ -19,6 +19,7 @@ import taven.playerInfo.ItemUserRender;
 import tool.FormatDataTool;
 
 public class RankVipModule extends BaseModule {
+
     /** 当前点击的item数据*/
     public var selectItem:Object;
     private var _vipList:TavenScrollList;

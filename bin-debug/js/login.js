@@ -476,7 +476,7 @@ document.domain = document.domain;
 		
 		document.getElementById("flashContent").innerHTML="flashContent";
 		
-		swfobject.embedSWF(_flashVars.httpRes + "/videoRoomAes.swf?v=v1.8", "flashContent", "100%", "100%", swfVersionStr, xiSwfUrlStr, _flashVars, params, attributes);
+		swfobject.embedSWF(_flashVars.httpRes + "/videoRoomAes.swf?v=v2.1", "flashContent", "100%", "100%", swfVersionStr, xiSwfUrlStr, _flashVars, params, attributes);
 	}
 
 	

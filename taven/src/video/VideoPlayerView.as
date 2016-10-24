@@ -11,6 +11,8 @@ import com.rover022.vo.PlayerType;
 import com.rover022.vo.VideoConfig;
 import com.rover022.event.ModuleEvent;
 
+import display.ui.Alert;
+
 import flash.display.MovieClip;
 import flash.events.Event;
 import flash.events.IOErrorEvent;
@@ -24,6 +26,7 @@ import flash.media.H264Level;
 import flash.media.H264Profile;
 import flash.media.H264VideoStreamSettings;
 import flash.media.Microphone;
+import flash.media.SoundCodec;
 import flash.media.SoundTransform;
 import flash.media.Video;
 import flash.net.NetConnection;
@@ -31,10 +34,11 @@ import flash.net.NetStream;
 import flash.net.URLLoader;
 import flash.net.URLRequest;
 import flash.net.URLRequestMethod;
-import flash.trace.Trace;
 import flash.utils.ByteArray;
 import flash.utils.Timer;
 import flash.utils.setInterval;
+
+import manger.ClientManger;
 
 import manger.DataCenterManger;
 
@@ -71,12 +75,12 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	//public var inforProxy:InforProxy          = new InforProxy(this as VideoPlayerView);
 	//是否关闭rtmp 不在继续重连了
 	public var isCloseRestConnectRtmp:Boolean = false;
-	public var callTime:Number                = 0;
-	public var pingTime:Number                = 0;
+	//public var pingTime:Number                = 0;
 //    public var signView:SignViewUI;
 	public var rtmpReadyOK:Boolean            = false;
 	private var googleAdClip:GoogleAdSence;
-
+	//是否是http 模式
+	private  var isHttpStream:Boolean = false;
 
 
 	public function VideoPlayerView():void {
@@ -122,12 +126,11 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		ownerTimeout.start();//启动判断是否有上麦者
 		setInterval(updatePer30Second, 30000);
 		stage.addEventListener(ModuleEvent.CLOSE_ALL_RTMP_BY_SOCKET, closeRtmpNoResetConnect);
-		//
 	}
 
 	public function initUI():void {
-		pingTime = -1;
-//        signView.update(pingTime);
+	//	pingTime = -1;
+	// signView.update(pingTime);
 	}
 
 	/**
@@ -161,9 +164,8 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 
 	private function rtmpValid():void {
 		Cc.log("strart------------------Valid");
-		nc.call("netping", null);
+		nc.call("netping", null,22);
 	}
-
 	public function netping(...args):void {
 		//只有参数有3个时才开启验证流程
 		var arglenth:int = args.length;
@@ -200,6 +202,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			nc.close();
 		}
 	}
+
 
 	//获取麦克风
 	public function onGetMic(event:CBModuleEvent):void {
@@ -319,13 +322,13 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		this.initMicrophone();//初始麦克风
 	}
 
+	
 	protected function initMicrophone():void {
 		//麦克风
 		if (Microphone.names.length > 0) {
 			if (!this.mic) {
 				this.mic = Microphone.getMicrophone(this.videoparam_mc.microphoneValue);
 				if (this.mic) {
-
 					//this.mic.codec = SoundCodec.SPEEX;
 					this.mic.setSilenceLevel(this.microphoneConfig.silence, this.microphoneConfig.timeout);
 					this.mic.rate = this.microphoneConfig.rate;
@@ -356,10 +359,15 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		if (this._rtmpURL != _rtmp || !this.nc.connected) {
 			this.nc.close();
 			if (_rtmp != "") {
-				this.nc.connect(_rtmp);
-				infoText = "开始连接视频服务器!", _rtmp;
+				if(!isHttpStream)
+				{	this._rtmpURL = _rtmp;
+					this.nc.connect(_rtmp);
+                }else{
+					this._rtmpURL = _rtmp;
+					this.nc.connect(null);
+				}
+				infoText = "开始连接视频服务器!"
 			}
-			this._rtmpURL = _rtmp;
 		} else {
 			dispatchEvent(new Event("connectSuccessEvent"));//流连接成功
 			reconCount = 0;
@@ -389,9 +397,16 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			this.ns.client = this;
 			this.ns.addEventListener(NetStatusEvent.NET_STATUS, _netStatusEvent);
 			if (this.isAnchor) {
+
 			} else {
-				this.ns.bufferTime    = 3;
-				this.ns.bufferTimeMax = 10;
+				if(!isHttpStream){
+					this.ns.bufferTime    = 3;
+					this.ns.bufferTimeMax = 10;
+				}
+				else{
+					this.ns.bufferTime    = 1;
+					this.ns.bufferTimeMax = 5;
+				}
 				this.rePlay();
 			}
 		} catch (e:*) {
@@ -408,16 +423,22 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	}
 
 	private function _netStatusEvent(e:NetStatusEvent):void {
-		Cc.log(e.info.code + "-----------" + this.nc.uri+"-----------------vtype:"+DataCenterManger.videoQType);
+		Cc.log(e.info.code + "---------url=" + _rtmpURL+"--file="+flvName+"-----------------vtype:"+DataCenterManger.videoQType);
 		switch (e.info.code) {
 			case "NetConnection.Connect.Success":
 				reConnTimer.stop();//暂停计时器
-				if (VideoConfig.isValidRtmp) {
-					rtmpValid();
-				}
-				else {
-					startStream();
-				}
+                    if(!isHttpStream){
+                        if ((VideoConfig.isValidRtmp&&!DataCenterManger.roomAdmin)||(VideoConfig.isValidRtmpUp&&DataCenterManger.roomAdmin)) {
+                            rtmpValid();
+                        }
+                        else {
+                            startStream();
+                        }
+                    }
+                    else{
+                        startStream();
+                    }
+
 				break;
 			case "NetConnection.Connect.Closed"://关闭
 			case "NetConnection.Connect.Failed"://Error 失败
@@ -460,6 +481,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			case "NetStream.Play.Start":
 				break;
 			case "NetStream.Buffer.Full":
+				rtmpReadyOK=true;
 				this.loading_mc.stop();
 				this.loading_mc.visible = false;
 				this.infoText           = "缓冲中.";
@@ -489,14 +511,19 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			case "NetStream.Play.FileStructureInvalid"://Error
 			case "NetStream.Play.NoSupportedTrackFound"://Error
 			case "NetStream.Play.StreamNotFound"://Error
-				if (this.nc.connected) {
-					this.initStream();
-				} else {
-					this.reConnTimer.reset();
-					this.reConnTimer.start();
-				}
-				this.infoText = "接收中.";
-				initUI();
+					if(!isHttpStream){
+						if (this.nc.connected) {
+							this.initStream();
+						} else {
+							this.reConnTimer.reset();
+							this.reConnTimer.start();
+						}
+						this.infoText = "接收中.";
+						initUI();
+					}
+					else{
+						Alert.Show("服务器不存在视频流","请更换线路试试！");
+					}
 				break;
 			case "NetStream.Failed":
 				this.infoText = "播放出现异常.";
@@ -538,7 +565,6 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			}
 		}
 	}
-
 	// 重置播放 如果是用户则播放
 	protected function rePlay():void {
 		if (!this.ns) {
@@ -546,10 +572,16 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		}
 		rtmpReadyOK = false;
 		setVideoVisible(false);
-		this.doSubscribe(this.flvName);
-		this.ns.play(this.flvName);
+        if(!isHttpStream){
+           // this.doSubscribe(this.flvName);
+            this.ns.play(this.flvName);
+        }
+        else{
+			var url=  this._rtmpURL+"/" +this.flvName+".flv"
+            this.ns.play( url);
+        }
 		if (!this.checkPlayTimer) {
-			this.checkPlayTimer = new Timer(10000);
+			this.checkPlayTimer = new Timer(20000);
 			this.checkPlayTimer.addEventListener(TimerEvent.TIMER, _checkPlayTimerEvent);
 		}
 		this.checkPlayTimer.reset();
@@ -558,10 +590,12 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		this.video_mc.attachNetStream(this.ns);
 	}
 
+
 	//播放防假死 //每隔5秒，this.ns.time =0 重新connect  ，防止有时候连接上 但是没数据
 	private function _checkPlayTimerEvent(e:TimerEvent):void {
 		if (!this.isAnchor && this.ns) {
-			if (this._playOldTimer == int(this.ns.time) && !rtmpReadyOK) {//如果rtmpReadyOK ture 即 netStream 触发了full 则跳过
+			if (!rtmpReadyOK) {//如果rtmpReadyOK ture 即 netStream 触发了full 则跳过
+				this._playOldTimer == int(this.ns.time)
 				if (this._playOldTimer == 0) {//重未连上过
 					if (this.reconCount < 4) //最多进行4次重连测试
 					{
@@ -614,9 +648,9 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	public function onMetaData(...rest):void {
 	}
 
-	private function doSubscribe(id:String):void {
-		this.nc.call("FCSubscribe", null, id);
-	}
+//	private function doSubscribe(id:String):void {
+//		this.nc.call("FCSubscribe", null, id);
+//	}
 
 	public function onFCSubscribe(...arg):void {
 		//trace("onFCSubscribe:    "+arg[0].code+"="+arg[0].description)
@@ -644,6 +678,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			this.initNet(_rtmp);//初始连接
 			return;
 		}
+		isHttpStream = _rtmp.indexOf("http://")>-1;
 		this.resetView();//重置显示列表
 		this.flvName            = _flv;
 		this.isAnchor           = false;
