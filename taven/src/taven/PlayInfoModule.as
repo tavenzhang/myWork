@@ -182,7 +182,7 @@ public class PlayInfoModule extends BaseModule {
 						view_cj.txtNum.maxChars=2;
 						view_cj.txtNum.restrict="0-9";
 						view_cj.txtDesc.text="";
-
+						view_cj.txtTitle.text="";
 						_view.addChild(view_cj);
 						view_cj.btnClose.addEventListener(MouseEvent.CLICK, function (e:*) {
 							view_cj.visible=false;
@@ -205,7 +205,6 @@ public class PlayInfoModule extends BaseModule {
 					TweenHelp.fade(_view.mcMail, 0.3, 0.2, 1);
 					_view.mcMail.txtPrivate.text = "";
 					_view.mcMail.txtSystem.text  = "";
-					view_cj.txtTitle.text="";
 					if (_view.mcMail.btnPrivate)
 						_view.mcMail.btnPrivate.mouseEnabled = false;
 					EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, {}, s2cNoticeData);
@@ -216,6 +215,7 @@ public class PlayInfoModule extends BaseModule {
 				break;
 		}
 	}
+
 	private function onStarCJClick(evt:Event){
 		EventUtils.secndNetDataNew(CBProtocol.activeCj_62001,{"title":view_cj.txtTitle.text,"num":view_cj.txtNum.text,"detail":view_cj.txtDesc.text,"cmd":CBProtocol.activeCj_62001});
 		view_cj.visible=false;
@@ -229,11 +229,9 @@ public class PlayInfoModule extends BaseModule {
 		});
 		stage.addEventListener(CBModuleEvent.SHOW_FINGER_GAME, function (e:Event):void {
 			trace(stage);
-			_view.mcCaiQuan.dispatchEvent(new MouseEvent(MouseEvent.CLICK))
-
+			_view.mcCaiQuan.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
 		});
 	}
-
 
 
 	public function onButtonClickHandle(e:MouseEvent):void {

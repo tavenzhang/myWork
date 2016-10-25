@@ -577,8 +577,8 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
             this.ns.play(this.flvName);
         }
         else{
-			var url=  this._rtmpURL+"/" +this.flvName+".flv"
-            this.ns.play( url);
+			var url=  this._rtmpURL+"/" +this.flvName+".flv";
+            this.ns.play(url);
         }
 		if (!this.checkPlayTimer) {
 			this.checkPlayTimer = new Timer(20000);
