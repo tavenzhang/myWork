@@ -11,7 +11,7 @@
             <entry library-id="18ca1811-730d-4251-9725-0ddaf76a0a5d">
               <dependency linkage="Merged" />
             </entry>
-            <entry module-name="appShare" build-configuration-name="appShare">
+            <entry library-id="73ee265f-1d97-45e0-8fed-7abbdd91faed">
               <dependency linkage="External" />
             </entry>
           </entries>
@@ -35,7 +35,7 @@
             <entry library-id="4c6563d4-2f29-4c8b-a0d4-2e5b909f1db9">
               <dependency linkage="Merged" />
             </entry>
-            <entry module-name="appShare" build-configuration-name="appShare">
+            <entry library-id="e89f6056-0c89-4b13-9166-93c3b80937e5">
               <dependency linkage="External" />
             </entry>
           </entries>
@@ -59,7 +59,7 @@
             <entry library-id="d8cfdeea-aad5-4d43-a23b-dbaf9a0da8c0">
               <dependency linkage="Merged" />
             </entry>
-            <entry module-name="appShare" build-configuration-name="appShare">
+            <entry library-id="d3398acf-8ed9-4942-88d3-33a8f56514c2">
               <dependency linkage="External" />
             </entry>
           </entries>
@@ -80,7 +80,7 @@
             <entry library-id="6f2b7371-ee11-4790-92ba-370a61bb0e82">
               <dependency linkage="Merged" />
             </entry>
-            <entry module-name="appShare" build-configuration-name="appShare">
+            <entry library-id="82fe8a7e-a4b8-4386-a3fe-56a49e75d364">
               <dependency linkage="External" />
             </entry>
           </entries>
@@ -101,7 +101,7 @@
             <entry library-id="8d2aa529-b2c8-4bce-b0f9-1860cd188cab">
               <dependency linkage="Merged" />
             </entry>
-            <entry module-name="appShare" build-configuration-name="appShare">
+            <entry library-id="aa1b8ec1-3eb7-4ca1-844b-66f46678aa83">
               <dependency linkage="External" />
             </entry>
           </entries>
@@ -125,7 +125,7 @@
             <entry library-id="5836a2c9-9d47-4567-862b-11a40c8d3aa0">
               <dependency linkage="Merged" />
             </entry>
-            <entry module-name="appShare" build-configuration-name="appShare">
+            <entry library-id="8f4288ef-951d-4a08-8339-7550fcb60ef8">
               <dependency linkage="External" />
             </entry>
           </entries>
@@ -146,11 +146,11 @@
             <entry library-id="6ee747b6-3a6d-4ae5-9ab3-3c25724ec01b">
               <dependency linkage="Merged" />
             </entry>
-            <entry module-name="appShare" build-configuration-name="appShare">
-              <dependency linkage="External" />
-            </entry>
             <entry library-id="21e49cca-16ff-47fc-9607-dee587ef50c8">
               <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="ce9d9abd-bc35-4577-a735-620be4122301">
+              <dependency linkage="External" />
             </entry>
           </entries>
           <sdk name="AIRSDK_Compiler23" />
@@ -174,7 +174,6 @@
     </content>
     <orderEntry type="jdk" jdkName="AIRSDK_Compiler23" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="appShare" exported="" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
         <properties id="eb6480d0-d2a0-4855-9061-7ceb3a2e6f25" />
@@ -305,6 +304,76 @@
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="aa1b8ec1-3eb7-4ca1-844b-66f46678aa83" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../appShare/appShare.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="ce9d9abd-bc35-4577-a735-620be4122301" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../appShare/appShare.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="d3398acf-8ed9-4942-88d3-33a8f56514c2" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../appShare/appShare.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="8f4288ef-951d-4a08-8339-7550fcb60ef8" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../appShare/appShare.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="82fe8a7e-a4b8-4386-a3fe-56a49e75d364" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../appShare/appShare.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="73ee265f-1d97-45e0-8fed-7abbdd91faed" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../appShare/appShare.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="e89f6056-0c89-4b13-9166-93c3b80937e5" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../appShare/appShare.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>
