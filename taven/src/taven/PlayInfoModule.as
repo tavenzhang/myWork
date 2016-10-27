@@ -1,7 +1,5 @@
 package taven {
-import com.adobe.utils.StringUtil;
 import com.bit101.components.VBox;
-import com.junkbyte.console.Cc;
 import com.rover022.CBProtocol;
 import com.rover022.ModuleNameType;
 import com.rover022.event.CBModuleEvent;
@@ -20,9 +18,7 @@ import flash.net.URLRequest;
 import flash.net.navigateToURL;
 
 import manger.ClientManger;
-import manger.HttpLinkManger;
 import manger.DataCenterManger;
-
 
 import taven.enum.EventConst;
 import taven.enum.EventUtils;
@@ -31,14 +27,13 @@ import taven.playerInfo.RankStartView;
 import taven.playerInfo.VideoHomeView;
 import taven.utils.HeadIconBuildTool;
 import taven.utils.MathUtils;
-import taven.utils.StringUtils;
 import taven.utils.TweenHelp;
 
 import tool.VideoTool;
 
 public class PlayInfoModule extends BaseModule {
 	private var _view:taven_PlayerInfoView;
-	//private var _playListView:PlayerListView;
+	private var _playListView:PlayerListView;
 	private var _videoHomeView:VideoHomeView;
 	private var _starView:RankStartView;
 	/*--------------------------外部接口------------------*/
@@ -53,13 +48,14 @@ public class PlayInfoModule extends BaseModule {
 	public var peopleInfo:Object;
 	public var headMc:MovieClip;
 	public var gameBox:Sprite    = new Sprite();
-	public var view_cj:taven_viewCJ;
 
 	override protected function initView():void {
 		_view          = new taven_PlayerInfoView();
 		_maxHeigh      = _view.mcBg.height;
+		_playListView  = new PlayerListView(_view.mcPlayList, this);
 		_videoHomeView = new VideoHomeView(_view.mcHome, this);
 		this.addChild(_view);
+		_view.mcPlayList.visible = false;
 		_view.mcMail.visible     = false;
 		_view.bgBtnStart.visible = false;
 		_view.mcSelectBg.visible = false;
@@ -69,7 +65,7 @@ public class PlayInfoModule extends BaseModule {
 		_view.mcFace.visible   = false;
 		_view.mcMail.gotoAndStop(2);
 		_view.mcActive.visible = _view.mcAcviteHouse.visible = false;
-		headMc = HeadIconBuildTool.makerUserHead(17, 34);
+		headMc = HeadIconBuildTool.makerUserHead(17, 34)
 		_view.addChild(headMc);
 		headMc.visible = false;
 		headMc.addEventListener(MouseEvent.CLICK, headMcClick);
@@ -87,138 +83,7 @@ public class PlayInfoModule extends BaseModule {
 		VideoTool.buildButtonEff(_view.mcCaiQuan);
 		gameBox = new VBox(_view, 0, 0);
 		gameBox.addChild(_view.mcJuBao);
-		gameBox.addChild(_view.mcCaiQuan);
-		_view.mcInfo.visible =false;
-		initNewBtn();
-	}
-
-
-	private function  initNewBtn():void{
-		_view.mcBtnIndex.txtBtnName.text = "首页";
-		_view.mcBtnRank.txtBtnName.text="排行";
-		_view.mcBtnHome.txtBtnName.text="大厅";
-		_view.mcBtnShop.txtBtnName.text="商城";
-		_view.mcBtnFuni.txtBtnName.text="福利";
-		_view.mcBtnCJ.txtBtnName.text="抽奖";
-		_view.mcBtnMsg.txtBtnName.text="消息";
-		initListnerBtn(_view.mcBtnIndex);
-		initListnerBtn(_view.mcBtnRank);
-		_view.mcBtnRank.btnView.gotoAndStop(2);
-		initListnerBtn(_view.mcBtnHome);
-		_view.mcBtnHome.btnView.gotoAndStop(3);
-		initListnerBtn(_view.mcBtnShop);
-		_view.mcBtnShop.btnView.gotoAndStop(4);
-		initListnerBtn(_view.mcBtnFuni);
-		_view.mcBtnFuni.btnView.gotoAndStop(5);
-		_view.mcBtnFuni.visible=false;
-		initListnerBtn(_view.mcBtnCJ);
-		_view.mcBtnCJ.btnView.gotoAndStop(6);
-		_view.mcBtnCJ.visible=false;
-		initListnerBtn(_view.mcBtnMsg);
-		_view.mcBtnMsg.btnView.gotoAndStop(7);
-	}
-
-	private  function initListnerBtn(mc:MovieClip):void{
-		mc.buttonMode = true;
-		mc.mouseChildren=false;
-		mc.addEventListener(MouseEvent.ROLL_OVER, function (evt:Event) {
-			var target:MovieClip = evt.currentTarget as MovieClip;
-			target.gotoAndStop(2);
-		});
-		mc.addEventListener(MouseEvent.ROLL_OUT, function (evt:Event) {
-			var target:MovieClip = evt.currentTarget as MovieClip;
-			target.gotoAndStop(1);
-		});
-		mc.addEventListener(MouseEvent.CLICK,onNewBtnClick);
-		headMc.addEventListener(MouseEvent.ROLL_OVER,onRollOverHandle);
-		headMc.addEventListener(MouseEvent.ROLL_OUT,onRollOverHandle);
-	}
-
-	private function onRollOverHandle(evt:Event):void
-	{
-		if(evt.type == MouseEvent.ROLL_OVER)
-		{
-			_view.mcInfo.visible = true;
-		}
-		else
-		{
-			_view.mcInfo.visible = false;
-		}
-	}
-
-
-	private  function  onNewBtnClick(evt:Event):void
-	{
-		trace("onNewBtnClick ---"+evt.currentTarget.name);
-		var videoVisible:Boolean = _view.mcHome.visible;
-		var mailVisilbe:Boolean  = _view.mcMail.visible;
-		switch (evt.currentTarget)
-		{
-			case _view.mcBtnIndex: //首页
-				HttpLinkManger.gotoIndex();
-				break;
-			case _view.mcBtnRank://排行
-				HttpLinkManger.gotoRank();
-				break;
-			case _view.mcBtnHome://大厅
-				_view.mcHome.visible = !videoVisible;
-				if (_view.mcHome.visible) {
-					TweenHelp.fade(_view.mcHome, 0.3, 0.2, 1);
-				}
-				EventUtils.secndStatusEvent(this, EventConst.PLAYER_HOME);
-				break;
-			case _view.mcBtnShop://商城
-				HttpLinkManger.gotoShop();
-				break;
-			case _view.mcBtnFuni://福利
-				break;
-			case _view.mcBtnCJ://抽奖
-				//ClientManger.getInstance().showCarGame();
-					if(!view_cj)
-					{
-						view_cj = new taven_viewCJ();
-						view_cj.x=82;
-						view_cj.y=502;
-						view_cj.txtNum.maxChars=2;
-						view_cj.txtNum.restrict="0-9";
-						view_cj.txtDesc.text="";
-
-						_view.addChild(view_cj);
-						view_cj.btnClose.addEventListener(MouseEvent.CLICK, function (e:*) {
-							view_cj.visible=false;
-						});
-						view_cj.btnCj.addEventListener(MouseEvent.CLICK,onStarCJClick);
-						view_cj.visible=false;
-					}
-				 view_cj.visible = !view_cj.visible;
-					if(view_cj.visible)
-					{
-						TweenHelp.fade(_view.mcMail, 0.3, 0.2, 1);
-					}
-
-				break;
-            case _view.mcBtnMsg://消息
-				//ClientManger.getInstance().getMsgKeyFromWeb(VideoConfig.testUID, VideoConfig.testPASS, ClientManger.getInstance().view["AirConnectService"]);
-				if (!mailVisilbe) {
-					_view.mcMail.visible = true;
-					changeSelcedBtn(_view.btnMail);
-					TweenHelp.fade(_view.mcMail, 0.3, 0.2, 1);
-					_view.mcMail.txtPrivate.text = "";
-					_view.mcMail.txtSystem.text  = "";
-					view_cj.txtTitle.text="";
-					if (_view.mcMail.btnPrivate)
-						_view.mcMail.btnPrivate.mouseEnabled = false;
-					EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, {}, s2cNoticeData);
-				}
-				else {
-					_view.mcMail.visible = false;
-				}
-				break;
-		}
-	}
-	private function onStarCJClick(evt:Event){
-		EventUtils.secndNetDataNew(CBProtocol.activeCj_62001,{"title":view_cj.txtTitle.text,"num":view_cj.txtNum.text,"detail":view_cj.txtDesc.text,"cmd":CBProtocol.activeCj_62001});
-		view_cj.visible=false;
+		gameBox.addChild(_view.mcCaiQuan)
 	}
 
 	override protected function onAddToStageHandle(event:Event):void {
@@ -230,11 +95,8 @@ public class PlayInfoModule extends BaseModule {
 		stage.addEventListener(CBModuleEvent.SHOW_FINGER_GAME, function (e:Event):void {
 			trace(stage);
 			_view.mcCaiQuan.dispatchEvent(new MouseEvent(MouseEvent.CLICK))
-
 		});
 	}
-
-
 
 	public function onButtonClickHandle(e:MouseEvent):void {
 		switch (e.currentTarget.name) {
@@ -273,12 +135,12 @@ public class PlayInfoModule extends BaseModule {
 	private function onViewClick(evt:MouseEvent):void {
 		if (evt.target is SimpleButton) {
 			_view.mcSelectBg.visible = false;
-			//var listVisible:Boolean  = _view.mcPlayList.visible;
+			var listVisible:Boolean  = _view.mcPlayList.visible;
 			var videoVisible:Boolean = _view.mcHome.visible;
 			var mailVisilbe:Boolean  = _view.mcMail.visible;
 			if (evt.target == _view.btnHome || evt.target == _view.btnMail || evt.target == _view.mcPerson) //这三个子ui 不要同时存在
 			{
-				_view.mcHome.visible = _view.mcMail.visible = false;
+				_view.mcHome.visible = _view.mcMail.visible = _view.mcPlayList.visible = false;
 			}
 			switch (evt.target) {
 				case _view.btnChonZhi: //点击充值
@@ -293,6 +155,7 @@ public class PlayInfoModule extends BaseModule {
 					break;
 				case _view.btnShop: //点击商场
 					EventUtils.secndStatusEvent(this, EventConst.PLAYER_SHOP);
+					//ClientManger.getInstance().getMsgKeyFromWeb(VideoConfig.testUID, VideoConfig.testPASS, ClientManger.getInstance().view["AirConnectService"]);
 					break;
 				case _view.btnMail: //点击邮件
 					if (!mailVisilbe) {
@@ -303,14 +166,19 @@ public class PlayInfoModule extends BaseModule {
 						_view.mcMail.txtSystem.text  = "";
 						if (_view.mcMail.btnPrivate)
 							_view.mcMail.btnPrivate.mouseEnabled = false;
-						EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, {}, s2cNoticeData);
+						EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, new Object(), s2cNoticeData);
 					}
 					else {
 						_view.mcMail.visible = false;
 					}
 					break;
 				case _view.mcPerson: //
-					//changeSelcedBtn(_view.mcPerson);
+					_view.mcPlayList.visible = !listVisible;
+					if (_view.mcPlayList.visible) {
+						TweenHelp.fade(_view.mcPlayList, 0.3, 0.2, 1);
+						_playListView.openView();
+					}
+					changeSelcedBtn(_view.mcPerson);
 					break;
 				case _view.btnSound: //点击声音广播
 					EventUtils.secndStatusEvent(this, EventConst.PLAYER_BROADCAST);
@@ -389,7 +257,7 @@ public class PlayInfoModule extends BaseModule {
 		value = MathUtils.clamp(value, 600, _maxHeigh);
 		if (_curHeight != value) {
 			_view.mcBg.height = value;
-		//	_playListView.updateMaxHeight(value);
+			_playListView.updateMaxHeight(value);
 			gameBox.y      = value - 80;
 			//_view.mcJuBao.y = value - _view.mcJuBao.height - 30;
 			_view.mcHome.y = (value - _view.mcHome.height) / 2
@@ -477,7 +345,7 @@ public class PlayInfoModule extends BaseModule {
 		}
 		if (isChange || (peopleInfo && peopleInfo.flushPerson)) {
 			_userList = srcArr;
-		//	_playListView.updateView(srcArr);
+			_playListView.updateView(srcArr);
 		}
 	}
 
@@ -508,18 +376,14 @@ public class PlayInfoModule extends BaseModule {
 	 * @private
 	 */
 	public function set data(value:Object):void {
-		Cc.log("play data===="+data);
 		_data = value;
 		if (_data) {
 			if (_data.headUrl != null) {
 				headUrl = _data.headUrl;
 			}
 			_view.btnRegist.visible = _view.btnLogin.visible = false;
-			headMc.visible = true;
+			headMc.visible = true
 			_view.mcMail.gotoAndStop(1);
-			_view.mcInfo.txtName.text=_data.name;
-			_view.mcInfo.txtDetail.text=StringUtils.strStitute("等级: {0}级 \n钻石: {1}个",_data.richLv,_data.points);
-			trace("_view.mcInfo.txtDetail.text="+_view.mcInfo.txtDetail.text)
 		}
 		else {
 			headMc.visible          = false;
@@ -530,15 +394,14 @@ public class PlayInfoModule extends BaseModule {
 
 	public function showActiveBtns(activeList:Array):void {
 		//每次进入获取一下消息数
-
-		EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, {}, s2cNoticeData);
+		EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, new Object(), s2cNoticeData);
 		for each(var item:Object in activeList) {
 			if (item) {
 				switch (item.activityType) {
 					case 1:  //1表示礼物之星传统活动
 						_view.mcActive.visible            = true;
 						_view.mcActive.txtActicve.text         = item.activityName;
-						_view.mcActive.txtActicve.mouseEnabled = false;
+						_view.mcActive.txtActicve.mouseEnabled = false
 						_view.mcActive.btnStar.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
 						break;
 					case 2:// 金屋藏娇
@@ -550,7 +413,7 @@ public class PlayInfoModule extends BaseModule {
 					case 3:// 魔兽争霸:
 						view.mcAcviteHouse.visible                 = true;
 						view.mcAcviteHouse.txtActicve.text         = item.activityName;
-						view.mcAcviteHouse.txtActicve.mouseEnabled = false;
+						view.mcAcviteHouse.txtActicve.mouseEnabled = false
 						view.mcAcviteHouse.addEventListener(MouseEvent.CLICK, function (evt:Event):void {
 							RslModuleManager.instance.toggleModule(ModuleNameType.ActiveMsFight);
 						});
@@ -559,10 +422,6 @@ public class PlayInfoModule extends BaseModule {
 				}
 			}
 		}
-	}
-
-	public function checkChoujiang(isOpen:Boolean){
-		_view.mcBtnCJ.visible=isOpen;
 	}
 
 	public function get view():taven_PlayerInfoView {

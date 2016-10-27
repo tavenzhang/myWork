@@ -43,9 +43,9 @@ public class ScrollStageControl {
      * @param e
      */
     private function onResizeStageHandle(e:Event):void {
-        if (view.stage.stageHeight < 800) {
+        if (view.stage.stageHeight < 700) {
             scrollStage_Module.x = view.stage.stageWidth - 30;
-            scrollStage_Module.step = 800 - view.stage.stageHeight;
+            scrollStage_Module.step = 700 - view.stage.stageHeight;
             scrollStage_Module.y = (view.stage.stageHeight - scrollStage_Module.height) / 3
         } else {
             scrollStage_Module.step = 0;

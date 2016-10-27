@@ -20,7 +20,7 @@ public class ItemGiftCircle extends res_richGiftItem {
     private var _itemIcoMc:loadHeadElement;
     private var _headUrl:String = "";
     /**静态共享变量*/
-                private static var CSS_STYPE_SHEET:StyleSheet;
+    private static var CSS_STYPE_SHEET:StyleSheet;
     private var callFun:Function;
 
     public function ItemGiftCircle() {

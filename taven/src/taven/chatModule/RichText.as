@@ -46,14 +46,14 @@ public class RichText extends MovieClip {
         _height = _h;
         this.textFlow = new TextFlow();
         textFlow.fontLookup = FontLookup.DEVICE;
-        textFlow.fontFamily = "微软雅黑";
+        textFlow.fontFamily = "黑体";
         textFlow.fontSize = 12;
         if (Capabilities.manufacturer.indexOf("Google") > -1) {
-            textFlow.fontFamily = "微软雅黑";
-            TextFlowTool.fontClass = "微软雅黑";
+            textFlow.fontFamily = "黑体";
+            TextFlowTool.fontClass = "黑体";
         } else {
-            textFlow.fontFamily = "宋体";
-            TextFlowTool.fontClass = "宋体";
+            textFlow.fontFamily = "黑体";
+            TextFlowTool.fontClass = "黑体";
         }
         textFlow.color = 0xffffff;
         //textFlow.lineHeight = 22;

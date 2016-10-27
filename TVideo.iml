@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="VideoRoom">
     <configurations>
-      <configuration name="VideoRoom" pure-as="true" main-class="VideoRoom" output-file="VideoRoom.swf" output-folder="$MODULE_DIR$/bin-debug">
+      <configuration name="VideoRoom" pure-as="true" main-class="VideoRoom" output-file="VideoRoom.swf" output-folder="$MODULE_DIR$/bin-debug" skip-build="true">
         <dependencies target-player="23.0">
           <entries>
             <entry library-id="fc9476c4-f1a2-4c39-b5c6-9f4dd7800913">
@@ -16,7 +16,7 @@
         </dependencies>
         <compiler-options>
           <map>
-            <entry key="compiler.debug.swf" value="false" />
+            <entry key="compiler.debug.swf" value="true" />
           </map>
           <option name="resourceFilesMode" value="None" />
         </compiler-options>
@@ -24,15 +24,16 @@
         <packaging-android />
         <packaging-ios />
       </configuration>
-      <configuration name="videoRoomAes" pure-as="true" main-class="videoRoomAes" output-file="videoRoomAes.swf" output-folder="$MODULE_DIR$/bin-debug">
+      <configuration name="videoRoomCryp.as" pure-as="true" main-class="videoRoomCryp" output-file="videoRoomCryp.swf" output-folder="$MODULE_DIR$/bin-debug">
         <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="94371678-2110-4dda-b532-46db31692e39">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
           <sdk name="AIRSDK_Compiler23" />
         </dependencies>
-        <compiler-options>
-          <map>
-            <entry key="compiler.debug.swf" value="false" />
-          </map>
-        </compiler-options>
+        <compiler-options />
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />
@@ -59,5 +60,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="appShare" exported="" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="94371678-2110-4dda-b532-46db31692e39" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -42,7 +42,7 @@ public class ChangeLineView extends BasePaneUI {
         _module = vidoRoom;
         _viewBtn.addEventListener(MouseEvent.CLICK, closeClick);
         _pane.yes_bt.addEventListener(MouseEvent.CLICK, suerClick);
-        _pane.mcTip.visible =false;
+        //_pane.mcTip.visible =false;
         Style.embedFonts = false;
         Style.fontSize = 12;
         Style.fontName = "宋体";
