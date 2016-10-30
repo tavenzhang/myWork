@@ -67,7 +67,7 @@
         </dependencies>
         <compiler-options>
           <map>
-            <entry key="compiler.debug.swf" value="false" />
+            <entry key="compiler.debug.swf" value="true" />
           </map>
         </compiler-options>
         <packaging-air-desktop />

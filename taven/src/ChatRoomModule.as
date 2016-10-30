@@ -398,6 +398,8 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 			publicOutput.addRichChild(pCustom);
 			return;
 		}
+
+
 		if (recObject.car > 0) {
 			giftS = makeSpan("欢迎『", vColor);
 			pCustom.addChild(giftS);
