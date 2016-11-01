@@ -42,7 +42,7 @@ public class LimitEnterModule extends BaseModule {
         VideoTool.makeMovieClipToButton(_view.use_up);
         addEventListener(CBModuleEvent.LIMIT_ROOM, onLimuteHandle);
         addEventListener(CBModuleEvent.LIMIT_ROOM_QAINGENTER, onQiangEnterHandle);
-        _view.guizuiMc.visible = false;
+      //  _view.guizuiMc.visible = false;
 
     }
 

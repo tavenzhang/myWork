@@ -531,6 +531,9 @@ public class PlayInfoModule extends BaseModule {
 		}
 	}
 
+	public function  monyChange(){
+		_view.mcInfo.txtDetail.text=StringUtils.strStitute("等级: {0}级 \n钻石: {1}个",DataCenterManger.userData.richLv,DataCenterManger.userData.points);
+	}
 	public function showActiveBtns(activeList:Array):void {
 		//每次进入获取一下消息数
 
