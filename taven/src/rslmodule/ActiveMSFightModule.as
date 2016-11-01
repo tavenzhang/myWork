@@ -5,9 +5,8 @@ package rslmodule {
 import com.rover022.CBProtocol;
 import display.BaseRslModule;
 import flash.events.MouseEvent;
-import flash.utils.Dictionary;
-
 import taven.enum.EventUtils;
+
 
 public class ActiveMSFightModule extends BaseRslModule{
     private var _ui:active_moshouView;
@@ -25,11 +24,11 @@ public class ActiveMSFightModule extends BaseRslModule{
     override  public function addEventListeners():void {
         _ui.btnClose.addEventListener(MouseEvent.CLICK, onCloseHandle)
     }
-
     override public function show():void {
         super.show();
         var data:Object = {};
         EventUtils.secndNetDataNew( CBProtocol.list_Active_15007, data, s2cGetListData);
+
     }
 
     public function s2cGetListData(data:*):void {
@@ -64,10 +63,8 @@ public class ActiveMSFightModule extends BaseRslModule{
         {
 
         }
-
     }
 
-    
     private function onCloseHandle(evt:MouseEvent):void
     {
         this.hide();

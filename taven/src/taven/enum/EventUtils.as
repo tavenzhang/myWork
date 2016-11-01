@@ -26,31 +26,19 @@ public class EventUtils {
 
     /**通用发生 事件接口，方便统一处理*/
     public static function secndNetData(iVideoRoom:IVideoRoom, cmdId:int, dataStr:Object, func:Function = null):void {
-        if (iVideoRoom) {
-            dataStr.cmd = cmdId;
-            if (func != null) {
-                dataStr.callBack = func;
-            }
-            iVideoRoom.sendDataObject(dataStr);//
-            // netManager.sendDataObject({"cmd": 11001, "start": 0, "end": 20})
-            // trace("taven send socket------>" +str);
-        }
+        secndNetDataNew(cmdId,dataStr,func);
     }
 
     /**通用发生 事件接口，方便统一处理*/
     public static function secndNetDataNew(cmdId:int, dataStr:Object, func:Function = null):void
     {
-
         dataStr.cmd = cmdId;
         if (func != null) {
-            dataStr.callBack = func;
-            ControlsManger.sendOneTimesMsg(dataStr,  dataStr.callBack );
-            dataStr.callBack = null
+            NetManager.sendOnceDataObject(dataStr,  dataStr.callBack);
         }
         else
         {
-            NetManager.getInstance().sendDataObject(dataStr);
-
+            NetManager.sendDataObject(dataStr);
         }
 
     }
