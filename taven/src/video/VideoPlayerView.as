@@ -42,6 +42,8 @@ import manger.ClientManger;
 
 import manger.DataCenterManger;
 
+import net.NetManager;
+
 import sk.video.videoPlayer;
 
 import tool.GoogleAdSence;
@@ -148,7 +150,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	public function downMicClick(event:MouseEvent):void {
 		closeRtmpNoResetConnect();
 		if (DataCenterManger.videoOwner) {
-			videoRoom.sendDataObject({"cmd": CBProtocol.stopTalkPlay_20003, "sid": DataCenterManger.videoOwner.sid});//下麦;
+			NetManager.sendDataObject({"cmd": CBProtocol.stopTalkPlay_20003, "sid": DataCenterManger.videoOwner.sid});//下麦;
 		}
 		isGetMic = false;
 		updateUI(null);
@@ -322,7 +324,6 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		this.initMicrophone();//初始麦克风
 	}
 
-	
 	protected function initMicrophone():void {
 		//麦克风
 		if (Microphone.names.length > 0) {
@@ -577,8 +578,8 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
             this.ns.play(this.flvName);
         }
         else{
-			var url=  this._rtmpURL+"/" +this.flvName+".flv"
-            this.ns.play( url);
+			var url:String=  this._rtmpURL+"/" +this.flvName+".flv";
+            this.ns.play(url);
         }
 		if (!this.checkPlayTimer) {
 			this.checkPlayTimer = new Timer(20000);
@@ -788,7 +789,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 		this.endPlay_mc.gotoHall_bt.addEventListener(MouseEvent.CLICK, _gotoHallClickEvent);
 		this.loading_mc.stop();
 		this.loading_mc.visible = false;
-		videoRoom.sendDataObject({"cmd": 50002});//更新人数
+		NetManager.sendDataObject({"cmd": 50002});//更新人数
 		if (!isAnchor) {
 			var _imodule:MovieClip = videoRoom.getModule(ModuleNameType.SIDESGROUP) as MovieClip;
 			if (_imodule) {

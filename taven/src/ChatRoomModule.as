@@ -11,6 +11,9 @@ import com.rover022.vo.PlayerType;
 import com.rover022.vo.UserVo;
 import com.rover022.vo.VideoConfig;
 
+import display.ModuleRSLManager;
+import display.ui.Alert;
+
 import flash.display.*;
 import flash.events.*;
 import flash.text.TextField;
@@ -35,6 +38,8 @@ import ghostcat.util.Tick;
 import manger.ClientManger;
 import manger.DataCenterManger;
 import manger.HttpLinkManger;
+
+import net.NetManager;
 
 import taven.chatModule.*;
 
@@ -199,7 +204,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		videoRoom.showAlert("确认要花费100钻石发送飞屏吗?", "提示", false, 3, true, callBack);
 		function callBack(a:*):void {
 			if (a) {
-				videoRoom.sendDataObject({"cmd": 30001, "type": 9, "recUid": 0, "content": _str});//发送飞屏a
+				NetManager.sendDataObject({"cmd": 30001, "type": 9, "recUid": 0, "content": _str});//发送飞屏a
 			}
 		}
 	}
@@ -273,6 +278,10 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 				return;
 			}
 		}
+		if(DataCenterManger.vipInfo.forbitChat){
+			Alert.Show("主播开启了禁止聊天,请等待主播恢复聊天功能！","友情提示");
+			return;
+		}
 		//过滤字检查
 		var mObject:Object = checkFilterWords(inputTextField.text);
 		var mString:String = mObject.data;
@@ -282,7 +291,7 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 		}
 		//满足条件开始运行冷确
 		if (videoRoom) {
-			videoRoom.sendDataObject({
+			NetManager.sendDataObject({
 				"cmd":     30001,
 				"type":    _input.getType(),
 				"recUid":  _input.getUID(),
@@ -398,6 +407,8 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 			publicOutput.addRichChild(pCustom);
 			return;
 		}
+
+
 		if (recObject.car > 0) {
 			giftS = makeSpan("欢迎『", vColor);
 			pCustom.addChild(giftS);
@@ -623,6 +634,9 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 				case CBModuleEvent.CHATLINK_GAMRE2:
 					ClientManger.getInstance().showFingerGame();
 					break;
+				case CBModuleEvent.CHATLINK_GAMRE3:
+					ModuleRSLManager.instance.showModule(ModuleNameType.GameTurnPlate);
+					break;
 			}
 		}
 	}
@@ -696,7 +710,6 @@ public class ChatRoomModule extends MovieClip implements IVideoModule,IChat {
 				break;
 		}
 	}
-
 	/**
 	 * 收到礼物连击效果
 	 * @param sObject

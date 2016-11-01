@@ -25,7 +25,7 @@ import com.rover022.vo.VideoConfig;
 
 import control.ControlsManger;
 
-import display.RslModuleManager;
+import display.ModuleRSLManager;
 import display.ui.Alert;
 import display.ui.SignActivityPanel;
 
@@ -293,7 +293,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
             rankWeek_Module.updateData(FormatDataTool.rankViewArray(obj as Array));
         }
 
-
         //28用户信息面板 弹出式
         this.personInfo_Module = VideoTool.getMCTaven("PersonInfoModule");
         this.personInfo_Module.visible = false;
@@ -306,7 +305,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     }
 
     private function initVideoUI():void {
-
         //12 中间视频设置
         sides_Module = VideoTool.getMCTaven("sidesGroup");
         videoUIView.addChild(sides_Module);
@@ -335,16 +333,20 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         this.gift_Module.addEventListener("sendGift", onGiftMouseEvent);
         videoUIView.addChild(this.gift_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.GIFT_MODULE, gift_Module);
-        //进入限制模块
-        enterLimit_Module = VideoTool.getMCTaven("LimitEnterModule");
-        enterLimit_Module.hide();
-        videoUIView.addChild(enterLimit_Module);
-        ModuleLoaderManger.getInstance().register(ModuleNameType.LIMIT_EnterModule, enterLimit_Module);
+
+
         //10********视频
         this.video_Module = VideoTool.getClassByModule("video.VideoPlayerView", "videoModule") as IPlayer;
         ModuleLoaderManger.getInstance().register(ModuleNameType.VIDEOPLAYER, video_Module as DisplayObject);
         this.video_Module.addEventListener("reGOHallEvent", onBackHallEvent);//回到大厅
         videoUIView.addChild(video_Module as DisplayObject);
+        //进入限制模块
+        enterLimit_Module = VideoTool.getMCTaven("LimitEnterModule");
+        enterLimit_Module.hide();
+        enterLimit_Module.y=30;
+        enterLimit_Module.x=20;
+        videoUIView.addChild(enterLimit_Module);
+        ModuleLoaderManger.getInstance().register(ModuleNameType.LIMIT_EnterModule, enterLimit_Module);
 
     }
 
@@ -430,9 +432,9 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         //showCarGame();
         //showFingerGame();
 
-        this.rslModuleContainer = RslModuleManager.instance.rslContainer;
+        this.rslModuleContainer = ModuleRSLManager.instance.rslContainer;
         this.rslModuleContainer.mouseEnabled = false;
-        RslModuleManager.instance.$videoroom = this;
+        ModuleRSLManager.instance.$videoroom = this;
         this.stageSpr.addChild(this.rslModuleContainer);
     }
 
@@ -706,19 +708,19 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
      * @param sObject
      */
     public function showetSignActivity(sObject:Object):void {
-        var module:MovieClip = ModuleLoaderManger.getInstance().getModule(ModuleNameType.PLAYINFOMODULE) as MovieClip;
-        module.view.btnGet.visible = sObject.sign == 1 ? true : false;
-        if (module.view.btnGet.visible == false) {
-            return;
-        }
-        //否则显示签到面板
-        var panel:SignActivityPanel = stage.getChildByName("SignActivityPanel") as SignActivityPanel;
-        if (panel == null) {
-            panel = new SignActivityPanel();
-            panel.name = "SignActivityPanel";
-            ModuleLoaderManger.getInstance().register("SignActivityPanel", panel);
-        }
-        panel.init(sObject, module.view.btnGet);
+//        var module:MovieClip = ModuleLoaderManger.getInstance().getModule(ModuleNameType.PLAYINFOMODULE) as MovieClip;
+//      //  module.view.btnGet.visible = sObject.sign == 1 ? true : false;
+//        if (module.view.btnGet.visible == false) {
+//            return;
+//        }
+//        //否则显示签到面板
+//        var panel:SignActivityPanel = stage.getChildByName("SignActivityPanel") as SignActivityPanel;
+//        if (panel == null) {
+//            panel = new SignActivityPanel();
+//            panel.name = "SignActivityPanel";
+//            ModuleLoaderManger.getInstance().register("SignActivityPanel", panel);
+//        }
+//        panel.init(sObject, module.view.btnGet);
     }
 
     /**
@@ -753,13 +755,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     /**
      * 给每个模块用的
      * 显示弹出窗口函数
-     * @param a
-     * @param a2
-     * @param a3
-     * @param a4
-     * @param a5
-     * @param a6
-     * @param a7
      */
     public function showAlert(a:String = "", a2:String = "消息", a3:Boolean = true, a4:int = 3, a5:Boolean = false, a6:Function = null, a7:Object = null):void {
         Alert.Show.call(null, a, a2, a3, a4, a5, a6, a7);

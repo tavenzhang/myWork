@@ -8,7 +8,7 @@ import com.rover022.event.CBModuleEvent;
 import com.rover022.vo.VideoConfig;
 
 import display.BaseModule;
-import display.RslModuleManager;
+import display.ModuleRSLManager;
 
 import flash.display.DisplayObject;
 import flash.display.MovieClip;
@@ -65,7 +65,7 @@ public class PlayInfoModule extends BaseModule {
 		_view.mcSelectBg.visible = false;
 		initListeners();
 		_view.btnSound.visible = false; //点击声音广播
-		_view.btnGet.visible   = false;//点击领取
+		//_view.btnGet.visible   = false;//点击领取
 		_view.mcFace.visible   = false;
 		_view.mcMail.gotoAndStop(2);
 		_view.mcActive.visible = _view.mcAcviteHouse.visible = false;
@@ -75,14 +75,16 @@ public class PlayInfoModule extends BaseModule {
 		headMc.addEventListener(MouseEvent.CLICK, headMcClick);
 		_view.mcMail.txtPrivate.text = "";
 		_view.mcMail.txtSystem.text  = "";
-		_view.btnGet.addEventListener(MouseEvent.CLICK, onButtonClickHandle);
+	//	_view.btnGet.addEventListener(MouseEvent.CLICK, onButtonClickHandle);
+		_view.btnTurnGanme.addEventListener(MouseEvent.CLICK, onButtonClickHandle);
 		_view.btnDown.addEventListener(MouseEvent.CLICK, onButtonClickHandle);
 		_view.mcJuBao.addEventListener(MouseEvent.CLICK, onButtonClickHandle);
 		_view.mcCaiQuan.addEventListener(MouseEvent.CLICK, onButtonClickHandle);
 		_view.mcCaiQuan.visible = false;
 		_view.btnDown.visible = false;
 		VideoTool.buildButtonEff(_view.btnDown);
-		VideoTool.buildButtonEff(_view.btnGet);
+		//VideoTool.buildButtonEff(_view.btnGet);
+		VideoTool.buildButtonEff(_view.btnTurnGanme);
 		VideoTool.buildButtonEff(_view.mcJuBao);
 		VideoTool.buildButtonEff(_view.mcCaiQuan);
 		gameBox = new VBox(_view, 0, 0);
@@ -118,14 +120,15 @@ public class PlayInfoModule extends BaseModule {
 		_view.mcBtnMsg.btnView.gotoAndStop(7);
 	}
 
+
 	private  function initListnerBtn(mc:MovieClip):void{
 		mc.buttonMode = true;
 		mc.mouseChildren=false;
-		mc.addEventListener(MouseEvent.ROLL_OVER, function (evt:Event) {
+		mc.addEventListener(MouseEvent.ROLL_OVER, function (evt:Event):void {
 			var target:MovieClip = evt.currentTarget as MovieClip;
 			target.gotoAndStop(2);
 		});
-		mc.addEventListener(MouseEvent.ROLL_OUT, function (evt:Event) {
+		mc.addEventListener(MouseEvent.ROLL_OUT, function (evt:Event):void {
 			var target:MovieClip = evt.currentTarget as MovieClip;
 			target.gotoAndStop(1);
 		});
@@ -182,9 +185,9 @@ public class PlayInfoModule extends BaseModule {
 						view_cj.txtNum.maxChars=2;
 						view_cj.txtNum.restrict="0-9";
 						view_cj.txtDesc.text="";
-
+						view_cj.txtTitle.text="";
 						_view.addChild(view_cj);
-						view_cj.btnClose.addEventListener(MouseEvent.CLICK, function (e:*) {
+						view_cj.btnClose.addEventListener(MouseEvent.CLICK, function (e:*):void {
 							view_cj.visible=false;
 						});
 						view_cj.btnCj.addEventListener(MouseEvent.CLICK,onStarCJClick);
@@ -195,7 +198,6 @@ public class PlayInfoModule extends BaseModule {
 					{
 						TweenHelp.fade(_view.mcMail, 0.3, 0.2, 1);
 					}
-
 				break;
             case _view.mcBtnMsg://消息
 				//ClientManger.getInstance().getMsgKeyFromWeb(VideoConfig.testUID, VideoConfig.testPASS, ClientManger.getInstance().view["AirConnectService"]);
@@ -205,7 +207,6 @@ public class PlayInfoModule extends BaseModule {
 					TweenHelp.fade(_view.mcMail, 0.3, 0.2, 1);
 					_view.mcMail.txtPrivate.text = "";
 					_view.mcMail.txtSystem.text  = "";
-					view_cj.txtTitle.text="";
 					if (_view.mcMail.btnPrivate)
 						_view.mcMail.btnPrivate.mouseEnabled = false;
 					EventUtils.secndNetData(this.videoRoom, CBProtocol.msg_notice_50006, {}, s2cNoticeData);
@@ -216,7 +217,8 @@ public class PlayInfoModule extends BaseModule {
 				break;
 		}
 	}
-	private function onStarCJClick(evt:Event){
+
+	private function onStarCJClick(evt:Event):void{
 		EventUtils.secndNetDataNew(CBProtocol.activeCj_62001,{"title":view_cj.txtTitle.text,"num":view_cj.txtNum.text,"detail":view_cj.txtDesc.text,"cmd":CBProtocol.activeCj_62001});
 		view_cj.visible=false;
 	}
@@ -229,34 +231,35 @@ public class PlayInfoModule extends BaseModule {
 		});
 		stage.addEventListener(CBModuleEvent.SHOW_FINGER_GAME, function (e:Event):void {
 			trace(stage);
-			_view.mcCaiQuan.dispatchEvent(new MouseEvent(MouseEvent.CLICK))
-
+			_view.mcCaiQuan.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
 		});
 	}
 
 
-
 	public function onButtonClickHandle(e:MouseEvent):void {
 		switch (e.currentTarget.name) {
-			case "btnDown":
-				navigateToURL(new URLRequest(VideoConfig.httpFunction + DataCenterManger.userData.downloadUrl));
-				break;
-			case "btnGet":
-				var panel:Sprite = videoRoom.getModule("SignActivityPanel") as Sprite;
-				if (panel) {
-					if (panel.parent == null) {
-						stage.addChild(panel);
-					} else {
-						panel.parent.removeChild(panel)
-					}
-				}
-				break;
-			case "mcJuBao":
-				ClientManger.getInstance().showCarGame();
-				//EventUtils.secndStatusEvent(this, EventConst.PLAYER_JU_BIAO);
-				break;
-			case "mcCaiQuan":
-				ClientManger.getInstance().showFingerGame();
+//			case "btnDown":
+//				navigateToURL(new URLRequest(VideoConfig.httpFunction + DataCenterManger.userData.downloadUrl));
+//				break;
+//			case "btnGet":
+//				var panel:Sprite = videoRoom.getModule("SignActivityPanel") as Sprite;
+//				if (panel) {
+//					if (panel.parent == null) {
+//						stage.addChild(panel);
+//					} else {
+//						panel.parent.removeChild(panel)
+//					}
+//				}
+//				break;
+//			case "mcJuBao":
+//				ClientManger.getInstance().showCarGame();
+//				//EventUtils.secndStatusEvent(this, EventConst.PLAYER_JU_BIAO);
+//				break;
+//			case "mcCaiQuan":
+//				ClientManger.getInstance().showFingerGame();
+//				break;
+			case "btnTurnGanme":
+				ModuleRSLManager.instance.toggleModule(ModuleNameType.GameTurnPlate);
 				break;
 			default :
 		}
@@ -528,6 +531,9 @@ public class PlayInfoModule extends BaseModule {
 		}
 	}
 
+	public function  monyChange(){
+		_view.mcInfo.txtDetail.text=StringUtils.strStitute("等级: {0}级 \n钻石: {1}个",DataCenterManger.userData.richLv,DataCenterManger.userData.points);
+	}
 	public function showActiveBtns(activeList:Array):void {
 		//每次进入获取一下消息数
 
@@ -552,7 +558,7 @@ public class PlayInfoModule extends BaseModule {
 						view.mcAcviteHouse.txtActicve.text         = item.activityName;
 						view.mcAcviteHouse.txtActicve.mouseEnabled = false;
 						view.mcAcviteHouse.addEventListener(MouseEvent.CLICK, function (evt:Event):void {
-							RslModuleManager.instance.toggleModule(ModuleNameType.ActiveMsFight);
+							ModuleRSLManager.instance.toggleModule(ModuleNameType.ActiveMsFight);
 						});
 						view.mcAcviteHouse.btnStar.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
 						break;
@@ -561,7 +567,7 @@ public class PlayInfoModule extends BaseModule {
 		}
 	}
 
-	public function checkChoujiang(isOpen:Boolean){
+	public function checkChoujiang(isOpen:Boolean):void{
 		_view.mcBtnCJ.visible=isOpen;
 	}
 

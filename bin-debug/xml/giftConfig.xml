@@ -5,7 +5,7 @@
   <item id="120004" url="image/gift_material/120004.swf" time="6" x="0" y="0" type="swf" xScale="1" yScale="1" isFull="0" name="120004.swf" playType=""/>
   <item id="120006" url="image/gift_material/120006.swf" time="6" x="-183" y="-145" type="swf" xScale="1" yScale="1" isFull="0" name="120006.swf"/>
   <item id="120007" url="image/gift_material/120007.swf" time="6" x="222" y="124" type="swf" xScale="1" yScale="1" isFull="0" name="120007.swf"/>
-  <item id="120008" url="image/gift_material/120008.swf" time="4" x="0" y="0" type="swf" xScale="1" yScale="1" isFull="0" name="120008.swf" playType=""/>
+  <item id="120008" url="image/gift_material/120008.swf" time="6" x="110" y="0" type="swf" xScale="1" yScale="1" isFull="0" name="飞机" playType=""/>
   <item id="120009" url="image/gift_material/120009.swf" time="6" x="0" y="0" type="swf" xScale="1" yScale="1" isFull="0" name="120009.swf" playType=""/>
   <item id="120010" url="image/gift_material/120010.swf" time="6" x="-128" y="-46" type="swf" xScale="1" yScale="1" isFull="0" name="120010.swf" playType="inline"/>
   <item id="120011" url="image/gift_material/120011.swf" time="4" x="0" y="0" type="swf" xScale="1" yScale="1" isFull="0" name="布加迪威龙.swf" playType=""/>
@@ -24,6 +24,11 @@
   <item id="120102" url="image/gift_material/120102.swf" time="6" x="1" y="1" xScale="1" yScale="1" type="swf" playType="inline" name="鸾鸟"/>
   <item id="120108" url="image/gift_material/120108.swf" time="6" x="1" y="1" xScale="1" yScale="1" type="swf" playType="inline" name="菲华国际"/>
   <item id="120109" url="image/gift_material/120109.swf" time="6" x="1" y="1" xScale="1" yScale="1" type="swf" playType="inline" name="菲华国际2"/>
+  <item id="120110" url="image/gift_material/120110.swf" time="6" x="110" y="0" type="swf" xScale="1" yScale="1" isFull="0" name="紫蝴蝶" playType="" />
+  <item id="120111" url="image/gift_material/120111.swf" time="4" x="520" y="300" type="swf" xScale="1" yScale="1" isFull="0" name="乐队" playType="" />
+  <item id="120112" url="image/gift_material/120112.swf"  time="9" x="500" y="300" type="swf"  xScale="1" yScale="1" isFull="0" name="龙" playType="" />
+  <item id="120113" url="image/gift_material/120113.swf"  time="5" x="520" y="300" type="swf" xScale="1" yScale="1" isFull="0" name="雅典啦" playType="" />
+  <item id="120114" url="image/gift_material/120114.swf"  time="5" x="520" y="300" type="swf" xScale="1" yScale="1" isFull="0" name="自行车" playType="" />
  <!--礼物-->
 
   <item id="210010" url="image/gift_material/210010.swf" time="2" x="-201" y="-197" type="swf" xScale="1" yScale="1" isFull="0" name="气球.swf"/>

@@ -24,19 +24,6 @@
         <packaging-android />
         <packaging-ios />
       </configuration>
-      <configuration name="videoRoomAes" pure-as="true" main-class="videoRoomAes" output-file="videoRoomAes.swf" output-folder="$MODULE_DIR$/bin-debug">
-        <dependencies target-player="23.0">
-          <sdk name="AIRSDK_Compiler23" />
-        </dependencies>
-        <compiler-options>
-          <map>
-            <entry key="compiler.debug.swf" value="false" />
-          </map>
-        </compiler-options>
-        <packaging-air-desktop />
-        <packaging-android />
-        <packaging-ios />
-      </configuration>
     </configurations>
     <compiler-options />
   </component>

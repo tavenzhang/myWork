@@ -164,6 +164,30 @@
         <packaging-android />
         <packaging-ios />
       </configuration>
+      <configuration name="gameTurnPlate" pure-as="true" main-class="rslmodule.GameTurnPlate" output-file="GameTurnPlate.swf" output-folder="$MODULE_DIR$/../bin-debug/Modules/rslModules">
+        <dependencies target-player="23.0">
+          <entries>
+            <entry module-name="appShare" build-configuration-name="appShare">
+              <dependency linkage="External" />
+            </entry>
+            <entry library-id="3a53ee84-71c7-4a44-a2c2-7e1c31e5fa6f">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="5a79fb88-bb38-4cfe-9645-c6a5f303aeb8">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler23" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
     </configurations>
     <compiler-options />
   </component>
@@ -299,6 +323,28 @@
     <orderEntry type="module-library" exported="">
       <library type="flex">
         <properties id="21e49cca-16ff-47fc-9607-dee587ef50c8" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="3a53ee84-71c7-4a44-a2c2-7e1c31e5fa6f" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="5a79fb88-bb38-4cfe-9645-c6a5f303aeb8" />
         <CLASSES>
           <root url="file://$MODULE_DIR$/../libs" />
         </CLASSES>

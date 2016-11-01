@@ -141,7 +141,7 @@ public class RankVipModule extends BaseModule {
 
 
 
-    private function showLoading(visible:Boolean) {
+    private function showLoading(visible:Boolean):void {
         _loadIngMc.visible = visible;
         if (visible) {
             _loadIngMc.stop();

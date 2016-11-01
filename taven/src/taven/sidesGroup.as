@@ -18,12 +18,15 @@ import flash.external.ExternalInterface;
 import flash.geom.PerspectiveProjection;
 import flash.ui.Keyboard;
 import flash.utils.Dictionary;
+import flash.utils.setTimeout;
 
 import ghostcat.util.display.DisplayUtil;
 
 import manger.ClientManger;
 
 import manger.DataCenterManger;
+
+import net.NetManager;
 
 import taven.enum.EventConst;
 import taven.enum.EventUtils;
@@ -96,6 +99,12 @@ public class sidesGroup extends BaseModule {
         _view.btnClearGit.mouseChildren=false;
         _view.btnClearGit.y-=5;
         _view.btnClearGit.stop();
+        _view.btnForbidChat.stop();
+        VideoTool.buildButtonEff(_view.btnForbidChat);
+        _view.btnForbidChat.buttonMode=true;
+        _view.btnForbidChat.mouseChildren=false;
+        _view.btnForbidChat.visible =false;
+
         //_view.visible=false;
     }
 
@@ -132,7 +141,7 @@ public class sidesGroup extends BaseModule {
             _headFace.x = _headFace.width / 2;
             _headFace.y = int(_headFace.height / 2);
         }
-        showHotVideo(false)
+        showHotVideo(false);
     }
 
     private function showTranUser(visible:Boolean):void {
@@ -231,6 +240,20 @@ public class sidesGroup extends BaseModule {
                 case _view.btnVip://办理vip
                     VideoTool.jumpToGuiZhuURL();
                     break;
+                case _view.btnForbidChat://控制聊天
+                        if(_view.btnForbidChat.currentFrame==1)//开启禁止聊天
+                        {
+                            NetManager.sendDataObject({"cmd":CBProtocol.chat_formib_24003,"forbidChat":1});
+                        }
+                        else{
+                            NetManager.sendDataObject({"cmd":CBProtocol.chat_formib_24003,"forbidChat":0});
+                        }
+                        //避免点击过快
+                        _view.btnForbidChat.mouseEnabled=false;
+                        setTimeout(function () {
+                            _view.btnForbidChat.mouseEnabled=true;
+                        },1000)
+                    break;
                 default:
             }
         }
@@ -288,6 +311,13 @@ public class sidesGroup extends BaseModule {
     }
 
     /**---------------------------------------------------------------外部接口------------------------------------------------------------*/
+    public function updateViewCheck(){
+        _view.btnForbidChat.visible = DataCenterManger.getInstance().isRoomAdmin;
+        _view.btnForbidChat.gotoAndStop(DataCenterManger.vipInfo.forbitChat ? 2:1);
+    }
+
+
+
     private function s2cRoomLimita(data:*):void {
         if (data.open == 1) {
             videoRoom.showAlert("开启限制成功!");
