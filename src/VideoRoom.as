@@ -333,16 +333,20 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         this.gift_Module.addEventListener("sendGift", onGiftMouseEvent);
         videoUIView.addChild(this.gift_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.GIFT_MODULE, gift_Module);
-        //进入限制模块
-        enterLimit_Module = VideoTool.getMCTaven("LimitEnterModule");
-        enterLimit_Module.hide();
-        videoUIView.addChild(enterLimit_Module);
-        ModuleLoaderManger.getInstance().register(ModuleNameType.LIMIT_EnterModule, enterLimit_Module);
+
+
         //10********视频
         this.video_Module = VideoTool.getClassByModule("video.VideoPlayerView", "videoModule") as IPlayer;
         ModuleLoaderManger.getInstance().register(ModuleNameType.VIDEOPLAYER, video_Module as DisplayObject);
         this.video_Module.addEventListener("reGOHallEvent", onBackHallEvent);//回到大厅
         videoUIView.addChild(video_Module as DisplayObject);
+        //进入限制模块
+        enterLimit_Module = VideoTool.getMCTaven("LimitEnterModule");
+        enterLimit_Module.hide();
+        enterLimit_Module.y=30;
+        enterLimit_Module.x=20;
+        videoUIView.addChild(enterLimit_Module);
+        ModuleLoaderManger.getInstance().register(ModuleNameType.LIMIT_EnterModule, enterLimit_Module);
 
     }
 
