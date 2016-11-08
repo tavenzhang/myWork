@@ -16,7 +16,7 @@
         </dependencies>
         <compiler-options>
           <map>
-            <entry key="compiler.debug.swf" value="true" />
+            <entry key="compiler.debug.swf" value="false" />
           </map>
           <option name="resourceFilesMode" value="None" />
         </compiler-options>
@@ -33,7 +33,11 @@
           </entries>
           <sdk name="AIRSDK_Compiler23" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+          </map>
+        </compiler-options>
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />
