@@ -53,12 +53,9 @@ import net.NetManager;
 
 import tool.FormatDataTool;
 import tool.VideoTool;
-
 import videoRoom.bulletin;
 
 [SWF(width=1500, height=700, backgroundColor="#00000")]
-//[Frame(factoryClass="Preloader")]
-//-frame VideoRoom VideoRoom -use-network=false
 public class VideoRoom extends BaseResRoom implements IVideoRoom {
     public var appLay:Sprite;
     public var backGround:Sprite;
@@ -348,9 +345,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         userInfo_Module.addEventListener(StatusEvent.STATUS, roomHandler.onUserInfo);
         roomEastUIView.addChild(this.userInfo_Module);
         ModuleLoaderManger.getInstance().register(ModuleNameType.USERINFOUI, userInfo_Module);
-
     }
-
     /**
      * 初始化模块
      */
@@ -406,6 +401,8 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         RslModuleManager.instance.$videoroom = this;
         this.stageSpr.addChild(this.rslModuleContainer);
     }
+
+
 
     /**
      * 重置模块

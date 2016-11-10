@@ -22,7 +22,6 @@ public class LoadUI extends Sprite {
         this.addEventListener(Event.REMOVED_FROM_STAGE, _removedFromStageEvent);
     }
 
-
     /**
      * 设置加载面板上面的信息
      * @param _str
@@ -44,7 +43,6 @@ public class LoadUI extends Sprite {
             loadingUI.progressValue = _progress;
         }
         if (_progress >= 100) {
-
             loadingUI.parent.removeChild(loadingUI);
         }
         loadFlashComplete(_str, _progress);
@@ -88,7 +86,7 @@ public class LoadUI extends Sprite {
         matr.createGradientBox(this.stage.stageWidth, this.stage.stageHeight, 80, 0, 0);
 
         //this.graphics.beginGradientFill(GradientType.LINEAR, [0x421C4F,0xD84EBA], [1, 1], [0x00, 0xFF],matr);
-        this.graphics.beginFill(0xF6F1EB);
+        this.graphics.beginFill(0x000000);
         this.graphics.drawRect(0, 0, this.stage.stageWidth, this.stage.stageHeight);
         this.graphics.endFill();
     }
