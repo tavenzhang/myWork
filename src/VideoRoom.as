@@ -112,6 +112,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         }
     }
 
+
     /**
      * 初始化UI界面
      * 获取页面参数

@@ -6,6 +6,7 @@ import flash.display.Loader;
 import flash.display.Sprite;
 import flash.system.ApplicationDomain;
 import flash.system.LoaderContext;
+
 [SWF(width=1500, height=900, backgroundColor="#00000")]
 public class videoRoomCryp extends Sprite {
 
