@@ -194,7 +194,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         NetManager.getInstance().connectRoom();
         setTimeout(checkIsLoginAndPopPane, 1000 * 60 * 10);
     }
-
     /**
      * 尺寸变化
      * @param e
@@ -202,8 +201,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     private function onViewLayoutStageHandle(e:ktvStageEvent):void {
         var _layout:Object = e.data;
         if (this.rightMenu_Module) {
-
-
             vipModule.x =this.rankMenu_Moudle.x = _layout.leftBase.x -20;
             this.rankMenu_Moudle.y = _layout.leftBase.y ;
             rankMenu_Moudle.adjustHeiht(200);

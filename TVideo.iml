@@ -26,6 +26,11 @@
       </configuration>
       <configuration name="videoRoomCryp" pure-as="true" main-class="videoRoomCryp" output-file="videoRoomCryp.swf" output-folder="$MODULE_DIR$/bin-debug">
         <dependencies target-player="23.0">
+          <entries>
+            <entry library-id="e3d437d8-74d7-4251-a023-73ae1b7e0e01">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
           <sdk name="AIRSDK_Compiler23" />
         </dependencies>
         <compiler-options>
@@ -66,6 +71,17 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="e3d437d8-74d7-4251-a023-73ae1b7e0e01" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
       </library>
     </orderEntry>
   </component>
