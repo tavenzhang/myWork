@@ -1,0 +1,80 @@
+
+.seek-item-img {
+    width: 90%;
+}
+
+
+///活动
+.activity {
+
+    a {
+        text-decoration: none;
+    }
+
+    .activity-item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: @paddingSmall @paddingNormal;
+        background: @white;
+        margin-bottom: @marginSmall;
+        position: relative;
+
+        .title {
+            font-size: 1.8rem;
+            color: @black;
+        }
+
+        .activityPic {
+            width: 100%;
+            margin: 8px 0;
+        }
+
+        .status {
+            width: 0;
+            height: 0;
+            border: 6rem solid transparent;
+            border-bottom-color: lighten(@prmary,10%);
+            color: @white;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 0;
+            margin-right: -4.8rem;
+            margin-top: -6rem;
+
+            &:after {
+                font-size: 1.5rem;
+                content: "即将开始";
+                display: block;
+                width: 60px;
+                margin-top: 35px;
+                margin-left: -30px;
+            }
+
+            &.start{
+                border-bottom-color: @green;
+                &:after {
+                    content: "进行中";
+                    margin-left: -24px;
+                    font-size: 1.7rem;
+                }
+            }
+
+            &.end{
+                border-bottom-color: lighten(@gray,10%);;
+                &:after {
+                    content: "已结束";
+                    margin-left: -24px;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        .activityDetailBtn {
+            font-size: 1.6rem;
+            color: @notice;
+            text-align: right;
+            line-height: 1.5;
+        }
+    }
+
+}

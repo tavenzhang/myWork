@@ -1,0 +1,581 @@
+
+.video-chatPanel {
+    width: 100%;
+    //position: fixed;
+    //bottom: 0;
+    padding: 0 1rem !important;
+    z-index: @zIndexHead;
+    .send-box {
+        width: 100%;
+    }
+    .send-btn {
+        margin-right: 0 !important;
+    }
+
+    .btnGift {
+        font-size: 3rem;
+        padding: .8rem 1.2rem 0 0;
+        color: @prmary;
+        margin-top: .5rem;
+    }
+}
+
+.video-box {
+    width: 100%;
+    background: @black;
+    position: fixed;
+    //top: 0;
+    bottom:0;
+    left: 0;
+
+    .giftNums {
+        z-index: 10000;
+        background: rgba(0,0,0,.5);
+        position: absolute;
+        font-size: 1.4rem;
+        padding: .5rem .5rem;
+        color: @white;
+        border-bottom-right-radius: 8px;
+    }
+
+    #live,.liveBg {
+        //height: 24rem;
+        //width: 100%;
+        margin: auto;
+        width: 100vw;
+        height: 75vw;
+    }
+
+    #live {
+        z-index: 100;
+    }
+
+    .liveBg {
+        background: url("../../images/videoBg_default.jpg") 100% 100% ;
+        background-size: cover;
+    }
+
+    .video-banner {
+        width: 100%;
+        font-size: 1.4rem;
+        background: @white;
+        line-height: 3rem;
+        padding: 0 .5rem;
+        box-sizing: border-box;
+        //color: ;
+
+        .hosterName {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.video-main {
+    position: absolute;
+    top: 30rem;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.video-backIcon {
+    position: fixed;
+    top: .5rem;
+    left: .1rem;
+    font-size: 3rem;
+    z-index: @zIndexHead;
+}
+
+//.video-audience {
+//    .video-audience-item {
+//
+//    }
+//}
+
+.room-rankList-diamond {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    font-size: 1.4rem;
+    color: @second;
+
+    .diamond {
+        vertical-align: text-top;
+        margin-left: .2rem;
+    }
+}
+
+.video-chat {
+    width: 100%;
+
+    .chat-list-icon {
+        height: 2rem;
+        margin: 0 .2rem;
+    }
+
+    .chat-userEnter {
+        background: lighten(@prmary,10%);
+        color: @white;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: center;
+        width: 98%;
+        margin: .2rem auto;
+        padding: 0.2rem;
+        box-sizing: border-box;
+    }
+
+    .chat-chat {
+        background: @white;
+        color: darken(@gray,10%);
+        font-size: 1.2rem;
+        line-height: 1.5;
+        //border-bottom: 0.1rem solid lighten(@gray,40%);
+        width: 100%;
+        padding: 0.2rem .5rem;
+        box-sizing: border-box;
+
+        .mark {
+            color: @second;
+
+            &.gift {
+                color: @prmary;
+            }
+
+            &.giftNum {
+                color: @prmary;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+
+        .sendName {
+            color: @prmary;
+        }
+
+        .date {
+            color: @second;
+        }
+    }
+
+    .roomMsg {
+        background: @white;
+        color: @black;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        width: 100%;
+        padding: 0.2rem;
+        box-sizing: border-box;
+
+        .mark {
+            color: @second;
+        }
+    }
+}
+
+.room-item {
+    .rankDetail {
+        margin-top: 0;
+
+        .moneyIcon {
+            vertical-align: baseline;
+            margin-left: .2rem;
+            color: @second;
+        }
+    }
+
+    .chat-zhubo {
+        background: @white;
+        font-size: 2rem;
+        .avatar {
+            width: 5rem;
+            border-radius: 50%;
+            box-shadow: 0 0 .4rem rgba(0,0,0,.3);
+            margin: .5rem 1rem;
+        }
+    }
+}
+
+//礼物盒子
+.giftBox {
+    width: 90% !important;
+
+    .giftBoxBody {
+        padding: 0 !important;
+        //padding-top: .8rem !important;
+    }
+
+    .giftBoxTitle {
+        padding: 0 !important;
+    }
+
+    .giftBoxContent {
+        height: 35rem;
+        >div {
+            height: 100%;
+        }
+    }
+
+    .gift-actions-desc {
+        display: inline-block;
+        float: left;
+        margin-top: .5rem;
+        line-height: 2;
+        font-size: 1.4rem;
+    }
+
+    .send-gift-num {
+        border: .1rem solid lighten(@gray,30%);
+        width: 4rem;
+        line-height: 1.6;
+        font-size: 1.4rem;
+        text-align: center;
+        border-radius: @borderRadiusNormal;
+        margin:0 .5rem;
+    }
+
+    .btn-recharge {
+        color: @prmary;
+    }
+}
+
+.room-gift-panel {
+    text-align: center;
+    padding-bottom: 3rem;
+    .room-gift-item {
+        width: 10rem;
+        height: 11rem;
+        border: .1rem solid lighten(@gray,30%);
+        border-radius: @borderRadiusNormal;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0.4rem;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: @black;
+        //background: rgba(0,0,0,.05);
+
+        &.selected {
+            border-color: lighten(@prmary,0%);
+            //background: lighten(@prmary,35%);
+            //color: @white;
+            //text-shadow:0 0 2px rgba(0,0,0,.7);
+            box-shadow: 0 0 6px @prmary;
+
+            .price {
+                font-size: 1.2rem;
+                color: @second;
+                text-shadow : none;
+            }
+        }
+
+        .giftIcon {
+            height: 4.5rem;
+            margin: .8rem auto;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            color: @gray;
+
+            //.priceIcon {
+            //    margin: .2rem;
+            //    vertical-align: sub !important;
+            //    color: darken(@second , 10%);
+            //}
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #btnGiftBoxCancel {
+        display: none !important;
+    }
+}
+
+.Idiamond {
+    vertical-align: sub !important;
+    margin: .2rem;
+    color: darken(@second , 10%);
+}
+
+.str-link {
+    text-decoration: underline;
+    margin: 0 .1rem;
+}
+
+
+////动画效果
+
+.user-entered {
+    position: fixed;
+    top: 40%;
+    margin-top: 2rem;
+    //border: .2rem solid lighten(@prmary,10%);
+    background: rgba(0,0,0,.3);
+    z-index: @zIndexHead;
+    right: -15rem;
+    opacity: 0;
+    font-size: 1.6rem;
+    color: @white;
+    //background: -webkit-linear-gradient(left,rgba(0,0,0,1),rgba(0,0,0,.1));
+    background: -webkit-linear-gradient(left,lighten(@prmary,0%),transparent);
+    line-height: 2.5rem;
+    height: 2.8rem;
+    width: 20rem;
+    padding: 0 4rem 0 1rem;
+    border-right: 0;
+    animation: uenter 3s ease-in;
+
+    .user-entered-lv {
+        display: inline-block;
+        width: 3.8rem;
+        height: 2.8rem;
+        background: lighten(@prmary,0%);
+        position: relative;
+        vertical-align: middle;
+        margin-left: -2rem;
+        border-radius: 5.6rem;
+        
+        .userMount {
+            position: absolute;
+            top: .2rem;
+            height: 2.2rem;
+            left: .8rem;
+            z-index: @zIndex100;
+        }
+
+        //&:before, &:after {
+        //    content: "";
+        //    display: block;
+        //    width: 2.8rem;
+        //    height: 2.8rem;
+        //    border-radius: 50%;
+        //    background: lighten(@prmary,0%);
+        //    position: absolute;
+        //}
+        //
+        //&:before {
+        //    left: -1.4rem;
+        //}
+        //
+        //&:after {
+        //    right: -1.4rem;
+        //}
+    }
+
+    .text {
+        margin-left: 1rem;
+        //border-top: .2rem solid lighten(@prmary,10%);
+        //border-bottom: .2rem solid lighten(@prmary,10%);
+        display: inline-block;
+        text-shadow: 0 0 2px rgba(0,0,0,.5);
+        //height: 2.4rem;
+    }
+}
+
+@keyframes uenter {
+    0% {
+        right: -15rem;
+        opacity: 0;
+    }
+    //20% {
+    //    opacity: 1;
+    //}
+    30% {
+        right: 8%;
+        opacity: 1;
+    }
+    90% {
+        right: 8%;
+        opacity: 1;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+//.user-enter-block, .user-sendGift-block {
+//    position: fixed;
+//    width: 100%;
+//    height: 50%;
+//    background: #f00;
+//}
+//
+//.user-enter-block {
+//    top: 10%;
+//    z-index: @zIndexHead;
+//}
+//
+//.user-sendGift-block {
+//    top: 25%;
+//    z-index: @zIndex100;
+//    background: transparent;
+//}
+
+
+//送礼效果
+////动画效果
+@keyframes sendGift {
+    0% {
+        left: -10rem;
+        opacity: 0;
+    }
+    //20% {
+    //    opacity: 1;
+    //}
+    20% {
+        left: 2%;
+        opacity: 1;
+    }
+    85% {
+        left: 2%;
+        opacity: 1;
+    }
+    100% {
+        left: -100%;
+        opacity: 0;
+    }
+}
+
+
+@keyframes giftNumBone {
+    0% {
+        opacity:1;
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.user-sendGift {
+    position: fixed;
+    top: 20%;
+    margin-top: 2rem;
+    z-index: @zIndexHead;
+    left: -100%;
+    //left: 0;
+    opacity: 0;
+    //width: 16rem;
+
+    &.amin32s {
+        animation: sendGift 3.2s ease-in;
+    }
+
+    .contentBox {
+        font-size: 1.6rem;
+        color: @white;
+        background: rgba(0,0,0,.5);
+        height: 5rem;
+        width: 14rem;
+        border-radius:10rem;
+        padding-right: 3rem;
+        display: inline-block;
+    }
+
+    .avatar {
+        width: 4.6rem;
+        border: .2rem solid @prmary;
+        box-shadow: 0 0 .5rem rgba(255,255,255,.5);
+        border-radius: 50%;
+        vertical-align: top;
+        margin-right: .8rem;
+    }
+
+    .gift {
+        height: 6rem;
+        margin-left: -5rem;
+    }
+
+    .senderBox {
+        display: inline-block;
+        position: relative;
+        //width: 9rem;
+        .sender {
+            color: @white;
+            font-size: 1.6rem;
+            line-height: 4.5rem;
+        }
+
+        //.giftName {
+        //    float: left;
+        //    margin-right: -5rem;
+        //}
+    }
+
+    .giftNum {
+        font-size: 3rem;
+        color: darken(@prmary,10%);
+        //right: -13rem;
+        //top: 1rem;
+        text-shadow: 0 0 3rem @prmary;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 0 1rem;
+
+        .giftNumBlock {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            &.effect1, &.effect2, &.effect3 {
+                animation: giftNumBone 0.5s ease-in-out;
+            }
+
+            &.effect1 {
+                animation-delay: 1s;
+            }
+
+            &.effect2 {
+                animation-delay: 1.5s;
+            }
+
+            &.effect3 {
+                animation-delay: 2s;
+            }
+        }
+
+    }
+
+
+}
+
+//聊天输入框
+.chat-input div:last-child {
+    hr:first-child {
+        border-bottom-color: lighten(@prmary,15%) !important;
+    }
+}
+
+
+//大礼物效果
+.bigGift {
+    width: 10rem;
+    height: 10rem;
+    background: transparent;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -5rem;
+    z-index: 100;
+    opacity: 0;
+    text-align: right;
+
+    .giftNum {
+        color: @prmary;
+        font-weight: bold;
+        font-size: 3rem;
+        margin-right: -2rem;
+    }
+
+    .giftBig {
+        width: 100%;
+    }
+}

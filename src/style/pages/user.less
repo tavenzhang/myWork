@@ -1,0 +1,55 @@
+
+.user-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 14rem;
+    background: @second;
+    color: @white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,.3);
+    z-index: @zIndex100;
+
+    .user-header-main {
+        .avatar {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+        }
+
+        h4,h5 {
+            margin: 0;
+            color: @white;
+        }
+        h4 {
+            line-height: 2;
+        }
+        h5 {
+            line-height: 1.5;
+        }
+    }
+
+}
+
+.user-content {
+    padding-top: 15rem;
+}
+
+.btn-register, .btn-login {
+    color: @white !important;
+    margin: 1.2rem 1.5rem 0 !important;
+    border-radius: 0.4rem !important;
+    background: @prmary !important;
+    padding: .2rem 2rem !important;
+    height: auto !important;
+
+    span {
+        font-size: 1.8rem !important;
+    }
+}
+
+.btn-login {
+    background: #33bcb5 !important;
+}

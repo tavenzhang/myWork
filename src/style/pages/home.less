@@ -1,0 +1,144 @@
+////大厅页/////
+//.home {
+//
+//
+//}
+
+.home-item {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: center;
+    //flex-pack: justify;
+    justify-content: space-between;
+}
+
+.videoLists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-alertDialog {
+    .video-alertDialog-title {
+        color: @notice;
+        text-align: center;
+        line-height: 2;
+    }
+
+    .video-alertDialog-input {
+        border: .1rem solid @grayLight;
+        display: block;
+        margin: auto;
+        padding: .4rem .8rem;
+        line-height: 1.5;
+        text-align: center;
+        width: 10rem;
+        margin-top: 1rem;
+    }
+}
+
+
+.video-item {
+    width: 49vw;
+    height: 49/1.34vw;
+    background: rgba(0,0,0,.5);
+    margin: 0.5vw;
+    position: relative;
+
+    .lockBg {
+        position: absolute;
+        width: 49vw;
+        height: 49/1.34vw;
+        text-align: center;
+        line-height: 49/1.34vw;
+        .lockIcon {
+            font-size: 4rem;
+            color: @notice;
+        }
+    }
+
+    .live {
+        width: 4rem;
+        line-height: 1.8;
+        text-align: center;
+        display: block;
+        position: absolute;
+        right: .5rem;
+        top: .5rem;
+        background: rgba(255,255,255,.4);
+        color: @second;
+        border: .1rem solid @second;
+        border-radius: @borderRadiusSmall;
+        z-index: @zIndex10;
+
+        &:after {
+            content: "直播";
+            display: block;
+            font-size: 1.2rem;
+        }
+    }
+
+    .infoPanel {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: .4rem .5rem;
+        line-height: 1.5;
+        background: rgba(0,0,0,.4);
+        z-index: @zIndex10;
+        color: @white;
+        font-size: 1.4rem;
+    }
+
+    .desc {
+        position: absolute;
+        right: .4rem;
+        .vIcon {
+            vertical-align: baseline !important;
+            color: darken(@prmary,5%);
+        }
+    }
+}
+
+//搜索页面
+.search-list {
+    height: calc(~'100% - @{topBanner}');
+    overflow-y: auto;
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: center;
+}
+
+//iphone5
+@media screen and (max-width: 374px){
+    //.video-item {
+    //    width: 15.7rem;
+    //    height: 11.8rem;
+    //    margin: 0.1rem;
+    //}
+
+    .gift-actions-desc {
+        position: absolute;
+        left: 0;
+    }
+}
+
+////iphone6s
+//@media screen and (min-width: 414px) and (max-width: 767px){
+//    .video-item {
+//        width: 20rem;
+//        height: 15rem;
+//        margin: 0.2rem;
+//    }
+//}
+//
+////ipad
+//@media screen and (min-width: 768px){
+//    .video-item {
+//        width: 18.8rem;
+//        height: 14rem;
+//        margin: 0.2rem;
+//    }
+//}

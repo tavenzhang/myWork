@@ -1,0 +1,19 @@
+@import './../../../style/_variable';
+
+.panel-item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: @paddingNormal;
+    background: @white;
+    border-bottom: 1px solid lighten(@grayLight,15%);
+    position: relative;
+
+    .panel-item-rightIcon {
+        font-size: 4rem;
+        position: absolute;
+        right: 0;
+        color: lighten(@gray,25%);
+        top: 50%;
+        margin-top: -2rem;
+    }
+}

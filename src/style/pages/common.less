@@ -1,0 +1,309 @@
+
+
+#app, #appMain {
+    height: 100%;
+}
+
+//.appMain {
+//    height: 100%;
+//    display: flex;
+//    flex-direction: column;
+//    > div {
+//        height: 100%;
+//    }
+//    .appMain-item {
+//        width: 100%;
+//        height: 100%;
+//        box-sizing: border-box;
+//        padding-bottom: 72px;
+//        overflow-x: hidden;
+//    }
+//}
+.app-main {
+    height: 100%;
+
+    &.hasBottom {
+        height: calc(~'100% - @{bottomMenuHeight}');
+    }
+
+    .app-main-content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+//#appMainContent {
+//    overflow-x: hidden;
+//}
+
+
+
+
+
+
+//公共组件
+.tab {
+    > div:nth-child(2) {
+        div {
+            background: @prmary !important;
+        }
+    }
+}
+
+.appBar {
+    position: fixed !important;
+    text-align: center !important;
+    h1 {
+        font-size: 2rem !important;
+    }
+}
+
+.appContent {
+    padding-top: @topBanner;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.appContent-text {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+//.appSubPage {
+//    .appSubPage-content {
+//        padding-top: 60px;
+//        box-sizing: border-box;
+//        height: 100%;
+//        display: flex;
+//        flex-direction: column;
+//        overflow-x: hidden;
+//        overflow-y: auto;
+//
+//        &.appContent-text {
+//            margin: 0 auto;
+//            width: 80%;
+//        }
+//    }
+//}
+
+///侧边菜单
+//.drawer {
+//    background: @prmaryDark;
+//    a {
+//        text-decoration: none;
+//    }
+//
+//    .menu-item {
+//        color: @white !important;
+//    }
+//}
+
+//底部菜单
+.menuBottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: @zIndex100;
+    height: @bottomMenuHeight !important;
+    display: block !important;
+    border-top: 1px solid lighten(@grayLight,10%);
+
+    > div:nth-child(2) {
+        display: none;
+    }
+
+    .menuTab {
+        height: @bottomMenuHeight !important;
+        >div {
+            >div {
+                height: @bottomMenuHeight !important;
+                font-size: 1rem !important;
+                line-height: 0.8;
+            }
+        }
+    }
+}
+
+
+
+////切换动画
+@keyframes slideIn {
+    from {
+        transform: translate3d(100%, 0, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate3d(100%, 0, 0);
+        opacity: 0;
+    }
+}
+
+.page-enter, .page-leave {
+    position: absolute;
+    top: 0;
+    right: 0;
+    //height: calc(~'100% - @{bottomMenuHeight}');
+    height: calc(~'100% - @{bottomMenuHeight}');
+    overflow-y: auto;
+    left: 0;
+    z-index: 1;
+}
+
+.page-enter {
+    animation: slideIn .2s forwards;
+}
+
+.page-leave {
+    animation: slideOut .25s forwards;
+}
+
+.contentPanel {
+    box-sizing: border-box;
+    padding: @paddingNormal;
+    background: @white;
+    .contentPanel-main {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    .contentPanel-desc {
+        font-size: 1.4rem;
+        color: @gray;
+        line-height: 1.8;
+    }
+}
+
+.listPanel {
+    background: @white;
+    margin: 8px 0;
+    > div{
+        padding: 0 !important;
+    }
+}
+
+.btnArea {
+    box-sizing: border-box;
+    padding: @paddingNormal 10%;
+}
+
+
+.icon, .iconUP {
+    vertical-align: baseline !important;
+    margin: 0 0.2rem;
+    &.red {
+        color : #e84548 !important;
+    }
+
+    &.blue {
+        color : #1a80e8 !important;
+    }
+
+    &.green {
+        color : #39e85a !important;
+    }
+
+    &.orange {
+        color : #e88b47 !important;
+    }
+
+    &.pink {
+        color : #e86289 !important;
+    }
+
+    &.purple {
+        color : #e854ca !important;
+    }
+}
+
+.infoBox {
+    background: transparent;
+    //top : 0 !important;
+    //bottom: 7.2rem !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.scodeImg {
+    width: 35%;
+    height: 4rem;
+    float: right;
+    margin-top: 1.4rem;
+}
+
+.noContent {
+    font-size: 2rem;
+    color: @prmary;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.textLine {
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+}
+
+.mark {
+    color: @mark;
+    margin: 0 .4rem;
+}
+
+.banner-right-iconBtn {
+    color: @white;
+    font-size: 2rem;
+}
+
+.main-swipe {
+    //height: calc(~'100% - @{bottomMenuHeight}');;
+}
+
+
+//tab切换框
+.swipHome {
+    height: calc(~'100% - @{swipTabHeight}');
+    > div {
+        height: 100% !important;
+        box-sizing: border-box;
+    }
+}
+
+.swipSubPage {
+    height: calc(~'100% - @{swipTabHeight}');
+    > div {
+        height: 100% !important;
+        padding-top: .5rem;
+        box-sizing: border-box;
+    }
+}
+
+.swipRoom {
+    height: calc(~'100% - @{swipTabHeight} - 75vw - 6rem');
+    > div {
+        height: 100% !important;
+        box-sizing: border-box;
+    }
+}
+
+.winerTitle {
+    color: #ed200c;
+    text-shadow: 1px 2px 3px rgba(255,0,0,.5);
+}
+
+.dialogDesc {
+    color: @second;
+    margin-top: .5rem;
+    font-size: 1.4rem;
+}
