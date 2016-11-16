@@ -25,7 +25,7 @@ class VideoItem extends Component {
     };
 
     render() {
-        const {imgSrc,name,nums,isLive,enterRoomlimit,tid} = this.props;
+        const {imgSrc,name,nums,isLive,enterRoomlimit,tid,liveTime} = this.props;
 
         let [numsDom,liveIcon,lock] = [null,null,null];
 
@@ -43,15 +43,18 @@ class VideoItem extends Component {
         if(isLive) {
             liveIcon = <span className="live"></span>;
         }
+        else {
+            liveIcon = <span className="live reset"></span>;
+        }
 
         return (
             <div className="video-item" onTouchTap={()=>this.props.onClick()}>
                 {liveIcon}
-                {lock}
-                <img src={imgSrc} width="100%" height="100%" />
+                <img src={imgSrc} className="avatar" />
                 <div className="infoPanel">
-                    {name}
-                    {numsDom}
+                    <div className="rightTop">{liveIcon} {liveTime}</div>
+                    <div className="title">主播</div>
+                    <div className="name">{name}</div>
                 </div>
             </div>
         )

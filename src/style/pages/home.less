@@ -40,10 +40,10 @@
 
 
 .video-item {
-    width: 49vw;
-    height: 49/1.34vw;
-    background: rgba(0,0,0,.5);
-    margin: 0.5vw;
+    width: 98%;
+    //height: 98/1.34vw;
+    //background: rgba(0,0,0,.5);
+    margin: 1%;
     position: relative;
 
     .lockBg {
@@ -58,48 +58,62 @@
         }
     }
 
-    .live {
-        width: 4rem;
-        line-height: 1.8;
-        text-align: center;
-        display: block;
-        position: absolute;
-        right: .5rem;
-        top: .5rem;
-        background: rgba(255,255,255,.4);
-        color: @second;
-        border: .1rem solid @second;
-        border-radius: @borderRadiusSmall;
-        z-index: @zIndex10;
-
-        &:after {
-            content: "直播";
-            display: block;
-            font-size: 1.2rem;
-        }
+    .avatar {
+        width: 55%;
+        vertical-align: top;
     }
+
 
     .infoPanel {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+        display: inline-block;
+        width: 45%;
         box-sizing: border-box;
-        padding: .4rem .5rem;
-        line-height: 1.5;
-        background: rgba(0,0,0,.4);
-        z-index: @zIndex10;
+        padding: 0 .5rem;
         color: @white;
         font-size: 1.4rem;
-    }
 
-    .desc {
-        position: absolute;
-        right: .4rem;
-        .vIcon {
-            vertical-align: baseline !important;
-            color: darken(@prmary,5%);
+        .name {
+            font-size: 1.8rem;
+            text-align: center;
+            line-height: 2.5;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .rightTop {
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            .live {
+                width: 4rem;
+                height: 2rem;
+                //text-align: center;
+                padding-left: .5rem;
+                display: inline-block;
+                background: url("./../../images/LiveIcon.png");
+                background-size: 100% 100%;
+                color: @white;
+
+                &:after {
+                    content: "直播";
+                    display: block;
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                }
+
+                &.reset {
+                    background: url("./../../images/RestIcon.png");
+                    background-size: 100% 100%;
+
+                    &:after {
+                        content: "休息";
+                    }
+                }
+            }
         }
     }
+
 }
 
 //搜索页面

@@ -91,7 +91,6 @@ class Video extends Component {
 
     componentDidUpdate() {
         const {dispatch,videoUrls,seleVideoSrc,isLogin} = this.props;
-
         //设置聊天窗口最新消息一直在最下边
         this.refs.chatBox.parentNode.scrollTop = 99999999;
 

@@ -66,6 +66,7 @@ const filterUserData = data => {
             total : d.total,//房间在线人数
             enterRoomlimit : d.enterRoomlimit,//限制房间
             tid : d.tid,//
+            live_time : d.live_time,//直播时间
             uid : d.uid//主播id
         }
         newDatas.push(nd);
@@ -128,6 +129,16 @@ const appState = (state = initAppState, action) => {
         case appAN.UPDATE_GIFT_LIST:
             return Object.assign({}, state, {
                 giftList: action.giftList
+            });
+
+        case appAN.TOGGLE_DRAWER:
+            return Object.assign({}, state, {
+                drawerOpen: action.isOpen
+            });
+
+        case appAN.CLOSE_DRAWER:
+            return Object.assign({}, state, {
+                drawerOpen: false
             });
 
         case appAN.SWITCH_MENU_TAB_INDEX:

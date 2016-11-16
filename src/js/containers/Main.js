@@ -128,31 +128,10 @@ class Main extends Component {
 
         //当menuSelectIndex=0时
         //读取cookie中设置的menuSelectIndex值，没有的话默认0，针对刷新页面时状态基中的值丢失处理
-        if(menuSelectIndex == 0) {
-            //let cookieMenuSelectIndex = getCookie('menuSelectIndex');
-            menuSelectIndex = parseInt(getCookie('menuSelectIndex')) || 0;
-        }
-        //根据路由是否显示底部菜单
-        if(location.pathname == '/'
-            || location.pathname == '/seek'
-            || location.pathname == '/user'
-            || location.pathname == '/home'
-            || location.pathname == '/rank') {
-
-            appClass = "app-main hasBottom";
-
-            bottomTabs = <Tabs
-                onChange = { e => this.changeMenu(e) }
-                value = { menuSelectIndex }
-                className="menuBottom"
-                style={{height:60}}
-                >
-                <Tab className="menuTab" label="大厅" data-route="/home" onActive={this.changeRouter} icon={<ActionHome />} value={0} />
-                <Tab className="menuTab" label="排行" data-route="/rank" onActive={this.changeRouter} icon={<Itrophy />} value={1} />
-                <Tab className="menuTab" label="发现" data-route="/seek" onActive={this.changeRouter} icon={<ImageCamera />} value={2} />
-                <Tab className="menuTab" label="我的" data-route="/user" onActive={this.changeRouter} icon={<Iuser />} value={3} />
-            </Tabs>
-        }
+        //if(menuSelectIndex == 0) {
+        //    //let cookieMenuSelectIndex = getCookie('menuSelectIndex');
+        //    menuSelectIndex = parseInt(getCookie('menuSelectIndex')) || 0;
+        //}
 
         return (
             <MuiThemeProvider muiTheme={muiTheme}>
@@ -160,7 +139,6 @@ class Main extends Component {
                     <div className={appClass}>
                         {this.props.children}
                     </div>
-                    {bottomTabs}
                     <Loading show={isFatch} />
                     <InfoBox
                         open={infoBox.show}

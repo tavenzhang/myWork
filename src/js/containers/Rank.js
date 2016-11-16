@@ -11,6 +11,8 @@ import { REQURL } from '../config';
 
 const rankExpPic = require('../../images/rank_exp.jpg');
 const rankRichPic = require('../../images/rank_rich.jpg');
+import FaAlignJustify from 'react-icons/lib/fa/bars';
+
 
 class Rank extends Component {
 
@@ -36,11 +38,17 @@ class Rank extends Component {
     }
 
     render() {
-        let { richLists, expLists, dispatch } = this.props;
+        let { richLists, expLists, dispatch, drawerOpen } = this.props;
 
         return (
             <div className="app-main-content">
-                <Banner title="排行" />
+                <Banner
+                    title="排行"
+                    leftIcon={<FaAlignJustify className="menuIcon" />}
+                    leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
+                    drawerOpen={drawerOpen}
+                    drawerClose={()=>dispatch(appAct.drawerClose())}
+                    />
                 <div className="appContent rank">
                     <RankPanel
                         iconSrc={rankExpPic}
@@ -66,6 +74,7 @@ const mapStateToProps = (state) => {
     return {
         rankSlideIndex: state.appState.rankSlideIndex,
         expLists: expLists,
+        drawerOpen: state.appState.drawerOpen,//菜单
         richLists: richLists
     }
 }

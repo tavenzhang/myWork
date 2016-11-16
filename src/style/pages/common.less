@@ -2,6 +2,7 @@
 
 #app, #appMain {
     height: 100%;
+    background: #000;
 }
 
 //.appMain {
@@ -47,6 +48,7 @@
     > div:nth-child(2) {
         div {
             background: @prmary !important;
+            height: 0 !important;
         }
     }
 }
@@ -57,6 +59,11 @@
     h1 {
         font-size: 2rem !important;
     }
+}
+
+.menuIcon {
+    width: 2rem;
+    height: 2rem;
 }
 
 .appContent {
@@ -92,16 +99,21 @@
 //}
 
 ///侧边菜单
-//.drawer {
-//    background: @prmaryDark;
-//    a {
-//        text-decoration: none;
-//    }
-//
-//    .menu-item {
-//        color: @white !important;
-//    }
-//}
+.drawer {
+    background: @second;
+
+    a {
+        text-decoration: none;
+    }
+
+    .menu-item {
+        color: @white !important;
+
+        &.active {
+            background: @prmary !important;
+        }
+    }
+}
 
 //底部菜单
 .menuBottom {
@@ -306,4 +318,11 @@
     color: @second;
     margin-top: .5rem;
     font-size: 1.4rem;
+}
+
+
+.tab {
+    >div {
+        background: @second !important;
+    }
 }

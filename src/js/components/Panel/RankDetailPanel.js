@@ -29,65 +29,20 @@ class RankDetailPanel extends Component {
 
     render() {
         const { data, type } = this.props;
-        console.log("222222")
-        const top3 = data.slice(0,3);
-        const others = data.slice(3);
 
         //没有排行榜数据
-        if(top3.length == 0) {
+        if(data.length == 0) {
             return (
                 <div className="noContent">暂无数据~</div>
             )
         }
         else {
-            //top3数组数据
-            let top3p = [];
-
-            top3.map((v,index) => {
-                if(v && v.uid) {
-                    const tempClassName = `rankDetail-top3-item p${index}`;
-                    const nameClassName = `name p${index}`;
-
-                    //等级icon
-                    let lvIcon = null;
-                    if(type == 'exp') {//主播排行
-                        lvIcon = `hotListImg AnchorLevel${v.lv_exp}`;
-                    }
-                    else {
-                        lvIcon = `lvRichIcon r${v.lv_rich}`;
-                    }
-
-                    //贵族
-                    let vipIcon = null;
-                    if(v.vip > 0) {
-                        const vipIconClass = `hotListImg basicLevel${v.vip}`;
-                        vipIcon = <div className={vipIconClass}></div>;
-                    }
-
-                    //头像
-                    const headimg = v.headimg ? CONFIG.imageServe + v.headimg + "?w=100&h=100" : require('../../../images/avatar_default.png');
-
-                    const temp = <div className={tempClassName}>
-                                    <img src={headimg} className="avatar" /><br />
-                                    <span className={nameClassName}>{v.username}</span><br />
-                                    {vipIcon}<div className={lvIcon}></div>
-                                </div>;
-                    top3p.push(temp);
-                }
-            });
 
             return (
                 <div className="rankDetail">
-                    <div className="rankDetail-top3">
-                        {top3p[1]}
-                        {top3p[0]}
-                        {top3p[2]}
-                        <img src={rankTopsPic} className="top3-platform" />
-                    </div>
                     <div className="rank-list">
-                        {others.map(( anchor, index ) => {
-                            let num = index + 4;
-                            if(num < 10) num = "0"+num;
+                        {data.map(( anchor, index ) => {
+                            let num = index + 1;
 
                             //等级icon
                             let lvIcon = null;

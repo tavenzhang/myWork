@@ -31,8 +31,8 @@ class RankListPanel extends Component {
             const headimg = data.headimg ? CONFIG.imageServe + data.headimg + "?w=100&h=100" : require('../../../images/avatar_default.png');
             return (
                 <div className="rankListPanel-item">
-                    <span className="num">{num}</span>
-                    <Avatar className="avatar" src={headimg} size={40} />
+                    <span className={`rankList r${num}`}></span>
+                    <Avatar className="avatar" src={headimg} size={60} />
                     {data.name}
                     {this.props.lvIcons}
                 </div>

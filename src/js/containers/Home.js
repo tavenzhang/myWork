@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import { Banner, Tabs, Tab, SwipeableViews, VideoLists, Dialog, FlatButton } from '../components';
 import ActionSearch from 'material-ui/svg-icons/action/search';
+import FaAlignJustify from 'react-icons/lib/fa/bars';
 
 //actions
 import { appAct, appAN, fetchData, wsAct } from '../actions';
@@ -152,17 +153,19 @@ class Home extends Component {
 
     render() {
 
-        let { slideIndex, videoListsAll, videoListsRec, videoListsSls, videoListsOrd, dialogOpen } = this.props;
+        let { slideIndex, videoListsAll, videoListsRec, videoListsSls, videoListsOrd, dialogOpen, drawerOpen, dispatch } = this.props;
         const { router } = this.context;
 
         return (
             <div className="app-main-content">
                 <Banner
                     title="大厅"
-                    leftIcon={<ActionSearch />}
-                    leftIconTouch={()=>router.push('/search')}
-                    rightIcon={<ActionSearch />}
-                    rightIconTouch={()=>router.push('/search')}
+                    leftIcon={<FaAlignJustify className="menuIcon" />}
+                    leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
+                    drawerOpen={drawerOpen}
+                    drawerClose={()=>dispatch(appAct.drawerClose())}
+                    //rightIcon={<ActionSearch />}
+                    //rightIconTouch={()=>router.push('/search')}
                 />
                 <div className="appContent home">
                     <Tabs
@@ -222,6 +225,7 @@ const mapStateToProps = state => {
         videoListsSls: state.appState.videoListsSls,
         videoListsOrd: state.appState.videoListsOrd,
         dialogOpen: state.appState.dialogOpen,//弹出框
+        drawerOpen: state.appState.drawerOpen,//菜单
         currSeleRoomId: state.appState.currSeleRoomId,//当前选中的房间号
     }
 }

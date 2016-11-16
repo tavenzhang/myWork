@@ -22,6 +22,7 @@ import Ifighter from 'react-icons/lib/fa/fighter-jet';
 import Iangleright from 'react-icons/lib/fa/angle-right';
 import Idiamond from 'react-icons/lib/fa/diamond';
 import Iedit from 'react-icons/lib/fa/edit';
+import FaAlignJustify from 'react-icons/lib/fa/bars';
 
 //actions
 import {appAct,fetchData,appAN} from '../actions';
@@ -87,7 +88,7 @@ class UserInfo extends Component {
     //}
 
     render() {
-        const { isLogin, userInfo } = this.props;
+        const { isLogin, userInfo, drawerOpen, dispatch } = this.props;
         //头衔
         let [Iexp,Irich,Ivip,logout] = [null,null,null,null];
 
@@ -116,7 +117,13 @@ class UserInfo extends Component {
         }
 
         //头部banner
-        let banner = <Banner title="我的" />;
+        let banner = <Banner
+                        title="我的"
+                        leftIcon={<FaAlignJustify className="menuIcon" />}
+                        leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
+                        drawerOpen={drawerOpen}
+                        drawerClose={()=>dispatch(appAct.drawerClose())}
+                    />;
 
         //头部信息
         let headerMsg = <div>
@@ -189,7 +196,8 @@ class UserInfo extends Component {
 const mapStateToProps = state => {
     return {
         isLogin : state.appState.isLogin,
-        userInfo : state.appState.userInfo
+        userInfo : state.appState.userInfo,
+        drawerOpen: state.appState.drawerOpen,//菜单
     }
 }
 

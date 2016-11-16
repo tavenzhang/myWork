@@ -1,3 +1,4 @@
+
 /**
  * Created by soga on 16/9/28.
  */
@@ -37,6 +38,7 @@ class VideoLists extends Component {
                                 nums={d.total}
                                 isLive={d.live_status}
                                 enterRoomlimit={d.enterRoomlimit}
+                                liveTime={d.live_time}
                                 tid={d.tid}
                                 onClick={()=>this.props.action({
                                     uid:d.uid,

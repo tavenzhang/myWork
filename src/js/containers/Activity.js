@@ -8,6 +8,8 @@ import { Banner, ActivityPanel } from '../components';
 //actions
 import { appAct, fetchData, appAN } from '../actions';
 
+import FaAlignJustify from 'react-icons/lib/fa/bars';
+
 import { REQURL } from '../config';
 
 class Activity extends Component{
@@ -26,8 +28,8 @@ class Activity extends Component{
 
     render(){
 
-        let { activityList } = this.props;
-        let actContent = <div className="noContent">暂无活动~</div>;
+        let { activityList, drawerOpen, dispatch } = this.props;
+        let actContent = <div className="noContent"></div>;
 
         if(activityList.length) {
             actContent = <div className="activity-list">
@@ -39,7 +41,13 @@ class Activity extends Component{
 
         return (
             <div className="app-main-content">
-                <Banner title="活动中心" back={true} />
+                <Banner
+                    title="活动"
+                    leftIcon={<FaAlignJustify className="menuIcon" />}
+                    leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
+                    drawerOpen={drawerOpen}
+                    drawerClose={()=>dispatch(appAct.drawerClose())}
+                    />
                 <div className="appContent activity">
                     {actContent}
                 </div>
@@ -50,7 +58,8 @@ class Activity extends Component{
 
 const mapStateToProps = state => {
     return {
-        activityList: state.appState.activityList
+        activityList: state.appState.activityList,
+        drawerOpen: state.appState.drawerOpen,//菜单
     }
 }
 

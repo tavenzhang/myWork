@@ -2,8 +2,8 @@ export const appAN  = {
     UPDATE_ACTIVITY_LISTS : "app/UPDATE_ACTIVITY_LISTS",
     SEARCH_VIDEO          : "app/SEARCH_VIDEO",
     UPDATE_CURRSELEROOMID : "app/UPDATE_CURRSELEROOMID",
-    //DRAWER_TOGGLE         : "app/DRAWER_TOGGLE",
-    //DRAWER_CLOSE          : "app/DRAWER_CLOSE",
+    TOGGLE_DRAWER         : "app/TOGGLE_DRAWER",
+    CLOSE_DRAWER          : "app/CLOSE_DRAWER",
     CLOSE_GIFT_DIALOG     : "app/CLOSE_GIFT_DIALOG",
     UPDATE_MYRECORD       : "app/UPDATE_MYRECORD", //更新我的消费记录
     UPDATE_MYMSG          : "app/UPDATE_MYMSG", //更新我的消息
@@ -46,16 +46,15 @@ export const appAct = {
     }),
 
     //drawer toggle
-    //drawerToggle : isOpen => ({
-    //    type: appAN.DRAWER_TOGGLE,
-    //    open: isOpen
-    //}),
+    drawerToggle : isOpen => ({
+        type: appAN.TOGGLE_DRAWER,
+        isOpen
+    }),
 
     //drawer close
-    //drawerClose : () => ({
-    //    type: appAN.DRAWER_CLOSE,
-    //    open: false
-    //}),
+    drawerClose : () => ({
+        type: appAN.CLOSE_DRAWER
+    }),
 
     //打开礼物对话框
     openGiftDialog : () => ({

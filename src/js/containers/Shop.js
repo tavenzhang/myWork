@@ -15,6 +15,9 @@ import { REQURL } from './../config'
 
 import { isEmptyObj } from '../utils/util'
 
+import FaAlignJustify from 'react-icons/lib/fa/bars';
+
+
 class Shop extends Component{
 
     static contextTypes = {
@@ -189,7 +192,7 @@ class Shop extends Component{
 
     render(){
 
-        let { slideIndex, mounts, vipmount, vipIcons, dialogOpen, userInfo, shopSelectItem } = this.props;
+        let { slideIndex, mounts, vipmount, vipIcons, dialogOpen, userInfo, shopSelectItem, drawerOpen, dispatch } = this.props;
 
         //取消按钮
         const btnCancl = <FlatButton
@@ -295,7 +298,10 @@ class Shop extends Component{
             <div className="app-main-content">
                 <Banner
                     title="商城"
-                    back="/seek"
+                    leftIcon={<FaAlignJustify className="menuIcon" />}
+                    leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
+                    drawerOpen={drawerOpen}
+                    drawerClose={()=>dispatch(appAct.drawerClose())}
                     rightIcon={<Imoney className="banner-recharge-btn" />}
                     rightIconTouch={()=>this.goRecharge()}
                 />
@@ -375,6 +381,7 @@ const mapStateToProps = state => {
         vipIcons: state.appState.vipIcons,//贵族勋章
         dialogOpen: state.appState.dialogOpen,//弹出框
         userInfo: state.appState.userInfo,//用户信息
+        drawerOpen: state.appState.drawerOpen,//菜单
         shopSelectItem: state.appState.shopSelectItem,//当前选中的产品
     }
 }
