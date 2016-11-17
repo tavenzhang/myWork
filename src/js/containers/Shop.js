@@ -302,8 +302,6 @@ class Shop extends Component{
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
                     drawerOpen={drawerOpen}
                     drawerClose={()=>dispatch(appAct.drawerClose())}
-                    rightIcon={<Imoney className="banner-recharge-btn" />}
-                    rightIconTouch={()=>this.goRecharge()}
                 />
                 <div className="appContent activity">
                     <Tabs

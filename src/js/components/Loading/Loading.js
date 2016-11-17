@@ -22,10 +22,7 @@ class Loading extends Component {
             return (
                 <div className="loading">
                     <div className="loading-main">
-                        <div className="spinner">
-                            <div className="double-bounce1"></div>
-                            <div className="double-bounce2"></div>
-                        </div>
+                        <CircularProgress />
                     </div>
                 </div>
             )

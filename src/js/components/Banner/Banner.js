@@ -13,7 +13,7 @@ const MenuIcon = [
     require('./../../../images/LeftListIcon01.png'),
     require('./../../../images/LeftListIcon02.png'),
     require('./../../../images/LeftListIcon03.png'),
-    //require('./../../../images/LeftListIcon04.png'),
+    require('./../../../images/LeftListIcon04.png'),
     require('./../../../images/LeftListIcon05.png'),
     require('./../../../images/LeftListIcon06.png')
 ]
@@ -22,7 +22,7 @@ const menus = [
     { title: '大厅', link:'/home' },
     { title: '我的', link:'/user' },
     { title: '排行', link:'/rank' },
-    //{ title: '充值', link:'/recharge' },
+    { title: '充值', link:'/recharge' },
     { title: '商城', link:'/shop' },
     { title: '活动', link:'/activity' },
 ]
