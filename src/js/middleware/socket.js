@@ -103,7 +103,7 @@ const webSocketMiddleware = store => next => action => {
                     type:wsAN.CHAT_MESSAGE,
                     data:{
                         cmd : 1, //系统连接信息
-                        content : "小兰正在为您连接聊天服务器..."
+                        content : "正在连接服务器..."
                     }
                 });
 
@@ -116,7 +116,7 @@ const webSocketMiddleware = store => next => action => {
                         type:wsAN.CHAT_MESSAGE,
                         data:{
                             cmd : 1, //系统连接信息
-                            content : "您正在登陆聊天服务器..."
+                            content : "正在登陆服务器..."
                         }
                     });
                     socketMsg.postMessage(loginCMD); //登陆
@@ -148,7 +148,7 @@ const webSocketMiddleware = store => next => action => {
                                     type:wsAN.CHAT_MESSAGE,
                                     data:{
                                         cmd : 1, //系统连接信息
-                                        content : "您现在可以跟房间内的玩家进行互动聊天了~~"
+                                        content : "登陆成功，您可以进行聊天了"
                                     }
                                 });
                                 break;

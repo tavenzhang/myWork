@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
-import { Banner, ContentPanel, Divider, List, ListItem, RaisedButton, Checkbox, TextField, FlatButton } from '../components';
+import { Banner, ContentPanel, Divider, List, ListItem, RaisedButton, Checkbox, TextField, FlatButton, UserMenuItem } from '../components';
 
 //import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
@@ -29,6 +29,24 @@ import {appAct,fetchData,appAN} from '../actions';
 
 import {CONFIG,REQURL} from '../config';
 //import { encode } from '../utils/util';
+
+const menuIcon = [
+    require('../../images/MailIcon.png'),
+    require('../../images/ItemIcon.png'),
+    require('../../images/BillIcon.png'),
+    require('../../images/LoveIcon.png'),
+    require('../../images/ReservationIcon.png'),
+    require('../../images/SetIcon.png'),
+];
+
+const menuItems = [
+    { title: '我的信箱', link: 'myMsg' },
+    { title: '我的道具', link: 'myMount' },
+    { title: '消费记录', link: 'myRecord' },
+    { title: '我的关注', link: 'myFav' },
+    { title: '我的预约', link: 'myOrd' },
+    { title: '设置', link: 'mySetting' },
+]
 
 class UserInfo extends Component {
 
@@ -119,6 +137,7 @@ class UserInfo extends Component {
         //头部banner
         let banner = <Banner
                         title="我的"
+                        currentPath="/user"
                         leftIcon={<FaAlignJustify className="menuIcon" />}
                         leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
                         drawerOpen={drawerOpen}
@@ -151,9 +170,10 @@ class UserInfo extends Component {
             //    />
         }
 
+        let userAvatar = <img src={userInfo.headimg} className="avatar" />
         //用户头像
         if(!userInfo.headimg) {
-            userInfo.headimg = require('../../images/default-avatar.png');
+            userAvatar = <img src={require('../../images/logo.png')} className="avatar-logo" />;
         }
 
         return (
@@ -162,27 +182,22 @@ class UserInfo extends Component {
                 <div className="appContent">
                     <div className="user-header">
                         <div className="user-header-main">
-                            <img src={userInfo.headimg} className="avatar" />
+                            {userAvatar}
                             {headerMsg}
                         </div>
                     </div>
                     <div className="user-main">
                         <div className="listPanel">
-                            <List>
-                                <ListItem primaryText="我的关注" rightIcon={<Iangleright />} leftIcon={<Iheart className="iconUP red" />} onTouchTap={()=>this.showDetail('myFav')} />
-                                <Divider inset={true} />
-                                <ListItem primaryText="我的预约" rightIcon={<Iangleright />} leftIcon={<Istar className="iconUP blue" />} onTouchTap={()=>this.showDetail('myOrd')} />
-                                <Divider inset={true} />
-                                <ListItem primaryText="我的信箱" rightIcon={<Iangleright />} leftIcon={<Imail className="iconUP pink" />} onTouchTap={()=>this.showDetail('myMsg')} />
-                                <Divider inset={true} />
-                                <ListItem primaryText="我的道具" rightIcon={<Iangleright />} leftIcon={<Ifighter className="iconUP green" />} onTouchTap={()=>this.showDetail('myMount')} />
-                                <Divider inset={true} />
-                                <ListItem primaryText="消费记录" rightIcon={<Iangleright />} leftIcon={<Icartplus className="iconUP orange" />} onTouchTap={()=>this.showDetail('myRecord')} />
-                                <Divider inset={true} />
-                                <ListItem primaryText="设置" rightIcon={<Iangleright />} leftIcon={<Isetting className="iconUP purple" />} onTouchTap={()=>this.showDetail('mySetting')} />
-                                <Divider inset={true} />
-                                {logout}
-                            </List>
+                            {
+                                menuItems.map((v,i) =>
+                                    <UserMenuItem
+                                        key={i}
+                                        title={v.title}
+                                        icon={menuIcon[i]}
+                                        onTouchTap={()=>this.showDetail(v.link)}
+                                        />
+                                )
+                            }
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ import Snackbar from 'material-ui/Snackbar';
 
 const styles = {
     infoBox: {
-        backgroundColor: '#222'
+        backgroundColor: '#363636'
     }
 }
 
@@ -27,8 +27,8 @@ class InfoBox extends Component {
 
     render() {
 
-        if(this.props.style=="error") styles.infoBox.backgroundColor = '#e84548';
-        if(this.props.style=="success") styles.infoBox.backgroundColor = '#222';
+        //if(this.props.style=="error") styles.infoBox.backgroundColor = '#e84548';
+        //if(this.props.style=="success") styles.infoBox.backgroundColor = '#222';
 
         return (
 

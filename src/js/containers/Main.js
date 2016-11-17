@@ -96,7 +96,7 @@ class Main extends Component {
     }
 
     static contextTypes = {
-        router: React.PropTypes.object
+        router: React.PropTypes.object,
     };
 
     changeMenu(index) {

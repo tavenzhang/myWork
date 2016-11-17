@@ -122,41 +122,50 @@ class Register extends Component {
                     <div className="login-form">
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="登录邮箱"
                             fullWidth={true}
+                            floatingLabelFixed={true}
                             ref="Rusername"
                             /><br />
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="用户昵称"
                             ref="Rnickname"
+                            floatingLabelFixed={true}
                             fullWidth={true}
                             /><br />
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="登录密码"
                             fullWidth={true}
+                            floatingLabelFixed={true}
                             type="password"
                             ref="Rpassword"
                             />
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="确认密码"
                             fullWidth={true}
+                            floatingLabelFixed={true}
                             type="password"
                             ref="Rrepassword"
                             />
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="验证码"
                             fullWidth={true}
+                            floatingLabelFixed={true}
                             ref="RsCode"
                             style={{ width:'60%'}}
                             />
                         <img src={scodeImg} className="scodeImg" ref="RscodeImg" onClick={()=>this.changeScode()} />
                         <br /><br /><br /><br />
                         <RaisedButton label="注 册" primary={true} fullWidth={true} onClick={ e => { this.handleLogin(e) } } />
-                        <div className="login-form-bottom">已有兰桂坊账号，<a href="javascript:;" onTouchTap={()=>this.goLogin()}>登录</a></div>
                     </div>
                 </div>
             </div>

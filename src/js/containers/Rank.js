@@ -44,6 +44,7 @@ class Rank extends Component {
             <div className="app-main-content">
                 <Banner
                     title="排行"
+                    currentPath="/rank"
                     leftIcon={<FaAlignJustify className="menuIcon" />}
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
                     drawerOpen={drawerOpen}

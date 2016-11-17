@@ -3,7 +3,6 @@
  */
 import React, {Component,PropTypes} from 'react';
 import { Link } from 'react-router';
-import RaisedButton from 'material-ui/RaisedButton';
 import Idiamond from 'react-icons/lib/fa/diamond';
 
 class ShopGiftPanel extends Component {
@@ -27,12 +26,10 @@ class ShopGiftPanel extends Component {
                     <img src={this.props.imgSrc} />
                 </div>
                 <h5>{this.props.name}</h5>
-                <h6>{this.props.price}<Idiamond /> / 月</h6>
-                <RaisedButton
-                    label={this.props.btnName}
-                    primary={true}
-                    onTouchTap={()=>this.props.btnClick()}
-                    />
+                <div className="bottom">
+                    <span>{this.props.price}<Idiamond /> / 月</span>
+                    <button onTouchTap={()=>this.props.btnClick()}>{this.props.btnName}</button>
+                </div>
             </div>
         )
     }};

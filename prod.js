@@ -36,7 +36,7 @@ var serverConfig = {
 	srcPath : './src', //静态资源的目录 相对路径
 	mainFile : path.join(__dirname, './src/js/app.js'), //程序入口主文件
 	outputPath : path.join(__dirname, "dist"),  //编译输出文件目录
-	outputPublicPath : "/mobi/", //服务路径,用于热替换服务器,用于配置文件发布路径，如CDN或本地服务器,默认当前根目录
+	outputPublicPath : "/PiGI37VfToPLHyZB/", //服务路径,用于热替换服务器,用于配置文件发布路径，如CDN或本地服务器,默认当前根目录
 	needbabelPath : 'src/js/', //指定作用范围,这里可不写,但是范围越小速度越快,默认跟目录
 	vendor : ['react','react-dom','react-router','redux','react-router-redux','react-redux','material-ui','react-swipeable-views','superagent','crypto-js'], // 第三方库单独文件打包'material-ui',
 	//vendor : ['react-redux','react-swipeable-views'], // 第三方库单独文件打包

@@ -101,23 +101,23 @@ class Login extends Component {
                     <div className="login-form">
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
+                            floatingLabelFixed={true}
                             floatingLabelText="登录邮箱"
                             fullWidth={true}
                             ref="Luname"
                         /><br />
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
+                            floatingLabelFixed={true}
                             floatingLabelText="登录密码"
                             fullWidth={true}
                             type="password"
                             ref="Lpassword"
-                        /><br />
-                        <Checkbox
-                            label="记住密码"
-                            className="login-checkbox"
-                        /><br/>
+                        /><br /><br /><br /><br /><br />
+
                         <RaisedButton label="登 录" primary={true} fullWidth={true} onTouchTap={ () => this.handleLogin() } />
-                        <div className="login-form-bottom">没有兰桂坊账号？<a href="javascript:;" onTouchTap={()=>this.goRegister()}>注册新用户</a></div>
                     </div>
                 </div>
             </div>
@@ -128,6 +128,11 @@ class Login extends Component {
 
 }
 
+//<Checkbox
+//    label="记住密码"
+//    className="login-checkbox"
+//    /><br/>
+//
 const mapStateToProps = state => {
     return {
         isConnected: state.msgState.status

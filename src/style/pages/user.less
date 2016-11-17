@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 14rem;
+    height: 18rem;
     background: @second;
     color: @white;
     text-align: center;
@@ -14,9 +14,14 @@
 
     .user-header-main {
         .avatar {
-            width: 6rem;
-            height: 6rem;
+            width: 8rem;
+            height: 8rem;
             border-radius: 50%;
+        }
+
+        .avatar-logo {
+            height: 8rem;
+            margin: 1rem 0 !important;
         }
 
         h4,h5 {
@@ -25,9 +30,12 @@
         }
         h4 {
             line-height: 2;
+            margin-top: 1rem;
+            font-size: 2rem;
         }
         h5 {
             line-height: 1.5;
+            color: #33bcb4
         }
     }
 
@@ -52,4 +60,30 @@
 
 .btn-login {
     background: #33bcb5 !important;
+}
+
+.listPanel {
+    margin-top: 20rem;
+    background: @black;
+    text-align: center;
+}
+
+.menuItem {
+    width: 28vw;
+    border: .2rem solid #ccc;
+    border-radius: .8rem;
+    display: inline-block;
+    margin: 2vw;
+
+    .menuItem-icon {
+        height: 10vw;
+        display: block;
+        margin: 1.5rem auto 0;
+    }
+
+    .menuItem-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 3;
+    }
 }

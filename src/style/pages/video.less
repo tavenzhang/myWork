@@ -1,10 +1,11 @@
 
 .video-chatPanel {
     width: 100%;
-    //position: fixed;
-    //bottom: 0;
+    position: fixed;
+    bottom: 0;
     padding: 0 1rem !important;
     z-index: @zIndexHead;
+    background: @second !important;
     .send-box {
         width: 100%;
     }
@@ -24,8 +25,8 @@
     width: 100%;
     background: @black;
     position: fixed;
-    //top: 0;
-    bottom:0;
+    top: 0;
+    //bottom:0;
     left: 0;
 
     .giftNums {
@@ -81,8 +82,8 @@
 
 .video-backIcon {
     position: fixed;
-    top: .5rem;
-    left: .1rem;
+    top: .3rem;
+    right: .3rem;
     font-size: 3rem;
     z-index: @zIndexHead;
 }
@@ -98,7 +99,7 @@
     right: 0;
     top: 1rem;
     font-size: 1.4rem;
-    color: @second;
+    color: @prmary;
 
     .diamond {
         vertical-align: text-top;
@@ -127,8 +128,8 @@
     }
 
     .chat-chat {
-        background: @white;
-        color: darken(@gray,10%);
+        background: transparent;
+        color: @white;
         font-size: 1.2rem;
         line-height: 1.5;
         //border-bottom: 0.1rem solid lighten(@gray,40%);
@@ -137,7 +138,7 @@
         box-sizing: border-box;
 
         .mark {
-            color: @second;
+            color: @prmary;
 
             &.gift {
                 color: @prmary;
@@ -155,7 +156,7 @@
         }
 
         .date {
-            color: @second;
+            color: @prmary;
         }
     }
 
@@ -204,6 +205,12 @@
     .giftBoxBody {
         padding: 0 !important;
         //padding-top: .8rem !important;
+
+        + div {
+            background: @second !important;
+            color: @white;
+            border-top: 0 !important;
+        }
     }
 
     .giftBoxTitle {
@@ -211,6 +218,7 @@
     }
 
     .giftBoxContent {
+        background: @black;
         height: 35rem;
         >div {
             height: 100%;
@@ -243,42 +251,44 @@
 .room-gift-panel {
     text-align: center;
     padding-bottom: 3rem;
+    width: 100%;
     .room-gift-item {
-        width: 10rem;
-        height: 11rem;
-        border: .1rem solid lighten(@gray,30%);
-        border-radius: @borderRadiusNormal;
+        width: calc(~'25% - 0.2rem');;
+        height: 9rem;
+        border: .1rem solid @prmary;
         display: inline-block;
         vertical-align: top;
-        margin: 0.4rem;
         text-align: center;
         font-size: 1.4rem;
         line-height: 1.5;
-        color: @black;
+        color: @white;
+        position: relative;
         //background: rgba(0,0,0,.05);
 
         &.selected {
-            border-color: lighten(@prmary,0%);
+            background: @second;
             //background: lighten(@prmary,35%);
             //color: @white;
             //text-shadow:0 0 2px rgba(0,0,0,.7);
-            box-shadow: 0 0 6px @prmary;
 
-            .price {
-                font-size: 1.2rem;
-                color: @second;
-                text-shadow : none;
-            }
+
         }
 
         .giftIcon {
-            height: 4.5rem;
-            margin: .8rem auto;
+
+            height: 4rem;
+            margin: 1.5rem auto .8rem;
+        }
+
+        .desc {
+            position: absolute;
+            top: 0rem;
+            right: .4rem;
         }
 
         .price {
             font-size: 1.2rem;
-            color: @gray;
+            color: @prmary;
 
             //.priceIcon {
             //    margin: .2rem;
@@ -298,7 +308,7 @@
 .Idiamond {
     vertical-align: sub !important;
     margin: .2rem;
-    color: darken(@second , 10%);
+    color: @prmary;
 }
 
 .str-link {
@@ -554,6 +564,10 @@
     }
 }
 
+.chat-input div:first-child {
+    color: @white !important;
+}
+
 
 //大礼物效果
 .bigGift {
@@ -578,4 +592,11 @@
     .giftBig {
         width: 100%;
     }
+}
+
+.room-chat {
+    margin-top: 75vw;
+    padding-bottom: 5.6rem;
+    box-sizing: border-box;
+    height: calc(~'100% - 75vw');
 }

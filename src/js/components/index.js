@@ -9,6 +9,7 @@ import RankPanel from './Panel/RankPanel';
 import RankListPanel from './Panel/RankListPanel';
 import RankDetailPanel from './Panel/RankDetailPanel';
 import ActivityPanel from './Panel/ActivityPanel';
+import UserMenuItem from './Panel/UserMenuItem';
 import ShopGiftPanel from './Panel/ShopGiftPanel';
 import InfoBox from './InfoBox/InfoBox';
 import AudienceList from './Room/AudienceList';
@@ -54,6 +55,7 @@ export {
     RankListPanel,
     ChatList,
     AudienceList,
+    UserMenuItem,
     RoomMsg,
     VideoItem,
     GiftRank,

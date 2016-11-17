@@ -20,7 +20,7 @@ const MenuIcon = [
 
 const menus = [
     { title: '大厅', link:'/home' },
-    { title: '我的', link:'/home' },
+    { title: '我的', link:'/user' },
     { title: '排行', link:'/rank' },
     //{ title: '充值', link:'/recharge' },
     { title: '商城', link:'/shop' },
@@ -49,7 +49,7 @@ class Banner extends Component {
 
     render() {
         const { router } = this.context;
-        const { back, title, titleTP, drawerClose, drawerOpen, leftIconTouch } = this.props;
+        const { back, title, titleTP, drawerClose, drawerOpen, leftIconTouch, currentPath } = this.props;
         let [rightIcon,leftIcon] = [<IconButton />,<IconButton />];
 
         if(back) {
@@ -90,8 +90,6 @@ class Banner extends Component {
         //栏目标题
         let bannerTitle = titleTP == "image" ? <img src={title} /> : title;
 
-        let menuBg = "";
-
         return (
             <AppBar
                 title={ bannerTitle }
@@ -107,16 +105,17 @@ class Banner extends Component {
                 >
                     <div className="appContent drawer">
                         {
-                            menus.map((v,i) =>
-                                <Link to={v.link} key={i}>
-                                    <MenuItem
-                                        className={`menu-item ${menuBg}`}
-                                        leftIcon={<img src={MenuIcon[i]} />}
-                                        onTouchTap={() => drawerClose()}>
-                                        {v.title}
-                                    </MenuItem>
-                                </Link>
-                            )
+                            menus.map((v,i) => {
+                                const itemBg = currentPath == v.link ? 'active' : '';
+                                return <Link to={v.link} key={i}>
+                                            <MenuItem
+                                                className={`menu-item ${itemBg}`}
+                                                leftIcon={<img src={MenuIcon[i]} className="menu-list-icon" />}
+                                                onTouchTap={() => drawerClose()}>
+                                                {v.title}
+                                            </MenuItem>
+                                        </Link>
+                            })
                         }
                     </div>
                 </Drawer>

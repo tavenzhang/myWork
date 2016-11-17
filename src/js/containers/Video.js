@@ -5,7 +5,7 @@ import request from 'superagent'
 import { Link } from 'react-router';
 
 //聊天窗口头部
-import NavigationClose from 'react-icons/lib/fa/chevron-circle-left';
+import NavigationClose from 'react-icons/lib/fa/times-circle';
 import { RaisedButton, TextField, Toolbar, ToolbarSeparator, ToolbarGroup, Tabs, Tab, SwipeableViews, AudienceList, ChatList, RoomMsg, GiftRank, FlatButton, Dialog, RoomGiftPanel, UserMount, GiftEffect, VideoBox } from '../components';
 
 import Igift from 'react-icons/lib/fa/gift';
@@ -112,7 +112,7 @@ class Video extends Component {
                 const urlHost = urlData.substr(0,urlData.lastIndexOf("/"));
                 let pic = document.createElement('img');
                 //请求服务器上一个小文件，看哪个返回最快
-                pic.src = urlHost + "/speed.json";
+                pic.src = urlHost + "/speed.jpg";
                 pic.onload = function(e,v){
                     pic = null;
                     setBestVideoUrl(urlData);
@@ -433,7 +433,7 @@ class Video extends Component {
         //提示登录注册的actions
         let alertActions = [
             <FlatButton
-                label="立即登录"
+                label="登录"
                 primary={true}
                 keyboardFocused={true}
                 onTouchTap={()=>this.goLogin()}
@@ -523,47 +523,21 @@ class Video extends Component {
                 <UserMount data={userMount} />
                 <GiftEffect data={sendGifts}  />
 
-                <Tabs
-                    onChange = { e => dispatch(appAct.setVideoTabIndex(e)) }
-                    value = { slideIndex }
-                    className="tab"
-                    >
-                    <Tab label="聊天" value={0} />
-                    <Tab label="观众" value={1} />
-                    <Tab label="本日贡献" value={2} />
-                    <Tab label="房间消息" value={3} />
-                </Tabs>
-                <SwipeableViews
-                    index={ slideIndex }
-                    onChangeIndex = { e => dispatch(appAct.setVideoTabIndex(e)) }
-                    className="swipRoom"
-                    >
-                    <div className="room-item" ref="chatBox">
-                        <ChatList data={messages} uid={uid} />
-                    </div>
-                    <div className="room-item">
-                        <AudienceList data={admins} type="admin" />
-                        <AudienceList data={audiences} type="audience" />
-                    </div>
-                    <div className="room-item">
-                        <GiftRank data={todayGifts} />
-                    </div>
-                    <div className="room-item">
-                        {zhubo}
-                        <RoomMsg data={roomMsg} />
-                    </div>
-                </SwipeableViews>
-                <div className="video-box">
-                    <div className="giftNums">收礼：{moneyTotal}<Idiamond className="Idiamond" /></div>
-                    <div className="liveBg">{ showVideo ? video : null}</div>
-                    <Toolbar className="video-chatPanel">
-                        <Igift className="btnGift" onClick={()=>this.showGift()} />
-                        <ToolbarGroup className="send-box">
-                            <TextField hintText="和大家聊天吧~~" fullWidth={true} ref="chatInput" className="chat-input" />
-                            <RaisedButton label="发送" primary={true} className="send-btn" onTouchEnd={e=>this.sendMsg(e)} />
-                        </ToolbarGroup>
-                    </Toolbar>
+                <div className="room-chat" ref="chatBox">
+                    <ChatList data={messages} uid={uid} />
                 </div>
+
+                <div className="video-box">
+                    <div className="liveBg">{ showVideo ? video : null}</div>
+                </div>
+                <Toolbar className="video-chatPanel">
+                    <Igift className="btnGift" onClick={()=>this.showGift()} />
+                    <ToolbarGroup className="send-box">
+                        <TextField hintText="快跟主播聊天互动吧" fullWidth={true} ref="chatInput" className="chat-input input" />
+                        <RaisedButton label="发送" primary={true} className="send-btn" onTouchEnd={e=>this.sendMsg(e)} />
+                    </ToolbarGroup>
+                </Toolbar>
+
                 <Dialog
                     //title={}
                     actions={actions}

@@ -37,7 +37,7 @@ class RoomGiftPanel extends Component {
                         <div className={roomGiftItem} key={index} onClick={()=>this.props.selectGift(v.gid)} >
                             <img src={CONFIG.giftPath + v.gid + ".png"} className="giftIcon" /><br />
                             {v.name}<br />
-                            <span className="price">{v.price}<Idiamond className="Idiamond" /></span>
+                            <div className="desc"><span className="price">{v.price}<Idiamond className="Idiamond" /></span></div>
                         </div>
                     )
                 })}

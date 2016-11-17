@@ -153,13 +153,13 @@ class Home extends Component {
 
     render() {
 
-        let { slideIndex, videoListsAll, videoListsRec, videoListsSls, videoListsOrd, dialogOpen, drawerOpen, dispatch } = this.props;
+        let { slideIndex, videoListsAll, videoListsRec, videoListsSls, videoListsOrd, dialogOpen, drawerOpen, dispatch, location } = this.props;
         const { router } = this.context;
-
         return (
             <div className="app-main-content">
                 <Banner
                     title="大厅"
+                    currentPath="/home"
                     leftIcon={<FaAlignJustify className="menuIcon" />}
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
                     drawerOpen={drawerOpen}
@@ -174,7 +174,7 @@ class Home extends Component {
                         className="tab"
                     >
                         <Tab label="精选" value={0} />
-                        <Tab label="大厅" value={1} />
+                        <Tab label="全部" value={1} />
                         <Tab label="特色" value={2} />
                         <Tab label="预约" value={3} />
                     </Tabs>

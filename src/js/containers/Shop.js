@@ -271,7 +271,7 @@ class Shop extends Component{
                     btnGoRecharge,
                     btnCancl
                 ];
-                dialogContent = <span>确认开通VIP专属<span className="mark">{shopSelectItem.level_name}</span>?</span>
+                dialogContent = <span>确认开通贵族<span className="mark">{shopSelectItem.level_name}</span>?</span>
             }
         }
 
@@ -281,15 +281,14 @@ class Shop extends Component{
             //弹出框button
             actions = [
                 <FlatButton
-                    label="立即登陆"
+                    label="登录"
                     primary={true}
                     onTouchTap={()=>this.gotologin()}
                     />,
                 btnCancl
             ];
 
-            dialogContent = "登陆后才可以购买";
-            if(slideIndex == 1) dialogContent = "登陆后才可以领取";
+            dialogContent = "登录后才能操作";
         }
 
 
@@ -298,6 +297,7 @@ class Shop extends Component{
             <div className="app-main-content">
                 <Banner
                     title="商城"
+                    currentPath="/shop"
                     leftIcon={<FaAlignJustify className="menuIcon" />}
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
                     drawerOpen={drawerOpen}
@@ -312,8 +312,8 @@ class Shop extends Component{
                         className="tab"
                         >
                         <Tab label="普通坐骑" value={0} />
-                        <Tab label="VIP特权专属" value={1} />
-                        <Tab label="开通VIP特权" value={2} />
+                        <Tab label="贵族专属" value={1} />
+                        <Tab label="开通贵族" value={2} />
                     </Tabs>
                     <SwipeableViews
                         index={ slideIndex }

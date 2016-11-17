@@ -3,6 +3,7 @@
 #app, #appMain {
     height: 100%;
     background: #000;
+    color: @white;
 }
 
 //.appMain {
@@ -101,6 +102,7 @@
 ///侧边菜单
 .drawer {
     background: @second;
+    padding-top: 2rem;
 
     a {
         text-decoration: none;
@@ -111,6 +113,13 @@
 
         &.active {
             background: @prmary !important;
+        }
+
+        .menu-list-icon {
+            margin-left: 1rem !important;
+            left: 4rem !important;
+            height: 2rem !important;
+            width: 2rem !important;
         }
     }
 }
@@ -324,5 +333,15 @@
 .tab {
     >div {
         background: @second !important;
+    }
+}
+
+.input {
+    input {
+        color: @white !important;
+    }
+    
+    label {
+        color: @white !important;
     }
 }
