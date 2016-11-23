@@ -185,16 +185,19 @@
             color: @second;
         }
     }
+}
 
-    .chat-zhubo {
-        background: @white;
-        font-size: 2rem;
-        .avatar {
-            width: 5rem;
-            border-radius: 50%;
-            box-shadow: 0 0 .4rem rgba(0,0,0,.3);
-            margin: .5rem 1rem;
-        }
+.chat-zhubo {
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: @zIndexHead;
+    .avatar {
+        width: 3rem;
+        border-radius: 50%;
+        box-shadow: 0 0 .4rem rgba(0,0,0,.3);
+        margin-right: 0.5rem;
     }
 }
 

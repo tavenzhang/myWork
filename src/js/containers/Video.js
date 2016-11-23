@@ -509,8 +509,10 @@ class Video extends Component {
 
             //主播信息
             const lvIcon = `hotListImg AnchorLevel${zhuboMsg.lv}`;
+            const headimg = zhuboMsg.headimg ? CONFIG.imageServe + zhuboMsg.headimg + "?w=100&h=100" : require('../../images/avatar_default.png');
+
             zhubo = <div className="chat-zhubo">
-                        <img src={CONFIG.imageServe + zhuboMsg.headimg} className="avatar" />
+                        <img src={headimg} className="avatar" />
                         <span>{zhuboMsg.name} <div className={lvIcon}></div></span>
                     </div>
         }
@@ -520,6 +522,7 @@ class Video extends Component {
         return (
             <div className="app-main-content">
                 <NavigationClose className="video-backIcon" onTouchTap={ ()=>this.backhome() } />
+                {zhubo}
                 <UserMount data={userMount} />
                 <GiftEffect data={sendGifts}  />
 
