@@ -27,7 +27,7 @@ import { REQURL } from '../config';
 
 //组件
 //import VAppBar from '../components/VAppBar';
-import { Loading, InfoBox, Tabs, Tab, SwipeableViews } from '../components';
+import { Loading, Tabs, Tab, SwipeableViews } from '../components';
 //Icon
 import ActionHome from 'material-ui/svg-icons/action/home';
 import ImageCamera from 'material-ui/svg-icons/image/camera';
@@ -36,11 +36,17 @@ import ActionCamera from 'material-ui/svg-icons/action/camera-enhance';
 import Itrophy from 'react-icons/lib/fa/trophy';
 import Iuser from 'react-icons/lib/fa/user';
 
+//提示盒子
+import 'rc-notification/assets/index.css';
+import Notification from 'rc-notification';
+const notification = Notification.newInstance({});
+
 class Main extends Component {
     constructor(props){
         super(props);
         this.changeRouter = this.changeRouter.bind(this);
         this.isConnect    = this.isConnect.bind(this);
+        this.closeInfoBox = this.closeInfoBox.bind(this);
     }
 
     componentWillMount() {
@@ -78,6 +84,19 @@ class Main extends Component {
         loadPanel.className += " loadHidden";
     }
 
+    componentDidUpdate() {
+        const {infoBox} = this.props;
+        const closeIB = this.closeInfoBox;
+        if(infoBox.show) {
+            notification.notice({
+                content: <span>{infoBox.msg}</span>,
+                onClose() {
+                    closeIB();
+                },
+            });
+        }
+    }
+
     /**
      * 判断用户是否链接
      * @returns {boolean}
@@ -98,6 +117,20 @@ class Main extends Component {
     static contextTypes = {
         router: React.PropTypes.object,
     };
+
+    static childContextTypes = {
+        isLogin: React.PropTypes.bool,
+        userInfo: React.PropTypes.object,
+    };
+
+
+    getChildContext() {
+        const { isLogin,userInfo } = this.props;
+        return {
+            isLogin  : isLogin,
+            userInfo  : userInfo,
+        };
+    }
 
     changeMenu(index) {
         const {dispatch} = this.props;
@@ -123,7 +156,7 @@ class Main extends Component {
     }
 
     render() {
-        let {dispatch, location, isFatch, menuSelectIndex, children, infoBox } = this.props;
+        let { location, isFatch, menuSelectIndex, children } = this.props;
         let [bottomTabs, appClass] = [null,'app-main'];
 
         //当menuSelectIndex=0时
@@ -140,12 +173,6 @@ class Main extends Component {
                         {this.props.children}
                     </div>
                     <Loading show={isFatch} />
-                    <InfoBox
-                        open={infoBox.show}
-                        msg={infoBox.msg}
-                        onClose={()=>this.closeInfoBox()}
-                        style={infoBox.style}
-                        />
                 </div>
             </MuiThemeProvider>
         )

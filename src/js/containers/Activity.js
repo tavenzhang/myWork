@@ -42,7 +42,7 @@ class Activity extends Component{
         return (
             <div className="app-main-content">
                 <Banner
-                    title="活动"
+                    title="活动中心"
                     currentPath="/activity"
                     leftIcon={<FaAlignJustify className="menuIcon" />}
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}

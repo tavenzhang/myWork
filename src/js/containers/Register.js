@@ -83,7 +83,7 @@ class Register extends Component {
             requestType : REQURL.getUserInfo.type,
             successAction: appAN.UPDATE_USERINFO,
             callback : function() {
-                let backUrl = '/user';
+                let backUrl = '/';
 
                 if(location.query.from) {
                     backUrl = location.query.from;
@@ -99,7 +99,7 @@ class Register extends Component {
 
         //关闭对话框
         router.push({
-            pathname: '/login',
+            pathname: '/',
             query: { from: location.query.from }
         });
     }
@@ -110,7 +110,7 @@ class Register extends Component {
         let scodeImg = this.getScodeImg();
 
         //设置返回页面
-        let back = '/user';
+        let back = '/';
         if(location.query.from) {
             back = location.query.from;
         }

@@ -102,7 +102,8 @@
 ///侧边菜单
 .drawer {
     background: @second;
-    padding-top: 2rem;
+    padding-top: .5rem;
+    padding-bottom: 4rem;
 
     a {
         text-decoration: none;
@@ -117,7 +118,7 @@
 
         .menu-list-icon {
             margin-left: 1rem !important;
-            left: 4rem !important;
+            left: 3rem !important;
             height: 2rem !important;
             width: 2rem !important;
         }
@@ -270,6 +271,11 @@
     color: @prmary;
     text-align: center;
     padding-top: 20%;
+
+    .noContent-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .textLine {
@@ -344,4 +350,104 @@
     label {
         color: @white !important;
     }
+}
+
+
+//侧边菜单
+.menu-header {
+    .avatar {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+    }
+
+    .avatar-logo {
+        height: 5rem;
+        margin: 1rem 0 !important;
+    }
+
+    h4,h5 {
+        margin: 0;
+        color: @white;
+    }
+    h4 {
+        line-height: 2;
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    h5 {
+        line-height: 1.5;
+        color: #33bcb4
+    }
+}
+
+.menu-lists {
+    //height: calc(~'100% - 35rem');
+    //overflow-y: auto;
+}
+
+.menu-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: @black;
+    text-align: left;
+
+    .menu-bottom-btn {
+        font-size: 1.4rem;
+        color: @white;
+        margin-right: 2rem;
+    }
+}
+
+.btn-register, .btn-login {
+    color: @white !important;
+    margin: .5rem .5rem 1rem !important;
+    border-radius: 0.4rem !important;
+    background: @prmary !important;
+    padding: .2rem .5rem !important;
+    min-width: 5rem !important;
+    height: 2.6rem !important;
+    line-height: 2.6rem !important;
+
+    span {
+        font-size: 1.4rem !important;
+    }
+}
+
+.btn-login {
+    background: #33bcb5 !important;
+}
+
+//弹出的对话框
+.dialog-title {
+    padding: .5rem 1rem !important;
+    text-align: center;
+    background: @prmary;
+    color: @white !important;
+    font-size: 1.8rem !important;
+}
+
+.dialog-body {
+    padding-top: 1rem !important;
+}
+
+.dialog-action {
+    text-align: center !important;
+}
+
+.dialog-overlay {
+    background: rgba(255,255,255,.5) !important;
+}
+
+//tab
+.tab-selected {
+    background: #d692a9 !important;
+}
+
+.rc-notification {
+    top: 40% !important;
 }

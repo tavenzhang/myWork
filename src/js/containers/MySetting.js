@@ -8,6 +8,8 @@ import { connect } from 'react-redux';
 //组件
 import { Banner, TextField, RaisedButton } from '../components';
 import { SERVERADDR, REQURL } from '../config';
+import FaAlignJustify from 'react-icons/lib/fa/bars';
+
 
 import { fetchData, appAct } from '../actions';
 
@@ -62,38 +64,54 @@ class MySetting extends Component{
     }
 
     render(){
+        const {drawerOpen,dispatch} = this.props;
         let scodeImg = this.getScodeImg();
 
         return (
             <div className="app-main-content">
-                <Banner title="设置" back={true} />
+                <Banner
+                    title="设置"
+                    currentPath="/mySetting"
+                    leftIcon={<FaAlignJustify className="menuIcon" />}
+                    leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
+                    drawerOpen={drawerOpen}
+                    drawerClose={()=>dispatch(appAct.drawerClose())}
+                    />
                 <div className="appContent appContent-text">
                     <div className="login-form">
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="现在的密码"
                             fullWidth={true}
+                            floatingLabelFixed={true}
                             type="password"
                             ref="MSpassword"
                             /><br />
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="设置新密码"
                             fullWidth={true}
+                            floatingLabelFixed={true}
                             type="password"
                             ref="MSpassword1"
                             />
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="重复新密码"
                             fullWidth={true}
+                            floatingLabelFixed={true}
                             type="password"
                             ref="MSpassword2"
                             />
                         <TextField
                             //hintText="Hint Text"
+                            className="input"
                             floatingLabelText="验证码"
                             fullWidth={true}
+                            floatingLabelFixed={true}
                             ref="MSsCode"
                             style={{ width:'60%'}}
                             />
@@ -109,6 +127,7 @@ class MySetting extends Component{
 
 const mapStateToProps = state => {
     return {
+        drawerOpen: state.appState.drawerOpen,//菜单
     }
 }
 

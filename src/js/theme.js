@@ -18,7 +18,10 @@ export const muiTheme = getMuiTheme({
     tabs: {
         backgroundColor: '#fff',
         textColor: '#BDBDBD',
-        selectedTextColor: '#f464a2'
+        selectedTextColor: '#fff',
     },
+    //dropDownMenu: {
+    //    accentColor: '#cb2064'
+    //},
     fontFamily: 'Roboto, YouYuan, helvetica neue, hiragino sans gb'
 });

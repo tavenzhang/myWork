@@ -17,7 +17,7 @@ class Recharge extends Component{
         return (
             <div className="app-main-content">
                 <Banner
-                    title="充值"
+                    title="砖石充值"
                     currentPath="/recharge"
                     leftIcon={<FaAlignJustify className="menuIcon" />}
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
@@ -25,7 +25,7 @@ class Recharge extends Component{
                     drawerClose={()=>dispatch(appAct.drawerClose())}
                     />
                 <div className="appContent appContent-text">
-                    <p className="textLine">尊敬的各位玩家，目前移动端不支持充值功能，给大家带来不便敬请谅解</p>
+                    <p className="textLine">尊敬的各位玩家，目前移动端还不支持充值功能，给大家带来不便敬请谅解！</p>
                 </div>
             </div>
         );

@@ -13,8 +13,8 @@ let pSever = protocol + "//p" + mainpath + "/";
 
 if( process.env.NODE_ENV == 'development') {//开发环境
     //serverADR = "http://192.16.137.3";
-    serverADR = "http://www.newvf.com";
-    vSever = "http://v.o-front-test.com";
+    serverADR = "http://www.mm.com";
+    vSever = "http://v.m-front.com";
     pSever = "http://138.68.15.251/";
 }
 

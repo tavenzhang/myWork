@@ -11,7 +11,7 @@ import RankDetailPanel from './Panel/RankDetailPanel';
 import ActivityPanel from './Panel/ActivityPanel';
 import UserMenuItem from './Panel/UserMenuItem';
 import ShopGiftPanel from './Panel/ShopGiftPanel';
-import InfoBox from './InfoBox/InfoBox';
+//import InfoBox from './InfoBox/InfoBox';
 import AudienceList from './Room/AudienceList';
 import ChatList from './Room/ChatList';
 import RoomMsg from './Room/RoomMsg';
@@ -51,7 +51,7 @@ export {
     RankDetailPanel,
     ActivityPanel,
     ShopGiftPanel,
-    InfoBox,
+    //InfoBox,
     RankListPanel,
     ChatList,
     AudienceList,

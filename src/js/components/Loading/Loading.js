@@ -3,7 +3,7 @@
  */
 
 import React, {Component,PropTypes} from 'react';
-import CircularProgress from 'material-ui/CircularProgress';
+//import CircularProgress from 'material-ui/CircularProgress';
 
 import './loading.less';
 
@@ -22,7 +22,16 @@ class Loading extends Component {
             return (
                 <div className="loading">
                     <div className="loading-main">
-                        <CircularProgress />
+                        <div className="loadEffect">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             )

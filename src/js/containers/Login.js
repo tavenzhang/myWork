@@ -61,7 +61,7 @@ class Login extends Component {
             requestType : REQURL.getUserInfo.type,
             successAction: appAN.UPDATE_USERINFO,
             callback : function() {
-                let backUrl = '/user';
+                let backUrl = '/';
 
                 if(location.query.from) {
                     backUrl = location.query.from;
@@ -89,7 +89,7 @@ class Login extends Component {
         const { location } = this.props;
 
         //设置返回页面
-        let back = '/user';
+        let back = '/';
         if(location.query.from) {
             back = location.query.from;
         }

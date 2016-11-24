@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-import { Banner, ShopGiftPanel, Dialog, SwipeableViews, Tabs, Tab, FlatButton } from '../components';
+import { Banner, ShopGiftPanel, Dialog, SwipeableViews, Tabs, Tab, FlatButton, RaisedButton } from '../components';
 import Imoney from 'react-icons/lib/fa/cny'
 
 //actions
@@ -240,7 +240,7 @@ class Shop extends Component{
         if(!isEmptyObj(shopSelectItem)) {
             if(slideIndex == 0) {//坐骑页
                 actions = [
-                    <FlatButton
+                    <RaisedButton
                         label="确认"
                         primary={true}
                         onTouchTap={()=>this.buyMounts(shopSelectItem.gid)}
@@ -252,7 +252,7 @@ class Shop extends Component{
             }
             else if(slideIndex == 1) {//vip坐骑
                 actions = [
-                    <FlatButton
+                    <RaisedButton
                         label="确认"
                         primary={true}
                         onTouchTap={()=>this.getVIPMount(shopSelectItem.gid)}
@@ -263,7 +263,7 @@ class Shop extends Component{
             }
             else {//购买vip
                 actions = [
-                    <FlatButton
+                    <RaisedButton
                         label="确认"
                         primary={true}
                         onTouchTap={()=>this.buyVIP(shopSelectItem.gid)}
@@ -280,7 +280,7 @@ class Shop extends Component{
         if(!userInfo.uid) {
             //弹出框button
             actions = [
-                <FlatButton
+                <RaisedButton
                     label="登录"
                     primary={true}
                     onTouchTap={()=>this.gotologin()}
@@ -296,7 +296,7 @@ class Shop extends Component{
         return (
             <div className="app-main-content">
                 <Banner
-                    title="商城"
+                    title="道具商城"
                     currentPath="/shop"
                     leftIcon={<FaAlignJustify className="menuIcon" />}
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
@@ -309,9 +309,9 @@ class Shop extends Component{
                         value = { slideIndex }
                         className="tab"
                         >
-                        <Tab label="普通坐骑" value={0} />
-                        <Tab label="贵族专属" value={1} />
-                        <Tab label="开通贵族" value={2} />
+                        <Tab label="普通坐骑" value={0} className={ slideIndex == 0 ? 'tab-selected' : ''} />
+                        <Tab label="贵族专属" value={1} className={ slideIndex == 1 ? 'tab-selected' : ''} />
+                        <Tab label="开通贵族" value={2} className={ slideIndex == 2 ? 'tab-selected' : ''} />
                     </Tabs>
                     <SwipeableViews
                         index={ slideIndex }
@@ -362,6 +362,10 @@ class Shop extends Component{
                         actions={actions}
                         modal={true}
                         open={dialogOpen}
+                        titleClassName="dialog-title"
+                        bodyClassName="dialog-body"
+                        actionsContainerClassName="dialog-action"
+                        overlayClassName="dialog-overlay"
                         >
                         {dialogContent}
                     </Dialog>

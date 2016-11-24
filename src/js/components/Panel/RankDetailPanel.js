@@ -6,6 +6,8 @@ import RankListPanel from './RankListPanel';
 //import Divider from 'material-ui/Divider';
 import { CONFIG } from '../../config';
 
+import Hourglass from 'react-icons/lib/fa/hourglass-2';
+
 const rankTopsPic = require('../../../images/rank_top3.png');
 
 class RankDetailPanel extends Component {
@@ -33,7 +35,10 @@ class RankDetailPanel extends Component {
         //没有排行榜数据
         if(data.length == 0) {
             return (
-                <div className="noContent">暂无数据~</div>
+                <div className="noContent">
+                    <Hourglass className="noContent-icon" />
+                    <div>暂无相关内容！</div>
+                </div>
             )
         }
         else {

@@ -127,7 +127,7 @@ class Video extends Component {
                 isAlertLogin = true;
                 setTimeout(function(){
                     dispatch(wsAct.showVideo(false));
-                    dispatch(wsAct.showAlertDialog(true,'用户登录后才能继续观看~',9));
+                    dispatch(wsAct.showAlertDialog(true,'用户登录后才能继续观看',9));
                 },5*60*1000)
             }
         }
@@ -263,11 +263,11 @@ class Video extends Component {
                 this.refs.chatInput.input.value = "";
             }
             else {
-                dispatch(appAct.showInfoBox('聊天内容不能为空~','error'))
+                dispatch(appAct.showInfoBox('聊天内容不能为空','error'))
             }
         }
         else {
-            dispatch(wsAct.showAlertDialog(true,'用户登录后才能进行聊天~',9));
+            dispatch(wsAct.showAlertDialog(true,'用户登录后才能进行聊天',9));
         }
     }
 
@@ -280,7 +280,7 @@ class Video extends Component {
             dispatch(wsAct.openGiftDialog(true));
         }
         else {
-            dispatch(wsAct.showAlertDialog(true,'用户登录后才能送礼~',9));
+            dispatch(wsAct.showAlertDialog(true,'用户登录后才能送礼',9));
         }
     }
 
@@ -310,7 +310,7 @@ class Video extends Component {
             dispatch(wsAct.openGiftDialog(false));
         }
         else {
-            dispatch(appAct.showInfoBox('请先选择礼物~','error'));
+            dispatch(appAct.showInfoBox('请先选择礼物','error'));
         }
     }
 
@@ -432,7 +432,7 @@ class Video extends Component {
 
         //提示登录注册的actions
         let alertActions = [
-            <FlatButton
+            <RaisedButton
                 label="登录"
                 primary={true}
                 keyboardFocused={true}
@@ -447,7 +447,7 @@ class Video extends Component {
 
         if(alertDialog.type == 1) {//普通弹出框
             alertActions = [
-                <FlatButton
+                <RaisedButton
                     label="知道了"
                     primary={true}
                     onTouchTap={()=>dispatch(wsAct.showAlertDialog(false,''))}
@@ -468,7 +468,7 @@ class Video extends Component {
 
         if(alertDialog.type == 5) {//只有关闭按钮的提示框
             alertActions = [
-                <FlatButton
+                <RaisedButton
                     label="知道了"
                     primary={true}
                     onTouchTap={()=>dispatch(wsAct.showAlertDialog(false,''))}
@@ -489,7 +489,7 @@ class Video extends Component {
             dialogDesc = "奖品：" + alertDialog.content.detail;
 
             alertActions = [
-                <FlatButton
+                <RaisedButton
                     label="知道了"
                     primary={true}
                     onTouchTap={()=>dispatch(wsAct.showAlertDialog(false,''))}
@@ -580,10 +580,13 @@ class Video extends Component {
                     </SwipeableViews>
                 </Dialog>
                 <Dialog
-                    title={alertDialog.title}
+                    title={alertDialog.title || '系统提示'}
                     actions={alertActions}
                     modal={false}
                     open={alertDialog.show}
+                    titleClassName="dialog-title"
+                    bodyClassName="dialog-body"
+                    actionsContainerClassName="dialog-action"
                     >
                     {dialogContent}
                     <div className="dialogDesc">{dialogDesc}</div>

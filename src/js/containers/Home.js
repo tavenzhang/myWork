@@ -153,12 +153,12 @@ class Home extends Component {
 
     render() {
 
-        let { slideIndex, videoListsAll, videoListsRec, videoListsSls, videoListsOrd, dialogOpen, drawerOpen, dispatch, location } = this.props;
+        const { slideIndex, videoListsAll, videoListsRec, videoListsSls, videoListsOrd, dialogOpen, drawerOpen, dispatch, location } = this.props;
         const { router } = this.context;
         return (
             <div className="app-main-content">
                 <Banner
-                    title="大厅"
+                    title="直播大厅"
                     currentPath="/home"
                     leftIcon={<FaAlignJustify className="menuIcon" />}
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
@@ -173,10 +173,10 @@ class Home extends Component {
                         value = { slideIndex }
                         className="tab"
                     >
-                        <Tab label="精选" value={0} />
-                        <Tab label="全部" value={1} />
-                        <Tab label="特色" value={2} />
-                        <Tab label="预约" value={3} />
+                        <Tab label="精选" value={0} className={ slideIndex == 0 ? 'tab-selected' : ''} />
+                        <Tab label="全部" value={1} className={ slideIndex == 1 ? 'tab-selected' : ''} />
+                        <Tab label="特色" value={2} className={ slideIndex == 2 ? 'tab-selected' : ''} />
+                        <Tab label="预约" value={3} className={ slideIndex == 3 ? 'tab-selected' : ''} />
                     </Tabs>
                     <SwipeableViews
                         //animateHeight={true}
@@ -207,6 +207,10 @@ class Home extends Component {
                     modal={true}
                     open={dialogOpen}
                     className="video-alertDialog"
+                    titleClassName="dialog-title"
+                    bodyClassName="dialog-body"
+                    actionsContainerClassName="dialog-action"
+
                     >
                     <div className="video-alertDialog-title">该房间需要密码才能进入</div>
                     <input className="video-alertDialog-input" placeholder="请输入房间密码" ref="roomPwd" />

@@ -8,6 +8,8 @@ import { connect } from 'react-redux';
 //组件
 import { Banner, List, ListItem, Divider, Avatar} from '../components';
 import { REQURL, CONFIG } from '../config';
+import FaAlignJustify from 'react-icons/lib/fa/bars';
+
 
 import Idiamond from 'react-icons/lib/fa/diamond';
 
@@ -29,10 +31,17 @@ class MyRecord extends Component{
     }
 
     render(){
-        const {myRecord} = this.props;
+        const {myRecord,drawerOpen,dispatch} = this.props;
         return (
             <div className="app-main-content">
-                <Banner title="消费记录" back={true} />
+                <Banner
+                    title="消费记录"
+                    currentPath="/myRecord"
+                    leftIcon={<FaAlignJustify className="menuIcon" />}
+                    leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
+                    drawerOpen={drawerOpen}
+                    drawerClose={()=>dispatch(appAct.drawerClose())}
+                    />
                 <div className="appContent">
                     <List className="myRecord-list">
                         {
@@ -66,6 +75,7 @@ class MyRecord extends Component{
 const mapStateToProps = state => {
     return {
         myRecord : state.appState.myRecord,//消费记录
+        drawerOpen: state.appState.drawerOpen,//菜单
     }
 }
 

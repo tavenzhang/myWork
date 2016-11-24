@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import { Banner, FlatButton} from '../components';
 import { REQURL, CONFIG } from '../config';
 import { changeDate } from '../utils/util'
+import FaAlignJustify from 'react-icons/lib/fa/bars';
 
 //actions
 import { appAct, appAN, fetchData } from '../actions';
@@ -100,10 +101,17 @@ class MyMount extends Component{
     }
 
     render(){
-        const {myMount} = this.props;
+        const {myMount,drawerOpen,dispatch} = this.props;
         return (
             <div className="app-main-content">
-                <Banner title="我的道具" back={true} />
+                <Banner
+                    title="我的道具"
+                    currentPath="/myMount"
+                    leftIcon={<FaAlignJustify className="menuIcon" />}
+                    leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
+                    drawerOpen={drawerOpen}
+                    drawerClose={()=>dispatch(appAct.drawerClose())}
+                    />
                 <div className="appContent">
                     {
                         myMount.map((v,i) => {
@@ -182,6 +190,7 @@ class MyMount extends Component{
 const mapStateToProps = state => {
     return {
         myMount : state.appState.myMount,//我的道具
+        drawerOpen: state.appState.drawerOpen,//菜单
     }
 }
 

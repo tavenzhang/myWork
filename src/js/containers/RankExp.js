@@ -41,10 +41,10 @@ class RankExp extends Component {
                         className="tab"
                         //animateHeight={true}
                         >
-                        <Tab label="日榜" value={0} />
-                        <Tab label="周榜" value={1} />
-                        <Tab label="月榜" value={2} />
-                        <Tab label="总榜" value={3} />
+                        <Tab label="日榜" value={0} className={ rankSlideIndex == 0 ? 'tab-selected' : ''} />
+                        <Tab label="周榜" value={1} className={ rankSlideIndex == 1 ? 'tab-selected' : ''} />
+                        <Tab label="月榜" value={2} className={ rankSlideIndex == 2 ? 'tab-selected' : ''} />
+                        <Tab label="总榜" value={3} className={ rankSlideIndex == 3 ? 'tab-selected' : ''} />
                     </Tabs>
                     <SwipeableViews
                         index={ rankSlideIndex }
