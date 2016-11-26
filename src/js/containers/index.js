@@ -7,6 +7,7 @@ import Home from './Home';
 import Rank from './Rank';
 import RankExp from './RankExp';
 import RankRich from './RankRich';
+import RankGame from './RankGame';
 import User from './User';
 import UserEdit from './UserEdit';
 import Activity from './Activity';
@@ -31,6 +32,7 @@ export {
     Rank,
     RankExp,
     RankRich,
+    RankGame,
     User,
     UserEdit,
     Activity,

@@ -11,6 +11,7 @@ import { REQURL } from '../config';
 
 const rankExpPic = require('../../images/rank_exp.jpg');
 const rankRichPic = require('../../images/rank_rich.jpg');
+const rankGamePic = require('../../images/rank_game.jpg');
 import FaAlignJustify from 'react-icons/lib/fa/bars';
 
 
@@ -38,7 +39,7 @@ class Rank extends Component {
     }
 
     render() {
-        let { richLists, expLists, dispatch, drawerOpen } = this.props;
+        let { richLists, expLists, gameLists, dispatch, drawerOpen } = this.props;
 
         return (
             <div className="app-main-content">
@@ -51,6 +52,12 @@ class Rank extends Component {
                     drawerClose={()=>dispatch(appAct.drawerClose())}
                     />
                 <div className="appContent rank">
+                    <RankPanel
+                        iconSrc={rankGamePic}
+                        link="/rankGame"
+                        data={gameLists}
+                        />
+
                     <RankPanel
                         iconSrc={rankExpPic}
                         link="/rankExp"
@@ -72,9 +79,11 @@ class Rank extends Component {
 const mapStateToProps = (state) => {
     const expLists = state.appState.expLists.day.slice(0, 3);
     const richLists = state.appState.richLists.day.slice(0, 3);
+    const gameLists = state.appState.gameLists.day.slice(0, 3);
     return {
         rankSlideIndex: state.appState.rankSlideIndex,
         expLists: expLists,
+        gameLists: gameLists,
         drawerOpen: state.appState.drawerOpen,//菜单
         richLists: richLists
     }

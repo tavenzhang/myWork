@@ -48,6 +48,12 @@ const initAppState = {
         month: [],
         total: []
     },
+    gameLists        : {  //赌圣排行数据
+        day: [],
+        week: [],
+        month: [],
+        total: []
+    },
     mounts: [],//坐骑
     vipmount: [],//贵族坐骑
     vipIcons: [],//贵族勋章
@@ -206,6 +212,12 @@ const appState = (state = initAppState, action) => {
                     week: action.data.rank_rich_week,
                     month: action.data.rank_rich_month,
                     total: action.data.rank_rich_his
+                },
+                gameLists: {
+                    day: action.data.rank_game_day,
+                    week: action.data.rank_game_week,
+                    month: action.data.rank_game_month,
+                    total: action.data.rank_game_his
                 }
             });
 

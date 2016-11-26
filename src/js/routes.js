@@ -11,6 +11,7 @@ import {
     Rank,
     RankRich,
     RankExp,
+    RankGame,
     User,
     UserEdit,
     Seek,
@@ -37,6 +38,7 @@ export default (
         <Route path="rank" component={ Rank } />
         <Route path="rankExp" component={ RankExp } />
         <Route path="rankRich" component={ RankRich } />
+        <Route path="rankGame" component={ RankGame } />
         <Route path="seek" component={ Seek } />
         <Route path="activity" component={ Activity } />
         <Route path="recharge" component={ Recharge } />
