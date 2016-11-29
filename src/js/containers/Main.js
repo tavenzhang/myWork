@@ -121,14 +121,16 @@ class Main extends Component {
     static childContextTypes = {
         isLogin: React.PropTypes.bool,
         userInfo: React.PropTypes.object,
+        dispat: React.PropTypes.func,
     };
 
 
     getChildContext() {
-        const { isLogin,userInfo } = this.props;
+        const { isLogin,userInfo,dispatch } = this.props;
         return {
             isLogin  : isLogin,
             userInfo  : userInfo,
+            dispat : dispatch
         };
     }
 

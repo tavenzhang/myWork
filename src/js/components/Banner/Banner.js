@@ -13,7 +13,10 @@ import Ipoweroff from 'react-icons/lib/fa/power-off';
 import Isetting from 'react-icons/lib/fa/cog';
 import Idiamond from 'react-icons/lib/fa/diamond';
 
+//actions
+import {fetchData,appAN} from '../../actions';
 
+import {REQURL} from '../../config';
 
 const MenuIcon = [
     require('../../../images/LeftListIcon01.png'),
@@ -64,6 +67,7 @@ class Banner extends Component {
         router: React.PropTypes.object,
         isLogin: React.PropTypes.bool,
         userInfo: React.PropTypes.object,
+        dispat: React.PropTypes.func,
     };
 
     goRegister() {
@@ -85,11 +89,35 @@ class Banner extends Component {
         });
     }
 
+    goSetting() {
+        const { drawerClose } = this.props;
+        const {router} = this.context;
+        drawerClose();
+        router.push({
+            pathname: '/mySetting',
+        });
+    }
+
+    logout() {
+        const {dispat} = this.context;
+        const { drawerClose } = this.props;
+
+        drawerClose();
+        //请求退出接口
+        dispat(fetchData({
+            url : REQURL.logout.url,
+            requestType : REQURL.logout.type,
+            successAction: appAN.LOGOUT,
+            callback: function(data) {
+                console.log(data)
+            }
+        }));
+    }
+
     render() {
         const { router, isLogin, userInfo } = this.context;
         const { back, title, titleTP, drawerClose, drawerOpen, leftIconTouch, currentPath } = this.props;
         let [rightIcon,leftIcon] = [<IconButton />,<IconButton />];
-
         if(back) {
             let backFunc = null;
             if(typeof back === "boolean") {
@@ -214,8 +242,8 @@ class Banner extends Component {
                         }
                         </div>
                         { isLogin ? <div className="menu-bottom">
-                            <span className="menu-bottom-btn"><Ipoweroff />退出</span>
-                            <Link to="/mySetting"><span className="menu-bottom-btn"><Isetting />设置</span></Link>
+                            <span className="menu-bottom-btn" onTouchTap={()=>this.logout()}><Ipoweroff />退出</span>
+                            <span className="menu-bottom-btn" onTouchTap={()=>this.goSetting()}><Isetting />设置</span>
                         </div> : null }
                     </div>
                 </Drawer>
