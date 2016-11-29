@@ -98,6 +98,7 @@ class Login extends Component {
             <div className="app-main-content" ref="login">
                 <Banner title="登录" back={back} />
                 <div className="login">
+                    <img src={require('../../images/logo.png')} className="login-icon" />
                     <div className="login-form">
                         <TextField
                             //hintText="Hint Text"

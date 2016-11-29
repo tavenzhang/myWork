@@ -17,25 +17,23 @@
 }
 
 .myMount-panel {
-    width: 100%;
-    padding: 2rem;
-    border-bottom: .1rem solid lighten(@grayLight,10%);
+    width: 50vw;
     box-sizing: border-box;
+    text-align: center;
+    margin-top: .5rem;
+    position: relative;
 
-    .expirDate {
-        color: @gray;
-        line-height: 2;
-    }
-
-    .mount {
-        margin: 1.5rem auto;
-        display: block;
-        width: 8rem;
-    }
-
-    .desc {
-        font-size: 1.4rem;
-        line-height: 1.8;
+    .shopGift-item {
         margin-bottom: 1rem;
+    }
+
+    .myMount-panel-status {
+        position: absolute;
+        top: 0.4rem;
+        right: 1vw;
+        background: @prmary;
+        font-size: 1.2rem;
+        color: @white;
+        padding: 0.5rem 1rem;
     }
 }

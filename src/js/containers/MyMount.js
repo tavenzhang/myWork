@@ -6,7 +6,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 
 //组件
-import { Banner, FlatButton} from '../components';
+import { Banner, RaisedButton, ShopGiftPanel} from '../components';
 import { REQURL, CONFIG } from '../config';
 import { changeDate } from '../utils/util'
 import FaAlignJustify from 'react-icons/lib/fa/bars';
@@ -112,24 +112,24 @@ class MyMount extends Component{
                     drawerOpen={drawerOpen}
                     drawerClose={()=>dispatch(appAct.drawerClose())}
                     />
-                <div className="appContent">
+                <div className="appContent shopGift">
                     {
                         myMount.map((v,i) => {
                             const edate = changeDate(v.expires);
-                            const edateStr = `截止日期：${edate}`;
+                            const edateStr = `${edate}`;
 
                             let [status, canEquiped, btnLabel] = ["",false,null];//道具状态
 
                             if(v.gid < 120001 || v.gid > 121000) {
                                 status = "不可装备";
-                                btnLabel = <FlatButton
+                                btnLabel = <RaisedButton
                                     disabled={true}
                                     label="不可装备"
                                     />;
                             }
                             else if(v.expires *1000 < (new Date()).valueOf()) {
                                 status = "已过期";
-                                btnLabel = <FlatButton
+                                btnLabel = <RaisedButton
                                         label="前去续费"
                                         primary={true}
                                         onTouchTap={()=>this.goRecharge()}
@@ -139,8 +139,8 @@ class MyMount extends Component{
                                 if(v.equip.length == 0) {
                                     status = "未装备";
                                     canEquiped = true;
-                                    btnLabel = <FlatButton
-                                        label="立即装备"
+                                    btnLabel = <RaisedButton
+                                        label="装备"
                                         secondary={true}
                                         onTouchTap={()=>this.equip(v.gid)}
                                         />;
@@ -149,7 +149,7 @@ class MyMount extends Component{
                                     for(var prop in v.equip ) {
                                         if( prop == v.gid ) {
                                             status = "已装备";
-                                            btnLabel = <FlatButton
+                                            btnLabel = <RaisedButton
                                                 label="取消装备"
                                                 onTouchTap={()=>this.cancelEquip()}
                                                 />;
@@ -157,8 +157,8 @@ class MyMount extends Component{
                                         else {
                                             status = "未装备";
                                             canEquiped = true;
-                                            btnLabel = <FlatButton
-                                                label="立即装备"
+                                            btnLabel = <RaisedButton
+                                                label="装备"
                                                 secondary={true}
                                                 onTouchTap={()=>this.equip(v.gid)}
                                                 />;
@@ -172,10 +172,13 @@ class MyMount extends Component{
 
                             return (
                                 <div key={i} className="myMount-panel">
-                                    <h3>{v.name}</h3>
-                                    <h5 className="expirDate">{edateStr}</h5>
-                                    <img src={imgSrc} className="mount" />
-                                    <div className="desc">{v.desc}</div>
+                                    <span className="myMount-panel-status">{status}</span>
+                                    <ShopGiftPanel
+                                        imgSrc={imgSrc}
+                                        name={v.name}
+                                        type="myMount"
+                                        price={edateStr}
+                                        />
                                     {btnLabel}
                                 </div>
                             )

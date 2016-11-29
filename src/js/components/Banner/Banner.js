@@ -66,6 +66,25 @@ class Banner extends Component {
         userInfo: React.PropTypes.object,
     };
 
+    goRegister() {
+        const { drawerClose } = this.props;
+        const {router} = this.context;
+
+        drawerClose();
+        router.push({
+            pathname: '/register',
+        });
+    }
+
+    goLogin() {
+        const { drawerClose } = this.props;
+        const {router} = this.context;
+        drawerClose();
+        router.push({
+            pathname: '/login',
+        });
+    }
+
     render() {
         const { router, isLogin, userInfo } = this.context;
         const { back, title, titleTP, drawerClose, drawerOpen, leftIconTouch, currentPath } = this.props;
@@ -141,8 +160,8 @@ class Banner extends Component {
 
         //头部信息
         let headerMsg = <div>
-            <Link to="/register"><FlatButton label="注册" className="btn-register" onTouchTap={()=>this.goRegister()} /></Link>
-            <Link to="/login"><FlatButton label="登录" className="btn-login" /></Link>
+            <FlatButton label="注册" className="btn-register" onTouchTap={()=>this.goRegister()} />
+            <FlatButton label="登录" className="btn-login" onTouchTap={()=>this.goLogin()} />
         </div>;
 
         if(isLogin && userInfo.uid) {//判断用户是否登陆
