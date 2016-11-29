@@ -409,7 +409,7 @@ class Video extends Component {
         //礼物弹出框的actions
         const actions = [
             <div className="gift-actions-desc">
-                <Link to="/recharge" className="btn-recharge">充值</Link> | 余额：{money}<Idiamond className="Idiamond" />
+                余额：{money}<Idiamond className="Idiamond" />
             </div>,
             <input
                 type="nunber"
@@ -435,7 +435,6 @@ class Video extends Component {
             <RaisedButton
                 label="登录"
                 primary={true}
-                keyboardFocused={true}
                 onTouchTap={()=>this.goLogin()}
                 />,
             <FlatButton
@@ -558,7 +557,7 @@ class Video extends Component {
                         >
                         {
                             gifts.map((v,i) => {
-                                return <Tab label={v.name} value={i} key={i} />
+                                return <Tab label={v.name} value={i} key={i} className={ slideGiftIndex == i ? 'tab-selected' : ''} />
                             })
                         }
                     </Tabs>
