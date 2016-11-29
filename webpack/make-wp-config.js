@@ -219,11 +219,11 @@ module.exports = function(options) {
                 //将公共代码抽离出来合并为一个文件
                 new webpack.optimize.CommonsChunkPlugin({
                     name:"js/vendor",
-                    filename:"js/vendor.bundle.js",
+                    filename:"js/base.js",
                     minChunks:3 //// 提取至少3个模块共有的部分
                 }),
                 //单独打包css
-                new ExtractTextPlugin("css/styles.css"),
+                new ExtractTextPlugin("css/common.css"),
                 //HtmlWebpackPlugin，模板生成相关的配置，每个对于一个页面的配置，有几个写几个
                 new HtmlWebpackPlugin(htmlTemplet),
                 //减小打包文件大小

@@ -55,7 +55,7 @@ class Main extends Component {
 
         //判断用户是否登陆
         if(this.isConnect() && !userInfo.uid){//当用户处在链接状态，并且状态基中userInfo的uid不存在时，请求用户数据
-            //console.log('uid',userInfo.uid)
+            console.log('uid',userInfo.uid)
             //console.log(location.pathname)
             //if(location.pathname.indexOf('/video') != 0) {
                 //请求用户信息

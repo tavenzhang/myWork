@@ -11,6 +11,8 @@ import NavigationClose from 'material-ui/svg-icons/navigation/arrow-back';
 import FlatButton from 'material-ui/FlatButton';
 import Ipoweroff from 'react-icons/lib/fa/power-off';
 import Isetting from 'react-icons/lib/fa/cog';
+import Idiamond from 'react-icons/lib/fa/diamond';
+
 
 
 const MenuIcon = [
@@ -139,7 +141,7 @@ class Banner extends Component {
 
         //头部信息
         let headerMsg = <div>
-            <Link to="/register"><FlatButton label="注册" className="btn-register" /></Link>
+            <Link to="/register"><FlatButton label="注册" className="btn-register" onTouchTap={()=>this.goRegister()} /></Link>
             <Link to="/login"><FlatButton label="登录" className="btn-login" /></Link>
         </div>;
 
