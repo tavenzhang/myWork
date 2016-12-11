@@ -11,6 +11,7 @@ import flash.system.LoaderContext;
 public class videoRoomCryp extends Sprite {
  [Embed (source="../bin-debug/videoRoom.swf", mimeType = "application/octet-stream")] // source = path to the swf you want to protect private var content:Class;
   public var mainClass:Class;
+
     public function videoRoomCryp() {
         var loader:Loader = new Loader();
         addChild(loader);

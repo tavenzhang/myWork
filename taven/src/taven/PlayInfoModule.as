@@ -83,14 +83,16 @@ public class PlayInfoModule extends BaseModule {
 		VideoTool.buildButtonEff(_view.mcCaiQuan);
 		gameBox = new VBox(_view, 0, 0);
 		gameBox.addChild(_view.mcJuBao);
-		gameBox.addChild(_view.mcCaiQuan)
+		_view.mcJuBao.visible=false;
+		gameBox.addChild(_view.mcCaiQuan);
+		_view.mcCaiQuan.visible=false;
 	}
 
 	override protected function onAddToStageHandle(event:Event):void {
 		trace(stage);
 		stage.addEventListener(CBModuleEvent.SHOW_CAR_GAME, function (e:Event):void {
 			trace(stage);
-			_view.mcJuBao.dispatchEvent(new MouseEvent(MouseEvent.CLICK))
+			//_view.mcJuBao.dispatchEvent(new MouseEvent(MouseEvent.CLICK))
 		});
 		stage.addEventListener(CBModuleEvent.SHOW_FINGER_GAME, function (e:Event):void {
 			trace(stage);
@@ -114,7 +116,7 @@ public class PlayInfoModule extends BaseModule {
 				}
 				break;
 			case "mcJuBao":
-				ClientManger.getInstance().showCarGame();
+				//ClientManger.getInstance().showCarGame();
 				//EventUtils.secndStatusEvent(this, EventConst.PLAYER_JU_BIAO);
 				break;
 			case "mcCaiQuan":
