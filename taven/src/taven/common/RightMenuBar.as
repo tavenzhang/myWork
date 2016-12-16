@@ -96,7 +96,7 @@ public class RightMenuBar extends leftMenuMc {
         dragBg(width, height)
     }
 
-    public function addSubView(displayObject:DisplayObject) {
+    public function addSubView(displayObject:DisplayObject):void {
         this.addChildAt(displayObject, 0);
         displayObject.y = tabBar.y + tabBar.height + 10;
         displayObject.width = menuWidth;

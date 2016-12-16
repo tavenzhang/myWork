@@ -38,6 +38,7 @@ public class TavenModule extends Sprite
 
 		public function TavenModule()
 		{
+
 		//	usrInfoView  = new UserInfo();
 		/*	var data:Object = new Object();
 			data.name = "111";
