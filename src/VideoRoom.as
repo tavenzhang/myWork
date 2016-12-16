@@ -391,6 +391,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         addEventListener(StatusEvent.STATUS, roomHandler.onVideoStatusEvent, true);
         netAppInit();
         LoadUI.setLoadInfo("开始进入视频大厅...", 100);
+
         //
         //showCarGame();
         //showFingerGame();
