@@ -17,14 +17,6 @@ const logo = require('../../images/logo.png');
 
 class Home extends Component {
 
-    componentDidMount() {
-        const {dispatch} = this.props;
-
-        //断开socket链接
-        dispatch(wsAct.logout());
-        //加载数据
-        this.loadVideosRec();
-    }
 
     static contextTypes = {
         router: React.PropTypes.object
@@ -222,23 +214,28 @@ class Home extends Component {
     }
 
     componentDidMount() {
+        const {dispatch} = this.props;
+
+        //断开socket链接
+        dispatch(wsAct.logout());
+        //加载数据
+        this.loadVideosRec();
         this.checkGuest(true);
+
         if(!this.check)
         {
             setTimeout(()=>{
-                for (var item of document.body.children)
-                {
-                    this.checkGuest(true);
-                }
+                this.checkGuest(true);
             },1000);
         }
     }
 
   checkGuest=(visible=true)=>{
       this.check=false;
-      for (var item of document.body.children)
+      for (let index in document.body.children)
       {
-          if(item.children[0]&&item.children[0].id=="754482live8003517")
+         let item=document.body.children[index];
+          if(item.children&&item.children[0]&&item.children[0].id=="754482live8003517")
           {
               var div=item.children[0];
               div.style.display=visible? "block":"none";
