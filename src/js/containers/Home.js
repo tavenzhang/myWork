@@ -109,6 +109,7 @@ class Home extends Component {
                 pathname: '/video/'+room.uid,
                 query: { from: '/' }
             })
+            this.checkGuest(false);
         }
     }
 
@@ -143,6 +144,7 @@ class Home extends Component {
                         pathname: '/video/'+currSeleRoomId,
                         query: { from: '/' }
                     })
+                    this.checkGuest(false);
                 }else{
                     //密码验证失败
                     dispatch(appAct.showInfoBox(res.msg,'error'))
@@ -218,6 +220,32 @@ class Home extends Component {
             </div>
         );
     }
+
+    componentDidMount() {
+        this.checkGuest(true);
+        if(!this.check)
+        {
+            setTimeout(()=>{
+                for (var item of document.body.children)
+                {
+                    this.checkGuest(true);
+                }
+            },1000);
+        }
+    }
+
+  checkGuest=(visible=true)=>{
+      this.check=false;
+      for (var item of document.body.children)
+      {
+          if(item.children[0]&&item.children[0].id=="754482live8003517")
+          {
+              var div=item.children[0];
+              div.style.display=visible? "block":"none";
+              this.check=true;
+          }
+      }
+  }
 
 }
 

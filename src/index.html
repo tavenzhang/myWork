@@ -1,16 +1,16 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <title>MY</title>
     <meta charset="UTF-8">
-	<meta name="description" content="">
+    <meta name="description" content="">
     <!--缩放不出滚动条，设置为yes后不出现横向滚动条。-->
     <meta name="viewport" content="uc-fitscreen=yes"/>
     <!--app模式，使用了application这种应用模式后，页面讲默认全屏，禁止长按菜单，禁止收拾，标准排版，以及强制图片显示。-->
     <meta name="browsermode" content="application"/>
 
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
     <!-- uc强制竖屏 -->
     <meta name="screen-orientation" content="portrait">
     <!-- QQ强制竖屏 -->
@@ -27,47 +27,54 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!--启用 WebApp 全屏模式-->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
 
     <!-- 设置状态栏的背景颜色 -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 
     <!--强制图片显示  -->
     <meta name="imagemode" content="force"/>
     <!--添加到主屏后的标题  -->
     <meta name="apple-mobile-web-app-title" content="兰桂坊">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
 
     <style>
 
-      #loadAnim {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 10000;
-        text-align: center;
-        box-sizing: border-box;
-        height: 100%;
-        background: url("./images/welcome.jpg");
-        background-size: 100% 100%;
-      }
+        #loadAnim {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            text-align: center;
+            box-sizing: border-box;
+            height: 100%;
+            background: url("./images/welcome.jpg");
+            background-size: 100% 100%;
+        }
 
-      .loadHidden {
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        transition: visibility 0s 1s, opacity 1s linear;
-      }
+        .loadHidden {
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            transition: visibility 0s 1s, opacity 1s linear;
+        }
 
     </style>
-  </head>
-  <body>
-  <div id="loadAnim">
-  </div>
-  <div id="app"></div>
-    <!--<script src="https://jwpsrv.com/library/cQwJLOoiEeS0FRJtO5t17w.js"></script>-->
-    <script src="./main.js"></script>
-  </body>
+</head>
+<body>
+<div id="loadAnim">
+</div>
+<div id="app"></div>
+<!--<script src="https://jwpsrv.com/library/cQwJLOoiEeS0FRJtO5t17w.js"></script>-->
+<script src="./main.js"></script>
+    <div style='display:none;'><a href='http://www.live800.com'>在线客服</a></div>
+    <script language='javascript'
+            src='http://v88.live800.com/live800/chatClient/floatButton.js?jid=5432615048&companyID=754482&configID=3517&codeType=custom'></script>
+    <div style='display:none;'><a href='http://en.live800.com'>live chat</a></div>
+
+
+</body>
 </html>

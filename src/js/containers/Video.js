@@ -87,6 +87,16 @@ class Video extends Component {
 
     componentDidMount() {
         const {dispatch,isLogin} = this.props;
+        for (var item of document.body.children)
+        {
+            // let target= item.getFirstChild()
+            //
+            if(item.children[0]&&item.children[0].id=="754482live8003517")
+            {
+                var div=item.children[0];
+                div.style.display="none";
+            }
+        }
     }
 
     componentDidUpdate() {

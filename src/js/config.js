@@ -13,9 +13,12 @@ let pSever = protocol + "//p" + mainpath + "/";
 
 if( process.env.NODE_ENV == 'development') {//开发环境
     //serverADR = "http://192.16.137.3";
-    serverADR = "http://www.mm.com";
-    vSever = "http://v.m-front.com";
-    pSever = "http://138.68.15.251/";
+    // serverADR = "http://www.mm.com";
+    // vSever = "http://v.m-front.com";
+    // pSever = "http://138.68.15.251/";
+    serverADR = "http://www.thomas.com:8000";
+    vSever = "http://v.thomas.com:8000";
+    pSever = "http://p.thomas.com:8000";
 }
 
 export const SERVERADDR = serverADR;

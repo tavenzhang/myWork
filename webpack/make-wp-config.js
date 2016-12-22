@@ -95,7 +95,7 @@ module.exports = function(options) {
             new ProgressBarPlugin(),
             //预加载的插件
             new webpack.PrefetchPlugin("react"),
-            new webpack.PrefetchPlugin("react/lib/ReactComponentBrowserEnvironment")
+          //  new webpack.PrefetchPlugin("react/lib/ReactComponentBrowserEnvironment")
         ]
     };
 
