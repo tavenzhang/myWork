@@ -3,7 +3,7 @@
   <component name="FlexBuildConfigurationManager" active="VideoRoom">
     <configurations>
       <configuration name="VideoRoom" pure-as="true" main-class="VideoRoom" output-file="VideoRoom.swf" output-folder="$MODULE_DIR$/bin-debug">
-        <dependencies target-player="23.0">
+        <dependencies target-player="18.0">
           <entries>
             <entry library-id="fc9476c4-f1a2-4c39-b5c6-9f4dd7800913">
               <dependency linkage="Merged" />
@@ -12,7 +12,7 @@
               <dependency linkage="Include" />
             </entry>
           </entries>
-          <sdk name="AIRSDK_Compiler23" />
+          <sdk name="AIRSDK18" />
         </dependencies>
         <compiler-options>
           <map>
@@ -25,13 +25,13 @@
         <packaging-ios />
       </configuration>
       <configuration name="videoRoomCryp" pure-as="true" main-class="videoRoomCryp" output-file="videoRoomCryp.swf" output-folder="$MODULE_DIR$/bin-debug">
-        <dependencies target-player="23.0">
+        <dependencies target-player="18.0">
           <entries>
             <entry library-id="e3d437d8-74d7-4251-a023-73ae1b7e0e01">
               <dependency linkage="Merged" />
             </entry>
           </entries>
-          <sdk name="AIRSDK_Compiler23" />
+          <sdk name="AIRSDK18" />
         </dependencies>
         <compiler-options>
           <map>
@@ -50,7 +50,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="AIRSDK_Compiler23" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="AIRSDK18" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">

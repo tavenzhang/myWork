@@ -402,7 +402,6 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
     }
 
 
-
     /**
      * 重置模块
      */
@@ -506,7 +505,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
      * @param e
      */
     private function onGiftMouseEvent(e:Event):void {
-        trace("onGiftMouseEvent...")
+        trace("onGiftMouseEvent...");
         if (ClientManger.getInstance().isGuestAndGuestRegister()) {
             Cc.debug("没有登录....");
             return;
