@@ -12,7 +12,7 @@ const initAppState = {
     myRecord        : [],//我的消费记录
     myMsg           : [],//我的消息
     myMount         : [],//我的道具
-    payMethod       : 'WEIXINWAP',//默认支付方式
+    payMethod       : 'ZFBWAP',//默认支付方式
     chargePrice     : '10',//默认支付价格
     chargeConfirmDialog: false,//支付确认框
     userInfo        : { //用户信息

@@ -14,8 +14,16 @@ import { Banner, SelectField, MenuItem, RadioButtonGroup, RadioButton, RaisedBut
 
 class Recharge extends Component{
 
+    constructor(props){
+        super(props);
+        this.state = {
+            orderId: '',
+        };
+    }
+
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
+        const state = this.state;
 
         dispatch(fetchData({
             url : REQURL.chargePay.url,
@@ -27,11 +35,16 @@ class Recharge extends Component{
             },
             callback : function(data) {
                 if(!data.status) {
+                    state.username = data.msg.order_id;
+
+                    console.log('1111',data);
                     dispatch(fetchData({
                         url : data.msg.pay_url,
                         requestType : "GET",
                         requestData : data.msg.post_data,
                         callback : function(data) {
+                            console.log('2222',data);
+
                             //显示弹出框
                             dispatch(appAct.showRechargeDialog(true));
 
@@ -48,12 +61,13 @@ class Recharge extends Component{
 
     confirmRecharge() {
         const {dispatch} = this.props;
+        const {orderId} = this.state;
 
         dispatch(fetchData({
             url : REQURL.chargeCheck.url,
             requestType : REQURL.chargeCheck.type,
             requestData : {
-                'order_id' : 11111
+                'order_id' : orderId
             },
             callback : function(data) {
                 dispatch(appAct.showRechargeDialog(false));
