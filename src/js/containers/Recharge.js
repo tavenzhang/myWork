@@ -63,6 +63,7 @@ class Recharge extends Component{
                         console.log(data)
                     }
                 }));
+                console.log('0000',data);
                 if(!data.status) {
                     state.username = data.msg.order_id;
 

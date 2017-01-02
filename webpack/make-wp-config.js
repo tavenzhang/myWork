@@ -207,21 +207,21 @@ module.exports = function(options) {
             },
             plugins: [
                 //js文件的压缩
-                new webpack.optimize.UglifyJsPlugin({
-                    compressor: {
-                        warnings: false
-                    },
-                    output: {
-                        comments: false,
-                    },
-                    //except: ['$super', '$', 'exports', 'require']    //排除关键字
-                }),
-                //将公共代码抽离出来合并为一个文件
-                new webpack.optimize.CommonsChunkPlugin({
-                    name:"js/vendor",
-                    filename:"js/base.js",
-                    minChunks:3 //// 提取至少3个模块共有的部分
-                }),
+                //new webpack.optimize.UglifyJsPlugin({
+                //    compressor: {
+                //        warnings: false
+                //    },
+                //    output: {
+                //        comments: false,
+                //    },
+                //    //except: ['$super', '$', 'exports', 'require']    //排除关键字
+                //}),
+                ////将公共代码抽离出来合并为一个文件
+                //new webpack.optimize.CommonsChunkPlugin({
+                //    name:"js/vendor",
+                //    filename:"js/base.js",
+                //    minChunks:3 //// 提取至少3个模块共有的部分
+                //}),
                 //单独打包css
                 new ExtractTextPlugin("css/common.css"),
                 //HtmlWebpackPlugin，模板生成相关的配置，每个对于一个页面的配置，有几个写几个
