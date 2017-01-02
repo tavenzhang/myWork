@@ -101,7 +101,6 @@ class Home extends Component {
                 pathname: '/video/'+room.uid,
                 query: { from: '/' }
             })
-            this.checkGuest(false);
         }
     }
 
@@ -136,7 +135,6 @@ class Home extends Component {
                         pathname: '/video/'+currSeleRoomId,
                         query: { from: '/' }
                     })
-                    this.checkGuest(false);
                 }else{
                     //密码验证失败
                     dispatch(appAct.showInfoBox(res.msg,'error'))
@@ -220,29 +218,10 @@ class Home extends Component {
         dispatch(wsAct.logout());
         //加载数据
         this.loadVideosRec();
-        this.checkGuest(true);
 
-        if(!this.check)
-        {
-            setTimeout(()=>{
-                this.checkGuest(true);
-            },1000);
-        }
     }
 
-  checkGuest=(visible=true)=>{
-      this.check=false;
-      for (let index in document.body.children)
-      {
-         let item=document.body.children[index];
-          if(item.children&&item.children[0]&&item.children[0].id=="754482live8003517")
-          {
-              var div=item.children[0];
-              div.style.display=visible? "block":"none";
-              this.check=true;
-          }
-      }
-  }
+
 
 }
 

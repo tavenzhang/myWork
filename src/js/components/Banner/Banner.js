@@ -12,7 +12,8 @@ import FlatButton from 'material-ui/FlatButton';
 import Ipoweroff from 'react-icons/lib/fa/power-off';
 import Isetting from 'react-icons/lib/fa/cog';
 import Idiamond from 'react-icons/lib/fa/diamond';
-
+//import  react-icons/lib/fa/question-circle
+import {FaQuestionCircle} from 'react-icons/lib/fa'
 //actions
 import {fetchData,appAN} from '../../actions';
 
@@ -45,6 +46,8 @@ const menus = [
     { title: '消费记录', link:'/myRecord', login:true },
     { title: '我的关注', link:'/myFav', login:true },
     { title: '我的预约', link:'/myOrd', login:true },
+    { title: '联系客服', link:'', login:false },
+    { title: '联系客服', link:'', login:true },
 ]
 
 class Banner extends Component {
@@ -230,14 +233,28 @@ class Banner extends Component {
                                 if(!isLogin && v.login) {
                                     return null;
                                 }
-                                return <Link to={v.link} key={i}>
-                                    <MenuItem
-                                        className={`menu-item ${itemBg}`}
-                                        leftIcon={<img src={MenuIcon[i]} className="menu-list-icon" />}
-                                        onTouchTap={() => drawerClose()}>
-                                        {v.title}
-                                    </MenuItem>
-                                </Link>
+                                if(v.title=="联系客服")
+                                {
+                                    return    <a key={i} href='http://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=754482&configID=3517&jid=5432615048&lan=zh&subject=%E5%92%A8%E8%AF%A2&prechatinfoexist=1' target="_blank">
+                                        <MenuItem
+                                            className={`menu-item ${itemBg}`}
+                                            leftIcon={<FaQuestionCircle color="#fff" className="menu-list-icon" />}
+                                            onTouchTap={() => drawerClose()}>
+                                            {v.title}
+                                        </MenuItem>
+                                    </a>
+                                }
+                                else{
+                                    return <Link to={v.link} key={i}>
+                                        <MenuItem
+                                            className={`menu-item ${itemBg}`}
+                                            leftIcon={<img src={MenuIcon[i]} className="menu-list-icon" />}
+                                            onTouchTap={() => drawerClose()}>
+                                            {v.title}
+                                        </MenuItem>
+                                    </Link>
+                                }
+
                             })
                         }
                         </div>

@@ -86,17 +86,17 @@ class Video extends Component {
     }
 
     componentDidMount() {
-        const {dispatch,isLogin} = this.props;
-        for  (let index in document.body.children)
-        {
-            let item=document.body.children[index];
-            if(item.children&&item.children[0]&&item.children[0].id=="754482live8003517")
-            {
-                var div=item.children[0];
-                div.style.display="none";
-                this.check=true;
-            }
-        }
+        // const {dispatch,isLogin} = this.props;
+        // for  (let index in document.body.children)
+        // {
+        //     let item=document.body.children[index];
+        //     if(item.children&&item.children[0]&&item.children[0].id=="754482live8003517")
+        //     {
+        //         var div=item.children[0];
+        //         div.style.display="none";
+        //         this.check=true;
+        //     }
+        // }
     }
 
     componentDidUpdate() {
