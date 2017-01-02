@@ -27,6 +27,9 @@ export const appAN  = {
     SHOW_INFOBOX          : "app/SHOW_INFOBOX",
     CLOSE_INFOBOX         : "app/CLOSE_INFOBOX",
     UPDATE_UID            : "app/UPDATE_UID",
+    UPDATE_PAY_METHOD     : "app/UPDATE_PAY_METHOD",
+    UPDATE_CHARGE_PRICE   : "app/UPDATE_CHARGE_PRICE",
+    SHOW_RECHARGE_DIALOG  : "app/SHOW_RECHARGE_DIALOG",
     EDIT_USERINFO         : "app/EDIT_USERINFO",//编辑用户信息
     LOGOUT                : "app/LOGOUT",
     LOGIN                 : "app/LOGIN"
@@ -72,6 +75,21 @@ export const appAct = {
     updateGiftList : giftList => ({
         type: appAN.UPDATE_GIFT_LIST,
         giftList
+    }),
+
+    updatePayMethod : data => ({
+        type: appAN.UPDATE_PAY_METHOD,
+        data
+    }),
+
+    updateChargePrice : price => ({
+        type: appAN.UPDATE_CHARGE_PRICE,
+        price
+    }),
+
+    showRechargeDialog : status => ({
+        type: appAN.SHOW_RECHARGE_DIALOG,
+        status
     }),
 
     //home tabs index

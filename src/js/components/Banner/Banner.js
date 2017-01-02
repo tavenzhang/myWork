@@ -242,6 +242,7 @@ class Banner extends Component {
                                             onTouchTap={() => drawerClose()}>
                                             {v.title}
                                         </MenuItem>
+                                        
                                     </a>
                                 }
                                 else{
