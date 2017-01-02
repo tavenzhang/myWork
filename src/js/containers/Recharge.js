@@ -21,6 +21,23 @@ class Recharge extends Component{
         };
     }
 
+    //componentWillMount() {
+    //    const {dispatch,payMethod,chargePrice} = this.props;
+    //
+    //    dispatch(fetchData({
+    //        url : "http://wytj.9vpay.com/PayBank.aspx",
+    //        requestType : "GET",
+    //        requestData : {
+    //            'interface_code': payMethod,
+    //            'charge_channel': 100049,
+    //            'price': chargePrice
+    //        },
+    //        callback : function(data) {
+    //            console.log(data)
+    //        }
+    //    }));
+    //}
+
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
         const state = this.state;
@@ -34,6 +51,18 @@ class Recharge extends Component{
                 'price': chargePrice
             },
             callback : function(data) {
+                dispatch(fetchData({
+                    url : "http://wytj.9vpay.com/PayBank.aspx",
+                    requestType : "GET",
+                    requestData : {
+                        'interface_code': payMethod,
+                        'charge_channel': 100049,
+                        'price': chargePrice
+                    },
+                    callback : function(data) {
+                        console.log(data)
+                    }
+                }));
                 if(!data.status) {
                     state.username = data.msg.order_id;
 
