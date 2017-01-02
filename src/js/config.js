@@ -50,7 +50,7 @@ export const REQURL = {
     search              : { url : SERVERADDR + "/find", type : 'GET'},//编辑个人信息
     checkroompwd        : { url : SERVERADDR + "/checkroompwd", type : 'POST'},//密码房密码验证
     chargeCheck         : { url : SERVERADDR + "/charge/checkCharge", type : 'GET'},//
-    chargePay           : { url : SERVERADDR + "/charge/pay", type : 'GET'},//
+    chargePay           : { url : SERVERADDR + "/charge/pay", type : 'POST'},//
 
     getVData            : { url : vSever + "/video_gs/rank/data_ajax", type : 'GET', model : 'jsonp'},//获取排行榜相关数据
     getGifts            : { url : vSever + "/video_gs/conf", type : 'GET', model : 'jsonp'},//获取礼物数据

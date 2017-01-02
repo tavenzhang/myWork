@@ -39,6 +39,9 @@ class Recharge extends Component{
                         }
                     }));
                 }
+                else {
+                    dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
+                }
             }
         }));
     }
