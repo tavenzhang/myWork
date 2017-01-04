@@ -40,7 +40,7 @@ class Recharge extends Component{
 
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
-        const state = this.state;
+        //const state = this.state;
 
         dispatch(fetchData({
             url : REQURL.chargePay.url,
@@ -56,7 +56,7 @@ class Recharge extends Component{
                     //state.username = data.msg.order_id;
 
                     console.log('1111',data);
-                    window.open(<data className="msg pay_url"></data>);
+                    window.open(data.msg.pay_url);
                 }
                 else {
                     dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
