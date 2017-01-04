@@ -21,22 +21,22 @@ class Recharge extends Component{
         };
     }
 
-    componentWillMount() {
-        const {dispatch,payMethod,chargePrice} = this.props;
-
-        dispatch(fetchData({
-            url : "http://wytj.9vpay.com/PayBank.aspx",
-            requestType : "GET",
-            requestData : {
-                'interface_code': payMethod,
-                'charge_channel': 100049,
-                'price': chargePrice
-            },
-            callback : function(data) {
-                console.log("=======",data)
-            }
-        }));
-    }
+    //componentWillMount() {
+    //    const {dispatch,payMethod,chargePrice} = this.props;
+    //
+    //    dispatch(fetchData({
+    //        url : "http://wytj.9vpay.com/PayBank.aspx",
+    //        requestType : "GET",
+    //        requestData : {
+    //            'interface_code': payMethod,
+    //            'charge_channel': 100049,
+    //            'price': chargePrice
+    //        },
+    //        callback : function(data) {
+    //            console.log("=======",data)
+    //        }
+    //    }));
+    //}
 
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
@@ -56,19 +56,7 @@ class Recharge extends Component{
                     //state.username = data.msg.order_id;
 
                     console.log('1111',data);
-                    dispatch(fetchData({
-                        url : data.msg.pay_url,
-                        requestType : "GET",
-                        requestData : data.msg.post_data,
-                        callback : function(data) {
-                            console.log('2222',data);
-
-                            //显示弹出框
-                            dispatch(appAct.showRechargeDialog(true));
-
-                            window.open(data);
-                        }
-                    }));
+                    window.open(<data className="msg pay_url"></data>);
                 }
                 else {
                     dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
