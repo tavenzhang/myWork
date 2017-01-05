@@ -14,8 +14,33 @@ import { Banner, SelectField, MenuItem, RadioButtonGroup, RadioButton, RaisedBut
 
 class Recharge extends Component{
 
+    constructor(props){
+        super(props);
+        this.state = {
+            orderId: '',
+        };
+    }
+
+    //componentWillMount() {
+    //    const {dispatch,payMethod,chargePrice} = this.props;
+    //
+    //    dispatch(fetchData({
+    //        url : "http://wytj.9vpay.com/PayBank.aspx",
+    //        requestType : "GET",
+    //        requestData : {
+    //            'interface_code': payMethod,
+    //            'charge_channel': 100049,
+    //            'price': chargePrice
+    //        },
+    //        callback : function(data) {
+    //            console.log("=======",data)
+    //        }
+    //    }));
+    //}
+
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
+        //const state = this.state;
 
         dispatch(fetchData({
             url : REQURL.chargePay.url,
@@ -26,18 +51,12 @@ class Recharge extends Component{
                 'price': chargePrice
             },
             callback : function(data) {
+                console.log('0000',data);
                 if(!data.status) {
-                    dispatch(fetchData({
-                        url : data.msg.pay_url,
-                        requestType : "GET",
-                        requestData : data.msg.post_data,
-                        callback : function(data) {
-                            //显示弹出框
-                            dispatch(appAct.showRechargeDialog(true));
+                    //state.username = data.msg.order_id;
 
-                            window.open(data);
-                        }
-                    }));
+                    console.log('1111',data);
+                    window.open(data.msg.pay_url);
                 }
                 else {
                     dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
@@ -48,12 +67,13 @@ class Recharge extends Component{
 
     confirmRecharge() {
         const {dispatch} = this.props;
+        const {orderId} = this.state;
 
         dispatch(fetchData({
             url : REQURL.chargeCheck.url,
             requestType : REQURL.chargeCheck.type,
             requestData : {
-                'order_id' : 11111
+                'order_id' : orderId
             },
             callback : function(data) {
                 dispatch(appAct.showRechargeDialog(false));
