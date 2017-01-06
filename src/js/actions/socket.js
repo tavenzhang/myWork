@@ -37,6 +37,7 @@ export const wsAN  = {
     UPDATE_MONEYTOTAL    : 'ws/UPDATE_MONEYTOTAL',//总计砖石数
     UPDATE_SENDGIFTLISTS : 'ws/UPDATE_SENDGIFTLISTS',//礼物清单数据
     HEART                : 'ws/HEART',//心跳
+    GOTO_HOME            : 'ws/GOTO_HOME',//心跳
 };
 
 export const wsAct = {

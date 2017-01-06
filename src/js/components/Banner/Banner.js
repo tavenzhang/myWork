@@ -41,13 +41,13 @@ const menus = [
     { title: '砖石充值', link:'/recharge', login:false },
     { title: '道具商城', link:'/shop', login:false },
     { title: '活动中心', link:'/activity', login:false },
+    { title: '联系客服', link:'', login:false },
     { title: '我的信箱', link:'/myMsg', login:true },
     { title: '我的道具', link:'/myMount', login:true },
     { title: '消费记录', link:'/myRecord', login:true },
     { title: '我的关注', link:'/myFav', login:true },
     { title: '我的预约', link:'/myOrd', login:true },
-    { title: '联系客服', link:'', login:false },
-    { title: '联系客服', link:'', login:true },
+
 ]
 
 class Banner extends Component {
@@ -207,7 +207,6 @@ class Banner extends Component {
         if(!userInfo.headimg) {
             userAvatar = <img src={require('../../../images/logo.png')} className="avatar-logo" />;
         }
-
         return (
             <AppBar
                 title={ bannerTitle }
@@ -230,7 +229,7 @@ class Banner extends Component {
                         {
                             menus.map((v,i) => {
                                 const itemBg = currentPath == v.link ? 'active' : '';
-                                if(!isLogin && v.login) {
+                                if((!isLogin && v.login)) {
                                     return null;
                                 }
                                 if(v.title=="联系客服")
@@ -242,7 +241,6 @@ class Banner extends Component {
                                             onTouchTap={() => drawerClose()}>
                                             {v.title}
                                         </MenuItem>
-
                                     </a>
                                 }
                                 else{

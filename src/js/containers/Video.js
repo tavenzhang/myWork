@@ -99,8 +99,9 @@ class Video extends Component {
         // }
     }
 
+
     componentDidUpdate() {
-        const {dispatch,videoUrls,seleVideoSrc,isLogin} = this.props;
+        const {dispatch,videoUrls,seleVideoSrc,isLogin,isVisitable} = this.props;
         //设置聊天窗口最新消息一直在最下边
         this.refs.chatBox.parentNode.scrollTop = 99999999;
 
@@ -140,6 +141,11 @@ class Video extends Component {
                     dispatch(wsAct.showAlertDialog(true,'用户登录后才能继续观看',9));
                 },5*60*1000)
             }
+        }
+        console.log("--------=====================isVisitable=="+isVisitable)
+        if(!isVisitable)
+        {
+            this.backhome();
         }
     }
 
@@ -634,6 +640,7 @@ const mapStateToProps = state => {
         sendGifts : state.wsState.sendGifts,//用户送的礼物
         showVideo : state.wsState.showVideo,//显示视频
         moneyTotal : state.wsState.moneyTotal,//本日总砖石数
+        isVisitable:state.wsState.isVisitable //是否有权限访问
     }
 }
 

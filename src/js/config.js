@@ -18,7 +18,7 @@ if( process.env.NODE_ENV == 'development') {//开发环境
     // pSever = "http://138.68.15.251/";
     serverADR = "http://www.thomas.com:8000";
     vSever = "http://v.thomas.com:8000";
-    pSever = "http://p.thomas.com:8000";
+    pSever = "http://p.thomas.com:8000/";
 }
 
 export const SERVERADDR = serverADR;
