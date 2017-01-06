@@ -14,12 +14,12 @@ import { Banner, SelectField, MenuItem, RadioButtonGroup, RadioButton, RaisedBut
 
 class Recharge extends Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
-            orderId: '',
-        };
-    }
+    //constructor(props){
+    //    super(props);
+    //    this.state = {
+    //        orderId: '',
+    //    };
+    //}
 
     //componentWillMount() {
     //    const {dispatch,payMethod,chargePrice} = this.props;
@@ -67,13 +67,13 @@ class Recharge extends Component{
 
     confirmRecharge() {
         const {dispatch} = this.props;
-        const {orderId} = this.state;
+        //const {orderId} = this.state;
 
         dispatch(fetchData({
             url : REQURL.chargeCheck.url,
             requestType : REQURL.chargeCheck.type,
             requestData : {
-                'order_id' : orderId
+                //'order_id' : orderId
             },
             callback : function(data) {
                 dispatch(appAct.showRechargeDialog(false));
