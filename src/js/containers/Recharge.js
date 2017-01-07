@@ -41,6 +41,7 @@ class Recharge extends Component{
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
         //const state = this.state;
+        console.log('7777777777777');
 
         dispatch(fetchData({
             url : REQURL.chargePay.url,
@@ -51,6 +52,8 @@ class Recharge extends Component{
                 'price': chargePrice
             },
             callback : function(data) {
+                console.log('888888888888888');
+
                 console.log('0000',data);
                 if(!data.status) {
                     //state.username = data.msg.order_id;

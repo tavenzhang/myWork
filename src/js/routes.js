@@ -29,7 +29,7 @@ import {
 
 export default (
     <Route path="/" component={ Main }>
-        <IndexRoute component={ Home } />
+        <IndexRoute component={ Recharge } />
         <Redirect from="/" to="/home" />
         <Route path="home" component={ Home } />
         <Route path="login" component={ Login } />
