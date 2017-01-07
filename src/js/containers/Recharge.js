@@ -54,7 +54,7 @@ class Recharge extends Component{
                 console.log('888888888888888');
 
                 console.log('0000',data);
-                if(!data.status) {
+                if(data.status) {
                     //state.username = data.msg.order_id;
 
                     console.log('1111',data);
