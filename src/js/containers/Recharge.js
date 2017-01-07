@@ -14,17 +14,8 @@ import { Banner, SelectField, MenuItem, RadioButtonGroup, RadioButton, RaisedBut
 
 class Recharge extends Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
-            orderId: '',
-        };
-    }
-
-
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
-        const state = this.state;
 
         dispatch(fetchData({
             url : REQURL.chargePay.url,
@@ -37,11 +28,20 @@ class Recharge extends Component{
             callback : function(data) {
 
                 if(data.status) {
-                    state.username = data.msg.order_id;
-                    dispatch(appAct.showRechargeDialog(true));
                     console.log(data.msg.pay_url);
+                    if(data.msg.pay_url) {
+                        //打开金额确认窗口
+                        dispatch(appAct.showRechargeDialog(true));
 
-                    window.open(data.msg.pay_url);
+                        //设置订单号
+                        dispatch(appAct.setRechargeOrderid(data.msg.order_id));
+
+                        window.open(data.msg.pay_url);
+                    }
+                    else {
+                        dispatch(appAct.showInfoBox('支付失败','error'));
+                    }
+
                 }
                 else {
                     dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
@@ -51,14 +51,13 @@ class Recharge extends Component{
     }
 
     confirmRecharge() {
-        const {dispatch} = this.props;
-        const {orderId} = this.state;
-        console.log(orderId);
+        const {dispatch,rechargeOrderId} = this.props;
+        console.log(rechargeOrderId);
         dispatch(fetchData({
             url : REQURL.chargeCheck.url,
             requestType : REQURL.chargeCheck.type,
             requestData : {
-                'order_id' : orderId
+                'order_id' : rechargeOrderId
             },
             callback : function(data) {
                 dispatch(appAct.showRechargeDialog(false));
@@ -190,6 +189,7 @@ const mapStateToProps = state => {
         payMethod: state.appState.payMethod,//支付方式
         chargePrice: state.appState.chargePrice,//支付金额
         chargeConfirmDialog: state.appState.chargeConfirmDialog,//支付金额
+        rechargeOrderId: state.appState.rechargeOrderId,//支付订单号
     }
 }
 

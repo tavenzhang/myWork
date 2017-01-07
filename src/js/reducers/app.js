@@ -11,9 +11,10 @@ const initAppState = {
     dialogOpen      : false, //弹出框是否开启
     myRecord        : [],//我的消费记录
     myMsg           : [],//我的消息
-    myMount         : [],//我的道具
+    myMount         : [],//我的道具'
     payMethod       : 'ZFBWAP',//默认支付方式
     chargePrice     : '10',//默认支付价格
+    rechargeOrderId : '',//订单号
     chargeConfirmDialog: false,//支付确认框
     userInfo        : { //用户信息
         nickname: "您是游客，请登录兰桂坊~~",
@@ -148,6 +149,11 @@ const appState = (state = initAppState, action) => {
         case appAN.UPDATE_CHARGE_PRICE:
             return Object.assign({}, state, {
                 chargePrice: action.price
+            });
+
+        case appAN.SET_RECHARGE_ORDERID:
+            return Object.assign({}, state, {
+                rechargeOrderId: action.orderId
             });
 
         case appAN.SHOW_RECHARGE_DIALOG:

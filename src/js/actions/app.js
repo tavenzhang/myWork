@@ -30,6 +30,7 @@ export const appAN  = {
     UPDATE_PAY_METHOD     : "app/UPDATE_PAY_METHOD",
     UPDATE_CHARGE_PRICE   : "app/UPDATE_CHARGE_PRICE",
     SHOW_RECHARGE_DIALOG  : "app/SHOW_RECHARGE_DIALOG",
+    SET_RECHARGE_ORDERID  : "app/SET_RECHARGE_ORDERID",
     EDIT_USERINFO         : "app/EDIT_USERINFO",//编辑用户信息
     LOGOUT                : "app/LOGOUT",
     LOGIN                 : "app/LOGIN"
@@ -102,6 +103,11 @@ export const appAct = {
     setMenuTabIndex : slideIndex => ({
         type: appAN.SWITCH_MENU_TAB_INDEX,
         slideIndex
+    }),
+
+    setRechargeOrderid : orderId => ({
+        type: appAN.SET_RECHARGE_ORDERID,
+        orderId
     }),
 
     //shop tabs index
