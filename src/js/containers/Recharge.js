@@ -73,7 +73,7 @@ class Recharge extends Component{
         return (
             <div className="app-main-content">
                 <Banner
-                    title="砖石充值"
+                    title="钻石充值"
                     currentPath="/recharge"
                     leftIcon={<FaAlignJustify className="menuIcon" />}
                     leftIconTouch={()=>dispatch(appAct.drawerToggle(!drawerOpen))}
@@ -90,7 +90,7 @@ class Recharge extends Component{
                         value={payMethod}
                         onChange={(event, index, value) => dispatch(appAct.updatePayMethod(value))}
                         >
-                        <MenuItem value={`WEIXINWAP`} primaryText="微信" />
+
                         <MenuItem value={`ZFBWAP`} primaryText="支付宝" />
                     </SelectField>
                     <div className="recharge-title">充值金额</div>
