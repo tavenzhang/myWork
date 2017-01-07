@@ -44,8 +44,8 @@ class Recharge extends Component{
         console.log('7777777777777');
 
         dispatch(fetchData({
-            url : REQURL.chargePay.url,
-            requestType : REQURL.chargePay.type,
+            url : REQURL.getVideoRec.url,
+            requestType : REQURL.getVideoRec.type,
             requestData : {
                 'interface_code': payMethod,
                 'charge_channel': 100049,
