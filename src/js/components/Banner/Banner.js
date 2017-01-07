@@ -38,7 +38,7 @@ const menus = [
     { title: '直播大厅', link:'/home', login:false },
     //{ title: '我的', link:'/user' },
     { title: '排行榜单', link:'/rank', login:false },
-    { title: '砖石充值', link:'/recharge', login:false },
+    { title: '砖石充值', link:'/recharge', login:true },
     { title: '道具商城', link:'/shop', login:false },
     { title: '活动中心', link:'/activity', login:false },
     { title: '联系客服', link:'', login:false },
