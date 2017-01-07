@@ -19,7 +19,7 @@ function fetchMiddleware(extraArgument) {
         let requestData = action.requestData || {};
 
         if( action.type === fetchAN.FETCH_REQUEST ) {
-
+            log('http----------->'+action.url,requestData);
             if(action.requestModel == 'jsonp') {
                 request(requestType, action.url)
                     .use(jsonp)
@@ -31,7 +31,7 @@ function fetchMiddleware(extraArgument) {
                         });
                         if(res) {
                             const data = res.body;
-                            log('fetchjsonp',data);
+                            log('http<------------',data);
                             //错误，显示错误信息
                             if((data && data.status == 0) || (data && data.ret == 0) ) {
                                 next({
@@ -63,7 +63,7 @@ function fetchMiddleware(extraArgument) {
                         if(res && res.ok) {
                             //const data = res.body;
                             const data = JSON.parse(res.text);
-                            log('fetch',data);
+                            log('http<-----------',data);
                             //更改请求状态
                             next({
                                 type:fetchAN.FETCH_SUCCEED

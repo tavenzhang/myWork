@@ -33,6 +33,7 @@ const initSockState = {
     sendGifts      : {},//送出的礼物
     gifts          : [],//礼物数据
     sendGiftsLists : [],//礼物清单数据
+    isVisitable:true  //是否可以访问当前房间
 };
 
 //过滤送礼数据
@@ -252,7 +253,8 @@ const wsState = (state = initSockState, action) => {
             return Object.assign({}, state, {
                 sendGiftsLists : [...action.data,...state.sendGiftsLists]
             });
-
+        case wsAN.GOTO_HOME:
+            return {...state,isVisitable:action.data};
         default:
             return state;
     }

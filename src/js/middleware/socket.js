@@ -37,23 +37,24 @@ const loginCMD = '{"cmd":10000}';
 class WS {
     constructor(url) {
         this.websocket = new WebSocket(url);
+        this.socketName=url;
         this.websocket.onmessage = function(event) {
             //log(event.data);
         }
 
         this.websocket.onopen = function(event) {
-            log("WS OPEN");
+            log( this.socketName+"----WS OPEN");
         }
 
         this.websocket.onerror = function(error) {
-            log("WS ERR: " + error);
+            log( this.socketName+"-----WS ERR: " + error);
         }
 
     }
 
     onOpenState(func) {
         this.websocket.onopen = function() {
-            log("WS OPEN");
+            log( this.socketName+"WS OPEN");
             func();
         }
     }
@@ -66,18 +67,19 @@ class WS {
 
     postMessage(text) {
         this.websocket.send(text);
-        log('-->',text)
+        log(this.socketName+'--->',text)
     }
 
     close() {
         this.websocket.close();
+        log(this.socketName+'----WS close');
     }
 }
 
 const webSocketMiddleware = store => next => action => {
 
     const closeCosket = () => {
-        log("WS close");
+     //   log("WS close");
         if(null !== socket) {//断开普通socket
             socket.close();
         }
@@ -109,6 +111,7 @@ const webSocketMiddleware = store => next => action => {
 
                 //链接socket
                 socketMsg = new WS(action.uri);
+                socketMsg.socketName="m:"
                 //登录
                 socketMsg.onOpenState(function(){
                     //优化显示socket信息
@@ -122,7 +125,7 @@ const webSocketMiddleware = store => next => action => {
                     socketMsg.postMessage(loginCMD); //登陆
                     socketMsg.websocket.onmessage = function(event) {
                         let data = JSON.parse(event.data);
-                        log('m: ',data);
+                        log('m:<------ ',data);
 
                         switch(data.cmd) {
                             case 10000 ://登陆密匙
@@ -207,12 +210,13 @@ const webSocketMiddleware = store => next => action => {
 
                 //链接socket
                 socketGift = new WS(action.uri);
+                socketGift.socketName="g:"
                 //登录
                 socketGift.onOpenState(function(){
                     socketGift.postMessage(loginCMD); //登陆
                     socketGift.websocket.onmessage = function(event) {
                         let data = JSON.parse(event.data);
-                        log('g: ',data);
+                        log('g:<------ ',data);
 
                         switch(data.cmd) {
                             case 10000 ://登陆密匙
@@ -317,7 +321,7 @@ const webSocketMiddleware = store => next => action => {
                     socket.postMessage(loginCMD); //登陆
                     socket.websocket.onmessage = function(event) {
                         let data = JSON.parse(event.data);
-                        log("comm: ",data);
+                        log("comm:<------ ",data);
                         const appSt = store.getState().appState;
 
                         switch(data.cmd) {
@@ -414,6 +418,13 @@ const webSocketMiddleware = store => next => action => {
                                         status:true,
                                         content:"当前房间禁止聊天",
                                         dialogType:5
+                                    });
+                                }
+                                if(!data.allowvisitroom)
+                                {
+                                    next({
+                                        type:wsAN.GOTO_HOME,
+                                        data:false
                                     });
                                 }
                                 break;
@@ -771,6 +782,8 @@ const webSocketMiddleware = store => next => action => {
 
                 //链接socket
                 socket = new WS(action.uri);
+                socket.socketName="comm"
+
                 //登录
                 socket.onOpenState(socketAction);
             }

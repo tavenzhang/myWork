@@ -51,10 +51,10 @@ class Login extends Component {
     /**
      * 请求用户信息
      */
-    requestUserInfo() {
+    requestUserInfo(data) {
         const { dispatch, location } = this.props;
         const { router } = this.context;
-
+        console.log("---------callback",data)
         //请求用户信息
         dispatch(fetchData({
             url : REQURL.getUserInfo.url,

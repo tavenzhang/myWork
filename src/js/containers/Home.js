@@ -3,7 +3,7 @@ import { Router, Route, Link, hashHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { Banner, Tabs, Tab, SwipeableViews, VideoLists, Dialog, FlatButton } from '../components';
+import { Banner, Tabs, Tab, SwipeableViews, VideoLists, Dialog, FlatButton,RaisedButton } from '../components';
 import ActionSearch from 'material-ui/svg-icons/action/search';
 import FaAlignJustify from 'react-icons/lib/fa/bars';
 
@@ -83,6 +83,9 @@ class Home extends Component {
 
     }
 
+
+
+
     /**
      * 进入房间
      */
@@ -92,8 +95,8 @@ class Home extends Component {
 
         //设置选中房间号
         dispatch(appAct.setCurrentSelectRoomId(room.uid));
-
-        if(room.enterRoomlimit == 1 && room.tid == 2) {//该房间需要密码才能进入
+        console.log("room-----------",room)
+        if(room.tid == 2) {//该房间需要密码才能进入
             dispatch(appAct.openDialog(true));
         }
         else {
@@ -124,11 +127,13 @@ class Home extends Component {
                 captcha: ""
             },
             callback: function(res){
+                console.log("res-----------",res)
+                dispatch(appAct.openDialog(false));
                 if(res.code == 1){
                     //重置输入框数据
                     roomPwd.value = "";
 
-                    dispatch(appAct.openDialog(false));
+
 
                     //密码验证成功，跳转
                     router.push({
@@ -185,13 +190,13 @@ class Home extends Component {
                 <Dialog
                     title="系统提示"
                     actions={[
-                        <FlatButton
+                        <RaisedButton
                             label="确定"
                             primary={true}
                             keyboardFocused={true}
                             onTouchTap={()=>this.enterPasswordRoom()}
-                            />,
-                        <FlatButton
+                            style={{marginRight:10}} />,
+                        <RaisedButton
                             label="取消"
                             onTouchTap={()=>this.closeDialog()}
                             />
@@ -202,7 +207,6 @@ class Home extends Component {
                     titleClassName="dialog-title"
                     bodyClassName="dialog-body"
                     actionsContainerClassName="dialog-action"
-
                     >
                     <div className="video-alertDialog-title">该房间需要密码才能进入</div>
                     <input className="video-alertDialog-input" placeholder="请输入房间密码" ref="roomPwd" />
@@ -213,16 +217,11 @@ class Home extends Component {
 
     componentDidMount() {
         const {dispatch} = this.props;
-
         //断开socket链接
         dispatch(wsAct.logout());
         //加载数据
         this.loadVideosRec();
-
     }
-
-
-
 }
 
 const mapStateToProps = state => {
