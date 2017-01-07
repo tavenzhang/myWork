@@ -41,11 +41,10 @@ class Recharge extends Component{
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
         //const state = this.state;
-        console.log('7777777777777');
 
         dispatch(fetchData({
-            url : REQURL.getVideoRec.url,
-            requestType : REQURL.getVideoRec.type,
+            url : REQURL.chargePay.url,
+            requestType : REQURL.chargePay.type,
             requestData : {
                 'interface_code': payMethod,
                 'charge_channel': 100049,
