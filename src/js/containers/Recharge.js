@@ -39,6 +39,8 @@ class Recharge extends Component{
                 if(data.status) {
                     state.username = data.msg.order_id;
                     dispatch(appAct.showRechargeDialog(true));
+                    console.log(data.msg.pay_url);
+
                     window.open(data.msg.pay_url);
                 }
                 else {
@@ -51,7 +53,7 @@ class Recharge extends Component{
     confirmRecharge() {
         const {dispatch} = this.props;
         const {orderId} = this.state;
-
+        console.log(orderId);
         dispatch(fetchData({
             url : REQURL.chargeCheck.url,
             requestType : REQURL.chargeCheck.type,
