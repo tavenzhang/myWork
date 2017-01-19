@@ -17,7 +17,7 @@ const initAppState = {
     rechargeOrderId : '',//订单号
     chargeConfirmDialog: false,//支付确认框
     userInfo        : { //用户信息
-        nickname: "您是游客，请登录兰桂坊~~",
+        nickname: "您是游客，请登录！",
     },
     infoBox : {
         show : false, //是否显示

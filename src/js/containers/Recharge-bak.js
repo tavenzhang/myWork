@@ -22,10 +22,11 @@ class Recharge extends Component{
             requestType : REQURL.chargePay.type,
             requestData : {
                 'interface_code': payMethod,
-                'charge_channel': 100050,
+                'charge_channel': 100049,
                 'price': chargePrice
             },
             callback : function(data) {
+                console.log(data)
                 if(data.status) {
                     console.log(data.msg.pay_url);
                     if(data.msg.pay_url) {
@@ -51,8 +52,7 @@ class Recharge extends Component{
 
     confirmRecharge() {
         const {dispatch,rechargeOrderId} = this.props;
-
-        //dispatch(appAct.showRechargeDialog(false));
+        console.log(rechargeOrderId);
         dispatch(fetchData({
             url : REQURL.chargeCheck.url,
             requestType : REQURL.chargeCheck.type,
@@ -92,7 +92,6 @@ class Recharge extends Component{
                         >
 
                         <MenuItem value={`ZFBWAP`} primaryText="支付宝" />
-                        <MenuItem value={`WEIXINWAP`} primaryText="微信" />
                     </SelectField>
                     <div className="recharge-title">充值金额</div>
                     <RadioButtonGroup
@@ -156,18 +155,18 @@ class Recharge extends Component{
                     <RaisedButton label="充值" primary={true} fullWidth={true} onTouchTap={ () => this.handleRecharge() } />
                 </div>
                 <Dialog
-                    title="系统提示"
+                    title="充值确认"
                     actions={
                     [
                         <FlatButton
-                            label="确定"
+                            label="确认"
                             primary={true}
                             onTouchTap={()=>this.confirmRecharge()}
                         />,
-                        //<FlatButton
-                        //    label="取消"
-                        //    onTouchTap={()=>dispatch(appAct.showRechargeDialog(false))}
-                        ///>
+                        <FlatButton
+                            label="取消"
+                            onTouchTap={()=>dispatch(appAct.showRechargeDialog(false))}
+                        />
                         ]
                     }
                     modal={true}
@@ -177,7 +176,7 @@ class Recharge extends Component{
                     actionsContainerClassName="dialog-action"
                     overlayClassName="dialog-overlay"
                     >
-                    系统会跳出二维码请使用屏幕截图于微信或支付宝中选（扫一扫）从相册中选取二维码扫描,请完成支付后关闭此窗口。
+                    您已充值{chargePrice}元！
                 </Dialog>
             </div>
         );
