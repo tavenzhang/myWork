@@ -60,6 +60,7 @@ class Recharge extends Component{
                 'order_id' : rechargeOrderId
             },
             callback : function(data) {
+                console.log(data);
                 dispatch(appAct.showRechargeDialog(false));
                 if(data.status) {//失败
                     dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));

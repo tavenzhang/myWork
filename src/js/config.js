@@ -49,7 +49,7 @@ export const REQURL = {
     editUserInfo        : { url : SERVERADDR + "/member/edituserinfo", type : 'POST'},//编辑个人信息
     search              : { url : SERVERADDR + "/find", type : 'GET'},//编辑个人信息
     checkroompwd        : { url : SERVERADDR + "/checkroompwd", type : 'POST'},//密码房密码验证
-    chargeCheck         : { url : SERVERADDR + "/charge/checkCharge", type : 'GET'},//
+    chargeCheck         : { url : SERVERADDR + "/charge/checkCharge", type : 'POST'},//
     chargePay           : { url : SERVERADDR + "/charge/pay", type : 'POST'},//
 
     getVData            : { url : vSever + "/video_gs/rank/data_ajax", type : 'GET', model : 'jsonp'},//获取排行榜相关数据
