@@ -9,6 +9,7 @@ const initAppState = {
     uid             : 0,//用户id
     currSeleRoomId  : 0,//当前选中的房间id
     dialogOpen      : false, //弹出框是否开启
+    dialogDateOpen      : false, //弹出预约对话框
     myRecord        : [],//我的消费记录
     myMsg           : [],//我的消息
     myMount         : [],//我的道具'
@@ -76,11 +77,19 @@ const filterUserData = data => {
             total : d.total,//房间在线人数
             enterRoomlimit : d.enterRoomlimit,//限制房间
             tid : d.tid,//
+            id:d.id,
             live_time : d.live_time,//直播时间
-            uid : d.uid//主播id
+            uid : d.uid,//主播id
+            appoint_state:parseInt(d.appoint_state), //1: 未预约 2: 约会中3: 已被预约
+            lv_type:d.lv_type
         }
         newDatas.push(nd);
     })
+    if(newDatas.length>0&&newDatas[0].appoint_state)
+    {
+        newDatas.sort(function(a,b){return a.appoint_state - b.appoint_state})
+    }
+
     return newDatas;
 }
 

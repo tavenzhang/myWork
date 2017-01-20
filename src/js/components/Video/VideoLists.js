@@ -25,28 +25,30 @@ class VideoLists extends Component {
     }
 
     render() {
-        return (
+
+            return (
             <div className="home-item">
                 {
+
                     this.props.data.map((d,i)=>{
                         let headImg = d.headimg ? CONFIG.imageServe + d.headimg + "?w=356&h=266" : require('../../../images/videoBg_default.jpg');
-                        return (
-                            <VideoItem
-                                key={i}
-                                name={d.username}
-                                imgSrc={headImg}
-                                nums={d.total}
-                                isLive={d.live_status}
-                                enterRoomlimit={d.enterRoomlimit}
-                                liveTime={d.live_time}
-                                tid={d.tid}
-                                onClick={()=>this.props.action({
-                                    uid:d.uid,
-                                    enterRoomlimit:d.enterRoomlimit,
-                                    tid:d.tid,
-                                })}
-                                />
-                        )
+                                    return (
+                                        <VideoItem
+                                            key={i}
+                                            name={d.username}
+                                            imgSrc={headImg}
+                                            nums={d.total}
+                                            isLive={d.live_status}
+                                            enterRoomlimit={d.enterRoomlimit}
+                                            liveTime={d.live_time}
+                                            tid={d.tid}
+                                            lv_type={d.lv_type}
+                                            appoint_state={d.appoint_state}
+                                            onClick={() => this.props.action({
+                                                ...d
+                                            })}
+                                        />
+                                    )
                     })
                 }
             </div>
