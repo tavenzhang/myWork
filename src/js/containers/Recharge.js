@@ -17,37 +17,39 @@ class Recharge extends Component{
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
 
-        dispatch(fetchData({
-            url : REQURL.chargePay.url,
-            requestType : REQURL.chargePay.type,
-            requestData : {
-                'interface_code': payMethod,
-                'charge_channel': 100050,
-                'price': chargePrice
-            },
-            callback : function(data) {
-                if(data.status) {
-                    console.log(data.msg.pay_url);
-                    if(data.msg.pay_url) {
-                        //打开金额确认窗口
-                        //dispatch(appAct.showRechargeDialog(true));
+        window.open("http://"+window.location.host+"/mRecharge?interface_code="+interface_code+"&price="+price);
 
-                        //设置订单号
-                        dispatch(appAct.setRechargeOrderid(data.msg.order_id));
-
-                        //window.open(data.msg.pay_url);
-                        window.location = data.msg.pay_url;
-                    }
-                    else {
-                        dispatch(appAct.showInfoBox('支付失败','error'));
-                    }
-
-                }
-                else {
-                    dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
-                }
-            }
-        }));
+        //dispatch(fetchData({
+        //    url : REQURL.chargePay.url,
+        //    requestType : REQURL.chargePay.type,
+        //    requestData : {
+        //        'interface_code': payMethod,
+        //        'charge_channel': 100050,
+        //        'price': chargePrice
+        //    },
+        //    callback : function(data) {
+        //        if(data.status) {
+        //            console.log(data.msg.pay_url);
+        //            if(data.msg.pay_url) {
+        //                //打开金额确认窗口
+        //                //dispatch(appAct.showRechargeDialog(true));
+        //
+        //                //设置订单号
+        //                dispatch(appAct.setRechargeOrderid(data.msg.order_id));
+        //
+        //                //window.open(data.msg.pay_url);
+        //                window.location = data.msg.pay_url;
+        //            }
+        //            else {
+        //                dispatch(appAct.showInfoBox('支付失败','error'));
+        //            }
+        //
+        //        }
+        //        else {
+        //            dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
+        //        }
+        //    }
+        //}));
     }
 
     confirmRecharge() {
