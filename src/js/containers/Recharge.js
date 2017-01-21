@@ -17,7 +17,7 @@ class Recharge extends Component{
     handleRecharge() {
         const {dispatch,payMethod,chargePrice} = this.props;
 
-        window.open("http://"+window.location.host+"/charge/mRecharge/?interface_code="+interface_code+"&price="+price);
+        window.open("http://"+window.location.host+"/charge/pay/?interface_code="+interface_code+"&price="+price+"&charge_channel=100050");
         //打开金额确认窗口
         dispatch(appAct.showRechargeDialog(true));
 
