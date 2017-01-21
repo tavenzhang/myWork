@@ -30,12 +30,13 @@ class Recharge extends Component{
                     console.log(data.msg.pay_url);
                     if(data.msg.pay_url) {
                         //打开金额确认窗口
-                        dispatch(appAct.showRechargeDialog(true));
+                        //dispatch(appAct.showRechargeDialog(true));
 
                         //设置订单号
                         dispatch(appAct.setRechargeOrderid(data.msg.order_id));
 
-                        window.open(data.msg.pay_url);
+                        //window.open(data.msg.pay_url);
+                        window.location = data.msg.pay_url;
                     }
                     else {
                         dispatch(appAct.showInfoBox('支付失败','error'));
