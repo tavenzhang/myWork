@@ -100,8 +100,8 @@ class Recharge extends Component{
                         onChange={(event, index, value) => dispatch(appAct.updatePayMethod(value))}
                         >
 
-                        <MenuItem value={`ZFBWAP`} primaryText="支付宝" />
-                        <MenuItem value={`WEIXINWAP`} primaryText="微信" />
+                        <MenuItem value={`ZFB`} primaryText="支付宝" />
+                        <MenuItem value={`WEIXIN`} primaryText="微信" />
                     </SelectField>
                     <div className="recharge-title">充值金额</div>
                     <RadioButtonGroup
