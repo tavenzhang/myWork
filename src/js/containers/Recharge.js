@@ -22,7 +22,7 @@ class Recharge extends Component{
         dispatch(appAct.showRechargeDialog(true));
 
         //设置订单号
-        dispatch(appAct.setRechargeOrderid(data.msg.order_id));
+        //dispatch(appAct.setRechargeOrderid(data.msg.order_id));
 
         //dispatch(fetchData({
         //    url : REQURL.chargePay.url,
@@ -60,25 +60,27 @@ class Recharge extends Component{
     confirmRecharge() {
         const {dispatch,rechargeOrderId} = this.props;
 
-        //dispatch(appAct.showRechargeDialog(false));
-        dispatch(fetchData({
-            url : REQURL.chargeCheck.url,
-            requestType : REQURL.chargeCheck.type,
-            requestData : {
-                'order_id' : rechargeOrderId
-            },
-            callback : function(data) {
-                console.log(data);
-                dispatch(appAct.showRechargeDialog(false));
-                if(data.status) {//失败
-                    dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
-                }
-            }
-        }));
+        dispatch(appAct.showRechargeDialog(false));
+        //dispatch(fetchData({
+        //    url : REQURL.chargeCheck.url,
+        //    requestType : REQURL.chargeCheck.type,
+        //    requestData : {
+        //        'order_id' : rechargeOrderId
+        //    },
+        //    callback : function(data) {
+        //
+        //        dispatch(appAct.showRechargeDialog(false));
+        //        if(data.status) {//失败
+        //            dispatch(appAct.showInfoBox('支付失败:'+data.msg,'error'));
+        //        }
+        //    }
+        //}));
     }
 
     render(){
         const {drawerOpen,dispatch,payMethod,chargePrice,chargeConfirmDialog} = this.props;
+
+        const alertMsg = payMethod == 'ZFB' ? '支付宝' : '微信';
         return (
             <div className="app-main-content">
                 <Banner
@@ -186,7 +188,7 @@ class Recharge extends Component{
                     actionsContainerClassName="dialog-action"
                     overlayClassName="dialog-overlay"
                     >
-                    系统会跳出二维码请使用屏幕截图于微信或支付宝中选（扫一扫）从相册中选取二维码扫描,请完成支付后关闭此窗口。
+                    系统会跳出二维码请使用屏幕截图于{alertMsg}中选扫一扫,从相册中选取二维码扫描,请完成支付后关闭此窗口。
                 </Dialog>
             </div>
         );
