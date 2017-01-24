@@ -9,7 +9,7 @@ var makeConfig = require('./webpack/make-wp-config');
 var serverConfig = {
 	mode: 'development',  //编译模式(development,production)
 	dir : __dirname,
-	host : "localhost",
+	host : "www.thomas.com",
 	//host : "192.16.137.3",
 	port : "3000",
 	srcPath : './src', //静态资源的目录 相对路径

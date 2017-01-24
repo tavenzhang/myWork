@@ -4,7 +4,7 @@
 import React, {Component,PropTypes} from 'react';
 import Iuser from 'react-icons/lib/fa/user'
 import Ilock from 'react-icons/lib/fa/lock'
-import {FlatButton,RaisedButton} from "../"
+import {RaisedButton} from "../"
 
 const defaultVideoBg = require('../../../images/videoBg_default.jpg');
 
@@ -36,7 +36,7 @@ class VideoItem extends Component {
         }
 
         //限制房
-        if(enterRoomlimit == 1 && tid == 2) {
+        if(tid&&tid == 2) {
             lock = <div className="lockBg"><Ilock className="lockIcon" /></div>
         }
 
@@ -57,7 +57,7 @@ class VideoItem extends Component {
                     dateBtn= <RaisedButton label="立即预约" primary={true} />
                     break;
                 case 2:
-                    dateBtn=<RaisedButton label="约会中" primary={true}  disabled={true} />
+                    dateBtn=<RaisedButton label="约会中" primary={true} />
                     break;
                 case 3:
                     dateBtn= <RaisedButton label="已被预约" primary={true} disabled={true}/>
@@ -68,6 +68,7 @@ class VideoItem extends Component {
         return (
             <div className="video-item" onTouchTap={()=>this.props.onClick()}>
                 {liveIcon}
+                {lock}
                 <img src={imgSrc} className="avatar" />
                 <div className="infoPanel">
                     <div className="rightTop">{liveIcon} {liveTime}</div>

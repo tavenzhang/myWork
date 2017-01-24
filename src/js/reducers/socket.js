@@ -101,7 +101,6 @@ const wsState = (state = initSockState, action) => {
                     audiences: state.audiences.filter(user => user.uid !== action.data.uid)
                 });
             }
-
         case wsAN.USER_JOINS_ROOM:
 
             let userMount = {}; //带坐骑用户
@@ -124,8 +123,6 @@ const wsState = (state = initSockState, action) => {
                     userMount: userMount
                 });
             }
-
-
 
         case wsAN.CHAT_MESSAGE:
             return Object.assign({}, state, {

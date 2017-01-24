@@ -125,7 +125,7 @@ const webSocketMiddleware = store => next => action => {
                     socketMsg.postMessage(loginCMD); //登陆
                     socketMsg.websocket.onmessage = function(event) {
                         let data = JSON.parse(event.data);
-                        log('m:<------ ',data);
+                        log('m:<------:'+data.cmd,data);
 
                         switch(data.cmd) {
                             case 10000 ://登陆密匙
@@ -139,8 +139,8 @@ const webSocketMiddleware = store => next => action => {
                                     }));
                                 }
 
-                                break;
 
+                                break;
                             case 10001 ://登陆成功后
                                 //通用socket登陆后，根据返回的extck值
                                 if(action.data && action.data.callback) {
@@ -151,7 +151,7 @@ const webSocketMiddleware = store => next => action => {
                                     type:wsAN.CHAT_MESSAGE,
                                     data:{
                                         cmd : 1, //系统连接信息
-                                        content : "登陆成功，您可以进行聊天了"
+                                        content : "连接成功，您可以进行聊天了"
                                     }
                                 });
                                 break;
@@ -348,8 +348,14 @@ const webSocketMiddleware = store => next => action => {
 
                                 EXTCK = data.extck;
                                 USERID = data.uid;
+                                // 如果保存状态与 服务器不一致  强制把登陆状态置回去
+                                if(data.ruled<0&&store.getState().appState.isLogin)
+                                {
+                                    next({
+                                        type: appAN.LOGOUT,
+                                    });
+                                }
 
-                                //设置socket连接状态
                                 next({
                                     type:wsAN.SOCKET_SUCCESS
                                 });
@@ -651,11 +657,8 @@ const webSocketMiddleware = store => next => action => {
                                     });
                                 }
                                 break;
-
                             case 500 ://登陆错误
-
                                 let alertDialogType = 1;
-
                                 //断开socket
                                 if(null !== socket) {
                                     closeCosket();
