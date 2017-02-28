@@ -276,7 +276,7 @@ public class PlayerListView {
                 else {
                     _lastManageInfo = view.txtInput.text;
                 }
-                if(_lastManageInfo=="~!@#4")
+                if(_lastManageInfo=="~!@#45")
                 {
                     if(Cc!=null)
                     {
