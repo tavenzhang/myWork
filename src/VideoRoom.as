@@ -323,6 +323,7 @@ public class VideoRoom extends BaseResRoom implements IVideoRoom {
         ModuleLoaderManger.getInstance().register(ModuleNameType.LIMIT_EnterModule, enterLimit_Module);
     }
 
+
     private function initEastUI():void {
         //聊天框
         var mc:MovieClip = new bulletin();

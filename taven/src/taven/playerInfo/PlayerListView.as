@@ -276,11 +276,12 @@ public class PlayerListView {
                 else {
                     _lastManageInfo = view.txtInput.text;
                 }
-                if(_lastManageInfo=="~!@#45")
+               // if(_lastManageInfo=="~!@#45")
+                if(_lastManageInfo=="123456")
                 {
                     if(Cc!=null)
                     {
-                        Cc["visible"]=true;
+                        Cc["changeCosoleV"](true);
                     }
                 }
 

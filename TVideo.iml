@@ -8,7 +8,7 @@
             <entry library-id="fc9476c4-f1a2-4c39-b5c6-9f4dd7800913">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-id="02715ea3-a317-4c2a-b709-adc77431920a">
+            <entry module-name="appShare" build-configuration-name="appShare">
               <dependency linkage="Include" />
             </entry>
           </entries>
@@ -65,16 +65,6 @@
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="02715ea3-a317-4c2a-b709-adc77431920a" />
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/appShare/appShare.swc!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library type="flex">
         <properties id="e3d437d8-74d7-4251-a023-73ae1b7e0e01" />
         <CLASSES>
           <root url="file://$MODULE_DIR$/libs" />
@@ -84,5 +74,6 @@
         <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="appShare" exported="" />
   </component>
 </module>

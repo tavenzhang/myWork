@@ -15,7 +15,6 @@ import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
 import flash.events.StatusEvent;
 import flash.external.ExternalInterface;
-import flash.geom.PerspectiveProjection;
 import flash.ui.Keyboard;
 import flash.utils.Dictionary;
 
@@ -132,7 +131,7 @@ public class sidesGroup extends BaseModule {
             _headFace.x = _headFace.width / 2;
             _headFace.y = int(_headFace.height / 2);
         }
-        showHotVideo(false)
+        showHotVideo(false);
     }
 
     private function showTranUser(visible:Boolean):void {

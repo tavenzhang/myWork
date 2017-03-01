@@ -47,14 +47,12 @@ public class VideoHomeView {
             item.addEventListener(MouseEvent.CLICK, onItemClickHandle);
             //添加头像容器
             var _headFace:LoadMaterial = new LoadMaterial();
-
             _headFace.logo_mc.removeChildren();
-            _headFace.logo_mc.addChild(item.mcHead.mcBg);
+           _headFace.logo_mc.addChild(item.mcHead.mcBg);
             item.mcHead.addChild(_headFace);
             _dataMap[item] = _headFace;
-
-            _headFace.width = 180;
-            _headFace.height = 135;
+            _headFace.width = 188;
+            _headFace.height = 140;
             _headFace.loading_mc.x = 10;
             _headFace.loading_mc.y = 10;
             _headFace.x = _headFace.width / 2;
@@ -189,10 +187,7 @@ public class VideoHomeView {
                     if ((item as MovieClip) != resutArr[i - 1].headUrl) {
                         (_dataMap[item] as LoadMaterial).load(resutArr[i - 1].headUrl, true);
                         (item as MovieClip).url = resutArr[i - 1].headUrl;
-                        //trace("videoHome LoadMaterial =" + resutArr[i - 1].headUrl);
                     }
-
-
                     _dataMap[item.name] = resutArr[i - 1];
                 }
                 else {

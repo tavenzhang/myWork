@@ -62,9 +62,9 @@ public class BaseResRoom extends MovieClip {
      */
     public function getParameters():void {
         VideoConfig.VERSION = "v1_0";
-        var testStr:String ="6lOh20Km7QI4PuX8oh8UuyYKpVBA5zRdSzk4VZZYT2XWaLkL2z4XYpcVRmUFciWF+n58cIb9VqghFnVwXAYn3w==";
-        var sss:String = VideoTool.decodeAseString("hg%43*&^56ig$g38",testStr);
-        trace("sssss="+sss);
+//        var testStr:String ="6lOh20Km7QI4PuX8oh8UuyYKpVBA5zRdSzk4VZZYT2XWaLkL2z4XYpcVRmUFciWF+n58cIb9VqghFnVwXAYn3w==";
+//        var sss:String = VideoTool.decodeAseString("hg%43*&^56ig$g38",testStr);
+//        trace("sssss="+sss);
         var param:Object = this.stage.loaderInfo.parameters;
         if (param) {
             if (param["v"] != null) {

@@ -595,7 +595,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	private function _checkPlayTimerEvent(e:TimerEvent):void {
 		if (!this.isAnchor && this.ns) {
 			if (!rtmpReadyOK) {//如果rtmpReadyOK ture 即 netStream 触发了full 则跳过
-				this._playOldTimer == int(this.ns.time)
+				this._playOldTimer == int(this.ns.time);
 				if (this._playOldTimer == 0) {//重未连上过
 					if (this.reconCount < 4) //最多进行4次重连测试
 					{
@@ -807,7 +807,6 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 			this.endPlay_mc.visible = false;
 			this.control_mc.visible = true;
 			setVideoVisible(true);//显示视频
-			//
 			var _imodule:MovieClip = videoRoom.getModule(ModuleNameType.SIDESGROUP) as MovieClip;
 			if (_imodule) {
 				_imodule.showHotVideo(false);
@@ -831,6 +830,7 @@ public class VideoPlayerView extends videoPlayer implements IVideoModule,IPlayer
 	private function goHomeVideo():void {
 		this.dispatchEvent(new Event("reGOHallEvent"));
 	}
+
 
 	/**
 	 * 截图提交事件
