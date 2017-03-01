@@ -147,6 +147,16 @@ class Video extends Component {
         {
             this.backhome();
         }
+
+        const {video} = this.refs;
+        if (video) {
+            if (!video.hasOwnProperty("playsinline")) {
+                video.setAttribute('playsinline', true);
+            }
+            if (!video.hasOwnProperty("webkit-playsinline")) {
+                video.setAttribute('webkit-playsinline', true)
+            }
+        }
     }
 
     /**
@@ -354,6 +364,20 @@ class Video extends Component {
 
         router.push({
             pathname: '/login',
+            query: {from: '/video/'+rommid},
+        });
+    }
+    //去注册页面
+    /**
+     * 返回注册
+     */
+    goRegister() {
+        const {router} = this.context;
+        const {params} = this.props;
+        const rommid = params.id;//房间号
+        //关闭对话框
+        router.push({
+            pathname: '/register',
             query: { from: '/video/'+rommid },
         });
     }
@@ -453,11 +477,16 @@ class Video extends Component {
                 primary={true}
                 onTouchTap={()=>this.goLogin()}
                 />,
+            <RaisedButton
+                label="注册"
+                onTouchTap={()=>this.goRegister()}
+            />,
             <FlatButton
                 label="取消"
                 primary={true}
                 onTouchTap={()=>dispatch(wsAct.showAlertDialog(false,''))}
                 />,
+
         ];
 
         if(alertDialog.type == 1) {//普通弹出框
@@ -502,7 +531,6 @@ class Video extends Component {
 
             dialogContent = `恭喜以下用户中奖： ${winers.substr(0,winers.length-1)}`;
             dialogDesc = "奖品：" + alertDialog.content.detail;
-
             alertActions = [
                 <RaisedButton
                     label="知道了"
@@ -516,7 +544,6 @@ class Video extends Component {
         let [video,zhubo] = [null,null];
         if(seleVideoSrc.length > 0) {
             const zhuboMsg = seleVideoSrc[0];
-
             const videoSrc = `${zhuboMsg['rtmp'] +"/" + zhuboMsg['sid'] + "_ff.m3u8"}`;
             video = <video id="live" controls="control" preload="auto" autoPlay="autoplay" ref="video">
                 <source src={videoSrc} type="video/mp4" />

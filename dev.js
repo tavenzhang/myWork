@@ -10,7 +10,7 @@ var serverConfig = {
 	mode: 'development',  //编译模式(development,production)
 	dir : __dirname,
 	host : "www.thomas.com",
-	//host : "192.16.137.3",
+	//host : "127.0.0.1",
 	port : "3000",
 	srcPath : './src', //静态资源的目录 相对路径
 	mainFile : path.join(__dirname, './src/js/app.js'), //程序入口主文件
@@ -34,7 +34,6 @@ new WebpackDevServer(webpack(webpackConfig), {
 	if (err) {
 		return console.log(err);
 	}
-
 	console.log('Listening at http://'+serverConfig.host+':'+serverConfig.port+'/');
 });
 
