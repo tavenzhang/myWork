@@ -159,6 +159,7 @@ class Video extends Component {
         }
     }
 
+
     /**
      * 连接socket
      */
