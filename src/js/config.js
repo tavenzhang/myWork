@@ -11,6 +11,9 @@ let serverADR = "";
 let vSever = protocol + "//v" + mainpath;
 let pSever = protocol + "//p" + mainpath + "/";
 
+// serverADR = "http://www.taven.com:9000";
+// vSever = "http://v.taven.com:9000";
+// pSever = "http://p.taven.com:9000/";
 if( process.env.NODE_ENV == 'development') {//开发环境
     //serverADR = "http://192.16.137.3";
     // serverADR = "http://www.mm.com";

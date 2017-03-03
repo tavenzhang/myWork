@@ -596,9 +596,8 @@ class Video extends Component {
                     >
                     <Tabs
                         onChange = { e =>dispatch(wsAct.setGiftTabIndex(e)) }
-                        value = { slideGiftIndex }
-                        className="tab giftBoxTitle"
-                        >
+                        value = {slideGiftIndex}
+                        className="tab giftBoxTitle">
                         {
                             gifts.map((v,i) => {
                                 return <Tab label={v.name} value={i} key={i} className={ slideGiftIndex == i ? 'tab-selected' : ''} />
