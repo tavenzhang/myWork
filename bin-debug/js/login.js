@@ -481,8 +481,7 @@ document.domain = document.domain;
 
 	
 	function liveChatAction() {
-		window.open("http://njmm.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=410769&jid=6811847595&enterurl=http%3A%2F%2Fv.1room.org%2Fvideo_gs%2Froom%2F10000&pagetitle=admin%E7%9A%84%E7%9B%B4%E6%92%AD%E9%97%B4+-+%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91%7C%E6%B5%B7%E9%87%8F%E7%9B%B4%E6%92%AD%7C%E7%BE%8E%E5%A5%B3%E7%A7%80%E5%9C%BA&pagereferrer=&firstEnterUrl=http%3A%2F%2Fv.1room.org%2Fvideo_gs%2Froom%2F10000&lan=zh&tm=1421914070885",
-		"server",
+		window.open("https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=754482&jid=5432615048&enterurl=http%3A%2F%2Fwww%2Etwmm56%2Ecom%2F&pagetitle=%E5%8F%B0%E6%B9%BE%E7%BE%8E%E7%9C%89&pagereferrer=&firstEnterUrl=http%3A%2F%2Fwww%2Etwmm56%2Ecom%2F&lan=zh&tm=1488790910113&s=1",
 		"toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=920,height=620")
 	};
 	
