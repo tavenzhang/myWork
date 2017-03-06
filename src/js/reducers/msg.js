@@ -8,7 +8,6 @@ const initMessageState = {
     status: false
 }
 
-
 //最后一条消息
 //const lastAction = ( state = null, action ) => {
 //    return action;

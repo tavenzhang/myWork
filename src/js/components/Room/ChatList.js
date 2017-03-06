@@ -33,7 +33,6 @@ class ChatList extends Component {
 
     render() {
         const { data, uid } = this.props;
-
         return (
             <div className="video-chat">
                 {data.map(( v, index ) => {
@@ -44,22 +43,20 @@ class ChatList extends Component {
                         const cls = `lvRichIcon r${v.richLv}`;
                         lvIcon = <div className={cls}></div>;
                     }
-
                     //贵族
                     if(v.vip > 0) {
                         const cls = `hotListImg basicLevel${v.vip}`;
                         vipIcon = <div className={cls}></div>;
                     }
-
                     //用户进入房间消息
                     if(v.cmd == 11002) {
                         let mount = null;
                         if(v.car) {
                             mount = <span>开着座驾<img className="chat-list-icon" src={ CONFIG.giftPath + v.car + ".png" } /></span>
                         }
-
                         msg = <span>欢迎【{vipIcon} {lvIcon} {v.name}】{mount}进入房间</span>;
-                        msgClass = `chat-userEnter`;
+                       //  msgClass = `chat-userEnter`;
+                        msgClass=`mark`
                     }
                     //聊天
                     if(v.cmd == 30001) {

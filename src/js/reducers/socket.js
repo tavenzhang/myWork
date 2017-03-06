@@ -109,6 +109,13 @@ const wsState = (state = initSockState, action) => {
                 userMount = action.data;
             }
 
+            if(state.messages)
+            {
+                while(state.messages.length>25)
+                {
+                    state.messages.shift();
+                }
+            }
             if(action.data.ruled == 2 || action.data.ruled == 3) {//主播或者管理员
                 return Object.assign({}, state, {
                     admins: [...state.audiences, action.data],
@@ -125,6 +132,13 @@ const wsState = (state = initSockState, action) => {
             }
 
         case wsAN.CHAT_MESSAGE:
+            if(state.messages)
+            {
+                while(state.messages.length>25)
+                {
+                    state.messages.shift();
+                }
+            }
             return Object.assign({}, state, {
                 messages: [...state.messages, action.data]
             });
