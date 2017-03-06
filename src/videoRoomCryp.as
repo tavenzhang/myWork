@@ -1,6 +1,3 @@
-/**
- * Created by thomas on 2016/9/21.
- */
 package {
 import flash.display.Loader;
 import flash.display.Sprite;
