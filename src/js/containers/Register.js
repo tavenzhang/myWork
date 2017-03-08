@@ -119,7 +119,7 @@ class Register extends Component {
             <div className="app-main-content">
                 <Banner title="注册" back={back} />
                 <div className="login">
-                    <img src={require('../../images/logo.png')} className="login-icon" style={{marginTop:150, marginBottom:20}} />
+                    <img src={require('../../images/logo.png')} className="login-icon" />
                     <div className="login-form">
                         <TextField
                             //hintText="Hint Text"
@@ -166,7 +166,7 @@ class Register extends Component {
                             />
                         <img src={scodeImg} className="scodeImg" ref="RscodeImg" onClick={()=>this.changeScode()} />
                         <br /><br /><br /><br />
-                        <RaisedButton style={{marginBottom:20}} label="注 册" primary={true} fullWidth={true} onClick={ e => { this.handleLogin(e) } } />
+                        <RaisedButton style={{marginBottom:40}} label="注 册" primary={true} fullWidth={true} onClick={ e => { this.handleLogin(e) } } />
                     </div>
                 </div>
             </div>
