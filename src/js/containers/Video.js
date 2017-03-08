@@ -124,7 +124,7 @@ class Video extends Component {
                 const urlHost = urlData.substr(0,urlData.lastIndexOf("/"));
                 let pic = document.createElement('img');
                 //请求服务器上一个小文件，看哪个返回最快
-                pic.src = urlHost + "/speed.jpg";
+                pic.src = urlHost + "/speed.jpg?a="+Math.random()*100000;
                 pic.onload = function(e,v){
                     pic = null;
                     setBestVideoUrl(urlData);
