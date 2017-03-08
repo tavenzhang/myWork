@@ -298,7 +298,7 @@ class Video extends Component {
                         dispatch(appAct.showInfoBox(`您的权限不足，最多只能输入${limitInfo.chatlimit}个字`,'error'))
                         return;
                     }
-                    
+
                     if(limitInfo.chatsecond>0)
                     {
                         if(chatSecond>0)
