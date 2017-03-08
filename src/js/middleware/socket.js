@@ -321,7 +321,7 @@ const webSocketMiddleware = store => next => action => {
                     socket.postMessage(loginCMD); //登陆
                     socket.websocket.onmessage = function(event) {
                         let data = JSON.parse(event.data);
-                        log("comm:<------ ",data);
+                        log("comm:<------ "+data.cmd,data);
                         const appSt = store.getState().appState;
 
                         switch(data.cmd) {
@@ -433,6 +433,11 @@ const webSocketMiddleware = store => next => action => {
                                         data:false
                                     });
                                 }
+                                next({
+                                    type:wsAN.LIMIT_INFO,
+                                    data:data
+                                });
+
                                 break;
 
                             case 10014 : //当用户进入限制房间时，如果不满足限制房间条件，可根据后台配置的用户等级进限制房间次数，进入限制房间，同一个房间不重复计数
@@ -865,7 +870,6 @@ const webSocketMiddleware = store => next => action => {
 
     if(wsAN.LOGOUT === action.type) { //发送信息
         closeCosket();
-
         //清空历史数据
         next({
             type:wsAN.RESET_STATE

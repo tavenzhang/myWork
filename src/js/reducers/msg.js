@@ -8,11 +8,6 @@ const initMessageState = {
     status: false
 }
 
-//最后一条消息
-//const lastAction = ( state = null, action ) => {
-//    return action;
-//}
-
 
 //消息列表
 //type: 0 文字信息，1 礼物
