@@ -28,7 +28,7 @@ let haveBestUrl = false; //是否选了最优的下播
 let haveBestWS = false; //是否选了最优的socket
 let testWSTask = [];//socket测试任务
 let isAlertLogin = false;//是否显示没登陆警告
-
+let chatSecond=0  //还剩多少时间可以发言
 //清楚任务
 const clearIntervalTask = () => {
     for(let name in intervalTasks) {
@@ -82,6 +82,7 @@ class Video extends Component {
 
     componentWillUnmount() {
         this.timer && clearTimeout(this.timer);
+        this.requestInteval&&clearIntervalTask(this.chatTimeId);
         this.requestInteval && clearInterval(this.requestInteval);
     }
 
@@ -275,7 +276,7 @@ class Video extends Component {
      */
     sendMsg(e) {
         //e.preventDefault();
-        const {dispatch} = this.props;
+        const {dispatch,limitInfo} = this.props;
 
         const {chatInput} = this.refs;
 
@@ -285,9 +286,39 @@ class Video extends Component {
 
         if(this.isLogin()) {//是否登录
             if(sendMsg) {
+                if(limitInfo)
+                {
+                    if(limitInfo.forbidChat)
+                    {
+                        dispatch(appAct.showInfoBox(`你当前被禁止聊天.`,'error'))
+                        return;
+                    }
+                    if(sendMsg.length>limitInfo.chatlimit)
+                    {
+                        dispatch(appAct.showInfoBox(`您的权限不足，最多只能输入${limitInfo.chatlimit}个字`,'error'))
+                        return;
+                    }
+
+                    if(limitInfo.chatsecond>0)
+                    {
+                        if(chatSecond>0)
+                        {
+                            dispatch(appAct.showInfoBox(`您的权限不足，请${chatSecond}秒后再发言！`,'error'))
+                            return;
+                        }
+                        else{
+                            clearIntervalTask(this.chatTimeId);
+                            chatSecond=limitInfo.chatsecond;
+                            this.chatTimeId=setInterval(function () {
+                                chatSecond--
+                            },1000);
+                        }
+                    }
+                }
                 dispatch(wsAct.postMessage(sendMsg));
-                //重置输入框数据
+                    //重置输入框数据
                 this.refs.chatInput.input.value = "";
+
             }
             else {
                 dispatch(appAct.showInfoBox('聊天内容不能为空','error'))
@@ -667,7 +698,8 @@ const mapStateToProps = state => {
         sendGifts : state.wsState.sendGifts,//用户送的礼物
         showVideo : state.wsState.showVideo,//显示视频
         moneyTotal : state.wsState.moneyTotal,//本日总砖石数
-        isVisitable:state.wsState.isVisitable //是否有权限访问
+        isVisitable:state.wsState.isVisitable, //是否有权限访问
+        limitInfo:state.wsState.limitInfo, //房间限制信息
     }
 }
 

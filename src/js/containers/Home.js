@@ -182,7 +182,7 @@ class Home extends Component {
         return (
             <div className="app-main-content">
                 <Banner
-                    title="直播大厅"
+                    title="台湾美媚-直播大厅"
                     currentPath="/home"
                     leftIcon={<FaAlignJustify className="menuIcon"/>}
                     leftIconTouch={() => dispatch(appAct.drawerToggle(!drawerOpen))}

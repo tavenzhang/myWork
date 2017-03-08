@@ -38,6 +38,7 @@ export const wsAN  = {
     UPDATE_SENDGIFTLISTS : 'ws/UPDATE_SENDGIFTLISTS',//礼物清单数据
     HEART                : 'ws/HEART',//心跳
     GOTO_HOME            : 'ws/GOTO_HOME',//心跳
+    LIMIT_INFO           : 'ws/LIMIT_INFO',//房间限制信息
 };
 
 export const wsAct = {
