@@ -74,7 +74,7 @@ class Register extends Component {
      * 请求用户信息
      */
     requestUserInfo() {
-        const { dispatch } = this.props;
+        const { dispatch, location } = this.props;
         const { router } = this.context;
 
         //请求用户信息
