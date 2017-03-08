@@ -116,7 +116,7 @@ class Register extends Component {
         }
 
         return (
-            <div className="app-main-content">
+            <div>
                 <Banner title="注册" back={back} />
                 <div className="login">
                     <img src={require('../../images/logo.png')} className="login-icon" />
