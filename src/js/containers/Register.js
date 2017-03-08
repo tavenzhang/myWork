@@ -119,6 +119,7 @@ class Register extends Component {
             <div className="app-main-content">
                 <Banner title="注册" back={back} />
                 <div className="login">
+                    <img src={require('../../images/logo.png')} className="login-icon" style={{marginTop:50}} />
                     <div className="login-form">
                         <TextField
                             //hintText="Hint Text"
