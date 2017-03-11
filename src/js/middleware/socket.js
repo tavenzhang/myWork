@@ -426,12 +426,15 @@ const webSocketMiddleware = store => next => action => {
                                         dialogType:5
                                     });
                                 }
-                                if(!data.allowvisitroom)
+                                if(parseInt(data.allowvisitroom)==1)// 如果是0 无限制 1有限制
                                 {
-                                    next({
-                                        type:wsAN.GOTO_HOME,
-                                        data:false
-                                    });
+                                    if(parseInt(data.limitRoomCount)<=0)//大于0表示可以访问
+                                    {
+                                        next({
+                                            type:wsAN.GOTO_HOME,
+                                            data:false
+                                        });
+                                    }
                                 }
                                 next({
                                     type:wsAN.LIMIT_INFO,
