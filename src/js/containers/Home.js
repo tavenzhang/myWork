@@ -22,6 +22,13 @@ class Home extends Component {
         router: React.PropTypes.object
     };
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            showConfirmDateBox: false
+        }
+    }
+
     //加载今日精选数据
     loadVideosRec() {
         const {dispatch} = this.props;
@@ -35,7 +42,7 @@ class Home extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (this.props != nextProps) {
+        if (this.props != nextProps||this.state!=nextState) {
             return true
         }
         else {
@@ -89,38 +96,19 @@ class Home extends Component {
      */
     enterRoom(room) {
         const {router} = this.context;
-        const {dispatch,isLogin,videoListsOrd} = this.props;
+        const {dispatch, isLogin, videoListsOrd} = this.props;
 
         //设置选中房间号
         dispatch(appAct.setCurrentSelectRoomId(room.uid));
         console.log("room-----------", room);
-        if (room.appoint_state&&(room.appoint_state==1||room.appoint_state==3)){
+        if (room.appoint_state && (room.appoint_state == 1 || room.appoint_state == 3)) {
 
-            if(!isLogin)
-            {
+            if (!isLogin) {
                 dispatch(appAct.showInfoBox("您尚未登陆,请登陆后 再 进行预约", 'error'))
             }
             else {
-                dispatch(fetchData({
-                    url: REQURL.dateTimeRoom.url+`?duroomid=${room.id}&flag=false`,
-                    requestType: REQURL.dateTimeRoom.type,
-                    callback:(data)=>{
-                        if(data.code==1)
-                        {
-                            for (let item of videoListsOrd)
-                            {
-                                if(item&&(item.id==room.id))
-                                {
-                                    item.appoint_state="3";
-                                    dispatch({type:appAN.UPDATE_VIDEO_LISTS_ORD,data:{rooms:videoListsOrd}});
-                                }
-                            }
-                        }
-
-                        dispatch(appAct.showInfoBox(data.msg, 'error'));
-                    }
-                    // successAction: appAN.UPDATE_VIDEO_LISTS_REC
-                }));
+                this.lastDateRoom = room;
+                this.setState({showConfirmDateBox: true});
             }
         }
         else {
@@ -137,6 +125,28 @@ class Home extends Component {
         }
     }
 
+    confirmDateRoom=(room)=> {
+        if (!room) return;
+        const {dispatch,videoListsOrd} = this.props;
+        dispatch(fetchData({
+            url: REQURL.dateTimeRoom.url + `?duroomid=${room.id}&flag=false`,
+            requestType: REQURL.dateTimeRoom.type,
+            callback: (data) => {
+                if (data.code == 1) {
+                    for (let item of videoListsOrd) {
+                        if (item && (item.id == room.id)) {
+                            item.appoint_state = "3";
+                            dispatch({type: appAN.UPDATE_VIDEO_LISTS_ORD, data: {rooms: videoListsOrd}});
+                        }
+                    }
+                }
+                dispatch(appAct.showInfoBox(data.msg, 'error'));
+            }
+            // successAction: appAN.UPDATE_VIDEO_LISTS_REC
+        }));
+        this.setState({showConfirmDateBox: false});
+    }
+
     /**
      * 进入密码房
      */
@@ -145,7 +155,6 @@ class Home extends Component {
         const {dispatch, currSeleRoomId} = this.props;
         const {roomPwd} = this.refs;
         const rPwd = roomPwd.value.trim();
-
         roomPwd.blur();
 
         dispatch(fetchData({
@@ -157,7 +166,6 @@ class Home extends Component {
                 captcha: ""
             },
             callback: function (res) {
-                console.log("res-----------", res)
                 dispatch(appAct.openDialog(false));
                 if (res.code == 1) {
                     //重置输入框数据
@@ -179,6 +187,7 @@ class Home extends Component {
     render() {
         const {slideIndex, videoListsAll, videoListsRec, videoListsSls, videoListsOrd, dialogOpen, drawerOpen, dispatch, location} = this.props;
         const {router} = this.context;
+        console.log("this.state.showConfirmDateBox---",this.state.showConfirmDateBox)
         return (
             <div className="app-main-content">
                 <Banner
@@ -209,9 +218,9 @@ class Home extends Component {
                         className="swipHome"
                     >
                         <VideoLists data={videoListsRec} action={(d) => this.enterRoom(d)} key={0}/>
-                        <VideoLists data={videoListsAll} action={(d) => this.enterRoom(d)} key={1} />
-                        <VideoLists data={videoListsSls} action={(d) => this.enterRoom(d)} key={2} />
-                        <VideoLists data={videoListsOrd} action={(d) => this.enterRoom(d)} key={3} />
+                        <VideoLists data={videoListsAll} action={(d) => this.enterRoom(d)} key={1}/>
+                        <VideoLists data={videoListsSls} action={(d) => this.enterRoom(d)} key={2}/>
+                        <VideoLists data={videoListsOrd} action={(d) => this.enterRoom(d)} key={3}/>
                     </SwipeableViews>
                 </div>
                 <Dialog
@@ -234,10 +243,32 @@ class Home extends Component {
                     titleClassName="dialog-title"
                     bodyClassName="dialog-body"
                     actionsContainerClassName="dialog-action"
-                >
-                    <div className="video-alertDialog-title">该房间需要密码才能进入</div>
-                    <input className="video-alertDialog-input" placeholder="请输入房间密码" ref="roomPwd"/>
-                </Dialog>
+                />
+                {this.state.showConfirmDateBox ?  <Dialog
+                    title="你确定花费钻石进行预约吗?"
+                    actions={[
+                        <RaisedButton
+                            label="确定"
+                            primary={true}
+                            keyboardFocused={true}
+                            onTouchTap={() => {
+                                this.confirmDateRoom(this.lastDateRoom);
+                            }}
+                            style={{marginRight: 10}}/>,
+                        <RaisedButton
+                            label="取消"
+                            onTouchTap={() => this.setState({showConfirmDateBox: false})}
+                        />
+                    ]}
+                    modal={true}
+                    open={true}
+                    className="video-alertDialog"
+                    titleClassName="dialog-title"
+                    bodyClassName="dialog-body"
+                    actionsContainerClassName="dialog-action"
+                />:null}
+                <div className="video-alertDialog-title">该房间需要密码才能进入</div>
+                <input className="video-alertDialog-input" placeholder="请输入房间密码" ref="roomPwd"/>
             </div>
         );
     }
@@ -253,7 +284,7 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLogin : state.appState.isLogin,
+        isLogin: state.appState.isLogin,
         slideIndex: state.appState.homeSlideIndex,
         videoListsAll: state.appState.videoListsAll,
         videoListsRec: state.appState.videoListsRec,
@@ -262,7 +293,7 @@ const mapStateToProps = state => {
         dialogOpen: state.appState.dialogOpen,//弹出框
         drawerOpen: state.appState.drawerOpen,//菜单
         currSeleRoomId: state.appState.currSeleRoomId,//当前选中的房间号
-        dialogDateOpen:state.appState.dialogDateOpen,//预约菜单
+        dialogDateOpen: state.appState.dialogDateOpen,//预约菜单
     }
 }
 

@@ -26,7 +26,7 @@ class VideoItem extends Component {
     };
 
     render() {
-        const {imgSrc,name,nums,isLive,enterRoomlimit,tid,liveTime,lv_type,appoint_state} = this.props;
+        const {imgSrc,name,nums,isLive,enterRoomlimit,tid,liveTime,lv_type,appoint_state,points} = this.props;
 
         let [numsDom,liveIcon,lock] = [null,null,null];
 
@@ -40,17 +40,11 @@ class VideoItem extends Component {
             lock = <div className="lockBg"><Ilock className="lockIcon" /></div>
         }
 
-        //显示直播状态
-        if(isLive) {
-            liveIcon = <span className="live"></span>;
-        }
-        else {
-            liveIcon = <span className="live reset"></span>;
-        }
+
         //1: 未预约 2: 约会中3: 已被预约
         let dateBtn=null;
-
-        if(lv_type==3)
+        let titleView=null
+        if(points>0)
         {
             switch(appoint_state){
                 case 1:
@@ -63,6 +57,17 @@ class VideoItem extends Component {
                     dateBtn= <RaisedButton label="已被预约" primary={true} disabled={true}/>
                     break;
             }
+            titleView=<div className="title">{`${points}钻 (25分钟)`}</div>
+        }
+        else{
+            //显示直播状态
+            if(isLive) {
+                liveIcon = <span className="live"></span>;
+            }
+            else {
+                liveIcon = <span className="live reset"></span>;
+            }
+            titleView=<div className="title">主播</div>
         }
 
         return (
@@ -72,7 +77,7 @@ class VideoItem extends Component {
                 <img src={imgSrc} className="avatar" />
                 <div className="infoPanel">
                     <div className="rightTop">{liveIcon} {liveTime}</div>
-                    <div className="title">主播</div>
+                    {titleView}
                     <div className="name">{name}</div>
                     <div  className="videoItem"> {dateBtn}</div>
                 </div>

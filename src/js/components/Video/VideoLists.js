@@ -43,6 +43,7 @@ class VideoLists extends Component {
                                             liveTime={d.live_time}
                                             tid={d.tid}
                                             lv_type={d.lv_type}
+                                            points={d.points}
                                             appoint_state={d.appoint_state}
                                             onClick={() => this.props.action({
                                                 ...d

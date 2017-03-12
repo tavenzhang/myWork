@@ -80,10 +80,21 @@ const filterUserData = data => {
             id:d.id,
             live_time : d.live_time,//直播时间
             uid : d.uid,//主播id
+            points:parseInt(d.points),
             appoint_state:parseInt(d.appoint_state), //1: 未预约 2: 约会中3: 已被预约
             lv_type:d.lv_type
         }
-        newDatas.push(nd);
+        if(nd.appoint_state)
+        {
+            if(nd.appoint_state==1)
+            {
+                newDatas.push(nd);
+            }
+        }
+        else{
+            newDatas.push(nd);
+        }
+
     })
     if(newDatas.length>0&&newDatas[0].appoint_state)
     {
