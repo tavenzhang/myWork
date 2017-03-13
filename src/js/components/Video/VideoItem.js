@@ -26,7 +26,7 @@ class VideoItem extends Component {
     };
 
     render() {
-        const {imgSrc,name,nums,isLive,enterRoomlimit,tid,liveTime,lv_type,appoint_state,points} = this.props;
+        const {imgSrc,name,nums,isLive,enterRoomlimit,tid,liveTime,lv_type,appoint_state,points,starttime} = this.props;
 
         let [numsDom,liveIcon,lock] = [null,null,null];
 
@@ -57,7 +57,8 @@ class VideoItem extends Component {
                     dateBtn= <RaisedButton label="已被预约" primary={true} disabled={true}/>
                     break;
             }
-            titleView=<div className="title">{`${points}钻 (25分钟)`}</div>
+            titleView=<div className="title">{`${points}钻 (25分钟)`} <br/> {starttime}</div>
+
         }
         else{
             //显示直播状态

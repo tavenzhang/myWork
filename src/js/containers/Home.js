@@ -42,7 +42,7 @@ class Home extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (this.props != nextProps||this.state!=nextState) {
+        if (this.props != nextProps || this.state != nextState) {
             return true
         }
         else {
@@ -125,9 +125,9 @@ class Home extends Component {
         }
     }
 
-    confirmDateRoom=(room)=> {
+    confirmDateRoom = (room) => {
         if (!room) return;
-        const {dispatch,videoListsOrd} = this.props;
+        const {dispatch, videoListsOrd} = this.props;
         dispatch(fetchData({
             url: REQURL.dateTimeRoom.url + `?duroomid=${room.id}&flag=false`,
             requestType: REQURL.dateTimeRoom.type,
@@ -187,7 +187,7 @@ class Home extends Component {
     render() {
         const {slideIndex, videoListsAll, videoListsRec, videoListsSls, videoListsOrd, dialogOpen, drawerOpen, dispatch, location} = this.props;
         const {router} = this.context;
-        console.log("this.state.showConfirmDateBox---",this.state.showConfirmDateBox)
+        console.log("this.state.showConfirmDateBox---", this.state.showConfirmDateBox)
         return (
             <div className="app-main-content">
                 <Banner
@@ -242,36 +242,39 @@ class Home extends Component {
                     className="video-alertDialog"
                     titleClassName="dialog-title"
                     bodyClassName="dialog-body"
-                    actionsContainerClassName="dialog-action"
-                />
-                {this.state.showConfirmDateBox ?  <Dialog
-                    title="你确定花费钻石进行预约吗?"
-                    actions={[
-                        <RaisedButton
-                            label="确定"
-                            primary={true}
-                            keyboardFocused={true}
-                            onTouchTap={() => {
-                                this.confirmDateRoom(this.lastDateRoom);
-                            }}
-                            style={{marginRight: 10}}/>,
-                        <RaisedButton
-                            label="取消"
-                            onTouchTap={() => this.setState({showConfirmDateBox: false})}
-                        />
-                    ]}
-                    modal={true}
-                    open={true}
-                    className="video-alertDialog"
-                    titleClassName="dialog-title"
-                    bodyClassName="dialog-body"
-                    actionsContainerClassName="dialog-action"
-                />:null}
-                <div className="video-alertDialog-title">该房间需要密码才能进入</div>
-                <input className="video-alertDialog-input" placeholder="请输入房间密码" ref="roomPwd"/>
+                    actionsContainerClassName="dialog-action">
+                    <div className="video-alertDialog-title">该房间需要密码才能进入</div>
+                    <input className="video-alertDialog-input" placeholder="请输入房间密码" ref="roomPwd"/>
+             </Dialog>
+                {
+                    this.state.showConfirmDateBox ? <Dialog
+                        title="你确定花费钻石进行预约吗?"
+                        actions={[
+                            <RaisedButton
+                                label="确定"
+                                primary={true}
+                                keyboardFocused={true}
+                                onTouchTap={() => {
+                                    this.confirmDateRoom(this.lastDateRoom);
+                                }}
+                                style={{marginRight: 10}}/>,
+                            <RaisedButton
+                                label="取消"
+                                onTouchTap={() => this.setState({showConfirmDateBox: false})}
+                            />
+                        ]}
+                        modal={true}
+                        open={true}
+                        className="video-alertDialog"
+                        titleClassName="dialog-title"
+                        bodyClassName="dialog-body"
+                        actionsContainerClassName="dialog-action"
+                    /> : null
+                }
             </div>
-        );
+             )
     }
+
 
     componentDidMount() {
         const {dispatch} = this.props;

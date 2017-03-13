@@ -76,6 +76,7 @@ const filterUserData = data => {
             live_status : d.live_status,//直播状态
             total : d.total,//房间在线人数
             enterRoomlimit : d.enterRoomlimit,//限制房间
+            starttime:d.starttime,//开播时间
             tid : d.tid,//
             id:d.id,
             live_time : d.live_time,//直播时间
