@@ -47,7 +47,6 @@ const menus = [
     { title: '我的预约', link:'/myOrd', login:true },
     { title: '我的关注', link:'/myFav', login:true },
     { title: '我的信箱', link:'/myMsg', login:true },
-
 ]
 
 class Banner extends Component {

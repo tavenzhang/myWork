@@ -56,13 +56,10 @@ export const REQURL = {
     chargePay           : { url : SERVERADDR + "/charge/pay", type : 'POST'},//
     dateTimeRoom        : { url : SERVERADDR + "/member/doReservation", type : 'GET'},//预约房间
 
-
     getVData            : { url : vSever + "/video_gs/rank/data_ajax", type : 'GET', model : 'jsonp'},//获取排行榜相关数据
     getGifts            : { url : vSever + "/video_gs/conf", type : 'GET', model : 'jsonp'},//获取礼物数据
     getSendGiftsLists   : { url : vSever + "/video_gs/rank/list_gift", type : 'GET', model : 'jsonp'},//获取礼物清单
     socketAddr          : { url : vSever + "/video_gs/mobileServer", type : 'GET', model : 'jsonp'},//获取socket地址
-
-
 };
 
 //基本配置
