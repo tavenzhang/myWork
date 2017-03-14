@@ -42,11 +42,11 @@ const menus = [
     { title: '道具商城', link:'/shop', login:false },
     { title: '活动中心', link:'/activity', login:false },
     { title: '联系客服', link:'', login:false },
-    { title: '我的信箱', link:'/myMsg', login:true },
     { title: '我的道具', link:'/myMount', login:true },
     { title: '消费记录', link:'/myRecord', login:true },
-    { title: '我的关注', link:'/myFav', login:true },
     { title: '我的预约', link:'/myOrd', login:true },
+    { title: '我的关注', link:'/myFav', login:true },
+    { title: '我的信箱', link:'/myMsg', login:true },
 
 ]
 
@@ -234,10 +234,11 @@ class Banner extends Component {
                                 }
                                 if(v.title=="联系客服")
                                 {
-                                    return    <a key={i} href='http://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=754482&configID=3517&jid=5432615048&lan=zh&subject=%E5%92%A8%E8%AF%A2&prechatinfoexist=1' target="_blank">
+                                    return
+                                     <a key={i} href='http://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=754482&configID=3517&jid=5432615048&lan=zh&subject=%E5%92%A8%E8%AF%A2&prechatinfoexist=1' target="_blank">
                                         <MenuItem
                                             className={`menu-item ${itemBg}`}
-                                            leftIcon={<FaQuestionCircle color="#fff" className="menu-list-icon" />}
+                                            leftIcon={<FaQuestionCircle color="#fff" className="menu-list-icon"/>}
                                             onTouchTap={() => drawerClose()}>
                                             {v.title}
                                         </MenuItem>
