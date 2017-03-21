@@ -25,7 +25,6 @@ if( process.env.NODE_ENV == 'development') {//开发环境
 }
 
 export const SERVERADDR = serverADR;
-
 //接口配置
 export const REQURL = {
     getVideoAll         : { url : SERVERADDR + "/videolistall.json?t="+(new Date()).valueOf(), type : 'GET'},//大厅全部数据
@@ -68,7 +67,6 @@ export const CONFIG = {
     giftPath : "/flash/image/gift_material/",
     //imageServe : "http://p.lgfxiu.com/"
 };
-
 
 //socket配置
 export const SOCKET = {

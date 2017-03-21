@@ -102,20 +102,19 @@
 ///侧边菜单
 .drawer {
     background: @second;
-    padding-top: .2rem;
-    padding-bottom: 1rem;
-
+    padding-top: .1rem;
+    padding-bottom: 10rem;
+    overflow-y: auto;
     a {
         text-decoration: none;
     }
 
     .menu-item {
         color: @white !important;
-
+        padding: 0;
         &.active {
             background: @prmary !important;
         }
-
         .menu-list-icon {
             margin-left: 1rem !important;
             left: 3rem !important;
@@ -362,7 +361,7 @@
     }
 
     .avatar-logo {
-        height: 5rem;
+        height: 4rem;
         margin: 1rem 0 !important;
     }
 
