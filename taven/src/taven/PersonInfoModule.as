@@ -52,7 +52,7 @@ public class PersonInfoModule extends BaseModule {
         _mainView.mcInfo.btnFocus.mouseChildren = false;
         _mainView.mcInfo.btnUnFocus.buttonMode = true;
         _mainView.mcInfo.btnUnFocus.mouseChildren = false;
-        _mainView.mcInfo.btnMail.visible =false;
+        _mainView.mcInfo.btnMail.visible =true;
         isShowEffect = true;
     }
 
