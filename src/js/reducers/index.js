@@ -31,7 +31,6 @@ let rootReducer = combineReducers({
 //debug
 //if (module.hot) {
     const devToolsExtension = window.devToolsExtension;
-
     if (typeof devToolsExtension === 'function') {
         middleware = compose(middleware, devToolsExtension())
     }

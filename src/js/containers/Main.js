@@ -52,7 +52,6 @@ class Main extends Component {
     componentWillMount() {
         //加载数据
         const {dispatch,userInfo,location} = this.props;
-
         //判断用户是否登陆
         if(this.isConnect() &&userInfo&&!userInfo.uid){//当用户处在链接状态，并且状态基中userInfo的uid不存在时，请求用户数据
             console.log('uid',userInfo.uid)

@@ -17,7 +17,6 @@ const logo = require('../../images/logo.png');
 
 class Home extends Component {
 
-
     static contextTypes = {
         router: React.PropTypes.object
     };
@@ -87,7 +86,6 @@ class Home extends Component {
         else {//大厅
             this.loadVideosRec();
         }
-
     }
 
 

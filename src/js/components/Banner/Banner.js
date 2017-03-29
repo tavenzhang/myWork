@@ -4,6 +4,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import MenuItem from 'material-ui/MenuItem';
+import Menu from 'material-ui/Menu';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import Drawer from 'material-ui/Drawer';
@@ -249,7 +250,8 @@ class Banner extends Component {
                                             <MenuItem
                                                 className={`menu-item ${itemBg}`}
                                                 leftIcon={<img src={MenuIcon[i]} className="menu-list-icon" />}
-                                                onTouchTap={() => drawerClose()}>
+                                                onTouchTap={() => drawerClose()}
+                                            >
                                                 {v.title}
                                             </MenuItem>
                                         </Link>

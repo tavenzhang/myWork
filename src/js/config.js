@@ -1,11 +1,9 @@
 /**
  * Created by soga on 16/9/19.
  */
-
 const hostname = location.hostname;
 const protocol = location.protocol;
 const mainpath = hostname.substr(hostname.indexOf("."));
-
 
 let serverADR = "";
 let vSever = protocol + "//v" + mainpath;
@@ -33,7 +31,8 @@ export const REQURL = {
     getVideoOrd         : { url : SERVERADDR + "/videolistord.json?t="+(new Date()).valueOf(), type : 'GET'},//一对一数据
     getUserInfo         : { url : SERVERADDR + "/indexinfo", type : 'GET'},//用户数据
     getMyRecord         : { url : SERVERADDR + "/member/consumerd?type=json", type : 'GET'},//获取我的消费记录
-    getMyMsg            : { url : SERVERADDR + "/member/msglist?type=json", type : 'GET'},//获取我的消息记录
+    getMyMsg            : { url : SERVERADDR + "/member/msglist/1?type=json", type : 'GET'},//获取我的消息记录
+    getMyPrivateMsg     : { url : SERVERADDR + "/member/msglist/2?type=json", type : 'GET'},//获取我的私信记录
     getMyMount          : { url : SERVERADDR + "/member/scene?type=json", type : 'GET'},//获取我的道具
     equipMount          : { url : SERVERADDR + "/member/scene", type : 'GET'},//装配坐骑
     cancelMount         : { url : SERVERADDR + "/member/cancelscene?type=json", type : 'GET'},//取消坐骑

@@ -18,18 +18,32 @@ class MyMsg extends Component{
     componentDidMount() {
         //加载数据
         const {dispatch,myMsg} = this.props;
-
         if(!myMsg.length) {
             dispatch(fetchData({
                 url : REQURL.getMyMsg.url,
                 requestType : REQURL.getMyMsg.type,
                 successAction : appAN.UPDATE_MYMSG
             }));
+            dispatch(fetchData({
+                url : REQURL.getMyPrivateMsg.url,
+                requestType : REQURL.getMyPrivateMsg.type,
+                successAction : appAN.UPDATE_MY_PRIVATE_MSG
+            }));
         }
     }
 
+    sortByField(x, y) {
+        let leftDate=new Date(x.created);
+        let rightDate = new Date(y.created);
+          return rightDate.getTime()-leftDate.getTime();
+    }
+
     render(){
-        const {myMsg,drawerOpen,dispatch} = this.props;
+        const {myMsg,drawerOpen,dispatch,myPrivateMsg} = this.props;
+        let dataMsg=[];
+        dataMsg =dataMsg.concat(myMsg);
+        dataMsg=dataMsg.concat(myPrivateMsg);
+        dataMsg.sort(this.sortByField);
         return (
             <div className="app-main-content">
                 <Banner
@@ -42,14 +56,26 @@ class MyMsg extends Component{
                     />
                 <div className="appContent">
                     {
-                        myMsg.map((v,i) => {
-                            return (
-                                <div className="msg-list" key={i}>
-                                    <h5>收件日期：{v.created}</h5>
-                                    <p>{v.content}</p>
-                                    <Divider />
-                                </div>
-                            )
+                        dataMsg.map((v,i) => {
+                            if(v.category==1){//系统邮件
+                                return (
+                                    <div className="msg-list" key={i}>
+                                        <h8>收件日期：{v.created}</h8>
+                                        <p>{v.content}</p>
+                                        <Divider />
+                                    </div>
+                                )
+                            }
+                            else{
+                                return (
+                                    <div className="msg-list" key={i}>
+                                        <h8>收件日期：{v.created} <br/> 发件人: {v.send_user ? v.send_user.nickname:""}</h8>
+                                        <p style={{color:"red"}}>【个人私信】{v.content}</p>
+                                        <Divider />
+                                    </div>
+                                )
+                            }
+
                         })
                     }
                 </div>
@@ -62,6 +88,7 @@ const mapStateToProps = state => {
     return {
         myMsg : state.appState.myMsg,//消息
         drawerOpen: state.appState.drawerOpen,//菜单
+        myPrivateMsg:state.appState.myPrivateMsg
     }
 }
 

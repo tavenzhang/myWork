@@ -12,6 +12,7 @@ const initAppState = {
     dialogDateOpen      : false, //弹出预约对话框
     myRecord        : [],//我的消费记录
     myMsg           : [],//我的消息
+    myPrivateMsg    : [],//我的私信
     myMount         : [],//我的道具'
     payMethod       : 'WEIXIN',//默认支付方式
     chargePrice     : '10',//默认支付价格
@@ -329,6 +330,11 @@ const appState = (state = initAppState, action) => {
             return Object.assign({}, state, {
                 myMsg : action.data.data
             });
+        case appAN.UPDATE_MY_PRIVATE_MSG:
+            return Object.assign({}, state, {
+                myPrivateMsg : action.data.data
+            });
+
 
         case appAN.UPDATE_MYMOUNT:
             return Object.assign({}, state, {

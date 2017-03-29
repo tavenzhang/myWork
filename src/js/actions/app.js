@@ -7,6 +7,7 @@ export const appAN  = {
     CLOSE_GIFT_DIALOG     : "app/CLOSE_GIFT_DIALOG",
     UPDATE_MYRECORD       : "app/UPDATE_MYRECORD", //更新我的消费记录
     UPDATE_MYMSG          : "app/UPDATE_MYMSG", //更新我的消息
+    UPDATE_MY_PRIVATE_MSG : "app/UPDATE_MY_PRIVATE_MSG", //更新我的私信
     UPDATE_MYMOUNT        : "app/UPDATE_MYMOUNT", //更新我的道具
     OPEN_GIFT_DIALOG      : "app/OPEN_GIFT_DIALOG",
     UPDATE_GIFT_LIST      : "app/UPDATE_GIFT_LIST",
