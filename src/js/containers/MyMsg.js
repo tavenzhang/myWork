@@ -71,7 +71,7 @@ class MyMsg extends Component{
                                 return (
                                     <div className="msg-list" key={i}>
                                         <h8>收件日期：{v.created} <br/> 发件人: {v.send_user ? v.send_user.nickname:""}</h8>
-                                        <p style={{color:"red"}}>【个人私信】{v.content}</p>
+                                        <p style={{color:"red"}} > 【个人私信】{v.content}</p>
                                         <Divider />
                                     </div>
                                 )
