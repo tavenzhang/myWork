@@ -15,7 +15,7 @@ const initAppState = {
     myPrivateMsg    : [],//我的私信
     myMount         : [],//我的道具'
     payMethod       : 'WEIXIN',//默认支付方式
-    chargePrice     : '10',//默认支付价格
+    chargePrice     : '100',//默认支付价格
     rechargeOrderId : '',//订单号
     chargeConfirmDialog: false,//支付确认框
     userInfo        : { //用户信息
