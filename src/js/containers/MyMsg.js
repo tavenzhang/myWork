@@ -33,6 +33,7 @@ class MyMsg extends Component{
     }
 
     sortByField(x, y) {
+
         let leftDate=new Date(x.created);
         let rightDate = new Date(y.created);
           return rightDate.getTime()-leftDate.getTime();

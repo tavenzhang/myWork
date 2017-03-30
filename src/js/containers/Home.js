@@ -275,6 +275,7 @@ class Home extends Component {
 
 
     componentDidMount() {
+
         const {dispatch} = this.props;
         //断开socket链接
         dispatch(wsAct.logout());
