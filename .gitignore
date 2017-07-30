@@ -10,3 +10,8 @@ gen
 .gitignore
 .idea/
 node_modules
+.DS_Store
+dist/js/.DS_Store
+src/.DS_Store
+src/flash/.DS_Store
+src/flash/image/.DS_Store
