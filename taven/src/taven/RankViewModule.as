@@ -42,6 +42,7 @@ public class RankViewModule extends BaseModule {
         _totalView.mcLine.width = _maxWidth-10;
         _totalView.mcLine.visible = false;
         _rankList.updateMaxCountByHeight(_maxHeight);
+
         //
     }
 
